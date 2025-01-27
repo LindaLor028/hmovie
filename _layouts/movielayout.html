@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> {{movie.name}}</title>
+        <link href="/assets/css/styles.css" rel="stylesheet" type="text/css">
+    </head>
+    <a href="http://127.0.0.1:4000"> HOME </a>
+
+<!-- GET THE MOVIE AND STORE IT IN THE VARIABLE, film -->
+{% for movie in site.data.movies %}
+    {% if movie.name contains page.title%}
+        {% assign film = movie%}
+        {% endif%}
+{% endfor%}
+
+<!-- PUT ALL PAGE CONTENT IN A DIV WITH MARGIN SO ALL THE CONTENT DOESN'T BLOW OUT-->
+<div class="centercontent"> 
+    <h1 alt="Movie Title"> {{ %page.title% }} </h1>
+
+    <br>
+
+    <!-- FORMAT THE FIRST CHUNK OF THE MOVIE CONTENT TO BE SIDE BY SIDE -->
+    <div class="movie_mainview">
+        <div class="section">
+            <p> {{ %film.synopsis%}} </p>
+            <h1> Cast </h1>
+            <div class="movie_cast">
+                <!-- {{%film.cast%}} -->
+                <!-- {{%film.array%}} -->
+                 <div class="movie_cast_scroll">
+                    <div class="scroll">
+                        {% for actor in film.array%}
+                        <div class="actor_div">
+                            <img src="{{film.thumbnail}}" alt="movie link" width="50px">
+                            <br>
+                            <a href="{{ actor.link}}">{{%actor.name %}} </a>
+                        </div>
+                    {% endfor %}
+
+                    </div>
+                    <hr>
+                 </div>
+            </div>
+
+            <div class="movie_wheretowatch">
+                <h1> Where To Watch </h1>
+
+            </div>
+
+        </div>
+        
+        <div class="movie_postercontainer">
+            <img src="{{film.thumbnail}}" alt="{{film.name}} Movie Poster" width="100%">
+            <p> Year of Production: {{%film.producers%}}</p>
+            <p> Producer(s): </p>
+            <p> Written by: </p>
+            <p> Release Type: </p>
+            <p> Storage Location: </p>
+        </div>
+        
+    </div>
+
+
+
+
+
+
+
+    <h1> Parts </h1>
+    {% if film.parts == 1 %}
+        {% assign sequel = null%}
+
+        <!-- If current movie is base movie, load all sequels -->
+        {% if film.basemovie == page.title%}
+            {% assign sequel = film.sequel%}
+
+            {% for counter in (0..film.total_parts)%}
+                {% for movie in site.data.movies %}
+                    {% if movie.name == sequel%}
+                    <a href="{{movie.link}}">{{movie.name}}</a>
+                    <a href="{{movie.link}}"><img src="{{movie.thumbnail}}" alt="movie link" width="75px"></a>
+                    {% assign sequel = movie.sequel %}
+                    {% endif %}
+                {% endfor%}
+            {% endfor %}
+        {% endif%}
+
+        <!-- If current movie is NOT base movie, load from base and skip current movie -->
+
+        {% if film.basemovie != page.title%}
+            <p> This is not the first movie</p>
+
+            {% for movie in site.data.movies %}
+                {% if movie.name == film.basemovie%}
+                    <a href="{{movie.link}}">{{movie.name}}</a>
+                    <a href="{{movie.link}}"><img src="{{movie.thumbnail}}" alt="movie link" width="75px"></a>
+                    {% assign sequel = movie.sequel %}
+                {% endif %}
+            {% endfor%}
+
+            {% for counter in (0..film.total_parts)%}
+                {% for movie in site.data.movies %}
+                    {% if movie.name == sequel%}
+                    {% if movie.name != film.name%}
+                    <a href="{{movie.link}}">{{movie.name}}</a>
+                    <a href="{{movie.link}}"><img src="{{movie.thumbnail}}" alt="movie link" width="75px"></a>
+                    {% endif %}
+                    {% assign sequel = movie.sequel %}
+                    {% endif %}
+                {% endfor%}
+            {% endfor %}
+        {% endif%}
+
+        {% else %}
+        <p> This movie does not have parts. </p>
+    {% endif%}
+
+
+</div>
+
+
+
+</html>

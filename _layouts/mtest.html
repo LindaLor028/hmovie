@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> {{movie.name}}</title>
+        <link href="/assets/css/styles.css" rel="stylesheet" type="text/css">
+    </head>
+
+<h1> {{ %page.title% }} </h1>
+<a href="http://127.0.0.1:4000"> HOME </a>
+<br>
+
+{% for movie in site.data.movies %}
+    {% if movie.name contains page.title%}
+    {% assign film = movie%}
+    {% endif%}
+{% endfor%}
+
+
+<a href="{{film.link}}">{{film.name}}</a>
+<a href="{{film.link}}"><img src="{{film.thumbnail}}" alt="film.name" width="75px"></a>
+
+<h1> Sequels</h1>
+
+{% assign sequel = null%}
+
+<!-- If current movie is base movie, load all sequels -->
+{% if film.basemovie == page.title%}
+    {% assign sequel = film.sequel%}
+
+    {% for counter in (0..film.total_parts)%}
+        {% for movie in site.data.movies %}
+            {% if movie.name == sequel%}
+            <a href="{{movie.link}}">{{movie.name}}</a>
+            <a href="{{movie.link}}"><img src="{{movie.thumbnail}}" alt="movie link" width="75px"></a>
+            {% assign sequel = movie.sequel %}
+            {% endif %}
+        {% endfor%}
+    {% endfor %}
+{% endif%}
+
+<!-- If current movie is NOT base movie, load from base and skip current movie -->
+
+{% if film.basemovie != page.title%}
+    <p> This is not the first movie</p>
+
+    {% for movie in site.data.movies %}
+        {% if movie.name == film.basemovie%}
+            <a href="{{movie.link}}">{{movie.name}}</a>
+            <a href="{{movie.link}}"><img src="{{movie.thumbnail}}" alt="movie link" width="75px"></a>
+            {% assign sequel = movie.sequel %}
+        {% endif %}
+    {% endfor%}
+
+    {% for counter in (0..film.total_parts)%}
+        {% for movie in site.data.movies %}
+            {% if movie.name == sequel%}
+            {% if movie.name != film.name%}
+            <a href="{{movie.link}}">{{movie.name}}</a>
+            <a href="{{movie.link}}"><img src="{{movie.thumbnail}}" alt="movie link" width="75px"></a>
+            {% endif %}
+            {% assign sequel = movie.sequel %}
+            {% endif %}
+        {% endfor%}
+    {% endfor %}
+{% endif%}
+
+
+
+</html>

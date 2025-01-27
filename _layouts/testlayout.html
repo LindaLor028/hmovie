@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> I forgot how to do this!</title>
+        <link href="/assets/css/styles.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <h1> Here's a test layout!</h1>
+<h1> {{ %page.title% }} </h1>
+
+<!-- {{ site.data.movies}} -->
+
+
+{% for movie in site.data.movies %}
+    {% if movie.name contains "1985"%}
+        <a href="{{movie.link}}">{{movie.name}}</a>
+        <a href="{{movie.link}}"><img src="{{movie.thumbnail}}" alt="Movie Thumbnail" width="75px"></a>
+        
+
+    {% endif%}
+{% endfor%}
+
+{{ content }}
+
+{% include photos.html%}
+
+</html>
+

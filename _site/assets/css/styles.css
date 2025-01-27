@@ -1,0 +1,60 @@
+h1 {
+  color: green;
+}
+
+* {
+  font-family: Arial;
+}
+
+.movie_mainview {
+  display: grid;
+  column-gap: 0.5rem;
+  grid-template-columns: 2fr 1fr;
+  width: auto;
+}
+
+.centercontent {
+  margin: 5%;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  padding: 0.5rem;
+  background-color: antiquewhite;
+}
+
+.movie_postercontainer {
+  background-color: white;
+  padding: 0.25rem;
+  border-radius: 0.2rem;
+}
+
+.movie_cast {
+  background-color: white;
+  padding: 0.25rem;
+  border-radius: 0.2rem;
+  overflow-x: scroll;
+  display: grid;
+  white-space: nowrap;
+  width: 50rem;
+}
+
+.movie_cast_scroll hr {
+  width: 100%;
+}
+
+.scroll {
+  width: 100%;
+}
+
+.actor_div {
+  display: inline-block;
+  width: 50px;
+  background-color: white;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+.section {
+  width: 100%;
+}
+
+/*# sourceMappingURL=styles.css.map */
