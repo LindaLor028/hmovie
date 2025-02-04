@@ -1,0 +1,101 @@
+<script src="/js/lunr.js"></script>
+
+<script>
+
+var documents = [{
+    "id": 0,
+    "url": "http://localhost:4000/404.html",
+    "title": "",
+    "body": " 404 Page not found :(  The requested page could not be found. "
+    }, {
+    "id": 1,
+    "url": "http://localhost:4000/about/",
+    "title": "About",
+    "body": "This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at jekyllrb. com You can find the source code for Minima at GitHub:jekyll /minima You can find the source code for Jekyll at GitHub:jekyll /jekyll "
+    }, {
+    "id": 2,
+    "url": "http://localhost:4000/",
+    "title": "",
+    "body": ""
+    }, {
+    "id": 3,
+    "url": "http://localhost:4000/jekyll/update/2024/12/05/welcome-to-jekyll.html",
+    "title": "Tiffany's Clothing!",
+    "body": "2024/12/05 - I’m ugly. This is Theresa’s website. If you think she’s nice, please follow and like! You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated. Jekyll requires blog post files to be named according to the following format: YEAR-MONTH-DAY-title. MARKUP Where YEAR is a four-digit number, MONTH and DAY are both two-digit numbers, and MARKUP is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works. Jekyll also offers powerful support for code snippets: {% highlight ruby %}def print_hi(name) puts “Hi, #{name}”endprint_hi(‘Tom’)#=&gt; prints ‘Hi, Tom’ to STDOUT. {% endhighlight %} Check out the Jekyll docs for more info on how to get the most out of Jekyll. File all bugs/feature requests at Jekyll’s GitHub repo. If you have questions, you can ask them on Jekyll Talk. "
+    }, {
+    "id": 4,
+    "url": "http://localhost:4000/search/",
+    "title": "search",
+    "body": "2024/12/05 - "
+    }, {
+    "id": 5,
+    "url": "http://localhost:4000/jekyll/update/2024/12/01/movietest.html",
+    "title": "Lub zog ntawm txoj kev hlub! Tsawg tiam los tseem nco",
+    "body": "2024/12/01 - "
+    }, {
+    "id": 6,
+    "url": "http://localhost:4000/jekyll/update/2024/12/01/test-post.html",
+    "title": "Test Post",
+    "body": "2024/12/01 - Hey here’s a test post! does this link work? "
+    }, {
+    "id": 7,
+    "url": "http://localhost:4000/jekyll/update/2024/12/01/ABC.html",
+    "title": "ABC",
+    "body": "2024/12/01 - "
+    }, {
+    "id": 8,
+    "url": "http://localhost:4000/jekyll/update/2024/12/01/1985.html",
+    "title": "1985",
+    "body": "2024/12/01 - "
+    }];
+
+var idx = lunr(function () {
+    this.ref('id')
+    this.field('title')
+    this.field('body')
+
+    documents.forEach(function (doc) {
+        this.add(doc)
+    }, this)
+});
+function lunr_search(term) {
+    document.getElementById('lunrsearchresults').innerHTML = '<ul></ul>';
+    if(term) {
+        document.getElementById('lunrsearchresults').innerHTML = "<p>Search results for '" + term + "'</p>" + document.getElementById('lunrsearchresults').innerHTML;
+        //put results on the screen.
+        var results = idx.search(term);
+        if(results.length>0){
+            //console.log(idx.search(term));
+            //if results
+            for (var i = 0; i < results.length; i++) {
+                // more statements
+                var ref = results[i]['ref'];
+                var url = documents[ref]['url'];
+                var title = documents[ref]['title'];
+                var body = documents[ref]['body'].substring(0,160)+'...';
+                document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML + "<li class='lunrsearchresult'><a href='" + url + "'><span class='title'>" + title + "</span><br /><span class='body'>"+ body +"</span><br /><span class='url'>"+ url +"</span></a></li>";
+            }
+        } else {
+            document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = "<li class='lunrsearchresult'>No results found...</li>";
+        }
+    }
+    return false;
+}
+</script>
+<style>
+    #lunrsearchresults {padding-top: 0.2rem;}
+    .lunrsearchresult {padding-bottom: 1rem;}
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+<form onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <p><input type="text" class="form-control" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Search via Lunr.js" /></p>
+</form>
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
