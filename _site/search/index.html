@@ -29,21 +29,31 @@ var documents = [{
     "body": "2024/12/05 - "
     }, {
     "id": 5,
-    "url": "http://localhost:4000/jekyll/update/2024/12/01/movietest.html",
-    "title": "Lub zog ntawm txoj kev hlub! Tsawg tiam los tseem nco",
-    "body": "2024/12/01 - "
+    "url": "http://localhost:4000/movie/Lubzog",
+    "title": "Lub zog ntawm txoj kev hlub! Tsawg tiam los tseem nco this aint gonna work no mo",
+    "body": "2024/12/01 - Tub Tswb Lauj, Vas Lauj, Mab Sua Lis, Yi Xyooj, Ntxhee Lis, Dao Yang, Kiab Thoj, Phooj Yaj, Lwm Vaj, Maiv Ko Thoj, Vam Txoov Vaj, Dee Vaj, Pov Lauj Tsab, Thej Vaj, Tub Tshaj Ki Yaj, Paj Tshiab Yaj, Toog Ham, Zaj Tsoo Lauj, Yeev Yaj, Plag Vaj, Cos Phees ice "
     }, {
     "id": 6,
+    "url": "http://localhost:4000/movie/layout",
+    "title": "Layout",
+    "body": "2024/12/01 - Tub Tswb Lauj, Vas Lauj, Mab Sua Lis, Yi Xyooj, Ntxhee Lis, Dao Yang, Kiab Thoj, Phooj Yaj, Lwm Vaj, Maiv Ko Thoj, Vam Txoov Vaj, Dee Vaj, Pov Lauj Tsab, Thej Vaj, Tub Tshaj Ki Yaj, Paj Tshiab Yaj, Toog Ham, Zaj Tsoo Lauj, Yeev Yaj, Plag Vaj, Cos Phees ice "
+    }, {
+    "id": 7,
     "url": "http://localhost:4000/jekyll/update/2024/12/01/test-post.html",
     "title": "Test Post",
     "body": "2024/12/01 - Hey here’s a test post! does this link work? "
     }, {
-    "id": 7,
+    "id": 8,
+    "url": "http://localhost:4000/cast/MaSuaLis",
+    "title": "Ma Sua Lis",
+    "body": "2024/12/01 - "
+    }, {
+    "id": 9,
     "url": "http://localhost:4000/jekyll/update/2024/12/01/ABC.html",
     "title": "ABC",
     "body": "2024/12/01 - "
     }, {
-    "id": 8,
+    "id": 10,
     "url": "http://localhost:4000/jekyll/update/2024/12/01/1985.html",
     "title": "1985",
     "body": "2024/12/01 - "
@@ -73,7 +83,8 @@ function lunr_search(term) {
                 var url = documents[ref]['url'];
                 var title = documents[ref]['title'];
                 var body = documents[ref]['body'].substring(0,160)+'...';
-                document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML + "<li class='lunrsearchresult'><a href='" + url + "'><span class='title'>" + title + "</span><br /><span class='body'>"+ body +"</span><br /><span class='url'>"+ url +"</span></a></li>";
+                // document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML + "<li class='lunrsearchresult'><a href='" + url + "'><span class='title'>" + title + "</span><br /><span class='body'>"+ body +"</span><br /><span class='url'>"+ url +"</span></a></li>";
+                document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML + "<li class='lunrsearchresult'><a href='" + url + "'><span class='title'>" + title + "</span><br /><span class='url'>"+ url +"</span></a></li>";
             }
         } else {
             document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = "<li class='lunrsearchresult'>No results found...</li>";

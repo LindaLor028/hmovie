@@ -1,0 +1,23 @@
+<!-- GET THE MOVIE AND STORE IT IN THE VARIABLE, film -->
+{% for movie in site.data.movies %}
+    {% if movie.name contains page.movie_title%}
+        {% assign film = movie%}
+        {% endif%}
+{% endfor%}
+
+<!-- RETURN THE HTML GOOD STUFF TO DISPLAY THE CAST!-->
+<div class="scroll">
+    {% for actor in film.cast%}
+        {% for person in site.data.casts %}
+            {% if actor.name == person.name%}
+                <a href="{{ person.link }}" >
+                <div class="actor_div">
+                    <img src="{{person.thumbnail}}" alt="Cast Thumbnail" width="80px">
+                    <br>
+                    <a href="{{ person.link }}">{{%actor.name %}} </a>
+                </div> </a>
+                {% endif%}
+    {% endfor %}
+{% endfor %}
+
+</div>

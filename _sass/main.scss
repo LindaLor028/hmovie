@@ -13,6 +13,14 @@ h1 {
     width: auto;
 }
 
+// Testing for video
+.movie_videoview {
+    display: grid;
+    column-gap: 0.5rem;
+    grid-template-columns: 1fr 2fr;
+    width: auto;
+}
+
 .centercontent {
     margin: 5%;
     margin-left: 10rem;
@@ -57,6 +65,11 @@ h1 {
     background-color: white;
     margin: 0.5rem;
     padding: 0.5rem;
+}
+
+.actor_div img{
+    border-radius: 50px;
+
 }
 
 .section {
