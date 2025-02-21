@@ -1,6 +1,33 @@
-<head>
-    <meta charset="UTF-8">
-    <title> {{ %page.movie_title% }} </title>
-    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css">
-</head>
-<a href="http://127.0.0.1:4000"> HOME </a>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> {{ %page.title% }} </title>
+        <link href="/assets/css/styles.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <!-- GET THE ACTOR/ACTRESS AND STORE IT IN THE VARIABLE, film -->
+    {% for person in site.data.actors %}
+        {% if person.name contains page.title%}
+            {% assign actor = person%}
+            {% endif%}
+    {% endfor%}
+
+    <body>
+        <!-- Site Header-->
+        {% include site_header.html %}
+    
+        <div class="centercontent">
+            <div class="movie_videoview">
+                <img src="{{actor.thumbnail}}" alt="{{actor.name}}" width="100%">
+
+                <div>
+                    <h1>{{actor.name}}</h1>
+
+                    <h2> Featured Works</h2>
+                    {% include display_cast_movies.html %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

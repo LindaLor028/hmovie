@@ -35,13 +35,14 @@
 
 - name: "Lub zog ntawm txoj kev hlub! Tsawg tiam los tseem nco"
   producer: M & Y Entertainment Center
-  link: "http://127.0.0.1:4000/jekyll/update/2024/12/01/movietest.html"
+  link: "http://127.0.0.1:4000/movie/layout"
   thumbnail: "/assets/images/movie_thumbnails/Lub xog ntawm txoj kev hlub! pt2.png"
   sequel: ""
   synopsis: "This movie is about a girl and a boy. They are in a movie together. Super long text. This movie is about a girl and a boy. They are in a movie together. Super long text. This movie is about a girl and a boy. They are in a movie together. Super long text. This movie is about a girl and a boy. They are in a movie together. Super long text. This movie is about a girl and a boy. They are in a movie together. Super long text. This movie is about a girl and a boy. They are in a movie together. Super long text. This movie is about a girl and a boy. They are in a movie together. Super long text. This movie is about a girl and a boy. They are in a movie together. Super long text. "
   producers: Tswb Yaj
   director: Dao Yang
   ppl: "Tub Tswb Lauj, Vas Lauj, Mab Sua Lis, Yi Xyooj, Ntxhee Lis, Dao Yang, Kiab Thoj, Phooj Yaj, Lwm Vaj, Maiv Ko Thoj, Vam Txoov Vaj, Dee Vaj, Pov Lauj Tsab, Thej Vaj, Tub Tshaj Ki Yaj, Paj Tshiab Yaj, Toog Ham, Zaj Tsoo Lauj, Yeev Yaj, Plag Vaj, Cos Phees"
+  video: "https://www.youtube.com/embed/MzFABWO59UU"
   cast:
   - name: "Tub Tswb Lauj"
   - name: "Vas Lauj"

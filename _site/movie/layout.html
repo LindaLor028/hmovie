@@ -5,41 +5,152 @@
         <title> Lub zog ntawm txoj kev hlub! Tsawg tiam los tseem nco </title>
         <link href="/assets/css/styles.css" rel="stylesheet" type="text/css">
     </head>
-    <a href="http://127.0.0.1:4000"> HOME </a>
 
-<!-- GET THE MOVIE AND STORE IT IN THE VARIABLE, film -->
+    <body>
+    <!-- Site Header-->
+    <header class="site_header">
+    <a href="http://127.0.0.1:4000"> Hmovie </a>
+    <form action="/search/" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search"/>
+    </form>
+    <a href="http://127.0.0.1:4000/about/"><button> About </button> </a>
+    <button> Explore </button>
+    <button> Contribute </button>
+</header>
 
+    <!-- GET THE MOVIE AND STORE IT IN THE VARIABLE, film -->
+    
 
-<!-- PUT ALL PAGE CONTENT IN A DIV WITH MARGIN SO ALL THE CONTENT DOESN'T BLOW OUT-->
-<div class="centercontent"> 
-    <h1 alt="Movie Title"> Lub zog ntawm txoj kev hlub! Tsawg tiam los tseem nco </h1>
-    <!-- <img src="/assets/images/full.jpeg" alt=" Movie Poster" width="100%"> -->
-    <br>
-    <div class="movie_videoview">
-        <div class="movie_postercontainer">
-            <img src="/assets/images/movie_thumbnails/Lub xog ntawm txoj kev hlub! pt2.png" alt="Lub zog ntawm txoj kev hlub! Tsawg tiam los tseem nco Movie Poster" width="80%">
-        </div>
-        
-        <div>
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/MzFABWO59UU" title="Lub zog ntawm txoj kev hlub" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    <!-- FORMAT THE FIRST CHUNK OF THE MOVIE CONTENT TO BE SIDE BY SIDE -->
-        </div>
-        
+    <!-- Movie Video PopUp -->
+    <div id="black_bg" onclick="closePopUp()">
+        <button id="close_popup_button">x</button>
+        <div id="movie_popup"></div>
     </div>
 
+    <!-- PUT ALL PAGE CONTENT IN A DIV WITH MARGIN SO ALL THE CONTENT DOESN'T BLOW OUT-->
+    <div class="centercontent"> 
+
+        <!-- Put title and button beside one another-->
+        <div class="movie_videoview_title">
+            <h1 alt="Movie Title"> Lub zog ntawm txoj kev hlub! Tsawg tiam los tseem nco </h1>
+            <!-- TODO: Only generate this button if the video variable is not null-->
+            <button type="button" class="video_button" onclick="triggerPopUp()"> Watch Movie </button>
+        </div>
+
+        <br>
+        <!-- Under the title, create two columns -->
+        <div class="movie_videoview">
+            <!-- Column 1: Holds Movie Meta Data -->
+            <div class="movie_postercontainer">
+                <img src="/assets/images/movie_thumbnails/Lub xog ntawm txoj kev hlub! pt2.png" alt="Lub zog ntawm txoj kev hlub! Tsawg tiam los tseem nco Movie Poster" width="100%">
+                <p> Year of Production: Tswb Yaj</p>
+                <p> Producer(s): Tswb Yaj</p>
+                <p> Written by: </p>
+                <p> Release Type: </p>
+                <p> Storage Location: </p>
+            </div>  
+
+            <!-- Column 2: Holds Movie Details -->
+            <div>
+                <p> This movie is about a girl and a boy. They are in a movie together. Super long text. This movie is about a girl and a boy. They are in a movie together. Super long text. This movie is about a girl and a boy. They are in a movie together. Super long text. This movie is about a girl and a boy. They are in a movie together. Super long text. This movie is about a girl and a boy. They are in a movie together. Super long text. This movie is about a girl and a boy. They are in a movie together. Super long text. This movie is about a girl and a boy. They are in a movie together. Super long text. This movie is about a girl and a boy. They are in a movie together. Super long text.  </p>
+                
+                <h1> Cast </h1>
+                <!-- GET THE MOVIE AND STORE IT IN THE VARIABLE, film -->
 
 
-
-
-
-
-    <h1> Parts </h1>
+<!-- RETURN THE HTML GOOD STUFF TO DISPLAY THE CAST!-->
+<div class="scroll">
     
-        <p> This movie does not have parts. </p>
+        
+            
+    
+            
+                <a href="/404.html" >
+                <div class="actor_div">
+                    <img src="" alt="Cast Thumbnail" width="80px">
+                    <br>
+                    <a href="/404.html">Tub Tswb Lauj </a>
+                </div> </a>
+                
+    
+            
+    
+
+        
+            
+    
+            
+    
+            
+                <a href="/404.html" >
+                <div class="actor_div">
+                    <img src="" alt="Cast Thumbnail" width="80px">
+                    <br>
+                    <a href="/404.html">Vas Lauj </a>
+                </div> </a>
+                
+    
+
+        
+            
+                <a href="/cast/MaSuaLis" >
+                <div class="actor_div">
+                    <img src="/assets/images/cast_thumbnails/Mab Sua Lis.png" alt="Cast Thumbnail" width="80px">
+                    <br>
+                    <a href="/cast/MaSuaLis">Mab Sua Lis </a>
+                </div> </a>
+                
+    
+            
+    
+            
     
 
 
 </div>
+                
+                <h1> Parts </h1>
+                <!-- GET THE MOVIE AND STORE IT IN THE VARIABLE, film -->
 
+
+    
+        <p> This movie does not have parts. </p>
+    
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+</div>
+</body>
 
 
 </html>
+
+<script>
+    function triggerPopUp() {
+    //   document.getElementById("movie_popup").style.width = "80%";
+    //   document.getElementById("movie_popup").style.height = "80%";
+      document.getElementById("black_bg").style.display = "block";
+      document.getElementById("movie_popup").innerHTML = "<iframe src=" + "https://www.youtube.com/embed/MzFABWO59UU" + " title=" + "Movie ></iframe>";
+    //   <iframe id="movie_popup" src="https://www.youtube.com/embed/MzFABWO59UU" title="Lub zog ntawm txoj kev hlub" frameborder=
+     }
+
+    function closePopUp() {
+      document.getElementById("movie_popup").style.width = "80%";
+      document.getElementById("movie_popup").style.height = "80%";
+      document.getElementById("black_bg").style.display = "none";
+      document.getElementById("movie_popup").innerHTML = "";
+
+    }
+
+    </script>

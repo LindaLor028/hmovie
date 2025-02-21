@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> {{ %page.title% }} </title>
+        <link href="/assets/css/styles.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <!-- Site Header-->
+        {% include site_header.html %}
+    
+        <div class="centercontent">
+            <div class="movie_videoview">
+                <div>
+                    <h1>Filters</h1>
+                    <button onclick="filterBy(name)"> Mab Sua Lis </button>
+                </div>
+
+                <div id="explore_movies">
+
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>
+
+<script>
+    function filterBy(name) {
+        document.getElementById("explore_movies").innerHTML = "hii";
+    }
+
+    </script>

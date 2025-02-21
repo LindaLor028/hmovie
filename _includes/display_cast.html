@@ -8,7 +8,7 @@
 <!-- RETURN THE HTML GOOD STUFF TO DISPLAY THE CAST!-->
 <div class="scroll">
     {% for actor in film.cast%}
-        {% for person in site.data.casts %}
+        {% for person in site.data.actors %}
             {% if actor.name == person.name%}
                 <a href="{{ person.link }}" >
                 <div class="actor_div">

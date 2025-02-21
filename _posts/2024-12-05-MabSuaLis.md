@@ -1,8 +1,8 @@
 ---
 layout: cast
-title:  "Ma Sua Lis"
+title:  "Mab Sua Lis"
 date:   2024-12-01 21:25:08 -0600
-categories: jekyll update
+categories: Mab Sua Lis
 
 permalink: "/cast/MaSuaLis"
 ---

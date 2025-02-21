@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title> About </title>
+        <title> Explore </title>
         <link href="/assets/css/styles.css" rel="stylesheet" type="text/css">
     </head>
 
@@ -20,8 +20,24 @@
 </header>
     
         <div class="centercontent">
-            <h1>About Hmovie</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div class="movie_videoview">
+                <div>
+                    <h1>Filters</h1>
+                    <button onclick="filterBy(name)"> Mab Sua Lis </button>
+                </div>
+
+                <div id="explore_movies">
+
+                </div>
+
+            </div>
         </div>
     </body>
 </html>
+
+<script>
+    function filterBy(name) {
+        document.getElementById("explore_movies").innerHTML = "hii";
+    }
+
+    </script>

@@ -52,6 +52,10 @@ function lunr_search(term) {
     }
     return false;
 }
+
+function goToSearchResults() {
+    window.location.href ="http://127.0.0.1:4000/search/";
+}
 </script>
 <style>
     #lunrsearchresults {padding-top: 0.2rem;}
@@ -62,7 +66,12 @@ function lunr_search(term) {
     .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
     .lunrsearchresult a:hover .title {text-decoration: underline;}
 </style>
-
+<!-- <form action="">
+    <p><input type="text" class="form-control" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Search via Lunr.js" /></p>
+</form>
+<div id="lunrsearchresults">
+    <ul></ul>
+</div> -->
 
 <form onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
     <p><input type="text" class="form-control" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Search via Lunr.js" /></p>

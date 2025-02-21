@@ -1,0 +1,22 @@
+    <!-- GET THE ACTOR/ACTRESS AND STORE IT IN THE VARIABLE, film -->
+    {% for person in site.data.actors %}
+        {% if person.name contains page.title%}
+            {% assign actor = person%}
+            {% endif%}
+    {% endfor%}
+
+<div class="cast_movies">
+    {% for movie in site.data.movies %}
+        {% for cast in movie.cast %}
+            {% if cast.name == actor.name %}
+                <a href="{{movie.link}}">
+                    <div>
+                        <img src="{{movie.thumbnail}}" alt="{{movie.name}} Movie Poster" width="100%">
+                        <p> {{movie.name}} </p>
+                    </div>
+                </a>
+            {% endif%}
+        {% endfor %}
+    {% endfor %}
+
+</div>

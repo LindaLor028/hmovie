@@ -44,16 +44,21 @@ var documents = [{
     "body": "2024/12/01 - Hey here’s a test post! does this link work? "
     }, {
     "id": 8,
-    "url": "http://localhost:4000/cast/MaSuaLis",
-    "title": "Ma Sua Lis",
+    "url": "http://localhost:4000/explore/",
+    "title": "Explore",
     "body": "2024/12/01 - "
     }, {
     "id": 9,
+    "url": "http://localhost:4000/cast/MaSuaLis",
+    "title": "Mab Sua Lis",
+    "body": "2024/12/01 - "
+    }, {
+    "id": 10,
     "url": "http://localhost:4000/jekyll/update/2024/12/01/ABC.html",
     "title": "ABC",
     "body": "2024/12/01 - "
     }, {
-    "id": 10,
+    "id": 11,
     "url": "http://localhost:4000/jekyll/update/2024/12/01/1985.html",
     "title": "1985",
     "body": "2024/12/01 - "
@@ -92,6 +97,10 @@ function lunr_search(term) {
     }
     return false;
 }
+
+function goToSearchResults() {
+    window.location.href ="http://127.0.0.1:4000/search/";
+}
 </script>
 <style>
     #lunrsearchresults {padding-top: 0.2rem;}
@@ -102,7 +111,12 @@ function lunr_search(term) {
     .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
     .lunrsearchresult a:hover .title {text-decoration: underline;}
 </style>
-
+<!-- <form action="">
+    <p><input type="text" class="form-control" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Search via Lunr.js" /></p>
+</form>
+<div id="lunrsearchresults">
+    <ul></ul>
+</div> -->
 
 <form onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
     <p><input type="text" class="form-control" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Search via Lunr.js" /></p>
@@ -110,3 +124,21 @@ function lunr_search(term) {
 <div id="lunrsearchresults">
     <ul></ul>
 </div>
+
+<script>
+    function getQueryVariable(variable) {
+        var query = window.location.search.substring(1),
+            vars = query.split("&");
+
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split("=");
+
+            if (pair[0] === variable) {
+                return decodeURIComponent(pair[1].replace(/\+/g, '%20')).trim();
+            }
+        }
+    }
+
+    var query = decodeURIComponent((getQueryVariable("q") || "").replace(/\+/g, "%20"));
+    lunr_search(query);
+</script>

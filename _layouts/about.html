@@ -2,22 +2,13 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title> About </title>
+        <title> {{ %page.title% }} </title>
         <link href="/assets/css/styles.css" rel="stylesheet" type="text/css">
     </head>
 
     <body>
         <!-- Site Header-->
-        <header class="site_header">
-    <a href="http://127.0.0.1:4000"> Hmovie </a>
-    <form action="/search/" method="get">
-        <input type="text" name="q" />
-        <input type="submit" value="Search"/>
-    </form>
-    <a href="http://127.0.0.1:4000/about/"><button> About </button> </a>
-    <button> Explore </button>
-    <button> Contribute </button>
-</header>
+        {% include site_header.html %}
     
         <div class="centercontent">
             <h1>About Hmovie</h1>
