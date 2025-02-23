@@ -43,8 +43,8 @@
 <body>
 
 <h2>My Phonebook</h2>
-<button onclick="filterAdele()"> Adele </button>
-<button onclick="filterCalvin()"> Calvin </button>
+<button onclick="filterInput('Adele')"> Adele </button>
+<button onclick="filterInput('Calvin')"> Calvin </button>
 <h3> Filters:</h3>
 <ul id="filters"></ul>
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
@@ -62,6 +62,14 @@
 </ul>
 
 <script>
+function filterInput(input) {
+    var ul, li;
+    var ul = document.getElementById("filters");
+    var li = document.createElement("li");
+    li.appendChild(document.createTextNode(input));
+    ul.appendChild(li);
+    filterItems();
+}
 function myFunction() {
     var input, filter, ul, li, a, i, txtValue;
     input = document.getElementById("myInput");
@@ -82,43 +90,16 @@ function myFunction() {
 function filterAdele() {
     var input, filter, ul, li, a, i, txtValue;
     input = "Adele";
-    // filter = input.toUpperCase();
-
-    // ul = document.getElementById("myUL");
-    // li = ul.getElementsByTagName("li");
-    // for (i = 0; i < li.length; i++) {
-    //     a = li[i].getElementsByTagName("a")[0];
-    //     txtValue = a.textContent || a.innerText;
-    //     if (txtValue.toUpperCase().indexOf(filter) > -1) {
-    //         li[i].style.display = "";
-    //     } else {
-    //         li[i].style.display = "none";
-    //     }
-    // }
-
     var ul = document.getElementById("filters");
     var li = document.createElement("li");
     li.appendChild(document.createTextNode(input));
     ul.appendChild(li);
-    // alert(li.id);
     filterItems();
 }
 
 function filterCalvin() {
     var input, filter, ul, li, a, i, txtValue;
     input = "Calvin";
-    // filter = input.toUpperCase();
-    // ul = document.getElementById("myUL");
-    // li = ul.getElementsByTagName("li");
-    // for (i = 0; i < li.length; i++) {
-    //     a = li[i].getElementsByTagName("a")[0];
-    //     txtValue = a.textContent || a.innerText;
-    //     if (txtValue.toUpperCase().indexOf(filter) > -1) {
-    //         li[i].style.display = "";
-    //     } else {
-    //         li[i].style.display = "none";
-    //     }
-    // }
     var ul = document.getElementById("filters");
     var li = document.createElement("li");
     li.appendChild(document.createTextNode(input));
@@ -137,22 +118,15 @@ function filterItems() {
                 li[s].style.display = "none";
         }
     for (let j = 0; j < size; j++) {
-        // input = filters[i];
         input= filters.childNodes[j].innerHTML.toUpperCase();
-        // console.log(input);
-
         for (i = 0; i < li.length; i++) {
             a = li[i].getElementsByTagName("a")[0];
             txtValue = a.textContent || a.innerText;
             if (txtValue.toUpperCase().indexOf(input) > -1) {
                 li[i].style.display = "";
-            } else {
-                // li[i].style.display = "none";
-            }
+            } 
         }
-
     }
-
 }
 </script>
 

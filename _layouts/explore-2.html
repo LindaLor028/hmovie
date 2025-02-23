@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="/assets/css/styles.css" rel="stylesheet" type="text/css">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+</style>
+</head>
+<body>
+    {% include site_header.html %}
+
+    <div class="centercontent">
+        <h2>Explore</h2>
+
+        <div class="movie_mainview" >
+
+            <div>
+
+                <ul id="movies_list">
+                    {% for movie in site.data.movies %}
+                        <li>
+                            <a href="{{movie.link}}">{{ %movie.name% }}</a>
+                            <p> {{%movie.year%}} </p>
+                        </li>
+                    {% endfor%}
+                </ul>
+                    
+            </div>
+
+            <div>
+                <button onclick="filterInput('Lub')"> Lub </button>
+                <button onclick="filterInput('Calvin')"> Calvin </button>
+                <button onclick="filterMultiple('2005')"> 2005 </button>
+                <h3> Filters:</h3>
+                <ul id="filters"></ul>
+            </div>
+            
+            <!-- <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name"> -->
+
+        </div>
+
+    </div>
+
+
+<script>
+function filterInput(input) {
+    var ul, li;
+    var ul = document.getElementById("filters");
+    var li = document.createElement("li");
+    li.appendChild(document.createTextNode(input));
+    ul.appendChild(li);
+    filterItems();
+}
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("movies_list");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        console.log(li[i].getElementsByTagName("a")[0]);
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+        console.log("loop itr done");
+    }
+}
+
+function filterItems() {
+    var input, filters, ul, li, a, i, txtValue;
+    filters = document.getElementById("filters");
+    var size = filters.childElementCount
+
+    ul = document.getElementById("movies_list");
+    li = ul.getElementsByTagName("li");
+    for (s = 0; s < li.length; s++) {
+                li[s].style.display = "none";
+        }
+    for (let j = 0; j < size; j++) {
+        input= filters.childNodes[j].innerHTML.toUpperCase();
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            console.log(li[i].getElementsByTagName("a")[0]);
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(input) > -1) {
+                li[i].style.display = "";
+            } 
+            else {
+            li[i].style.display = "none";
+        }
+        console.log("loop itr done");
+        }
+
+    }
+}
+
+function filterByYear(input) {
+    var movie_ul, movie_li, ul, li, input;
+    var movie_ul = document.getElementById("filters");
+    var movie_li = document.createElement("li");
+    movie_li.appendChild(document.createTextNode(input));
+    movie_ul.appendChild(movie_li);
+
+    filters = document.getElementById("filters");
+    var size = filters.childElementCount
+    ul = document.getElementById("movies_list");
+    li = ul.getElementsByTagName("li");
+    
+    for (s = 0; s < li.length; s++) {
+                li[s].style.display = "none";
+        }
+    for (let j = 0; j < size; j++) {
+        input= filters.childNodes[j].innerHTML.toUpperCase();
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("p")[0];
+            console.log(li[i].getElementsByTagName("p")[0]);
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(input) > -1) {
+                li[i].style.display = "";
+            } 
+            else {
+            li[i].style.display = "none";
+        }
+        }
+    }
+
+}
+
+function addFilter(input){
+    var filters_list, filter_item;
+
+    var filters_list = document.getElementById("filters");
+    var filter_item = document.createElement("li");
+    filter_item.appendChild(document.createTextNode(input));
+    filters_list.appendChild(filter_item);
+
+}
+
+function resetListItemsVisibility(numOfFilters) {
+    var movie_list, movie_items;
+    var movie_list = document.getElementById("movies_list");
+    var movie_items = movie_list.getElementsByTagName("a");
+
+    if (numOfFilters > 0 ) {
+        for (let movie_index = 0; movie_index < movie_items.length; movie_index++) {
+                movie_items[movie_index].style.display = "block";
+        }
+    }
+}
+
+function filterMultiple(input) {
+    var movie_list, movie_block, movie_p,filter_list, filter_input, current_movie;
+
+    var movie_list = document.getElementById("movies_list");
+    var movie_blocks = movie_list.getElementsByTagName("li");
+    var movie_p = movie_list.getElementsByTagName("p");
+
+    var filter_list = document.getElementById("filters");
+
+    // if filters list is empty, then reveal all items again
+    resetListItemsVisibility(filter_list.childElementCount);
+
+    // now add a filter to the filters list
+    addFilter(input);
+
+    // now actually do that filtering login
+    for (let filter_index = 0; filter_index < filter_list.childElementCount; filter_index ++ ) {
+        filter_input = filter_list.childNodes[filter_index].innerHTML.toUpperCase();
+
+        for (let movie_index = 0; movie_index < movie_blocks.length; movie_index ++) {
+            current_movie = movie_blocks[movie_index];
+            console.log(current_movie);
+            if (current_movie.style.display != "none") {
+                // a = movie_items[movie_index].getElementsByTagName("p")[0];
+                // console.log(movie_items[movie_index].innerHTML);
+                // console.log(movie_items[movie_index].getElementsByTagName("p")[0]);
+                p = current_movie.getElementsByTagName("p")[0];
+                txtValue = p.textContent || p.innerText;
+                if (txtValue.toUpperCase().indexOf(filter_input) > -1) {
+                    movie_blocks[movie_index].style.display = "";
+                } 
+                else {
+                    movie_blocks[movie_index].style.display = "none";
+            }
+        }
+
+        }}
+
+    }
+</script>
+
+</body>
+</html>

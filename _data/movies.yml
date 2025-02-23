@@ -2,11 +2,13 @@
   producer: "Illumination"
   link: "http://127.0.0.1:4000/jekyll/update/2024/12/05/welcome-to-jekyll.html"
   thumbnail: ""
+  year: "1990"
 
 - name: "Test Post"
   producer: "Illumination"
   link: "http://127.0.0.1:4000/jekyll/update/2024/12/01/test-post.html"
   thumbnail: ""
+  year: "2009"
 
 - name: "1985"
   producer: "Keng Vang"
@@ -15,6 +17,7 @@
   sequel: "ABC"
   basemovie: "1985"
   total_parts: 3
+  year: "2012"
 
 - name: "ABC"
   producer: "Binnie"
@@ -23,6 +26,7 @@
   sequel: "DEF"
   basemovie: "1985"
   total_parts: 3
+  year: "2005"
 
 - name: "DEF"
   producer: "Binnie"
@@ -31,6 +35,7 @@
   sequel: "NULL"
   basemovie: "1985"
   total_parts: 3
+  year: "2005"
 
 
 - name: "Lub zog ntawm txoj kev hlub! Tsawg tiam los tseem nco"
@@ -48,4 +53,5 @@
   - name: "Vas Lauj"
   - name: "Mab Sua Lis"
   basemovie: ""
+  year: "2005"
   total_parts: 1
