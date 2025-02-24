@@ -250,19 +250,22 @@ function filterMultiple() {
 
     // now actually do that filtering login - subtractive 
     var year_filters = filterByYear("year_filters");
-    console.log(year_filters[0]);
 
     var release_filters = filterByYear("release_filters");
-    console.log(release_filters[0]);
 
     var movies = document.getElementById("movies_list");
     var movie_blocks = movies.getElementsByTagName("li");
         for (let movie_index = 0; movie_index < movie_blocks.length; movie_index++ ) {
             p = movie_blocks[movie_index].getElementsByTagName("p")[0];
             txtValue = p.textContent || p.innerText;
-            if (txtValue.toUpperCase().includes(year_filters[0]) || txtValue.toUpperCase().includes(year_filters[1]) || txtValue.toUpperCase().includes(year_filters[2])) {
+            
+            if ((txtValue.toUpperCase().includes(year_filters[0]) || txtValue.toUpperCase().includes(year_filters[1]) || txtValue.toUpperCase().includes(year_filters[2])) && 
+                (txtValue.toUpperCase().includes(release_filters[0]) || txtValue.toUpperCase().includes(release_filters[1]) || txtValue.toUpperCase().includes(release_filters[2]))) {
                     // console.log("Making movie " + current_movie.innerHTML + " visible");
                     movie_blocks[movie_index].style.display = "";
+                    console.log("SHOWING MOVIE BC YEAR MATCH IS: " + (txtValue.toUpperCase().includes(year_filters[0]) || txtValue.toUpperCase().includes(year_filters[1]) || txtValue.toUpperCase().includes(year_filters[2])));
+                    console.log("SHOWING MOVIE BC RELEASE MATCH IS: " + txtValue.toUpperCase().includes(release_filters[0]) || txtValue.toUpperCase().includes(release_filters[1]) || txtValue.toUpperCase().includes(release_filters[2]));
+
                 } 
                 else {
                     movie_blocks[movie_index].style.display = "none";
