@@ -198,43 +198,23 @@ function reportCheckedFields() {
     }
 }
 
-function filterByYear(id) {
+function filterByCategory(id) {
     var filters = document.getElementById(id).getElementsByTagName("li");
 
-    var yearChecked = false; 
-    const years = [];
+    var hasChecked = false; 
+    const checked_filters = [];
     var array_index = 0;
     for (let i = 0; i < filters.length; i++ ) {
         
         if (filters[i].getElementsByTagName("input")[0].checked == true) {
             // console.log("at least one year is checked!")
-            years[array_index] =  filters[i].innerText.toUpperCase();
+            checked_filters[array_index] =  filters[i].innerText.toUpperCase();
             array_index++;
-            yearChecked = true;
+            hasChecked = true;
         }
     }
-    console.log("Years array " + years);
-    return years;
-
-    // var movies = document.getElementById("movies_list");
-    // var movie_blocks = movies.getElementsByTagName("li");
-    // if (yearChecked) {
-    //     for (let movie_index = 0; movie_index < movie_blocks.length; movie_index++ ) {
-    //         p = movie_blocks[movie_index].getElementsByTagName("p")[0];
-    //         txtValue = p.textContent || p.innerText;
-    //         if (txtValue.toUpperCase().includes(years[0]) || txtValue.toUpperCase().includes(years[1]) || txtValue.toUpperCase().includes(years[2])) {
-    //                 // console.log("Making movie " + current_movie.innerHTML + " visible");
-    //                 movie_blocks[movie_index].style.display = "";
-    //             } 
-    //             else {
-    //                 movie_blocks[movie_index].style.display = "none";
-    //             }
-
-    //     }
-    // }
-    // else {
-    //     resetListItemsVisibility(0);
-    // }
+    
+    return checked_filters;
 }
 function filterMultiple() {
     var movie_list, movie_block, movie_p,filter_list, filter_input, current_movie;
@@ -249,9 +229,9 @@ function filterMultiple() {
     // resetListItemsVisibility(filter_list.childElementCount);
 
     // now actually do that filtering login - subtractive 
-    var year_filters = filterByYear("year_filters");
+    var year_filters = filterByCategory("year_filters");
 
-    var release_filters = filterByYear("release_filters");
+    var release_filters = filterByCategory("release_filters");
 
     var movies = document.getElementById("movies_list");
     var movie_blocks = movies.getElementsByTagName("li");
@@ -263,9 +243,6 @@ function filterMultiple() {
                 (txtValue.toUpperCase().includes(release_filters[0]) || txtValue.toUpperCase().includes(release_filters[1]) || txtValue.toUpperCase().includes(release_filters[2]))) {
                     // console.log("Making movie " + current_movie.innerHTML + " visible");
                     movie_blocks[movie_index].style.display = "";
-                    console.log("SHOWING MOVIE BC YEAR MATCH IS: " + (txtValue.toUpperCase().includes(year_filters[0]) || txtValue.toUpperCase().includes(year_filters[1]) || txtValue.toUpperCase().includes(year_filters[2])));
-                    console.log("SHOWING MOVIE BC RELEASE MATCH IS: " + txtValue.toUpperCase().includes(release_filters[0]) || txtValue.toUpperCase().includes(release_filters[1]) || txtValue.toUpperCase().includes(release_filters[2]));
-
                 } 
                 else {
                     movie_blocks[movie_index].style.display = "none";
