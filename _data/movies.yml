@@ -3,12 +3,14 @@
   link: "http://127.0.0.1:4000/jekyll/update/2024/12/05/welcome-to-jekyll.html"
   thumbnail: ""
   year: "1990"
+  release-type: "DVD"
 
 - name: "Test Post"
   producer: "Illumination"
   link: "http://127.0.0.1:4000/jekyll/update/2024/12/01/test-post.html"
   thumbnail: ""
   year: "2009"
+  release-type: "VHS"
 
 - name: "1985"
   producer: "Keng Vang"
@@ -18,6 +20,7 @@
   basemovie: "1985"
   total_parts: 3
   year: "2012"
+  release-type: "DVD"
 
 - name: "ABC"
   producer: "Binnie"
@@ -27,6 +30,7 @@
   basemovie: "1985"
   total_parts: 3
   year: "2005"
+  release-type: "DVD"
 
 - name: "DEF"
   producer: "Binnie"
@@ -36,6 +40,7 @@
   basemovie: "1985"
   total_parts: 3
   year: "2005"
+  release-type: "DVD"
 
 
 - name: "Lub zog ntawm txoj kev hlub! Tsawg tiam los tseem nco"
@@ -54,4 +59,5 @@
   - name: "Mab Sua Lis"
   basemovie: ""
   year: "2005"
+  release-type: "VHS"
   total_parts: 1

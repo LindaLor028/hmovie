@@ -64,32 +64,32 @@
                     
                         <li>
                             <a href="http://127.0.0.1:4000/jekyll/update/2024/12/05/welcome-to-jekyll.html">Despicable Me</a>
-                            <p> 1990 </p>
+                            <p> 1990 DVD</p>
                         </li>
                     
                         <li>
                             <a href="http://127.0.0.1:4000/jekyll/update/2024/12/01/test-post.html">Test Post</a>
-                            <p> 2009 </p>
+                            <p> 2009 VHS</p>
                         </li>
                     
                         <li>
                             <a href="http://127.0.0.1:4000/jekyll/update/2024/12/01/1985.html">1985</a>
-                            <p> 2012 </p>
+                            <p> 2012 DVD</p>
                         </li>
                     
                         <li>
                             <a href="http://127.0.0.1:4000/jekyll/update/2024/12/01/ABC.html">ABC</a>
-                            <p> 2005 </p>
+                            <p> 2005 DVD</p>
                         </li>
                     
                         <li>
                             <a href="http://127.0.0.1:4000/jekyll/update/2024/12/01/1985.html">DEF</a>
-                            <p> 2005 </p>
+                            <p> 2005 DVD</p>
                         </li>
                     
                         <li>
                             <a href="http://127.0.0.1:4000/movie/layout">Lub zog ntawm txoj kev hlub! Tsawg tiam los tseem nco</a>
-                            <p> 2005 </p>
+                            <p> 2005 VHS</p>
                         </li>
                     
                 </ul>
@@ -100,6 +100,10 @@
                 <button onclick="filterInput('Lub')"> Lub </button>
                 <button onclick="filterInput('Calvin')"> Calvin </button>
                 <button onclick="filterMultiple('2005')"> 2005 </button>
+                <button onclick="filterMultiple('2009')"> 2009 </button>
+                <button onclick="filterMultiple('DVD')"> DVD </button>
+                <button onclick="filterMultiple('VHS')"> VHS </button>
+                <input type="checkbox" onclick="filterMultiple('VHS')">VHS</input>
                 <h3> Filters:</h3>
                 <ul id="filters"></ul>
             </div>
@@ -214,7 +218,8 @@ function resetListItemsVisibility(numOfFilters) {
     var movie_list = document.getElementById("movies_list");
     var movie_items = movie_list.getElementsByTagName("a");
 
-    if (numOfFilters > 0 ) {
+    if (numOfFilters < 1 ) {
+        console.log("Resetting fields to visible!");
         for (let movie_index = 0; movie_index < movie_items.length; movie_index++) {
                 movie_items[movie_index].style.display = "block";
         }
@@ -222,6 +227,7 @@ function resetListItemsVisibility(numOfFilters) {
 }
 
 function filterMultiple(input) {
+    
     var movie_list, movie_block, movie_p,filter_list, filter_input, current_movie;
 
     var movie_list = document.getElementById("movies_list");
@@ -239,17 +245,20 @@ function filterMultiple(input) {
     // now actually do that filtering login
     for (let filter_index = 0; filter_index < filter_list.childElementCount; filter_index ++ ) {
         filter_input = filter_list.childNodes[filter_index].innerHTML.toUpperCase();
-
+        console.log(movie_blocks.length);
+        if (filter_index == 0 ) {
+            resetListItemsVisibility(filter_list.childElementCount);
+        }
         for (let movie_index = 0; movie_index < movie_blocks.length; movie_index ++) {
             current_movie = movie_blocks[movie_index];
+            
             console.log(current_movie);
             if (current_movie.style.display != "none") {
-                // a = movie_items[movie_index].getElementsByTagName("p")[0];
-                // console.log(movie_items[movie_index].innerHTML);
-                // console.log(movie_items[movie_index].getElementsByTagName("p")[0]);
                 p = current_movie.getElementsByTagName("p")[0];
                 txtValue = p.textContent || p.innerText;
-                if (txtValue.toUpperCase().indexOf(filter_input) > -1) {
+                // if (txtValue.toUpperCase().indexOf(filter_input) > -1) {
+                console.log("txtValue of " + current_movie + " is " + txtValue);
+                    if (txtValue.toUpperCase().includes(filter_input)) {
                     movie_blocks[movie_index].style.display = "";
                 } 
                 else {
