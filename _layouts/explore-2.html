@@ -70,10 +70,19 @@
                 <button onclick="filterMultiple('DVD')"> DVD </button>
                 <button onclick="filterMultiple('VHS')"> VHS </button> -->
                 <ul id="filter_checkboxes">
-                    <li> <input type="checkbox" onclick="filterMultiple('VHS')">VHS</input> </li>
-                    <li> <input type="checkbox" onclick="filterMultiple('DVD')">DVD</input> </li>
-                    <li> <input type="checkbox" onclick="filterMultiple('2005')">2005</input> </li>
-                    <li> <input type="checkbox" onclick="filterMultiple('2009')">2009</input> </li>
+                    <li> <input type="checkbox" onclick="filterMultiple('VHS')"/>
+                         <label>VHS</label>
+                    </li>
+                    <li> <input type="checkbox" onclick="filterMultiple('DVD')"/>
+                         <label>DVD</label>
+                    </li>
+                    <li> 
+                        <input type="checkbox" onclick="filterMultiple('2005')"/>
+                        <label>2005</label>
+                    </li>
+                    <li> <input type="checkbox" onclick="filterMultiple('2009')"/> 
+                         <label>2009</label>
+                    </li>
                 </ul>
                 <!-- <input type="checkbox" onclick="filterMultiple('VHS')">VHS</input> -->
                 <h3> Filters:</h3>
@@ -209,14 +218,13 @@ function reportCheckedFields() {
     }
 }
 function filterMultiple(input) {
-    
     var movie_list, movie_block, movie_p,filter_list, filter_input, current_movie;
 
     var movie_list = document.getElementById("movies_list");
     var movie_blocks = movie_list.getElementsByTagName("li");
     var movie_p = movie_list.getElementsByTagName("p");
 
-    var filter_list = document.getElementById("filters");
+    var filter_list = document.getElementById("filter_checkboxes");
     reportCheckedFields();
     // if filters list is empty, then reveal all items again
     resetListItemsVisibility(filter_list.childElementCount);
@@ -229,25 +237,30 @@ function filterMultiple(input) {
         current_movie = movie_blocks[movie_index];
 
         for (let filter_index = 0; filter_index < filter_list.childElementCount; filter_index ++) {
-            filter_input = filter_list.childNodes[filter_index].innerHTML.toUpperCase();
+            filter_input = filter_list.getElementsByTagName("li")[filter_index].innerText.toUpperCase();
+            filter_checked = filter_list.getElementsByTagName("li")[filter_index].getElementsByTagName("input")[0].checked;
+            //console.log(filter_list.getElementsByTagName("li")[filter_index].innerText + " is " + 
+            // filter_list.getElementsByTagName("li")[filter_index].getElementsByTagName("input")[0].checked);
 
             if (filter_index == 0 ) {
                 resetListItemsVisibility(filter_list.childElementCount);
             }
 
             // if (current_movie.style.display != "none") {
+            if (filter_checked == true) {
                 p = current_movie.getElementsByTagName("p")[0];
                 txtValue = p.textContent || p.innerText;
                 // if (txtValue.toUpperCase().indexOf(filter_input) > -1) {
                 // console.log("txtValue of " + current_movie + " is " + txtValue);
                 if (txtValue.toUpperCase().includes(filter_input)) {
-                    console.log("Making movie " + current_movie.innerHTML + " visible");
+                    // console.log("Making movie " + current_movie.innerHTML + " visible");
                     movie_blocks[movie_index].style.display = "";
                 } 
                 else {
                     movie_blocks[movie_index].style.display = "none";
                 }
             // }
+            }
         }
     }
 
