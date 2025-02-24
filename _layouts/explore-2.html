@@ -214,18 +214,24 @@ function filterByCategory(id) {
             hasChecked = true;
         }
     }
+    return checked_filters;
 
-    if (hasChecked) {
-        return checked_filters;
-    }
-    else {
-        console.log("returning " + all_filters);
-        return all_filters;
-    }
+    // if (hasChecked) {
+    //     return checked_filters;
+    // }
+    // else {
+    //     console.log("returning " + all_filters);
+    //     return all_filters;
+    // }
 }
 
 function verifyCheck(txtValue, list) {
     var hasAMatch = false;
+
+    if (list.length < 1) {
+        return true;
+    }
+    
     for (let i = 0; i < list.length; i ++) {
         hasAMatch = ((hasAMatch) || (txtValue.toUpperCase().includes(list[i])));
         console.log("comparing if " + txtValue + " includes " + list[i] + " which is " + hasAMatch);
