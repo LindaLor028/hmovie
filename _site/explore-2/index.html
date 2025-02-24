@@ -97,13 +97,19 @@
             </div>
 
             <div>
-                <button onclick="filterInput('Lub')"> Lub </button>
+                <!-- <button onclick="filterInput('Lub')"> Lub </button>
                 <button onclick="filterInput('Calvin')"> Calvin </button>
                 <button onclick="filterMultiple('2005')"> 2005 </button>
                 <button onclick="filterMultiple('2009')"> 2009 </button>
                 <button onclick="filterMultiple('DVD')"> DVD </button>
-                <button onclick="filterMultiple('VHS')"> VHS </button>
-                <input type="checkbox" onclick="filterMultiple('VHS')">VHS</input>
+                <button onclick="filterMultiple('VHS')"> VHS </button> -->
+                <ul id="filter_checkboxes">
+                    <li> <input type="checkbox" onclick="filterMultiple('VHS')">VHS</input> </li>
+                    <li> <input type="checkbox" onclick="filterMultiple('DVD')">DVD</input> </li>
+                    <li> <input type="checkbox" onclick="filterMultiple('2005')">2005</input> </li>
+                    <li> <input type="checkbox" onclick="filterMultiple('2009')">2009</input> </li>
+                </ul>
+                <!-- <input type="checkbox" onclick="filterMultiple('VHS')">VHS</input> -->
                 <h3> Filters:</h3>
                 <ul id="filters"></ul>
             </div>
@@ -216,7 +222,7 @@ function addFilter(input){
 function resetListItemsVisibility(numOfFilters) {
     var movie_list, movie_items;
     var movie_list = document.getElementById("movies_list");
-    var movie_items = movie_list.getElementsByTagName("a");
+    var movie_items = movie_list.getElementsByTagName("li");
 
     if (numOfFilters < 1 ) {
         console.log("Resetting fields to visible!");
@@ -226,6 +232,16 @@ function resetListItemsVisibility(numOfFilters) {
     }
 }
 
+function reportCheckedFields() {
+    var checkboxes = document.getElementById("filter_checkboxes");
+    console.log("reporting!");
+    for (let i = 0; i < checkboxes.childElementCount ; i ++ ) {
+        // console.log(checkboxes.getElementsByTagName("input")[i]);
+        if (checkboxes.getElementsByTagName("input")[i].checked == true) {
+            // console.log(checkboxes.childNodes[i] + " is checked!");
+        }
+    }
+}
 function filterMultiple(input) {
     
     var movie_list, movie_block, movie_p,filter_list, filter_input, current_movie;
@@ -235,38 +251,39 @@ function filterMultiple(input) {
     var movie_p = movie_list.getElementsByTagName("p");
 
     var filter_list = document.getElementById("filters");
-
+    reportCheckedFields();
     // if filters list is empty, then reveal all items again
     resetListItemsVisibility(filter_list.childElementCount);
 
     // now add a filter to the filters list
     addFilter(input);
 
-    // now actually do that filtering login
-    for (let filter_index = 0; filter_index < filter_list.childElementCount; filter_index ++ ) {
-        filter_input = filter_list.childNodes[filter_index].innerHTML.toUpperCase();
-        console.log(movie_blocks.length);
-        if (filter_index == 0 ) {
-            resetListItemsVisibility(filter_list.childElementCount);
-        }
-        for (let movie_index = 0; movie_index < movie_blocks.length; movie_index ++) {
-            current_movie = movie_blocks[movie_index];
-            
-            console.log(current_movie);
-            if (current_movie.style.display != "none") {
+    // now actually do that filtering login - subtractive 
+    for (let movie_index = 0; movie_index < movie_blocks.length; movie_index ++) {
+        current_movie = movie_blocks[movie_index];
+
+        for (let filter_index = 0; filter_index < filter_list.childElementCount; filter_index ++) {
+            filter_input = filter_list.childNodes[filter_index].innerHTML.toUpperCase();
+
+            if (filter_index == 0 ) {
+                resetListItemsVisibility(filter_list.childElementCount);
+            }
+
+            // if (current_movie.style.display != "none") {
                 p = current_movie.getElementsByTagName("p")[0];
                 txtValue = p.textContent || p.innerText;
                 // if (txtValue.toUpperCase().indexOf(filter_input) > -1) {
-                console.log("txtValue of " + current_movie + " is " + txtValue);
-                    if (txtValue.toUpperCase().includes(filter_input)) {
+                // console.log("txtValue of " + current_movie + " is " + txtValue);
+                if (txtValue.toUpperCase().includes(filter_input)) {
+                    console.log("Making movie " + current_movie.innerHTML + " visible");
                     movie_blocks[movie_index].style.display = "";
                 } 
                 else {
                     movie_blocks[movie_index].style.display = "none";
-            }
+                }
+            // }
         }
-
-        }}
+    }
 
     }
 </script>
