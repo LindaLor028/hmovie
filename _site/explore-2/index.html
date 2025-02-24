@@ -113,9 +113,6 @@
                     </li>
                 </ul>
             </div>
-            
-            <!-- <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name"> -->
-
         </div>
 
     </div>
@@ -251,8 +248,6 @@ function filterMultiple() {
         for (let filter_index = 0; filter_index < filter_list.childElementCount; filter_index ++) {
             filter_input = filter_list.getElementsByTagName("li")[filter_index].innerText.toUpperCase();
             filter_checked = filter_list.getElementsByTagName("li")[filter_index].getElementsByTagName("input")[0].checked;
-            //console.log(filter_list.getElementsByTagName("li")[filter_index].innerText + " is " + 
-            // filter_list.getElementsByTagName("li")[filter_index].getElementsByTagName("input")[0].checked);
 
             if (filter_index == 0 ) {
                 resetListItemsVisibility(filter_list.childElementCount);
