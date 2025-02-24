@@ -219,10 +219,23 @@ function filterByCategory(id) {
         return checked_filters;
     }
     else {
+        console.log("returning " + all_filters);
         return all_filters;
     }
-    
 }
+
+function verifyCheck(txtValue, list) {
+    var hasAMatch = false;
+    for (let i = 0; i < list.length; i ++) {
+        hasAMatch = ((hasAMatch) || (txtValue.toUpperCase().includes(list[i])));
+        console.log("comparing if " + txtValue + " includes " + list[i] + " which is " + hasAMatch);
+        if (hasAMatch) {
+            break;
+        }
+    }
+    return hasAMatch;
+}
+
 function filterMultiple() {
     var movie_list, movie_block, movie_p,filter_list, filter_input, current_movie;
 
@@ -245,9 +258,11 @@ function filterMultiple() {
         for (let movie_index = 0; movie_index < movie_blocks.length; movie_index++ ) {
             p = movie_blocks[movie_index].getElementsByTagName("p")[0];
             txtValue = p.textContent || p.innerText;
-            
-            if ((txtValue.toUpperCase().includes(year_filters[0]) || txtValue.toUpperCase().includes(year_filters[1]) || txtValue.toUpperCase().includes(year_filters[2])) && 
-                (txtValue.toUpperCase().includes(release_filters[0]) || txtValue.toUpperCase().includes(release_filters[1]) || txtValue.toUpperCase().includes(release_filters[2]))) {
+            // verifyCheck(txtValue, year_filters);
+            // if ((txtValue.toUpperCase().includes(year_filters[0]) || txtValue.toUpperCase().includes(year_filters[1]) || txtValue.toUpperCase().includes(year_filters[2])) && 
+            // (txtValue.toUpperCase().includes(release_filters[0]) || txtValue.toUpperCase().includes(release_filters[1]) || txtValue.toUpperCase().includes(release_filters[2]))) {
+
+            if ((verifyCheck(txtValue, year_filters)) && (verifyCheck(txtValue, release_filters))) {
                     // console.log("Making movie " + current_movie.innerHTML + " visible");
                     movie_blocks[movie_index].style.display = "";
                 } 
