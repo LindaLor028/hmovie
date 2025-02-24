@@ -203,18 +203,25 @@ function filterByCategory(id) {
 
     var hasChecked = false; 
     const checked_filters = [];
+    const all_filters = [];
     var array_index = 0;
     for (let i = 0; i < filters.length; i++ ) {
-        
+        all_filters[i] = filters[i].innerText.toUpperCase();
         if (filters[i].getElementsByTagName("input")[0].checked == true) {
-            // console.log("at least one year is checked!")
+            // console.log("at least one checkbox is checked!")
             checked_filters[array_index] =  filters[i].innerText.toUpperCase();
             array_index++;
             hasChecked = true;
         }
     }
+
+    if (hasChecked) {
+        return checked_filters;
+    }
+    else {
+        return all_filters;
+    }
     
-    return checked_filters;
 }
 function filterMultiple() {
     var movie_list, movie_block, movie_p,filter_list, filter_input, current_movie;
