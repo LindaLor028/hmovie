@@ -97,30 +97,21 @@
             </div>
 
             <div>
-                <!-- <button onclick="filterInput('Lub')"> Lub </button>
-                <button onclick="filterInput('Calvin')"> Calvin </button>
-                <button onclick="filterMultiple('2005')"> 2005 </button>
-                <button onclick="filterMultiple('2009')"> 2009 </button>
-                <button onclick="filterMultiple('DVD')"> DVD </button>
-                <button onclick="filterMultiple('VHS')"> VHS </button> -->
                 <ul id="filter_checkboxes">
-                    <li> <input type="checkbox" onclick="filterMultiple('VHS')"/>
+                    <li> <input type="checkbox" onclick="filterMultiple()"/>
                          <label>VHS</label>
                     </li>
-                    <li> <input type="checkbox" onclick="filterMultiple('DVD')"/>
+                    <li> <input type="checkbox" onclick="filterMultiple()"/>
                          <label>DVD</label>
                     </li>
                     <li> 
-                        <input type="checkbox" onclick="filterMultiple('2005')"/>
+                        <input type="checkbox" onclick="filterMultiple()"/>
                         <label>2005</label>
                     </li>
-                    <li> <input type="checkbox" onclick="filterMultiple('2009')"/> 
+                    <li> <input type="checkbox" onclick="filterMultiple()"/> 
                          <label>2009</label>
                     </li>
                 </ul>
-                <!-- <input type="checkbox" onclick="filterMultiple('VHS')">VHS</input> -->
-                <h3> Filters:</h3>
-                <ul id="filters"></ul>
             </div>
             
             <!-- <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name"> -->
@@ -218,16 +209,6 @@ function filterByYear(input) {
 
 }
 
-function addFilter(input){
-    var filters_list, filter_item;
-
-    var filters_list = document.getElementById("filters");
-    var filter_item = document.createElement("li");
-    filter_item.appendChild(document.createTextNode(input));
-    filters_list.appendChild(filter_item);
-
-}
-
 function resetListItemsVisibility(numOfFilters) {
     var movie_list, movie_items;
     var movie_list = document.getElementById("movies_list");
@@ -251,7 +232,7 @@ function reportCheckedFields() {
         }
     }
 }
-function filterMultiple(input) {
+function filterMultiple() {
     var movie_list, movie_block, movie_p,filter_list, filter_input, current_movie;
 
     var movie_list = document.getElementById("movies_list");
@@ -262,9 +243,6 @@ function filterMultiple(input) {
     reportCheckedFields();
     // if filters list is empty, then reveal all items again
     resetListItemsVisibility(filter_list.childElementCount);
-
-    // now add a filter to the filters list
-    addFilter(input);
 
     // now actually do that filtering login - subtractive 
     for (let movie_index = 0; movie_index < movie_blocks.length; movie_index ++) {
