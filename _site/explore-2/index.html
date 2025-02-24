@@ -104,6 +104,8 @@
                     <li> <input type="checkbox" onclick="filterMultiple()"/>
                          <label>DVD</label>
                     </li>
+                </ul>
+                <ul id="year_filters">
                     <li> 
                         <input type="checkbox" onclick="filterMultiple()"/>
                         <label>2005</label>
@@ -229,7 +231,43 @@ function reportCheckedFields() {
         }
     }
 }
+
+function filterByYear() {
+    var filters = document.getElementById("year_filters").getElementsByTagName("li");
+
+    var yearChecked = false; 
+    const years = [];
+    var array_index = 0;
+    for (let i = 0; i < filters.length; i++ ) {
+        
+        if (filters[i].getElementsByTagName("input")[0].checked == true) {
+            // console.log("at least one year is checked!")
+            years[array_index] =  filters[i].innerText.toUpperCase();
+            array_index++;
+            yearChecked = true;
+        }
+    }
+    // console.log(years);
+
+    var movies = document.getElementById("movies_list");
+    var movie_blocks = movies.getElementsByTagName("li");
+    if (yearChecked) {
+        for (let movie_index = 0; movie_index < movie_blocks.length; movie_index++ ) {
+            p = movie_blocks[movie_index].getElementsByTagName("p")[0];
+            txtValue = p.textContent || p.innerText;
+            if (txtValue.toUpperCase().includes(years[0]) || txtValue.toUpperCase().includes(years[1])) {
+                    // console.log("Making movie " + current_movie.innerHTML + " visible");
+                    movie_blocks[movie_index].style.display = "";
+                } 
+                else {
+                    movie_blocks[movie_index].style.display = "none";
+                }
+
+        }
+    }
+}
 function filterMultiple() {
+    filterByYear()
     var movie_list, movie_block, movie_p,filter_list, filter_input, current_movie;
 
     var movie_list = document.getElementById("movies_list");
