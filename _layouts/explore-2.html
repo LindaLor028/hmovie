@@ -4,28 +4,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="/assets/css/styles.css" rel="stylesheet" type="text/css">
 <style>
-* {
+/* * {
   box-sizing: border-box;
-}
+} */
 
-#myInput {
-  background-image: url('/css/searchicon.png');
-  background-position: 10px 12px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-}
-
-#myUL {
+#movies_list {
   list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 150px));
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+  column-gap: 1rem;
+  row-gap: 1rem;
   padding: 0;
   margin: 0;
 }
 
-#myUL li a {
+#movies_list li {
   border: 1px solid #ddd;
   margin-top: -1px; /* Prevent double borders */
   background-color: #f6f6f6;
@@ -36,8 +30,13 @@
   display: block
 }
 
-#myUL li a:hover:not(.header) {
+#movies_list li a:hover:not(.header) {
   background-color: #eee;
+}
+
+.filter_list {
+    list-style-type: none;
+    width: 100%;
 }
 </style>
 </head>
@@ -54,8 +53,12 @@
                 <ul id="movies_list">
                     {% for movie in site.data.movies %}
                         <li>
-                            <a href="{{movie.link}}">{{ %movie.name% }}</a>
-                            <p> {{%movie.year%}} {{%movie.release-type%}}</p>
+                            <a href="{{movie.link}}">
+                                <img src="{{movie.thumbnail}}" alt="movie link" width="100%">
+                                <div>{{ %movie.name% }}</div>
+                                <p> {{%movie.year%}} {{%movie.release-type%}}</p>
+                                <!-- <p style="display: none"> {{%movie.year%}} {{%movie.release-type%}}</p> -->
+                            </a>
                         </li>
                     {% endfor%}
                 </ul>
@@ -63,21 +66,23 @@
             </div>
 
             <div>
-                <ul id="release_filters">
-                    <li> <input type="checkbox" onclick="filterMultiple()"/>
-                         <label>VHS</label>
-                    </li>
-                    <li> <input type="checkbox" onclick="filterMultiple()"/>
-                         <label>DVD</label>
-                    </li>
-                </ul>
-                <ul id="year_filters">
+                <h2>Year of Release </h2>
+                <ul id="year_filters" class="filter_list">
                     <li> 
                         <input type="checkbox" onclick="filterMultiple()"/>
                         <label>2005</label>
                     </li>
                     <li> <input type="checkbox" onclick="filterMultiple()"/> 
                          <label>2009</label>
+                    </li>
+                </ul>
+                <h2>Release Type</h2>
+                <ul id="release_filters" class="filter_list">
+                    <li> <input type="checkbox" onclick="filterMultiple()"/>
+                         <label>VHS</label>
+                    </li>
+                    <li> <input type="checkbox" onclick="filterMultiple()"/>
+                         <label>DVD</label>
                     </li>
                 </ul>
             </div>

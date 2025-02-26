@@ -14,7 +14,7 @@
 
 - name: "1985"
   producer: "Keng Vang"
-  link: "http://127.0.0.1:4000/jekyll/update/2024/12/01/1985.html"
+  link: "http://127.0.0.1:4000/movie/1985"
   thumbnail: "/assets/images/1985_thumbnail.jpg"
   sequel: "ABC"
   basemovie: "1985"
@@ -24,7 +24,7 @@
 
 - name: "ABC"
   producer: "Binnie"
-  link: "http://127.0.0.1:4000/jekyll/update/2024/12/01/ABC.html"
+  link: "http://127.0.0.1:4000/movie/ABC"
   thumbnail: "/assets/images/1985_thumbnail.jpg"
   sequel: "DEF"
   basemovie: "1985"
@@ -34,7 +34,7 @@
 
 - name: "DEF"
   producer: "Binnie"
-  link: "http://127.0.0.1:4000/jekyll/update/2024/12/01/1985.html"
+  link: "http://127.0.0.1:4000/movie/DEF"
   thumbnail: "/assets/images/1985_thumbnail.jpg"
   sequel: "NULL"
   basemovie: "1985"
