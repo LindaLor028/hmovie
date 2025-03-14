@@ -1,9 +1,25 @@
 - name: "Mab Sua Lis"
   thumbnail: "/assets/images/cast_thumbnails/Mab Sua Lis.png"
-  link: "/cast/MaSuaLis"
+  link: "/cast/Ma-Sua-Lis"
 
 - name: "Tub Tswb Lauj"
   link: /404.html
 
 - name: "Vas Lauj"
   link: /404.html
+
+- name: "Ntxhoo Lauj"
+  thumbnail: "/assets/images/cast_thumbnails/Ntxhoo Lauj.png"
+  link: "/cast/Ntxhoo-Lauj"
+
+- name: "Keeb Yaj"
+
+- name: "Khais Lauj"
+
+- name: "Tswb Yaj"
+
+- name: "Ntxhi Vaj"
+
+- name: "Kooj Hawj"
+
+- name: "Sua Lis"

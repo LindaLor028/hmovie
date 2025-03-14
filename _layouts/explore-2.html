@@ -53,7 +53,11 @@
                 <ul id="movies_list">
                     {% for movie in site.data.movies %}
                         <li>
-                            <a href="{{movie.link}}">
+                            <a href="{{movie.link}}" data-asdfasdf="{{ }}">
+                                <!-- <a href="{{ movie.link }}" data-type="{% for person in movie.cast %}{{ person }}{% if forloop.last == false %}, {% endif %}{% endfor %}"> -->
+                                    <a href="{{ movie.link }}" data-type="{% for person in movie.cast %}{{ person.name }}{% if forloop.last == false %}, {% endif %}{% endfor %}">
+
+
                                 <img src="{{movie.thumbnail}}" alt="movie link" width="100%">
                                 <div>{{ %movie.name% }}</div>
                                 <p> {{%movie.year%}} {{%movie.release-type%}}</p>

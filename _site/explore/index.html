@@ -128,6 +128,19 @@ function filterItems() {
         }
     }
 }
+
+function filterByYear(year) {
+  var year, current_movie, movie_list;
+
+  var displayed_ui = document.getElementById("ui_tag");
+
+  for (s = 0; s< movie_list.length; s++) {
+    displayed_ui.innerHTML = movie_list[s].getMovie().year;
+    li.appendChild(document.createTextNode(input));
+    ul.appendChild(li);
+    filterItems();
+  }
+}
 </script>
 
 </body>
