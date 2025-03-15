@@ -10,6 +10,7 @@
 
         <!-- If current movie is base movie, load all sequels -->
         {% if film.basemovie == page.movie_title%}
+        <p> This is  the first movie</p>
             {% assign sequel = film.sequel%}
             <div class="movie_parts_list">
             {% for counter in (0..film.total_parts)%}
