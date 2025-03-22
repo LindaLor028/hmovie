@@ -59,13 +59,11 @@
 <input type="text" id="myInput" onkeyup="newFilter()" placeholder="Search for names.." title="Type in a name">
 
 <ul id="movies_list">
-    {% for movie in site.data.movies %}
-        <li data-year="{{movie.year}}" data-movie-title="{{movie.name}}" data-cast-array="name guy; person dude; billy dude">
+    {% for movie in site.categories.movie %}
+        <li data-year="{{movie.year}}" data-movie-title="{{movie.name}}">
             <a href="{{movie.link}}">
                 <img src="{{movie.thumbnail}}" alt="movie link" width="100rem">
-                <div>{{ %movie.name% }}</div>
-                <p> {{%movie.year%}} {{%movie.release-type%}}</p>
-                <!-- <p style="display: none"> {{%movie.year%}} {{%movie.release-type%}}</p> -->
+                <div>{{ %movie.title% }}</div>
             </a>
         </li>
     {% endfor%}
