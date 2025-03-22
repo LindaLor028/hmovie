@@ -52,15 +52,15 @@
 
                 <ul id="movies_list">
                     {% for movie in site.categories.movie %}
-                        <li>
-                            <a href="{{movie.link}}" data-filter-data="{{ %movie.year% }} {{%movie.release-type%}}">
+                        <li data-filter-data="{{%movie.year%}} {{%movie.release-type%}}">
+                            <a href="{{movie.link}}">
                                 <!-- <a href="{{ movie.link }}" data-type="{% for person in movie.cast %}{{ person }}{% if forloop.last == false %}, {% endif %}{% endfor %}"> -->
                                     <a href="{{ movie.link }}" data-type="{% for person in movie.cast %}{{ person.name }}{% if forloop.last == false %}, {% endif %}{% endfor %}">
 
 
                                 <img src="{{movie.thumbnail}}" alt="movie link" width="100%">
                                 <div>{{ %movie.title% }}</div>
-                                <p> {{%movie.year%}} {{%movie.release-type%}}</p>
+                                <!-- <p> {{%movie.year%}} {{%movie.release-type%}}</p> -->
                                 <!-- <p style="display: none"> {{%movie.year%}} {{%movie.release-type%}}</p> -->
                             </a>
                         </li>
@@ -70,25 +70,26 @@
             </div>
 
             <div>
+                <button onclick="clearFilters()"> Clear Filters</button>
                 <h2>Year of Release </h2>
                 <ul id="year_filters" class="filter_list">
                     <li> 
-                        <input type="checkbox" onclick="filterMultiple()"/>
+                        <input type="checkbox" class="explore_checkbox" onclick="filterMultiple()"/>
                         <label>2005</label>
                     </li>
-                    <li> <input type="checkbox" onclick="filterMultiple()"/> 
+                    <li> <input type="checkbox" class="explore_checkbox" onclick="filterMultiple()"/> 
                          <label>2009</label>
                     </li>
-                    <li> <input type="checkbox" onclick="filterMultiple()"/> 
+                    <li> <input type="checkbox" class="explore_checkbox" onclick="filterMultiple()"/> 
                         <label>2000</label>
                    </li>
                 </ul>
                 <h2>Release Type</h2>
                 <ul id="release_filters" class="filter_list">
-                    <li> <input type="checkbox" onclick="filterMultiple()"/>
+                    <li> <input type="checkbox" class="explore_checkbox" onclick="filterMultiple()"/>
                          <label>VHS</label>
                     </li>
-                    <li> <input type="checkbox" onclick="filterMultiple()"/>
+                    <li> <input type="checkbox" class="explore_checkbox" onclick="filterMultiple()"/>
                          <label>DVD</label>
                     </li>
                 </ul>
@@ -245,7 +246,7 @@ function verifyCheck(txtValue, list) {
     }
     
     for (let i = 0; i < list.length; i ++) {
-        hasAMatch = ((hasAMatch) || (txtValue.toUpperCase().includes(list[i])));
+        hasAMatch = ((hasAMatch) || (txtValue.toUpperCase().includes(list[i].replaceAll(" ", ""))));
         console.log("comparing if " + txtValue + " includes " + list[i] + " which is " + hasAMatch);
         if (hasAMatch) {
             break;
@@ -254,7 +255,20 @@ function verifyCheck(txtValue, list) {
     return hasAMatch;
 }
 
+function clearFilters() {
+    resetListItemsVisibility(0);
+    // document.getElementById("#2005-label").removeAttr('checked');
+    var filters = document.getElementsByClassName("explore_checkbox");
+    for (let i = 0; i < filters.length; i++ ) {
+        filters[i].checked = false;
+    }
+
+}
+
 function filterMultiple() {
+    gg = "2000 VHS"
+    rr = " 2000"
+    console.log("TESTNIG " + gg.toUpperCase().includes(rr.toUpperCase()));
     var movie_list, movie_block, movie_p,filter_list, filter_input, current_movie;
 
     var movie_list = document.getElementById("movies_list");
@@ -274,8 +288,11 @@ function filterMultiple() {
     var movies = document.getElementById("movies_list");
     var movie_blocks = movies.getElementsByTagName("li");
         for (let movie_index = 0; movie_index < movie_blocks.length; movie_index++ ) {
-            p = movie_blocks[movie_index].getElementsByTagName("p")[0];
-            txtValue = p.textContent || p.innerText;
+            // p = movie_blocks[movie_index].getElementsByTagName("p")[0];
+            p = movie_blocks[movie_index].getAttribute("data-filter-data");
+            txtValue = p;
+            console.log("P value: " + p);
+            // txtValue = p.textContent || p.innerText;
             // verifyCheck(txtValue, year_filters);
             // if ((txtValue.toUpperCase().includes(year_filters[0]) || txtValue.toUpperCase().includes(year_filters[1]) || txtValue.toUpperCase().includes(year_filters[2])) && 
             // (txtValue.toUpperCase().includes(release_filters[0]) || txtValue.toUpperCase().includes(release_filters[1]) || txtValue.toUpperCase().includes(release_filters[2]))) {
@@ -291,7 +308,10 @@ function filterMultiple() {
         }
     
     }
+
+    
 </script>
+
 
 </body>
 </html>
