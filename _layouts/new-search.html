@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="/assets/css/styles.css" rel="stylesheet" type="text/css">
 <style>
 * {
   box-sizing: border-box;
@@ -51,53 +52,34 @@
 </style>
 </head>
 <body>
+{% include site_header.html %}
 
-<h2>My Phonebook</h2>
+    <div class="center_content">
+        <p id="search"></p>
+        <!-- <input type="text" id="myInput" onkeyup="newFilter()" placeholder="Search for names.." title="Type in a name"> -->
+<!-- 
+        <ul id="movies_list">
+            {% for movie in site.categories.movie %}
+                <li data-year="{{movie.year}}" data-movie-title="{{movie.name}}">
+                    <a href="{{movie.link}}">
+                        <img src="{{movie.thumbnail}}" alt="movie link" width="100rem">
+                        <div>{{ %movie.title% }}</div>
+                    </a>
+                </li>
+            {% endfor%}
+        </ul> -->
 
-<h3> Filters:</h3>
-<ul id="filters"></ul>
-<input type="text" id="myInput" onkeyup="newFilter()" placeholder="Search for names.." title="Type in a name">
 
-<ul id="movies_list">
-    {% for movie in site.categories.movie %}
-        <li data-year="{{movie.year}}" data-movie-title="{{movie.name}}">
-            <a href="{{movie.link}}">
-                <img src="{{movie.thumbnail}}" alt="movie link" width="100rem">
-                <div>{{ %movie.title% }}</div>
-            </a>
-        </li>
-    {% endfor%}
-</ul>
+
+    </div>
+
 
 <script>
-function filterInput(input) {
-    var ul, li;
-    var ul = document.getElementById("filters");
-    var li = document.createElement("li");
-    li.appendChild(document.createTextNode(input));
-    ul.appendChild(li);
-    filterItems();
-}
-function myFunction() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
-}
 
-function newFilter() {
+function newFilter(query) {
     var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById("myInput");
+    // input = document.getElementById("myInput");
+    input = query;
     filter = input.value.toUpperCase();
     ul = document.getElementById("movies_list");
     li = ul.getElementsByTagName("li");
@@ -110,61 +92,24 @@ function newFilter() {
         }
     }
 }
+function getQueryVariable(variable) {
+        
+        var query = window.location.search.substring(1),
+            vars = query.split("&");
 
-function filterAdele() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = "Adele";
-    var ul = document.getElementById("filters");
-    var li = document.createElement("li");
-    li.appendChild(document.createTextNode(input));
-    ul.appendChild(li);
-    filterItems();
-}
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split("=");
 
-function filterCalvin() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = "Calvin";
-    var ul = document.getElementById("filters");
-    var li = document.createElement("li");
-    li.appendChild(document.createTextNode(input));
-    ul.appendChild(li);
-    filterItems();
-}
-
-function filterItems() {
-    var input, filters, ul, li, a, i, txtValue;
-    filters = document.getElementById("filters");
-    var size = filters.childElementCount
-
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("li");
-    for (s = 0; s < li.length; s++) {
-                li[s].style.display = "none";
-        }
-    for (let j = 0; j < size; j++) {
-        input= filters.childNodes[j].innerHTML.toUpperCase();
-        for (i = 0; i < li.length; i++) {
-            a = li[i].getElementsByTagName("a")[0];
-            txtValue = a.textContent || a.innerText;
-            if (txtValue.toUpperCase().indexOf(input) > -1) {
-                li[i].style.display = "";
-            } 
+            if (pair[0] === variable) {
+                return decodeURIComponent(pair[1].replace(/\+/g, '%20')).trim();
+            }
         }
     }
-}
 
-function filterByYear(year) {
-  var year, current_movie, movie_list;
-
-  var displayed_ui = document.getElementById("ui_tag");
-
-  for (s = 0; s< movie_list.length; s++) {
-    displayed_ui.innerHTML = movie_list[s].getMovie().year;
-    li.appendChild(document.createTextNode(input));
-    ul.appendChild(li);
-    filterItems();
-  }
-}
+    var query = decodeURIComponent((getQueryVariable("q") || "").replace(/\+/g, "%20"));
+    newFilter(query);
+    document.getElementByID("search").innerHTML = query;
+    console.log("qery is:" + query);
 </script>
 
 </body>

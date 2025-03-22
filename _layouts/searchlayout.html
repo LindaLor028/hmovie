@@ -1,7 +1,8 @@
 {% include search-lunr.html %}
-
+<p> HI? </p>
 <script>
     function getQueryVariable(variable) {
+        
         var query = window.location.search.substring(1),
             vars = query.split("&");
 
@@ -16,4 +17,5 @@
 
     var query = decodeURIComponent((getQueryVariable("q") || "").replace(/\+/g, "%20"));
     lunr_search(query);
+    console.log("qery is:" + query);
 </script>
