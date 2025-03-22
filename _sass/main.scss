@@ -1,14 +1,16 @@
+* {
+    font-family: 'Maven Pro';
+}
+
 h1 {
-    color: green
+    color: green;
+    font-style: bold;
 }
 
 button {
     cursor: pointer;
 }
 
-* {
-    font-family: Arial;
-}
 
 .movie_mainview {
     display: grid;
