@@ -57,7 +57,7 @@
     <div class="center_content">
         <p id="search"></p>
         <!-- <input type="text" id="myInput" onkeyup="newFilter()" placeholder="Search for names.." title="Type in a name"> -->
-<!-- 
+
         <ul id="movies_list">
             {% for movie in site.categories.movie %}
                 <li data-year="{{movie.year}}" data-movie-title="{{movie.name}}">
@@ -67,10 +67,7 @@
                     </a>
                 </li>
             {% endfor%}
-        </ul> -->
-
-
-
+        </ul>
     </div>
 
 
@@ -78,9 +75,8 @@
 
 function newFilter(query) {
     var input, filter, ul, li, a, i, txtValue;
-    // input = document.getElementById("myInput");
     input = query;
-    filter = input.value.toUpperCase();
+    filter = query.toUpperCase();
     ul = document.getElementById("movies_list");
     li = ul.getElementsByTagName("li");
     for (i = 0; i < li.length; i++) {
@@ -93,7 +89,6 @@ function newFilter(query) {
     }
 }
 function getQueryVariable(variable) {
-        
         var query = window.location.search.substring(1),
             vars = query.split("&");
 
@@ -104,11 +99,13 @@ function getQueryVariable(variable) {
                 return decodeURIComponent(pair[1].replace(/\+/g, '%20')).trim();
             }
         }
+        console.log("QUERY" + query);
+        newFilter(query);
     }
 
     var query = decodeURIComponent((getQueryVariable("q") || "").replace(/\+/g, "%20"));
     newFilter(query);
-    document.getElementByID("search").innerHTML = query;
+    
     console.log("qery is:" + query);
 </script>
 
