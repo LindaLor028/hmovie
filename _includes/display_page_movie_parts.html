@@ -3,7 +3,7 @@
         {% assign sequel = null%}
 
         <!-- If current movie is base movie, load all sequels -->
-        {% if page.basemovie == page.movie_title%}
+        {% if page.basemovie == page.title%}
         <p> This is  the first movie</p>
             {% assign sequel = page.sequel%}
             <div class="movie_parts_list">
@@ -12,7 +12,7 @@
 
                     {% if movie.title == sequel%}
                     <div class="movie_part_item">
-                        <a href="{{movie.permalink}}"><img src="{{movie.thumbnail}}" alt="movie link" width="75px"></a>
+                        <a href="{{movie.permalink}}"><img src="{{movie.thumbnail}}" alt="movie link" width="100%"></a>
                         <a href="{{movie.permalink}}">{{movie.title}}</a>
                     </div>
                     {% assign sequel = movie.sequel %}
@@ -24,7 +24,7 @@
 
         <!-- If current movie is NOT base movie, load from base and skip current movie -->
 
-        {% if page.basemovie != page.movie_title%}
+        {% if page.basemovie != page.title%}
             <p> This is not the first movie</p>
             <div class="movie_parts_list">
             {% for movie in site.posts %}

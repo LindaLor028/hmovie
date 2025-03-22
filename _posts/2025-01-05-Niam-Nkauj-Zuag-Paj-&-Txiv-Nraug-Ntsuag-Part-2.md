@@ -1,7 +1,7 @@
 ---
 layout: movie-video-data
 date:   2024-12-01 21:25:08 -0600
-categories: jekyll update
+categories: movie
 
 # Search Queries
 title:  "Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 2" 

@@ -51,15 +51,15 @@
             <div>
 
                 <ul id="movies_list">
-                    {% for movie in site.data.movies %}
+                    {% for movie in site.categories.movie %}
                         <li>
-                            <a href="{{movie.link}}" data-asdfasdf="{{ }}">
+                            <a href="{{movie.link}}" data-filter-data="{{ %movie.year% }} {{%movie.release-type%}}">
                                 <!-- <a href="{{ movie.link }}" data-type="{% for person in movie.cast %}{{ person }}{% if forloop.last == false %}, {% endif %}{% endfor %}"> -->
                                     <a href="{{ movie.link }}" data-type="{% for person in movie.cast %}{{ person.name }}{% if forloop.last == false %}, {% endif %}{% endfor %}">
 
 
                                 <img src="{{movie.thumbnail}}" alt="movie link" width="100%">
-                                <div>{{ %movie.name% }}</div>
+                                <div>{{ %movie.title% }}</div>
                                 <p> {{%movie.year%}} {{%movie.release-type%}}</p>
                                 <!-- <p style="display: none"> {{%movie.year%}} {{%movie.release-type%}}</p> -->
                             </a>
@@ -79,6 +79,9 @@
                     <li> <input type="checkbox" onclick="filterMultiple()"/> 
                          <label>2009</label>
                     </li>
+                    <li> <input type="checkbox" onclick="filterMultiple()"/> 
+                        <label>2000</label>
+                   </li>
                 </ul>
                 <h2>Release Type</h2>
                 <ul id="release_filters" class="filter_list">
