@@ -30,6 +30,29 @@
   margin: 0;
 }
 
+#actors_list {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 150px));
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+  column-gap: 1rem;
+  row-gap: 1rem;
+  padding: 0;
+  margin: 0;
+
+}
+
+#actors_list li {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
 #movies_list li {
   border: 1px solid #ddd;
   margin-top: -1px; /* Prevent double borders */
@@ -68,34 +91,65 @@
     <div class="centercontent">
         <p id="search"></p>
         <!-- <input type="text" id="myInput" onkeyup="newFilter()" placeholder="Search for names.." title="Type in a name"> -->
+        <ul id="actors_list">
+            
+                <li data-movie-title="Ntxhoo Lauj">
+                    <a href="/cast/Ntxhoo-Lauj">
+                        <img src="/assets/images/cast_thumbnails/Ntxhoo Lauj.png" alt="actor link" width="100rem">
+                        <div>Ntxhoo Lauj</div>
+                    </a>
+                </li>
+            
+                <li data-movie-title="Mab Sua Lis">
+                    <a href="/cast/Ma-Sua-Lis">
+                        <img src="/assets/images/cast_thumbnails/Mab Sua Lis.png" alt="actor link" width="100rem">
+                        <div>Mab Sua Lis</div>
+                    </a>
+                </li>
+            
+        </ul>
 
         <ul id="movies_list">
             
-                <li data-year="2002" data-movie-title="2025-01-05-Niam-Nkauj-Zuag-Paj-&-Txiv-Nraug-Ntsuag-Part-3.md">
+                <li data-year="2002" data-movie-title="Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 3" data-movie-cast="Ntxhoo Lauj, Keeb Yaj, Khais Lauj, Tswb Yaj, Ntxhi Vaj, Kooj Hawj, Sua Lis">
                     <a href="">
                         <img src="/assets/images/movie_thumbnails/Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 3.jpeg" alt="movie link" width="100rem">
                         <div>Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 3</div>
                     </a>
                 </li>
             
-                <li data-year="2002" data-movie-title="2025-01-05-Niam-Nkauj-Zuag-Paj-&-Txiv-Nraug-Ntsuag-Part-2.md">
+                <li data-year="2002" data-movie-title="Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 2" data-movie-cast="Keeb Yaj, Ntxhoo Lauj, Khais Lauj, Kooj Hawj, Kuam Lis, Sua Lis, Tswb Yaj, Txais Hawj, Tswj Hwm Hawj, Daus Yaj">
                     <a href="">
                         <img src="/assets/images/movie_thumbnails/Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 2.jpeg" alt="movie link" width="100rem">
                         <div>Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 2</div>
                     </a>
                 </li>
             
-                <li data-year="2002" data-movie-title="2025-01-05-Niam-Nkauj-Zuag-Paj-&-Txiv-Nraug-Ntsuag-Part-1.md">
+                <li data-year="2002" data-movie-title="Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 1" data-movie-cast="Keeb Yaj, Ntxhoo Lauj, Khais Lauj, Kooj Hawj, Kuam Lis, Sua Lis, Tswb Yaj, Txais Hawj, Tswj Hwm Hawj, Daus Yaj">
                     <a href="">
                         <img src="/assets/images/movie_thumbnails/Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 1.jpeg" alt="movie link" width="100rem">
                         <div>Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 1</div>
                     </a>
                 </li>
             
-                <li data-year="2000" data-movie-title="Hlub Zaum Ob">
+                <li data-year="2000" data-movie-title="Hlub Zaum Ob" data-movie-cast="Kwm Lis, Zuag 'Naiv' Vaaj, Tsheem Yaaj, Vam Lis Thoj, Neeb Hawj, Maiv Lis Yaj, Mais Xyooj, Xaiv Xaab Yaaj, Kaag 'Xaiv Xaab' Yaaj, Ntxhoo 'Nchaiv Yis' Lis">
                     <a href="/movie/Hlub-Zaum-Ob">
                         <img src="/assets/images/movie_thumbnails/Hlub Zaum Ob.jpeg" alt="movie link" width="100rem">
                         <div>Hlub Zaum Ob</div>
+                    </a>
+                </li>
+            
+                <li data-year="" data-movie-title="ABC" data-movie-cast="">
+                    <a href="">
+                        <img src="" alt="movie link" width="100rem">
+                        <div>ABC</div>
+                    </a>
+                </li>
+            
+                <li data-year="" data-movie-title="1985" data-movie-cast="">
+                    <a href="">
+                        <img src="" alt="movie link" width="100rem">
+                        <div>1985</div>
                     </a>
                 </li>
             
@@ -105,14 +159,15 @@
 
 <script>
 
-function newFilter(query) {
+function filterActors(query) {
     var input, filter, ul, li, a, i, txtValue;
     input = query;
     filter = query.toUpperCase();
-    ul = document.getElementById("movies_list");
+    ul = document.getElementById("actors_list");
     li = ul.getElementsByTagName("li");
     for (i = 0; i < li.length; i++) {
         a = li[i].getAttribute("data-movie-title");
+        console.log("A is: " + a);
         if (a.toUpperCase().indexOf(filter) > -1) {
             li[i].style.display = "";
         } else {
@@ -120,6 +175,34 @@ function newFilter(query) {
         }
     }
 }
+
+function filterMovies(query) {
+    var input, filter, ul, li, a, i, txtValue;
+    input = query;
+    filter = query.toUpperCase();
+    ul = document.getElementById("movies_list");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getAttribute("data-movie-title");
+        console.log("A is: " + a);
+        if (a.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getAttribute("data-movie-cast");
+        console.log("A is: " + a);
+        if (a.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            // li[i].style.display = "none";
+        }
+    }
+}
+
 function getQueryVariable(variable) {
         var query = window.location.search.substring(1),
             vars = query.split("&");
@@ -131,14 +214,15 @@ function getQueryVariable(variable) {
                 return decodeURIComponent(pair[1].replace(/\+/g, '%20')).trim();
             }
         }
+        // newFilter(query);
         console.log("QUERY" + query);
-        newFilter(query);
     }
 
     var query = decodeURIComponent((getQueryVariable("q") || "").replace(/\+/g, "%20"));
-    newFilter(query);
+    filterActors(query);
+    filterMovies(query);
     
-    console.log("qery is:" + query);
+    // console.log("qery is:" + query);
 </script>
 
 </body>

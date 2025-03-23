@@ -30,6 +30,29 @@
   margin: 0;
 }
 
+#actors_list {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 150px));
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+  column-gap: 1rem;
+  row-gap: 1rem;
+  padding: 0;
+  margin: 0;
+
+}
+
+#actors_list li {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
 #movies_list li {
   border: 1px solid #ddd;
   margin-top: -1px; /* Prevent double borders */
@@ -57,10 +80,20 @@
     <div class="centercontent">
         <p id="search"></p>
         <!-- <input type="text" id="myInput" onkeyup="newFilter()" placeholder="Search for names.." title="Type in a name"> -->
+        <ul id="actors_list">
+            {% for actor in site.categories.actor %}
+                <li data-movie-title="{{actor.title}}">
+                    <a href="{{actor.permalink}}">
+                        <img src="{{actor.thumbnail}}" alt="actor link" width="100rem">
+                        <div>{{ %actor.title% }}</div>
+                    </a>
+                </li>
+            {% endfor%}
+        </ul>
 
         <ul id="movies_list">
             {% for movie in site.categories.movie %}
-                <li data-year="{{movie.year}}" data-movie-title="{{movie.name}}">
+                <li data-year="{{movie.year}}" data-movie-title="{{movie.title}}" data-movie-cast="{% for person in movie.cast %}{{ person.name }}{% if forloop.last == false %}, {% endif %}{% endfor %}">
                     <a href="{{movie.link}}">
                         <img src="{{movie.thumbnail}}" alt="movie link" width="100rem">
                         <div>{{ %movie.title% }}</div>
@@ -73,14 +106,15 @@
 
 <script>
 
-function newFilter(query) {
+function filterActors(query) {
     var input, filter, ul, li, a, i, txtValue;
     input = query;
     filter = query.toUpperCase();
-    ul = document.getElementById("movies_list");
+    ul = document.getElementById("actors_list");
     li = ul.getElementsByTagName("li");
     for (i = 0; i < li.length; i++) {
         a = li[i].getAttribute("data-movie-title");
+        console.log("A is: " + a);
         if (a.toUpperCase().indexOf(filter) > -1) {
             li[i].style.display = "";
         } else {
@@ -88,6 +122,34 @@ function newFilter(query) {
         }
     }
 }
+
+function filterMovies(query) {
+    var input, filter, ul, li, a, i, txtValue;
+    input = query;
+    filter = query.toUpperCase();
+    ul = document.getElementById("movies_list");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getAttribute("data-movie-title");
+        console.log("A is: " + a);
+        if (a.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getAttribute("data-movie-cast");
+        console.log("A is: " + a);
+        if (a.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            // li[i].style.display = "none";
+        }
+    }
+}
+
 function getQueryVariable(variable) {
         var query = window.location.search.substring(1),
             vars = query.split("&");
@@ -99,14 +161,15 @@ function getQueryVariable(variable) {
                 return decodeURIComponent(pair[1].replace(/\+/g, '%20')).trim();
             }
         }
+        // newFilter(query);
         console.log("QUERY" + query);
-        newFilter(query);
     }
 
     var query = decodeURIComponent((getQueryVariable("q") || "").replace(/\+/g, "%20"));
-    newFilter(query);
+    filterActors(query);
+    filterMovies(query);
     
-    console.log("qery is:" + query);
+    // console.log("qery is:" + query);
 </script>
 
 </body>
