@@ -149,16 +149,19 @@
                 <button onclick="clearFilters()"> Clear Filters</button>
                 <h2>Year of Release </h2>
                 <ul id="year_filters" class="filter_list">
+                    <li> <input type="checkbox" class="explore_checkbox" onclick="filterMultiple()"/> 
+                        <label>1990s</label>
+                   </li>
+                    <li> <input type="checkbox" class="explore_checkbox" onclick="filterMultiple()"/> 
+                        <label>2000s</label>
+                   </li>
                     <li> 
                         <input type="checkbox" class="explore_checkbox" onclick="filterMultiple()"/>
-                        <label>2005</label>
+                        <label>2010s</label>
                     </li>
                     <li> <input type="checkbox" class="explore_checkbox" onclick="filterMultiple()"/> 
-                         <label>2009</label>
+                         <label>2020s</label>
                     </li>
-                    <li> <input type="checkbox" class="explore_checkbox" onclick="filterMultiple()"/> 
-                        <label>2000</label>
-                   </li>
                 </ul>
                 <h2>Release Type</h2>
                 <ul id="release_filters" class="filter_list">
@@ -287,6 +290,29 @@ function reportCheckedFields() {
     }
 }
 
+function returnCheckedYearFilters(id) {
+    var filters = document.getElementById("year_filters").getElementsByTagName("li");
+    var decade_1990s = new RegExp("199[0-9]");
+    var decade_2000s = new RegExp("200[0-9]");
+    var decade_2010s = new RegExp("201[0-9]");
+    var decade_2020s = new RegExp("202[0-9]");
+    var decade_regex = [decade_1990s, decade_2000s, decade_2010s, decade_2020s];
+
+    const checked_regex = [];
+    var array_index = 0;
+
+    for (let i = 0; i < filters.length; i++ ) {
+        // all_filters[i] = filters[i].innerText.toUpperCase();
+        if (filters[i].getElementsByTagName("input")[0].checked == true) {
+            // console.log("at least one checkbox is checked!")
+            checked_regex[array_index] =  decade_regex[i];
+            console.log("ADDING " + decade_regex[i] + " TO CHECKED_REGEX");
+            array_index++;
+        }
+    }
+    return checked_regex;
+}
+
 function filterByCategory(id) {
     var filters = document.getElementById(id).getElementsByTagName("li");
 
@@ -335,7 +361,7 @@ function clearFilters() {
 
 function filterMultiple() {
     var movie_list, movie_block, movie_p,filter_list, filter_input, current_movie;
-
+    returnCheckedYearFilters("fd");
     var movie_list = document.getElementById("movies_list");
     var movie_blocks = movie_list.getElementsByTagName("li");
     var movie_p = movie_list.getElementsByTagName("p");
