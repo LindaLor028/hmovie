@@ -103,117 +103,26 @@
 
 
 <script>
-function filterInput(input) {
-    var ul, li;
-    var ul = document.getElementById("filters");
-    var li = document.createElement("li");
-    li.appendChild(document.createTextNode(input));
-    ul.appendChild(li);
-    filterItems();
-}
-function myFunction() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("movies_list");
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        console.log(li[i].getElementsByTagName("a")[0]);
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-        console.log("loop itr done");
-    }
-}
 
-function filterItems() {
-    var input, filters, ul, li, a, i, txtValue;
-    filters = document.getElementById("filters");
-    var size = filters.childElementCount
-
-    ul = document.getElementById("movies_list");
-    li = ul.getElementsByTagName("li");
-    for (s = 0; s < li.length; s++) {
-                li[s].style.display = "none";
-        }
-    for (let j = 0; j < size; j++) {
-        input= filters.childNodes[j].innerHTML.toUpperCase();
-        for (i = 0; i < li.length; i++) {
-            a = li[i].getElementsByTagName("a")[0];
-            console.log(li[i].getElementsByTagName("a")[0]);
-            txtValue = a.textContent || a.innerText;
-            if (txtValue.toUpperCase().indexOf(input) > -1) {
-                li[i].style.display = "";
-            } 
-            else {
-            li[i].style.display = "none";
-        }
-        console.log("loop itr done");
-        }
-
-    }
-}
-
-function filterByYear(input) {
-    var movie_ul, movie_li, ul, li, input;
-    var movie_ul = document.getElementById("filters");
-    var movie_li = document.createElement("li");
-    movie_li.appendChild(document.createTextNode(input));
-    movie_ul.appendChild(movie_li);
-
-    filters = document.getElementById("filters");
-    var size = filters.childElementCount
-    ul = document.getElementById("movies_list");
-    li = ul.getElementsByTagName("li");
-    
-    for (s = 0; s < li.length; s++) {
-                li[s].style.display = "none";
-        }
-    for (let j = 0; j < size; j++) {
-        input= filters.childNodes[j].innerHTML.toUpperCase();
-        for (i = 0; i < li.length; i++) {
-            a = li[i].getElementsByTagName("p")[0];
-            console.log(li[i].getElementsByTagName("p")[0]);
-            txtValue = a.textContent || a.innerText;
-            if (txtValue.toUpperCase().indexOf(input) > -1) {
-                li[i].style.display = "";
-            } 
-            else {
-            li[i].style.display = "none";
-        }
-        }
-    }
-
-}
-
+/**
+ * resetListItemsVisibility(numOfFilters) 
+ * This function is called in the clearFilters() method.
+ * This function sets the visibility of all movies on the explore page to visible. 
+ */
 function resetListItemsVisibility(numOfFilters) {
-    var movie_list, movie_items;
     var movie_list = document.getElementById("movies_list");
     var movie_items = movie_list.getElementsByTagName("li");
 
-    if (numOfFilters < 1 ) {
-        console.log("Resetting fields to visible!");
-        for (let movie_index = 0; movie_index < movie_items.length; movie_index++) {
-                movie_items[movie_index].style.display = "block";
-        }
+    for (let movie_index = 0; movie_index < movie_items.length; movie_index++) {
+        movie_items[movie_index].style.display = "block";
     }
 }
 
-function reportCheckedFields() {
-    var checkboxes = document.getElementById("filter_checkboxes");
-    console.log("reporting!");
-    for (let i = 0; i < checkboxes.childElementCount ; i ++ ) {
-        // console.log(checkboxes.getElementsByTagName("input")[i]);
-        if (checkboxes.getElementsByTagName("input")[i].checked == true) {
-            // console.log(checkboxes.childNodes[i] + " is checked!");
-        }
-    }
-}
-
+/**
+ * returnCheckedYearFilters()
+ * This function is called in the filterMultiple() method.
+ * This function returns an array of regex expressions based on what filter years are checked.
+ */
 function returnCheckedYearFilters() {
     var filters = document.getElementById("year_filters").getElementsByTagName("li");
     var decade_1990s = new RegExp("199[0-9]");
@@ -226,7 +135,6 @@ function returnCheckedYearFilters() {
     var array_index = 0;
 
     for (let i = 0; i < filters.length; i++ ) {
-        // all_filters[i] = filters[i].innerText.toUpperCase();
         if (filters[i].getElementsByTagName("input")[0].checked == true) {
             // console.log("at least one checkbox is checked!")
             checked_regex[array_index] =  decade_regex[i];
@@ -234,11 +142,15 @@ function returnCheckedYearFilters() {
             array_index++;
         }
     }
-    // console.log("DOES THIS WRK " + decade_regex[0].test("1993"));
     return checked_regex;
 }
 
-function filterByCategory(id) {
+/**
+ * returnCheckedFilters(id)
+ * This function is called in the filterMultiple() method.
+ * This function returns an array of checked filters of type id.
+*/
+function returnCheckedFilters(id) {
     var filters = document.getElementById(id).getElementsByTagName("li");
 
     var hasChecked = false; 
@@ -257,7 +169,12 @@ function filterByCategory(id) {
     return checked_filters;
 }
 
-function verifyCheck(txtValue, list) {
+/**
+ * verifyCheck(txtValue, list)
+ * This function is called in the filterMultiple() method.
+ * This function returns true/false if input matches one of the items in the list of checked filter items 
+ */
+function verifyCheck(input, list) {
     var hasAMatch = false;
 
     if (list.length < 1) {
@@ -265,7 +182,7 @@ function verifyCheck(txtValue, list) {
     }
     
     for (let i = 0; i < list.length; i ++) {
-        hasAMatch = ((hasAMatch) || (txtValue.toUpperCase().includes(list[i].replaceAll(" ", ""))));
+        hasAMatch = ((hasAMatch) || (input.toUpperCase().includes(list[i].replaceAll(" ", ""))));
         // console.log("comparing if " + txtValue + " includes " + list[i] + " which is " + hasAMatch);
         if (hasAMatch) {
             break;
@@ -274,15 +191,20 @@ function verifyCheck(txtValue, list) {
     return hasAMatch;
 }
 
-function checkYearRegex(txtValue, list) {
+/**
+ * checkYearRegex(txtValue, regex_list)
+ * This function is called in the filterMultiple() method. 
+ * This function returns true/false if the input matches one of the regexs in the regex_list.
+ */
+function checkYearRegex(input, regex_list) {
     var hasAMatch = false;
 
-    if (list.length < 1) {
+    if (regex_list.length < 1) {
         return true;
     }
 
-    for (let i = 0; i < list.length; i ++) {
-        hasAMatch = ((hasAMatch) || (list[i].test(txtValue)));
+    for (let i = 0; i < regex_list.length; i ++) {
+        hasAMatch = ((hasAMatch) || (regex_list[i].test(input)));
         // console.log("comparing if " + txtValue + " includes " + list[i] + " which is " + hasAMatch);
         if (hasAMatch) {
             break;
@@ -290,18 +212,24 @@ function checkYearRegex(txtValue, list) {
     }
     return hasAMatch;
 }
+
+/** 
+ * clearFilters()
+ * This function is called when the 'Clear Filters' button is clicked. 
+ * This function sets the visibility of all movies to visible. It then unchecks all filters. 
+ */
 function clearFilters() {
-    resetListItemsVisibility(0);
+    resetListItemsVisibility();
     // document.getElementById("#2005-label").removeAttr('checked');
     var filters = document.getElementsByClassName("explore_checkbox");
     for (let i = 0; i < filters.length; i++ ) {
         filters[i].checked = false;
     }
-
 }
 
 /**
  * filterMultiple()
+ * This function is called when any filter button is clicked.
  * This function sets the visibility of the movies on the Explore page based on if what fields are checked.
  * */
 function filterMultiple() {
@@ -312,7 +240,7 @@ function filterMultiple() {
 
 
     var year_filters = returnCheckedYearFilters(); // returns an array of regex expressions based on what year-filters are checked (e.g. 1990s = 199\d)
-    var release_filters = filterByCategory("release_filters"); // returns an array of categories.toUpperCase() based on what release filters are checked
+    var release_filters = returnCheckedFilters("release_filters"); // returns an array of categories.toUpperCase() based on what release filters are checked
     for (let movie_index = 0; movie_index < movie_blocks.length; movie_index++ ) {
         p = movie_blocks[movie_index].getAttribute("data-filter-data");
         txtValue = p;
@@ -325,9 +253,7 @@ function filterMultiple() {
         }
     }
 
-    
 </script>
-
 
 </body>
 </html>
