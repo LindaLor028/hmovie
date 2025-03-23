@@ -6,13 +6,13 @@
     {% endfor%}
 
 <div class="cast_movies">
-    {% for movie in site.data.movies %}
+    {% for movie in site.categories.movie %}
         {% for cast in movie.cast %}
             {% if cast.name == actor.name %}
                 <a href="{{movie.link}}">
                     <div>
                         <img src="{{movie.thumbnail}}" alt="{{movie.name}} Movie Poster" width="100%">
-                        <p> {{movie.name}} </p>
+                        <p> {{movie.title}} </p>
                     </div>
                 </a>
             {% endif%}
