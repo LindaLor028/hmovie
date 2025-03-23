@@ -310,6 +310,7 @@ function returnCheckedYearFilters(id) {
             array_index++;
         }
     }
+    // console.log("DOES THIS WRK " + decade_regex[0].test("1993"));
     return checked_regex;
 }
 
@@ -341,7 +342,7 @@ function verifyCheck(txtValue, list) {
     
     for (let i = 0; i < list.length; i ++) {
         hasAMatch = ((hasAMatch) || (txtValue.toUpperCase().includes(list[i].replaceAll(" ", ""))));
-        console.log("comparing if " + txtValue + " includes " + list[i] + " which is " + hasAMatch);
+        // console.log("comparing if " + txtValue + " includes " + list[i] + " which is " + hasAMatch);
         if (hasAMatch) {
             break;
         }
@@ -349,6 +350,22 @@ function verifyCheck(txtValue, list) {
     return hasAMatch;
 }
 
+function checkYearRegex(txtValue, list) {
+    var hasAMatch = false;
+
+    if (list.length < 1) {
+        return true;
+    }
+
+    for (let i = 0; i < list.length; i ++) {
+        hasAMatch = ((hasAMatch) || (list[0].test(txtValue)));
+        // console.log("comparing if " + txtValue + " includes " + list[i] + " which is " + hasAMatch);
+        if (hasAMatch) {
+            break;
+        }
+    }
+    return hasAMatch;
+}
 function clearFilters() {
     resetListItemsVisibility(0);
     // document.getElementById("#2005-label").removeAttr('checked');
@@ -372,7 +389,8 @@ function filterMultiple() {
     // resetListItemsVisibility(filter_list.childElementCount);
 
     // now actually do that filtering login - subtractive 
-    var year_filters = filterByCategory("year_filters");
+    // var year_filters = filterByCategory("year_filters");
+    var year_filters = returnCheckedYearFilters("fd");
 
     var release_filters = filterByCategory("release_filters");
 
@@ -382,14 +400,12 @@ function filterMultiple() {
             // p = movie_blocks[movie_index].getElementsByTagName("p")[0];
             p = movie_blocks[movie_index].getAttribute("data-filter-data");
             txtValue = p;
-            console.log("P value: " + p);
             // txtValue = p.textContent || p.innerText;
             // verifyCheck(txtValue, year_filters);
             // if ((txtValue.toUpperCase().includes(year_filters[0]) || txtValue.toUpperCase().includes(year_filters[1]) || txtValue.toUpperCase().includes(year_filters[2])) && 
             // (txtValue.toUpperCase().includes(release_filters[0]) || txtValue.toUpperCase().includes(release_filters[1]) || txtValue.toUpperCase().includes(release_filters[2]))) {
 
-            if ((verifyCheck(txtValue, year_filters)) && (verifyCheck(txtValue, release_filters))) {
-                    // console.log("Making movie " + current_movie.innerHTML + " visible");
+            if ((checkYearRegex(txtValue, year_filters)) && (verifyCheck(txtValue, release_filters))) {
                     movie_blocks[movie_index].style.display = "";
                 } 
                 else {
