@@ -7,8 +7,8 @@
     </head>
 
     <body>
-    <!-- Site Header-->
-    <header class="site_header">
+        <!-- Site Header-->
+        <header class="site_header">
     <a href="http://127.0.0.1:4000"> Hmovie </a>
     <form action="/search/" method="get">
         <input type="text" name="q" />
@@ -20,94 +20,10 @@
 </header>
 
 
-
-    <!-- GET THE MOVIE AND STORE IT IN THE VARIABLE, film -->
     
-
-    <!-- Movie Video PopUp -->
-    <div id="black_bg" onclick="closePopUp()">
-        <button id="close_popup_button">x</button>
-        <div id="movie_popup"></div>
-    </div>
-
-    <!-- PUT ALL PAGE CONTENT IN A DIV WITH MARGIN SO ALL THE CONTENT DOESN'T BLOW OUT-->
-    <div class="centercontent"> 
-
-        <!-- Put title and button beside one another-->
-        <div class="movie_videoview_title">
-            <h1 alt="Movie Title"> ABC </h1>
-            <!-- TODO: Only generate this button if the video variable is not null-->
-            <button type="button" class="video_button" onclick="triggerPopUp()"> Watch Movie </button>
+        <div class="centercontent">
+            <h1>About Hmovie</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
-
-        <br>
-        <!-- Under the title, create two columns -->
-        <div class="movie_videoview">
-            <!-- Column 1: Holds Movie Meta Data -->
-            <div class="movie_postercontainer">
-                <img src="" alt=" Movie Poster" width="100%">
-                <p> Year of Production: </p>
-                <p> Producer(s): </p>
-                <p> Written by: </p>
-                <p> Release Type: </p>
-                <p> Storage Location: </p>
-            </div>  
-
-            <!-- Column 2: Holds Movie Details -->
-            <div>
-                <p>  </p>
-                
-                <h1> Cast </h1>
-                <!-- GET THE MOVIE AND STORE IT IN THE VARIABLE, film -->
-
-
-<!-- RETURN THE HTML GOOD STUFF TO DISPLAY THE CAST!-->
-<div class="scroll">
-    
-
-</div>
-                
-                <h1> Parts </h1>
-                <!-- GET THE MOVIE AND STORE IT IN THE VARIABLE, film -->
-
-
-    
-        <p> This movie does not have parts. </p>
-    
-
-            </div>
-        </div>
-
-
-
-
-
-
-
-
-
-
-</div>
-</body>
-
-
+    </body>
 </html>
-
-<script>
-    function triggerPopUp() {
-    //   document.getElementById("movie_popup").style.width = "80%";
-    //   document.getElementById("movie_popup").style.height = "80%";
-      document.getElementById("black_bg").style.display = "block";
-      document.getElementById("movie_popup").innerHTML = "<iframe src=" + "" + " title=" + "Movie ></iframe>";
-    //   <iframe id="movie_popup" src="https://www.youtube.com/embed/MzFABWO59UU" title="Lub zog ntawm txoj kev hlub" frameborder=
-     }
-
-    function closePopUp() {
-      document.getElementById("movie_popup").style.width = "80%";
-      document.getElementById("movie_popup").style.height = "80%";
-      document.getElementById("black_bg").style.display = "none";
-      document.getElementById("movie_popup").innerHTML = "";
-
-    }
-
-    </script>

@@ -34,12 +34,12 @@
         <div class="movie_videoview">
             <!-- Column 1: Holds Movie Meta Data -->
             <div class="movie_postercontainer">
-                <img src="{{page.thumbnail}}" alt="{{page.name}} Movie Poster" width="100%">
+                <img src="{{page.thumbnail}}" alt="{{page.title}} Movie Poster" width="100%">
                 <p> Year of Production: {{%page.year%}}</p>
-                <p> Producer(s): {{%page.producers%}}</p>
-                <p> Writer(s):{{%page.writers%}} </p>
+                <p> Producer(s): {{%page.producer%}}</p>
+                <p> Writer(s):{{%page.writer%}} </p>
                 <p> Publishing Company: </p>
-                <p> Release Type: {{%page.release-type%}}</p>
+                <p> Release Type: {{%page.release_type%}}</p>
                 <p> Storage Location: {{%page.storage%}}</p>
             </div>  
 
@@ -76,7 +76,7 @@
     //   document.getElementById("movie_popup").style.width = "80%";
     //   document.getElementById("movie_popup").style.height = "80%";
       document.getElementById("black_bg").style.display = "block";
-      document.getElementById("movie_popup").innerHTML = "<iframe src=" + "{{%page.video%}}" + " title=" + "Movie ></iframe>";
+      document.getElementById("movie_popup").innerHTML = "<iframe src=" + "{{%page.video_link%}}" + " title=" + "Movie ></iframe>";
     //   <iframe id="movie_popup" src="https://www.youtube.com/embed/MzFABWO59UU" title="Lub zog ntawm txoj kev hlub" frameborder=
      }
 
