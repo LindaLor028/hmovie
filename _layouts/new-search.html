@@ -94,7 +94,7 @@
         <ul id="movies_list">
             {% for movie in site.categories.movie %}
                 <li data-year="{{movie.year}}" data-movie-title="{{movie.title}}" data-movie-cast="{% for person in movie.cast %}{{ person.name }}{% if forloop.last == false %}, {% endif %}{% endfor %}">
-                    <a href="{{movie.link}}">
+                    <a href="{{movie.permalink}}">
                         <img src="{{movie.thumbnail}}" alt="movie link" width="100rem">
                         <div>{{ %movie.title% }}</div>
                     </a>
@@ -144,9 +144,7 @@ function filterMovies(query) {
         console.log("A is: " + a);
         if (a.toUpperCase().indexOf(filter) > -1) {
             li[i].style.display = "";
-        } else {
-            // li[i].style.display = "none";
-        }
+        } 
     }
 }
 
@@ -161,15 +159,12 @@ function getQueryVariable(variable) {
                 return decodeURIComponent(pair[1].replace(/\+/g, '%20')).trim();
             }
         }
-        // newFilter(query);
-        console.log("QUERY" + query);
     }
 
     var query = decodeURIComponent((getQueryVariable("q") || "").replace(/\+/g, "%20"));
     filterActors(query);
     filterMovies(query);
     
-    // console.log("qery is:" + query);
 </script>
 
 </body>

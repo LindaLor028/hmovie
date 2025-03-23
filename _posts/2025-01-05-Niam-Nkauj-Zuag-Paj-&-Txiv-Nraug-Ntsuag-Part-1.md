@@ -14,7 +14,7 @@ synopsis: "Niam Nkauj Zuag Paj thiab txiv nraug Ntsuag yog ib zaj dabneeg sib hl
 producers: "Ntxawg Vwj, Muas Lis"
 director: "Daus Yaj, Ntxawg Vwj"
 writers: ""
-video: "https://www.youtube.com/embed/vjwS-V62z04?si=zd3vxQx2MZwTq-Mh"
+video: "https://www.youtube.com/embed/vjwS-V62z04?si=QxZYp8W20Hy1zrJZ"
 
 cast:
   - name: "Keeb Yaj"

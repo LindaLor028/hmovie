@@ -53,9 +53,9 @@
                 <ul id="movies_list">
                     {% for movie in site.categories.movie %}
                         <li data-filter-data="{{%movie.year%}} {{%movie.release-type%}}">
-                            <a href="{{movie.link}}">
+                            <a href="{{movie.permalink}}">
                                 <!-- <a href="{{ movie.link }}" data-type="{% for person in movie.cast %}{{ person }}{% if forloop.last == false %}, {% endif %}{% endfor %}"> -->
-                                    <a href="{{ movie.link }}" data-type="{% for person in movie.cast %}{{ person.name }}{% if forloop.last == false %}, {% endif %}{% endfor %}">
+                                    <a href="{{ movie.permalink }}" data-type="{% for person in movie.cast %}{{ person.name }}{% if forloop.last == false %}, {% endif %}{% endfor %}">
 
 
                                 <img src="{{movie.thumbnail}}" alt="movie link" width="100%">
@@ -228,14 +228,6 @@ function filterByCategory(id) {
         }
     }
     return checked_filters;
-
-    // if (hasChecked) {
-    //     return checked_filters;
-    // }
-    // else {
-    //     console.log("returning " + all_filters);
-    //     return all_filters;
-    // }
 }
 
 function verifyCheck(txtValue, list) {

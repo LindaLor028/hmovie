@@ -112,21 +112,21 @@
         <ul id="movies_list">
             
                 <li data-year="2002" data-movie-title="Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 3" data-movie-cast="Ntxhoo Lauj, Keeb Yaj, Khais Lauj, Tswb Yaj, Ntxhi Vaj, Kooj Hawj, Sua Lis">
-                    <a href="">
+                    <a href="/movie/Niam-Nkauj-Zuag-Paj-&-Txiv-Nraug-Ntsuag-Part-3">
                         <img src="/assets/images/movie_thumbnails/Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 3.jpeg" alt="movie link" width="100rem">
                         <div>Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 3</div>
                     </a>
                 </li>
             
                 <li data-year="2002" data-movie-title="Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 2" data-movie-cast="Keeb Yaj, Ntxhoo Lauj, Khais Lauj, Kooj Hawj, Kuam Lis, Sua Lis, Tswb Yaj, Txais Hawj, Tswj Hwm Hawj, Daus Yaj">
-                    <a href="">
+                    <a href="/movie/Niam-Nkauj-Zuag-Paj-&-Txiv-Nraug-Ntsuag-Part-2">
                         <img src="/assets/images/movie_thumbnails/Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 2.jpeg" alt="movie link" width="100rem">
                         <div>Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 2</div>
                     </a>
                 </li>
             
                 <li data-year="2002" data-movie-title="Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 1" data-movie-cast="Keeb Yaj, Ntxhoo Lauj, Khais Lauj, Kooj Hawj, Kuam Lis, Sua Lis, Tswb Yaj, Txais Hawj, Tswj Hwm Hawj, Daus Yaj">
-                    <a href="">
+                    <a href="/movie/Niam-Nkauj-Zuag-Paj-&-Txiv-Nraug-Ntsuag-Part-1">
                         <img src="/assets/images/movie_thumbnails/Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 1.jpeg" alt="movie link" width="100rem">
                         <div>Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 1</div>
                     </a>
@@ -140,14 +140,14 @@
                 </li>
             
                 <li data-year="" data-movie-title="ABC" data-movie-cast="">
-                    <a href="">
+                    <a href="/movie/ABC">
                         <img src="" alt="movie link" width="100rem">
                         <div>ABC</div>
                     </a>
                 </li>
             
                 <li data-year="" data-movie-title="1985" data-movie-cast="">
-                    <a href="">
+                    <a href="/movie/1985">
                         <img src="" alt="movie link" width="100rem">
                         <div>1985</div>
                     </a>
@@ -197,9 +197,7 @@ function filterMovies(query) {
         console.log("A is: " + a);
         if (a.toUpperCase().indexOf(filter) > -1) {
             li[i].style.display = "";
-        } else {
-            // li[i].style.display = "none";
-        }
+        } 
     }
 }
 
@@ -214,15 +212,12 @@ function getQueryVariable(variable) {
                 return decodeURIComponent(pair[1].replace(/\+/g, '%20')).trim();
             }
         }
-        // newFilter(query);
-        console.log("QUERY" + query);
     }
 
     var query = decodeURIComponent((getQueryVariable("q") || "").replace(/\+/g, "%20"));
     filterActors(query);
     filterMovies(query);
     
-    // console.log("qery is:" + query);
 </script>
 
 </body>
