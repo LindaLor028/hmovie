@@ -52,7 +52,7 @@
 
                 <ul id="movies_list">
                     {% for movie in site.categories.movie %}
-                        <li data-filter-data="{{%movie.year%}} {{%movie.release-type%}}">
+                        <li data-filter-data="{{%movie.year%}} {{%movie.release-type%}} {{movie.genre}}">
                             <a href="{{movie.permalink}}">
                                 <!-- <a href="{{ movie.link }}" data-type="{% for person in movie.cast %}{{ person }}{% if forloop.last == false %}, {% endif %}{% endfor %}"> -->
                                     <a href="{{ movie.permalink }}" data-type="{% for person in movie.cast %}{{ person.name }}{% if forloop.last == false %}, {% endif %}{% endfor %}">
@@ -94,6 +94,25 @@
                     </li>
                     <li> <input type="checkbox" class="explore_checkbox" onclick="filterMultiple()"/>
                          <label>DVD</label>
+                    </li>
+                </ul>
+
+                <h2>Genre</h2>
+                <ul id="genre_filters" class="filter_list">
+                    <li> <input type="checkbox" class="explore_checkbox" onclick="filterMultiple()"/>
+                         <label>Folklore</label>
+                    </li>
+                    <li> <input type="checkbox" class="explore_checkbox" onclick="filterMultiple()"/>
+                         <label>Comedy</label>
+                    </li>
+                    <li> <input type="checkbox" class="explore_checkbox" onclick="filterMultiple()"/>
+                        <label>Horror</label>
+                   </li>
+                   <li> <input type="checkbox" class="explore_checkbox" onclick="filterMultiple()"/>
+                        <label>Romance</label>
+                    </li>
+                    <li> <input type="checkbox" class="explore_checkbox" onclick="filterMultiple()"/>
+                        <label>Action</label>
                     </li>
                 </ul>
             </div>
@@ -241,10 +260,12 @@ function filterMultiple() {
 
     var year_filters = returnCheckedYearFilters(); // returns an array of regex expressions based on what year-filters are checked (e.g. 1990s = 199\d)
     var release_filters = returnCheckedFilters("release_filters"); // returns an array of categories.toUpperCase() based on what release filters are checked
+    var genre_filters = returnCheckedFilters("genre_filters"); // returns an array of categories.toUpperCase() based on what release filters are checked
+
     for (let movie_index = 0; movie_index < movie_blocks.length; movie_index++ ) {
         p = movie_blocks[movie_index].getAttribute("data-filter-data");
         txtValue = p;
-        if ((checkYearRegex(txtValue, year_filters)) && (verifyCheck(txtValue, release_filters))) {
+        if ((checkYearRegex(txtValue, year_filters)) && (verifyCheck(txtValue, release_filters)) && (verifyCheck(txtValue, genre_filters))) {
             movie_blocks[movie_index].style.display = "";
         } 
         else {

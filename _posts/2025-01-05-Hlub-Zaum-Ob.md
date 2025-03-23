@@ -18,6 +18,7 @@ producers: "Golden Path Entertainment"
 director: "Muas Lis"
 writers: "Muas Lis"
 video: "https://www.youtube.com/embed/MzFABWO59UU"
+genre: "Romance"
 cast:
   - name: "Kwm Lis"
   - name: "Zuag 'Naiv' Vaaj"

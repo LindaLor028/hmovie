@@ -15,6 +15,7 @@ producers: "Ntxawg Vwj, Muas Lis"
 director: "Daus Yaj, Ntxawg Vwj"
 ppl: "Tub Tswb Lauj, Vas Lauj, Mab Sua Lis, Yi Xyooj, Ntxhee Lis, Dao Yang, Kiab Thoj, Phooj Yaj, Lwm Vaj, Maiv Ko Thoj, Vam Txoov Vaj, Dee Vaj, Pov Lauj Tsab, Thej Vaj, Tub Tshaj Ki Yaj, Paj Tshiab Yaj, Toog Ham, Zaj Tsoo Lauj, Yeev Yaj, Plag Vaj, Cos Phees"
 video: "https://www.youtube.com/watch?v=YY__0C5vQes&t=40s&ab_channel=JoshuaThao"
+genre: "Folklore"
 cast:
   - name: "Keeb Yaj"
   - name: "Ntxhoo Lauj"

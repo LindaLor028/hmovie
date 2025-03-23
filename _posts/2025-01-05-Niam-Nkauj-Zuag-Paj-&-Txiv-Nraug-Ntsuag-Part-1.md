@@ -15,7 +15,7 @@ producers: "Ntxawg Vwj, Muas Lis"
 director: "Daus Yaj, Ntxawg Vwj"
 writers: ""
 video: "https://www.youtube.com/embed/vjwS-V62z04?si=QxZYp8W20Hy1zrJZ"
-
+genre: "Folklore"
 cast:
   - name: "Keeb Yaj"
   - name: "Ntxhoo Lauj"
