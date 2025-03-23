@@ -31,7 +31,7 @@ cast:
 # Sequels + Parts
 basemovie: "Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 1"
 year: "2002"
-release-type: "DVD"
+release-type: "DVD VHS"
 total_parts: 3
 storage: "private"
 ---

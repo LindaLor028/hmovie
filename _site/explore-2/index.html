@@ -89,7 +89,7 @@
                             </a>
                         </li>
                     
-                        <li data-filter-data="2002 DVD">
+                        <li data-filter-data="2002 DVD VHS">
                             <a href="/movie/Niam-Nkauj-Zuag-Paj-&-Txiv-Nraug-Ntsuag-Part-1">
                                 <!-- <a href="" data-type="{"name"=>"Keeb Yaj"}, {"name"=>"Ntxhoo Lauj"}, {"name"=>"Khais Lauj"}, {"name"=>"Kooj Hawj"}, {"name"=>"Kuam Lis"}, {"name"=>"Sua Lis"}, {"name"=>"Tswb Yaj"}, {"name"=>"Txais Hawj"}, {"name"=>"Tswj Hwm Hawj"}, {"name"=>"Daus Yaj"}"> -->
                                     <a href="/movie/Niam-Nkauj-Zuag-Paj-&-Txiv-Nraug-Ntsuag-Part-1" data-type="Keeb Yaj, Ntxhoo Lauj, Khais Lauj, Kooj Hawj, Kuam Lis, Sua Lis, Tswb Yaj, Txais Hawj, Tswj Hwm Hawj, Daus Yaj">
@@ -97,12 +97,12 @@
 
                                 <img src="/assets/images/movie_thumbnails/Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 1.jpeg" alt="movie link" width="100%">
                                 <div>Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 1</div>
-                                <!-- <p> 2002 DVD</p> -->
-                                <!-- <p style="display: none"> 2002 DVD</p> -->
+                                <!-- <p> 2002 DVD VHS</p> -->
+                                <!-- <p style="display: none"> 2002 DVD VHS</p> -->
                             </a>
                         </li>
                     
-                        <li data-filter-data="2000 VHS">
+                        <li data-filter-data="2020 VHS">
                             <a href="/movie/Hlub-Zaum-Ob">
                                 <!-- <a href="/movie/Hlub-Zaum-Ob" data-type="{"name"=>"Kwm Lis"}, {"name"=>"Zuag 'Naiv' Vaaj"}, {"name"=>"Tsheem Yaaj"}, {"name"=>"Vam Lis Thoj"}, {"name"=>"Neeb Hawj"}, {"name"=>"Maiv Lis Yaj"}, {"name"=>"Mais Xyooj"}, {"name"=>"Xaiv Xaab Yaaj"}, {"name"=>"Kaag 'Xaiv Xaab' Yaaj"}, {"name"=>"Ntxhoo 'Nchaiv Yis' Lis"}"> -->
                                     <a href="/movie/Hlub-Zaum-Ob" data-type="Kwm Lis, Zuag 'Naiv' Vaaj, Tsheem Yaaj, Vam Lis Thoj, Neeb Hawj, Maiv Lis Yaj, Mais Xyooj, Xaiv Xaab Yaaj, Kaag 'Xaiv Xaab' Yaaj, Ntxhoo 'Nchaiv Yis' Lis">
@@ -110,8 +110,8 @@
 
                                 <img src="/assets/images/movie_thumbnails/Hlub Zaum Ob.jpeg" alt="movie link" width="100%">
                                 <div>Hlub Zaum Ob</div>
-                                <!-- <p> 2000 VHS</p> -->
-                                <!-- <p style="display: none"> 2000 VHS</p> -->
+                                <!-- <p> 2020 VHS</p> -->
+                                <!-- <p style="display: none"> 2020 VHS</p> -->
                             </a>
                         </li>
                     
@@ -290,7 +290,7 @@ function reportCheckedFields() {
     }
 }
 
-function returnCheckedYearFilters(id) {
+function returnCheckedYearFilters() {
     var filters = document.getElementById("year_filters").getElementsByTagName("li");
     var decade_1990s = new RegExp("199[0-9]");
     var decade_2000s = new RegExp("200[0-9]");
@@ -358,7 +358,7 @@ function checkYearRegex(txtValue, list) {
     }
 
     for (let i = 0; i < list.length; i ++) {
-        hasAMatch = ((hasAMatch) || (list[0].test(txtValue)));
+        hasAMatch = ((hasAMatch) || (list[i].test(txtValue)));
         // console.log("comparing if " + txtValue + " includes " + list[i] + " which is " + hasAMatch);
         if (hasAMatch) {
             break;
@@ -376,44 +376,29 @@ function clearFilters() {
 
 }
 
+/**
+ * filterMultiple()
+ * This function sets the visibility of the movies on the Explore page based on if what fields are checked.
+ * */
 function filterMultiple() {
-    var movie_list, movie_block, movie_p,filter_list, filter_input, current_movie;
-    returnCheckedYearFilters("fd");
-    var movie_list = document.getElementById("movies_list");
-    var movie_blocks = movie_list.getElementsByTagName("li");
-    var movie_p = movie_list.getElementsByTagName("p");
+    var filter_input, current_movie;
+    // Collect relevant movie items
+    var movies = document.getElementById("movies_list");// This is the list that contains all the movies 
+    var movie_blocks = movies.getElementsByTagName("li"); // We then store the movies in an array 
 
-    var filter_list = document.getElementById("filter_checkboxes");
-    // reportCheckedFields();
-    // if filters list is empty, then reveal all items again
-    // resetListItemsVisibility(filter_list.childElementCount);
 
-    // now actually do that filtering login - subtractive 
-    // var year_filters = filterByCategory("year_filters");
-    var year_filters = returnCheckedYearFilters("fd");
-
-    var release_filters = filterByCategory("release_filters");
-
-    var movies = document.getElementById("movies_list");
-    var movie_blocks = movies.getElementsByTagName("li");
-        for (let movie_index = 0; movie_index < movie_blocks.length; movie_index++ ) {
-            // p = movie_blocks[movie_index].getElementsByTagName("p")[0];
-            p = movie_blocks[movie_index].getAttribute("data-filter-data");
-            txtValue = p;
-            // txtValue = p.textContent || p.innerText;
-            // verifyCheck(txtValue, year_filters);
-            // if ((txtValue.toUpperCase().includes(year_filters[0]) || txtValue.toUpperCase().includes(year_filters[1]) || txtValue.toUpperCase().includes(year_filters[2])) && 
-            // (txtValue.toUpperCase().includes(release_filters[0]) || txtValue.toUpperCase().includes(release_filters[1]) || txtValue.toUpperCase().includes(release_filters[2]))) {
-
-            if ((checkYearRegex(txtValue, year_filters)) && (verifyCheck(txtValue, release_filters))) {
-                    movie_blocks[movie_index].style.display = "";
-                } 
-                else {
-                    movie_blocks[movie_index].style.display = "none";
-                }
-
+    var year_filters = returnCheckedYearFilters(); // returns an array of regex expressions based on what year-filters are checked (e.g. 1990s = 199\d)
+    var release_filters = filterByCategory("release_filters"); // returns an array of categories.toUpperCase() based on what release filters are checked
+    for (let movie_index = 0; movie_index < movie_blocks.length; movie_index++ ) {
+        p = movie_blocks[movie_index].getAttribute("data-filter-data");
+        txtValue = p;
+        if ((checkYearRegex(txtValue, year_filters)) && (verifyCheck(txtValue, release_filters))) {
+            movie_blocks[movie_index].style.display = "";
+        } 
+        else {
+            movie_blocks[movie_index].style.display = "none";
         }
-    
+        }
     }
 
     

@@ -30,7 +30,7 @@ cast:
   - name: "Kaag 'Xaiv Xaab' Yaaj"
   - name: "Ntxhoo 'Nchaiv Yis' Lis"
 basemovie: "Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 1"
-year: "2000"
+year: "2020"
 release-type: "VHS"
 total_parts: 0
 storage: "private"
