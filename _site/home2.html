@@ -11,32 +11,32 @@
         </style>
     </head>
 
-    <body>
+    <body class="bg_blue">
         <!-- Site Header-->
-        <header class="site_header">
-    <a href="http://127.0.0.1:4000"> Hmovie </a>
-    <form action="/search/" method="get">
-        <input type="text" name="q" />
-        <input type="submit" value="Search"/>
-    </form>
-    <a href="http://127.0.0.1:4000/about/"><button> About </button> </a>
-    <button> Explore </button>
-    <button> Contribute </button>
+        <head>
+    <link href="//fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet" type="text/css">
+</head>
+<header class="site_header_nosearch">
+    <a href="http://127.0.0.1:4000" class="home_button">Hmovie</a>
+    <a href="http://127.0.0.1:4000/about/" class="nav_button">ABOUT</a>
+    <a href="http://127.0.0.1:4000/explore/" class="nav_button">EXPLORE</a>
+    <a href="http://127.0.0.1:4000/about/" class="nav_button">CONTRIBUTE</a>
 </header>
-
-
-        <div class="centercontent">
+        <div class="center_content">
                 <!-- Overlay -->
                 <div class="landing_items">
                     <img src="/assets/images/home_image.jpeg" class="home_image" alt=" Movie Poster">
                     <div class="text_over_image">
-                        <h1>Hmovie</h1>
-                        <p>The largest Hmong movie database</p>
+                        <h1 class="hmovie_title black_shadow">Hmovie</h1>
+                        <p class="black_shadow">The Largest Digital Hmong Movie Database</p>
                     </div>
+                    <form action="/search/" id="home_search" class="black_shadow" method="get">
+                        <input type="text" name="q" />
+                    </form>
                 </div>
 
-                <p>Explore the current collection</p>
-                <ul id="movies_list">
+                <p>EXPLORE THE CURRENT COLLECTION</p>
+                <ul class="home_featured_movies">
                 
                         <li data-filter-data="2002  Folktale">
                             <a href="/movie/Niam_Nkauj_Zuag_Paj_&_Txiv_Nraug_Ntsuag_Part_3">
@@ -82,7 +82,7 @@
                             <a href="/movie/ABC">
                                 <!-- <a href="" data-type=""> -->
                                     <a href="/movie/ABC" data-type="">
-                                    <img src="" alt="movie thumbnail" width="100%">
+                                    <img src="/assets/images/movie_thumbnails/no_thumbnail.jpeg" alt="movie thumbnail" width="100%">
             
                                 <div>ABC</div>
                             </a>
@@ -92,7 +92,7 @@
                             <a href="/movie/1985">
                                 <!-- <a href="" data-type="{"name"=>"Ntxhoo Lauj"}, {"name"=>"Keeb Yaj"}, {"name"=>"Khais Lauj"}, {"name"=>"Tswb Yaj"}, {"name"=>"Ntxhi Vaj"}, {"name"=>"Kooj Hawj"}, {"name"=>"Sua Lis"}"> -->
                                     <a href="/movie/1985" data-type="Ntxhoo Lauj, Keeb Yaj, Khais Lauj, Tswb Yaj, Ntxhi Vaj, Kooj Hawj, Sua Lis">
-                                    <img src="" alt="movie thumbnail" width="100%">
+                                    <img src="/assets/images/movie_thumbnails/no_thumbnail.jpeg" alt="movie thumbnail" width="100%">
             
                                 <div>1985</div>
                             </a>

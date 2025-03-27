@@ -11,21 +11,24 @@
         </style>
     </head>
 
-    <body>
+    <body class="bg_blue">
         <!-- Site Header-->
-        {% include site_header.html %}
-        <div class="centercontent">
+        {% include header_nosearch.html %}
+        <div class="center_content">
                 <!-- Overlay -->
                 <div class="landing_items">
                     <img src="/assets/images/home_image.jpeg" class="home_image" alt="{{movie.name}} Movie Poster">
                     <div class="text_over_image">
-                        <h1>Hmovie</h1>
-                        <p>The largest Hmong movie database</p>
+                        <h1 class="hmovie_title black_shadow">Hmovie</h1>
+                        <p class="black_shadow">The Largest Digital Hmong Movie Database</p>
                     </div>
+                    <form action="{{site.baseurl}}/search/" id="home_search" class="black_shadow" method="get">
+                        <input type="text" name="q" />
+                    </form>
                 </div>
 
-                <p>Explore the current collection</p>
-                <ul id="movies_list">
+                <p>EXPLORE THE CURRENT COLLECTION</p>
+                <ul class="home_featured_movies">
                 {% for movie in site.categories.movie %}
                         <li data-filter-data="{{%movie.year%}} {{%movie.release-type%}} {{movie.genre}}">
                             <a href="{{movie.permalink}}">
