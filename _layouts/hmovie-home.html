@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> {{%page.title%}} </title>
+        <link href="/assets/css/styles.css" rel="stylesheet" type="text/css">
+        <style>
+            * {
+                color:white
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Site Header-->
+        {% include site_header.html %}
+        <div class="centercontent">
+                <!-- Overlay -->
+                <div class="landing_items">
+                    <img src="/assets/images/home_image.jpeg" class="home_image" alt="{{movie.name}} Movie Poster">
+                    <div class="text_over_image">
+                        <h1>Hmovie</h1>
+                        <p>The largest Hmong movie database</p>
+                    </div>
+                </div>
+
+                <p>Explore the current collection</p>
+                <ul id="movies_list">
+                {% for movie in site.categories.movie %}
+                        <li data-filter-data="{{%movie.year%}} {{%movie.release-type%}} {{movie.genre}}">
+                            <a href="{{movie.permalink}}">
+                                <!-- <a href="{{ movie.link }}" data-type="{% for person in movie.cast %}{{ person }}{% if forloop.last == false %}, {% endif %}{% endfor %}"> -->
+                                    <a href="{{ movie.permalink }}" data-type="{% for person in movie.cast %}{{ person.name }}{% if forloop.last == false %}, {% endif %}{% endfor %}">
+                                    <img src="{{movie.thumbnail}}" alt="movie thumbnail" width="100%">
+            
+                                <div>{{ %movie.title% }}</div>
+                            </a>
+                        </li>
+                {% endfor%}
+            </ul>
+        </div>
+    </body>
+</html>

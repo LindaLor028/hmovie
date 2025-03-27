@@ -1,36 +1,37 @@
 ---
 layout: movie-video-data
-date:   2024-12-01 21:25:08 -0600
+date: 2025-03-01 21:25:08 -0600
 categories: movie
 
-# Search Queries
-title:  "Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 2" 
+# Site Attributes
+title: "Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 2"
+permalink: "/movie/Niam_Nkauj_Zuag_Paj_&_Txiv_Nraug_Ntsuag_Part_2"
 
 # Movie Attributes
-permalink: /movie/Niam-Nkauj-Zuag-Paj-&-Txiv-Nraug-Ntsuag-Part-2
+synopsis: ""
+producer: "Muas Lis, Ntxawg Vwj"
+director: "Ntxawg Vwj, Daus Yaj"
+writer: ""
+video_link: ""
+genre: "Folktale"
+year: "2001"
+release_type: "DVD VHS"
+storage: "Center for Hmong Studies"
 thumbnail: "/assets/images/movie_thumbnails/Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 2.jpeg"
-sequel: "Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 3"
-synopsis: "Niam Nkauj Zuag Paj thiab txiv nraug Ntsuag yog ib zaj dabneeg sib hlub uas peb Hmoob nawvdaws leejtwg los paub. Zaum no Golden Path Entertainment thiab Asian Video muab tig los mus ua ib zaj yeebyam duab video rau ib tsoom Hmoob sawvdaws tau saib. Nyob rau hauv no nej yuav pom muaj sib ntaus tes taw thiab muaj 'special effects' zoo heev uas peb Hmoob tsis tau muaj leejtwg ua tau dua. Yog nej nyiam zaj 'Nuj Nplaib thiab Ntxawm' nej yuav nyiam zaj no heev thiab. Caw nej sawvdaws saib seb Txiv Nraug Ntsuag mus nrog Zaj Txwj Zaj Laug, Niam Nkauj Kub Kaws, thiab huab tais quam ntuj tus tub sib ntsuas zog hwjhuaj seb thaum kawg nws puas tau Niam Nkauj Zuag Paj los ua nws us pojniam."
-producers: "Ntxawg Vwj, Muas Lis"
-director: "Daus Yaj, Ntxawg Vwj"
-ppl: "Tub Tswb Lauj, Vas Lauj, Mab Sua Lis, Yi Xyooj, Ntxhee Lis, Dao Yang, Kiab Thoj, Phooj Yaj, Lwm Vaj, Maiv Ko Thoj, Vam Txoov Vaj, Dee Vaj, Pov Lauj Tsab, Thej Vaj, Tub Tshaj Ki Yaj, Paj Tshiab Yaj, Toog Ham, Zaj Tsoo Lauj, Yeev Yaj, Plag Vaj, Cos Phees"
-video: "https://www.youtube.com/watch?v=YY__0C5vQes&t=40s&ab_channel=JoshuaThao"
-genre: "Folklore"
-cast:
-  - name: "Keeb Yaj"
-  - name: "Ntxhoo Lauj"
-  - name: "Khais Lauj"
-  - name: "Kooj Hawj"
-  - name: "Kuam Lis"
-  - name: "Sua Lis"
-  - name: "Tswb Yaj"
-  - name: "Txais Hawj"
-  - name: "Tswj Hwm Hawj"
-  - name: "Daus Yaj"
+publishing_company: "Golden Path Entertainment, AsianVideo"
 
 # Sequels + Parts
-basemovie: "Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 1"
-year: "2002"
-release-type: "VHS"
+base_movie: "Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 1"
 total_parts: 3
+sequel: "Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 3"
+
+# Movie Cast
+cast:
+- name: "Ntxhoo Lauj"
+- name: "Keeb Yaj"
+- name: "Khais Lauj"
+- name: "Tswb Yaj"
+- name: "Ntxhi Vaj"
+- name: "Kooj Hawj"
+- name: "Sua Lis"
 ---

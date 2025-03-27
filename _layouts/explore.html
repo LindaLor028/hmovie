@@ -56,9 +56,8 @@
                             <a href="{{movie.permalink}}">
                                 <!-- <a href="{{ movie.link }}" data-type="{% for person in movie.cast %}{{ person }}{% if forloop.last == false %}, {% endif %}{% endfor %}"> -->
                                     <a href="{{ movie.permalink }}" data-type="{% for person in movie.cast %}{{ person.name }}{% if forloop.last == false %}, {% endif %}{% endfor %}">
-
-
-                                <img src="{{movie.thumbnail}}" alt="movie link" width="100%">
+                                    <img src="{{movie.thumbnail}}" alt="movie thumbnail" width="100%">
+            
                                 <div>{{ %movie.title% }}</div>
                                 <!-- <p> {{%movie.year%}} {{%movie.release-type%}}</p> -->
                                 <!-- <p style="display: none"> {{%movie.year%}} {{%movie.release-type%}}</p> -->
@@ -100,7 +99,7 @@
                 <h2>Genre</h2>
                 <ul id="genre_filters" class="filter_list">
                     <li> <input type="checkbox" class="explore_checkbox" onclick="filterMultiple()"/>
-                         <label>Folklore</label>
+                         <label>Folktale</label>
                     </li>
                     <li> <input type="checkbox" class="explore_checkbox" onclick="filterMultiple()"/>
                          <label>Comedy</label>

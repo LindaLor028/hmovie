@@ -1,32 +1,37 @@
 ---
 layout: movie-video-data
-date:   2024-12-01 21:25:08 -0600
+date: 2025-03-01 21:25:08 -0600
 categories: movie
 
-# Search Queries
-title:  "Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 3" 
+# Site Attributes
+title: "Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 3"
+permalink: "/movie/Niam_Nkauj_Zuag_Paj_&_Txiv_Nraug_Ntsuag_Part_3"
 
 # Movie Attributes
-permalink: /movie/Niam-Nkauj-Zuag-Paj-&-Txiv-Nraug-Ntsuag-Part-3
-thumbnail: "/assets/images/movie_thumbnails/Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 3.jpeg"
-sequel: ""
 synopsis: ""
-producers: "Ntxawg Vwj, Muas Lis"
+producer: "Muas Lis, Ntxawg Vwj"
 director: "Ntxawg Vwj, Daus Yaj"
-video: "https://www.youtube.com/embed/MzFABWO59UU"
-genre: "Folklore"
-cast:
-  - name: "Ntxhoo Lauj"
-  - name: "Keeb Yaj"
-  - name: "Khais Lauj"
-  - name: "Tswb Yaj"
-  - name: "Ntxhi Vaj"
-  - name: "Kooj Hawj"
-  - name: "Sua Lis"
+writer: ""
+video_link: ""
+genre: "Folktale"
+year: "2002"
+release_type: "DVD VHS"
+storage: "Center for Hmong Studies"
+thumbnail: "/assets/images/movie_thumbnails/Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 3.jpeg"
+publishing_company: "Golden Path Entertainment, AsianVideo"
 
 # Sequels + Parts
-basemovie: "Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 1"
-year: "2002"
-release-type: "VHS"
+base_movie: "Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 1"
 total_parts: 3
+sequel: ""
+
+# Movie Cast
+cast:
+- name: "Ntxhoo Lauj"
+- name: "Keeb Yaj"
+- name: "Khais Lauj"
+- name: "Tswb Yaj"
+- name: "Ntxhi Vaj"
+- name: "Kooj Hawj"
+- name: "Sua Lis"
 ---
