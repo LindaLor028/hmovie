@@ -171,7 +171,6 @@ button {
   text-align: center;
   top: 50%;
   width: 100%;
-  height: 100%;
 }
 
 .text_over_image {
@@ -332,7 +331,6 @@ body {
 
 #home_searchbar {
   display: grid;
-  position: relative;
   left: 20%;
   column-gap: 0rem;
   grid-template-columns: 45px 6fr;
@@ -353,6 +351,18 @@ body {
 
 .search_input:focus {
   outline: none;
+}
+
+.sub_title {
+  font-size: large;
+}
+
+.landing_div {
+  background-image: url(/assets/images/home_image.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 36rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -16,16 +16,18 @@
         {% include header_nosearch.html %}
         <div class="center_content">
                 <!-- Overlay -->
-                <div class="landing_items">
-                    <img src="/assets/images/home_image.jpeg" class="home_image" alt="{{movie.name}} Movie Poster">
-                    <div class="text_over_image">
+                <div class="landing_div">
+                    <!-- <img src="/assets/images/home_image.jpeg" class="home_image" alt="{{movie.name}} Movie Poster"> -->
+                     <!-- class="text_over_image" -->
                         <h1 class="hmovie_title black_shadow">Hmovie</h1>
-                        <p class="black_shadow">The Largest Digital Hmong Movie Database</p>
+                        <p class="sub_title black_shadow">The Largest Digital Hmong Movie Database</p>
+                        <p class="black_shadow">SEARCH FOR A MOVIE</p> 
                         <form action="{{site.baseurl}}/search/" id="home_searchbar" class="black_shadow" method="get" >
                             <span class="search_icon"></span>
                             <input type="text" class="search_input" name="q" placeholder="search"/>
                         </form>
-                    </div>
+                    
+
                     <!-- <form action="{{site.baseurl}}/search/" id="home_search" class="black_shadow" method="get">
                         <input type="text" id="add" name="q" />
                     </form> -->
