@@ -163,7 +163,7 @@ button {
   vertical-align: top;
   width: 100%;
   filter: brightness(50%);
-  mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+  mask-image: linear-gradient(black, transparent 50%);
 }
 
 .landing_items {
@@ -259,8 +259,9 @@ body {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   height: 50px;
-  background-color: rgb(44, 48, 147);
+  background-color: rgb(3, 28, 73);
   grid-template-columns: 3fr 1fr 1fr 1fr;
+  box-shadow: none 20px 10px 5px rgb(0, 0, 0);
 }
 
 .nav_button {
@@ -305,7 +306,7 @@ body {
 }
 
 .hmovie_title {
-  font-size: 550%;
+  font-size: 100px;
   color: white;
   margin: 0%;
 }
@@ -351,7 +352,8 @@ body {
 }
 
 .sub_title {
-  font-size: large;
+  font-size: 3vw;
+  margin: 0%;
 }
 
 .landing_div {
@@ -360,12 +362,13 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 36rem;
+  margin-top: 3%;
   text-align: center;
   border-radius: 1rem;
   vertical-align: top;
   width: 100%;
-  filter: brightness(50%);
-  mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+  filter: brightness(83%);
+  mask-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgb(15, 20, 30) 20%);
 }
 
 /*# sourceMappingURL=styles.css.map */
