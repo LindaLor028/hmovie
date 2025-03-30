@@ -178,9 +178,7 @@ button {
   color: white;
   position: absolute;
   top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  width: 100%;
 }
 
 .text_over_image h1 {
@@ -330,6 +328,31 @@ body {
   background-size: 30px;
   border: 0;
   border-radius: 0.5rem;
+}
+
+#home_searchbar {
+  display: grid;
+  position: relative;
+  left: 20%;
+  column-gap: 0rem;
+  grid-template-columns: 45px 6fr;
+  background-color: white;
+  border-radius: 5rem;
+  width: 60%;
+}
+
+.search_input {
+  border-color: white;
+  border-width: 0px;
+  color: black;
+  font-size: 20px;
+  user-select: none;
+  border-bottom-right-radius: 5rem;
+  border-top-right-radius: 5rem;
+}
+
+.search_input:focus {
+  outline: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
