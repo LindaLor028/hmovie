@@ -199,12 +199,8 @@ button {
     color: white;
     position: absolute;  
     top: 40%;
-    width: 100%;
-}
-
-.text_over_image h1{
-    color: white;
-
+    width: 79%;
+    text-align: center;
 }
 
 
@@ -346,7 +342,7 @@ body {
     font-size: 550%;
     color: white;
     margin: 0%;
-    padding-top: 10rem;
+    // padding-top: 10rem;
 }
 
 .black_shadow {
@@ -368,7 +364,7 @@ body {
 #home_searchbar {
     display: grid;
     // position: relative;
-    left: 20%;
+    margin-left: 20%;
     column-gap: 0rem;
     grid-template-columns: 45px 6fr;
     background-color: white;
@@ -405,6 +401,6 @@ body {
     border-radius: 1rem;
     vertical-align: top;
     width: 100%;
-    // filter: brightness(50%);
-    // mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+    filter: brightness(50%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
 }
