@@ -1,11 +1,18 @@
+<head>
+    <link href="//fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet" type="text/css">
+</head>
 <header class="site_header">
-    <a href="http://127.0.0.1:4000"> Hmovie </a>
-    <form action="{{site.baseurl}}/search/" method="get">
+    <a href="/home2" class="home_button">Hmovie</a>
+    <!-- <form action="{{site.baseurl}}/search/" method="get" id="header_searchbar">
         <input type="text" name="q" />
         <input type="submit" value="Search"/>
+    </form> -->
+    <form action="{{site.baseurl}}/search/" id="header_searchbar" method="get" >
+        <span class="search_icon"></span>
+        <input type="text" class="search_input" name="q" placeholder="search"/>
     </form>
-    <a href="http://127.0.0.1:4000/about/"><button> About </button> </a>
-    <button> Explore </button>
-    <button> Contribute </button>
+    <a href="/about/" class="nav_button">ABOUT</a>
+    <a href="/explore/" class="nav_button">EXPLORE</a>
+    <a href="/about/" class="nav_button">CONTRIBUTE</a>
 </header>
 
