@@ -18,15 +18,17 @@
             {% for actor in site.categories.actor %}
                 <li data-movie-title="{{actor.title}}">
                     <a href="{{actor.permalink}}">
-                        <img src="{{actor.thumbnail}}" class="circle_img" alt="actor link" width="100%">
-                        <div>{{ %actor.title% }}</div>
+                        <div class="side_by_side">
+                            <img src="{{actor.thumbnail}}" class="circle_img" alt="actor link" height="80px">
+                            <p>{{ %actor.title% }}</p>
+                        </div>
                     </a>
                 </li>
             {% endfor%}
         </ul>
 
         <h1>Movies</h1>
-        <ul id="movies_list">
+        <ul id="movies_search_list">
             {% for movie in site.categories.movie %}
                 <li data-year="{{movie.year}}" data-movie-title="{{movie.title}}" data-movie-cast="{% for person in movie.cast %}{{ person.name }}{% if forloop.last == false %}, {% endif %}{% endfor %}">
                     <a href="{{movie.permalink}}">
@@ -62,7 +64,7 @@ function filterMovies(query) {
     var input, filter, ul, li, a, i, txtValue;
     input = query;
     filter = query.toUpperCase();
-    ul = document.getElementById("movies_list");
+    ul = document.getElementById("movies_search_list");
     li = ul.getElementsByTagName("li");
     for (i = 0; i < li.length; i++) {
         a = li[i].getAttribute("data-movie-title");

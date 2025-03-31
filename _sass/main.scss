@@ -597,18 +597,55 @@ body {
 
 // search page
 
-#actors_list {
+#actors_list li {
     list-style-type: none;
-    display: grid;
     background-color:rgba(31,44,68,255);
-    grid-template-columns: repeat(auto-fit, minmax(min-content, 150px));
-    column-gap: 1rem;
-    row-gap: 1rem;
-    padding: 2%;
+    height: fit-content;
+    padding: 1rem;
     border-radius: 1rem;
+    margin: 1rem;
 }
   
 #actors_list li a{
+    text-decoration: none;
+    font-size: 18px;
+
+}
+  
+#actors_list li:hover:not(.header) {
+    background-color: rgb(53, 63, 83);
+    border-radius: 1rem;
+}
+
+.circle_img {
+    border-radius: 5rem;
+}
+
+.side_by_side {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+}
+
+.side_by_side p{
+    padding-top: 1rem;
+}
+
+#movies_search_list {
+    list-style-type: none;
+    display: grid;
+    background-color:rgba(31,44,68,255);
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 175px));
+    column-gap: 1rem;
+    row-gap: 1rem;
+    padding: 0;
+    margin: 0;
+    padding: 2%;
+    border-radius: 1rem;
+    margin-left: 4rem;
+}
+  
+#movies_search_list li a{
     margin-top: -1px; /* Prevent double borders */
     padding: 12px;
     text-decoration: none;
@@ -616,11 +653,7 @@ body {
     display: block
 }
   
-#actors_list li a:hover:not(.header) {
+#movies_search_list li a:hover:not(.header) {
     background-color: rgb(53, 63, 83);
     border-radius: 1rem;
-}
-
-.circle_img {
-    border-radius: 5rem;
 }
