@@ -170,43 +170,6 @@ button {
   text-align: center;
 }
 
-.home_featured_movies {
-  list-style-type: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min-content, 230px));
-  column-gap: 3rem;
-  margin-left: 3rem;
-  margin-right: 3rem;
-  margin-top: 2rem;
-  row-gap: 1rem;
-  padding: 0;
-}
-
-.home_featured_movies li {
-  margin-top: -1px; /* Prevent double borders */
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  display: block;
-}
-
-.home_featured_movies img {
-  border-radius: 0.2rem;
-}
-
-.home_featured_movies li a {
-  margin-top: -1px; /* Prevent double borders */
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  display: block;
-}
-
-.home_featured_movies li a:hover:not(.header) {
-  background-color: rgb(53, 63, 83);
-  border-radius: 1rem;
-}
-
 #movies_list {
   list-style-type: none;
   display: grid;
@@ -219,9 +182,7 @@ button {
 }
 
 #movies_list li {
-  border: 1px solid #ddd;
   margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
   padding: 12px;
   text-decoration: none;
   font-size: 18px;
@@ -230,12 +191,18 @@ button {
 }
 
 #movies_list li a:hover:not(.header) {
-  background-color: rgb(15, 20, 30);
+  background-color: rgb(53, 63, 83);
 }
 
 .filter_list {
   list-style-type: none;
   width: 100%;
+}
+
+.filter_div {
+  background-color: rgb(53, 63, 83);
+  border-radius: 1rem;
+  padding: 2rem;
 }
 
 .bg_blue {
@@ -513,6 +480,43 @@ body {
 .about_profile img {
   width: 100%;
   border-radius: 60rem;
+}
+
+.home_featured_movies {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 230px));
+  column-gap: 3rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-top: 2rem;
+  row-gap: 1rem;
+  padding: 0;
+}
+
+.home_featured_movies li {
+  margin-top: -1px; /* Prevent double borders */
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+}
+
+.home_featured_movies img {
+  border-radius: 0.2rem;
+}
+
+.home_featured_movies li a {
+  margin-top: -1px; /* Prevent double borders */
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+}
+
+.home_featured_movies li a:hover:not(.header) {
+  background-color: rgb(53, 63, 83);
+  border-radius: 1rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

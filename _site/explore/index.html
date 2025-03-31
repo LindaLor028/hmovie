@@ -8,36 +8,6 @@
   box-sizing: border-box;
 } */
 
-#movies_list {
-  list-style-type: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min-content, 150px));
-  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
-  column-gap: 1rem;
-  row-gap: 1rem;
-  padding: 0;
-  margin: 0;
-}
-
-#movies_list li {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  color: black;
-  display: block
-}
-
-#movies_list li a:hover:not(.header) {
-  background-color: #eee;
-}
-
-.filter_list {
-    list-style-type: none;
-    width: 100%;
-}
 </style>
 </head>
 <body class="bg_blue">
@@ -65,80 +35,54 @@
         <h2>Explore</h2>
 
         <div class="movie_mainview" >
-
             <div>
-
                 <ul id="movies_list">
                     
                         <li data-filter-data="2002 DVD VHS Folktale">
                             <a href="/movie/Niam_Nkauj_Zuag_Paj_&_Txiv_Nraug_Ntsuag_Part_3">
-                                <!-- <a href="" data-type="{"name"=>"Ntxhoo Lauj"}, {"name"=>"Keeb Yaj"}, {"name"=>"Khais Lauj"}, {"name"=>"Tswb Yaj"}, {"name"=>"Ntxhi Vaj"}, {"name"=>"Kooj Hawj"}, {"name"=>"Sua Lis"}"> -->
-                                    <a href="/movie/Niam_Nkauj_Zuag_Paj_&_Txiv_Nraug_Ntsuag_Part_3" data-type="Ntxhoo Lauj, Keeb Yaj, Khais Lauj, Tswb Yaj, Ntxhi Vaj, Kooj Hawj, Sua Lis">
-                                    <img src="/assets/images/movie_thumbnails/Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 3.jpeg" alt="movie thumbnail" width="100%">
-            
+                                <a href="/movie/Niam_Nkauj_Zuag_Paj_&_Txiv_Nraug_Ntsuag_Part_3" data-type="Ntxhoo Lauj, Keeb Yaj, Khais Lauj, Tswb Yaj, Ntxhi Vaj, Kooj Hawj, Sua Lis">
+                                <img src="/assets/images/movie_thumbnails/Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 3.jpeg" alt="movie thumbnail" width="100%">
                                 <div>Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 3</div>
-                                <!-- <p> 2002 </p> -->
-                                <!-- <p style="display: none"> 2002 </p> -->
                             </a>
                         </li>
                     
                         <li data-filter-data="2001 DVD VHS Folktale">
                             <a href="/movie/Niam_Nkauj_Zuag_Paj_&_Txiv_Nraug_Ntsuag_Part_2">
-                                <!-- <a href="" data-type="{"name"=>"Ntxhoo Lauj"}, {"name"=>"Keeb Yaj"}, {"name"=>"Khais Lauj"}, {"name"=>"Tswb Yaj"}, {"name"=>"Ntxhi Vaj"}, {"name"=>"Kooj Hawj"}, {"name"=>"Sua Lis"}"> -->
-                                    <a href="/movie/Niam_Nkauj_Zuag_Paj_&_Txiv_Nraug_Ntsuag_Part_2" data-type="Ntxhoo Lauj, Keeb Yaj, Khais Lauj, Tswb Yaj, Ntxhi Vaj, Kooj Hawj, Sua Lis">
-                                    <img src="/assets/images/movie_thumbnails/Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 2.jpeg" alt="movie thumbnail" width="100%">
-            
+                                <a href="/movie/Niam_Nkauj_Zuag_Paj_&_Txiv_Nraug_Ntsuag_Part_2" data-type="Ntxhoo Lauj, Keeb Yaj, Khais Lauj, Tswb Yaj, Ntxhi Vaj, Kooj Hawj, Sua Lis">
+                                <img src="/assets/images/movie_thumbnails/Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 2.jpeg" alt="movie thumbnail" width="100%">
                                 <div>Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 2</div>
-                                <!-- <p> 2001 </p> -->
-                                <!-- <p style="display: none"> 2001 </p> -->
                             </a>
                         </li>
                     
                         <li data-filter-data="2002 DVD VHS Folktale">
                             <a href="/movie/Niam_Nkauj_Zuag_Paj_&_Txiv_Nraug_Ntsuag_Part_1">
-                                <!-- <a href="" data-type="{"name"=>"Keeb Yaj"}, {"name"=>"Ntxhoo Lauj"}, {"name"=>"Khais Lauj"}, {"name"=>"Kooj Hawj"}, {"name"=>"Sua Lis"}, {"name"=>"Tswb Yaj"}, {"name"=>"Txais Hawj"}, {"name"=>"Tswj Hwm Hawj"}, {"name"=>"Daus Yaj"}"> -->
-                                    <a href="/movie/Niam_Nkauj_Zuag_Paj_&_Txiv_Nraug_Ntsuag_Part_1" data-type="Keeb Yaj, Ntxhoo Lauj, Khais Lauj, Kooj Hawj, Sua Lis, Tswb Yaj, Txais Hawj, Tswj Hwm Hawj, Daus Yaj">
-                                    <img src="/assets/images/movie_thumbnails/Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 1.jpeg" alt="movie thumbnail" width="100%">
-            
+                                <a href="/movie/Niam_Nkauj_Zuag_Paj_&_Txiv_Nraug_Ntsuag_Part_1" data-type="Keeb Yaj, Ntxhoo Lauj, Khais Lauj, Kooj Hawj, Sua Lis, Tswb Yaj, Txais Hawj, Tswj Hwm Hawj, Daus Yaj">
+                                <img src="/assets/images/movie_thumbnails/Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 1.jpeg" alt="movie thumbnail" width="100%">
                                 <div>Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 1</div>
-                                <!-- <p> 2002 </p> -->
-                                <!-- <p style="display: none"> 2002 </p> -->
                             </a>
                         </li>
                     
                         <li data-filter-data="2020 VHS Romance">
                             <a href="/movie/Hlub-Zaum-Ob">
-                                <!-- <a href="/movie/Hlub-Zaum-Ob" data-type="{"name"=>"Kwm Lis"}, {"name"=>"Zuag 'Naiv' Vaaj"}, {"name"=>"Tsheem Yaaj"}, {"name"=>"Vam Lis Thoj"}, {"name"=>"Neeb Hawj"}, {"name"=>"Maiv Lis Yaj"}, {"name"=>"Mais Xyooj"}, {"name"=>"Xaiv Xaab Yaaj"}, {"name"=>"Kaag 'Xaiv Xaab' Yaaj"}, {"name"=>"Ntxhoo 'Nchaiv Yis' Lis"}"> -->
-                                    <a href="/movie/Hlub-Zaum-Ob" data-type="Kwm Lis, Zuag 'Naiv' Vaaj, Tsheem Yaaj, Vam Lis Thoj, Neeb Hawj, Maiv Lis Yaj, Mais Xyooj, Xaiv Xaab Yaaj, Kaag 'Xaiv Xaab' Yaaj, Ntxhoo 'Nchaiv Yis' Lis">
-                                    <img src="/assets/images/movie_thumbnails/Hlub Zaum Ob.jpeg" alt="movie thumbnail" width="100%">
-            
+                                <a href="/movie/Hlub-Zaum-Ob" data-type="Kwm Lis, Zuag 'Naiv' Vaaj, Tsheem Yaaj, Vam Lis Thoj, Neeb Hawj, Maiv Lis Yaj, Mais Xyooj, Xaiv Xaab Yaaj, Kaag 'Xaiv Xaab' Yaaj, Ntxhoo 'Nchaiv Yis' Lis">
+                                <img src="/assets/images/movie_thumbnails/Hlub Zaum Ob.jpeg" alt="movie thumbnail" width="100%">
                                 <div>Hlub Zaum Ob</div>
-                                <!-- <p> 2020 </p> -->
-                                <!-- <p style="display: none"> 2020 </p> -->
                             </a>
                         </li>
                     
                         <li data-filter-data="  ">
                             <a href="/movie/ABC">
-                                <!-- <a href="" data-type=""> -->
-                                    <a href="/movie/ABC" data-type="">
-                                    <img src="/assets/images/movie_thumbnails/no_thumbnail.jpeg" alt="movie thumbnail" width="100%">
-            
+                                <a href="/movie/ABC" data-type="">
+                                <img src="/assets/images/movie_thumbnails/no_thumbnail.jpeg" alt="movie thumbnail" width="100%">
                                 <div>ABC</div>
-                                <!-- <p>  </p> -->
-                                <!-- <p style="display: none">  </p> -->
                             </a>
                         </li>
                     
                         <li data-filter-data="  ">
                             <a href="/movie/1985">
-                                <!-- <a href="" data-type="{"name"=>"Ntxhoo Lauj"}, {"name"=>"Keeb Yaj"}, {"name"=>"Khais Lauj"}, {"name"=>"Tswb Yaj"}, {"name"=>"Ntxhi Vaj"}, {"name"=>"Kooj Hawj"}, {"name"=>"Sua Lis"}"> -->
-                                    <a href="/movie/1985" data-type="Ntxhoo Lauj, Keeb Yaj, Khais Lauj, Tswb Yaj, Ntxhi Vaj, Kooj Hawj, Sua Lis">
-                                    <img src="/assets/images/movie_thumbnails/no_thumbnail.jpeg" alt="movie thumbnail" width="100%">
-            
+                                <a href="/movie/1985" data-type="Ntxhoo Lauj, Keeb Yaj, Khais Lauj, Tswb Yaj, Ntxhi Vaj, Kooj Hawj, Sua Lis">
+                                <img src="/assets/images/movie_thumbnails/no_thumbnail.jpeg" alt="movie thumbnail" width="100%">
                                 <div>1985</div>
-                                <!-- <p>  </p> -->
-                                <!-- <p style="display: none">  </p> -->
                             </a>
                         </li>
                     
@@ -146,7 +90,7 @@
                     
             </div>
 
-            <div>
+            <div class="filter_div">
                 <button onclick="clearFilters()"> Clear Filters</button>
                 <h2>Year of Release </h2>
                 <ul id="year_filters" class="filter_list">
