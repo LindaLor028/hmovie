@@ -20,7 +20,7 @@
     </form>
     <a href="/about/" class="nav_button">ABOUT</a>
     <a href="/explore/" class="nav_button">EXPLORE</a>
-    <a href="/about/" class="nav_button">CONTRIBUTE</a>
+    <a href="/contribute/" class="nav_button">CONTRIBUTE</a>
 </header>
 
 
@@ -30,7 +30,7 @@
 
         <div class="movie_mainview" >
             <div>
-                <ul id="movies_list">
+                <ul id="movies_list" class="inner_shadow">
                     
                         <li data-filter-data="2002 DVD VHS Folktale">
                             <a href="/movie/Niam_Nkauj_Zuag_Paj_&_Txiv_Nraug_Ntsuag_Part_3" data-type="Ntxhoo Lauj, Keeb Yaj, Khais Lauj, Tswb Yaj, Ntxhi Vaj, Kooj Hawj, Sua Lis">
@@ -78,8 +78,11 @@
                     
             </div>
 
-            <div class="filter_div">
-                <button onclick="clearFilters()"> Clear Filters</button>
+            <div class="filter_div inner_shadow">
+                <div class="filter_title">
+                    <h2>FILTERS</h2>
+                    <button onclick="clearFilters()" class="clear_filters_button"> Clear Filters</button>
+                </div>
                 <h2>Year of Release </h2>
                 <ul id="year_filters" class="filter_list">
                     <li> <input type="checkbox" class="explore_checkbox" onclick="filterMultiple()"/> 

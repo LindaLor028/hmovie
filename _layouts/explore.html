@@ -12,7 +12,7 @@
 
         <div class="movie_mainview" >
             <div>
-                <ul id="movies_list">
+                <ul id="movies_list" class="inner_shadow">
                     {% for movie in site.categories.movie %}
                         <li data-filter-data="{{%movie.year%}} {{%movie.release_type%}} {{movie.genre}}">
                             <a href="{{ movie.permalink }}" data-type="{% for person in movie.cast %}{{ person.name }}{% if forloop.last == false %}, {% endif %}{% endfor %}">
@@ -25,8 +25,11 @@
                     
             </div>
 
-            <div class="filter_div">
-                <button onclick="clearFilters()"> Clear Filters</button>
+            <div class="filter_div inner_shadow">
+                <div class="filter_title">
+                    <h2>FILTERS</h2>
+                    <button onclick="clearFilters()" class="clear_filters_button"> Clear Filters</button>
+                </div>
                 <h2>Year of Release </h2>
                 <ul id="year_filters" class="filter_list">
                     <li> <input type="checkbox" class="explore_checkbox" onclick="filterMultiple()"/> 
