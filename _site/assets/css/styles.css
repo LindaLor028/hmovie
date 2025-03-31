@@ -365,7 +365,6 @@ body {
   padding-right: 10%;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  height: 50px;
   background-color: rgb(3, 28, 73);
   grid-template-columns: 1fr 2fr 0.75fr 0.75fr 0.75fr;
   box-shadow: none 20px 10px 5px rgb(0, 0, 0);
