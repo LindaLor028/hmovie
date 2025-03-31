@@ -4,98 +4,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="/assets/css/styles.css" rel="stylesheet" type="text/css">
 <style>
-* {
-  box-sizing: border-box;
-}
 
-#myInput {
-  /* background-image: url('/css/searchicon.png'); */
-  background-position: 10px 12px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-}
-
-#movies_list {
-  list-style-type: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min-content, 150px));
-  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
-  column-gap: 1rem;
-  row-gap: 1rem;
-  padding: 0;
-  margin: 0;
-}
-
-#actors_list {
-  list-style-type: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min-content, 150px));
-  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
-  column-gap: 1rem;
-  row-gap: 1rem;
-  padding: 0;
-  margin: 0;
-
-}
-
-#actors_list li {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  color: black;
-  display: block
-}
-
-#movies_list li {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  color: black;
-  display: block
-}
-
-#movies_list li a:hover:not(.header) {
-  background-color: #eee;
-}
-
-.filter_list {
-    list-style-type: none;
-    width: 100%;
-}
 </style>
 </head>
 <body class="bg_blue">
     {% include site_header.html %}
-    
+
     <div class="center_content">
         <p id="search"></p>
         <!-- <input type="text" id="myInput" onkeyup="newFilter()" placeholder="Search for names.." title="Type in a name"> -->
+        <h1>Actors</h1>
         <ul id="actors_list">
             {% for actor in site.categories.actor %}
                 <li data-movie-title="{{actor.title}}">
                     <a href="{{actor.permalink}}">
-                        <img src="{{actor.thumbnail}}" alt="actor link" width="100rem">
+                        <img src="{{actor.thumbnail}}" class="circle_img" alt="actor link" width="100%">
                         <div>{{ %actor.title% }}</div>
                     </a>
                 </li>
             {% endfor%}
         </ul>
 
+        <h1>Movies</h1>
         <ul id="movies_list">
             {% for movie in site.categories.movie %}
                 <li data-year="{{movie.year}}" data-movie-title="{{movie.title}}" data-movie-cast="{% for person in movie.cast %}{{ person.name }}{% if forloop.last == false %}, {% endif %}{% endfor %}">
                     <a href="{{movie.permalink}}">
-                        <img src="{{movie.thumbnail}}" alt="movie link" width="100rem">
+                        <img src="{{movie.thumbnail}}" alt="movie link" class="rounded_img" width="100%">
                         <div>{{ %movie.title% }}</div>
                     </a>
                 </li>
@@ -162,6 +97,7 @@ function getQueryVariable(variable) {
     }
 
     var query = decodeURIComponent((getQueryVariable("q") || "").replace(/\+/g, "%20"));
+    console.log(query);
     filterActors(query);
     filterMovies(query);
     

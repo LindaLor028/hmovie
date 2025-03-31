@@ -4,74 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="/assets/css/styles.css" rel="stylesheet" type="text/css">
 <style>
-* {
-  box-sizing: border-box;
-}
 
-#myInput {
-  /* background-image: url('/css/searchicon.png'); */
-  background-position: 10px 12px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-}
-
-#movies_list {
-  list-style-type: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min-content, 150px));
-  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
-  column-gap: 1rem;
-  row-gap: 1rem;
-  padding: 0;
-  margin: 0;
-}
-
-#actors_list {
-  list-style-type: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min-content, 150px));
-  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
-  column-gap: 1rem;
-  row-gap: 1rem;
-  padding: 0;
-  margin: 0;
-
-}
-
-#actors_list li {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  color: black;
-  display: block
-}
-
-#movies_list li {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  color: black;
-  display: block
-}
-
-#movies_list li a:hover:not(.header) {
-  background-color: #eee;
-}
-
-.filter_list {
-    list-style-type: none;
-    width: 100%;
-}
 </style>
 </head>
 <body class="bg_blue">
@@ -94,68 +27,70 @@
 </header>
 
 
-    
+
     <div class="center_content">
         <p id="search"></p>
         <!-- <input type="text" id="myInput" onkeyup="newFilter()" placeholder="Search for names.." title="Type in a name"> -->
+        <h1>Actors</h1>
         <ul id="actors_list">
             
                 <li data-movie-title="Ntxhoo Lauj">
                     <a href="/cast/Ntxhoo-Lauj">
-                        <img src="/assets/images/cast_thumbnails/Ntxhoo Lauj.png" alt="actor link" width="100rem">
+                        <img src="/assets/images/cast_thumbnails/Ntxhoo Lauj.png" class="circle_img" alt="actor link" width="100%">
                         <div>Ntxhoo Lauj</div>
                     </a>
                 </li>
             
                 <li data-movie-title="Mab Sua Lis">
                     <a href="/cast/Ma-Sua-Lis">
-                        <img src="/assets/images/cast_thumbnails/Mab Sua Lis.png" alt="actor link" width="100rem">
+                        <img src="/assets/images/cast_thumbnails/Mab Sua Lis.png" class="circle_img" alt="actor link" width="100%">
                         <div>Mab Sua Lis</div>
                     </a>
                 </li>
             
         </ul>
 
+        <h1>Movies</h1>
         <ul id="movies_list">
             
                 <li data-year="2002" data-movie-title="Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 3" data-movie-cast="Ntxhoo Lauj, Keeb Yaj, Khais Lauj, Tswb Yaj, Ntxhi Vaj, Kooj Hawj, Sua Lis">
                     <a href="/movie/Niam_Nkauj_Zuag_Paj_&_Txiv_Nraug_Ntsuag_Part_3">
-                        <img src="/assets/images/movie_thumbnails/Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 3.jpeg" alt="movie link" width="100rem">
+                        <img src="/assets/images/movie_thumbnails/Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 3.jpeg" alt="movie link" class="rounded_img" width="100%">
                         <div>Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 3</div>
                     </a>
                 </li>
             
                 <li data-year="2001" data-movie-title="Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 2" data-movie-cast="Ntxhoo Lauj, Keeb Yaj, Khais Lauj, Tswb Yaj, Ntxhi Vaj, Kooj Hawj, Sua Lis">
                     <a href="/movie/Niam_Nkauj_Zuag_Paj_&_Txiv_Nraug_Ntsuag_Part_2">
-                        <img src="/assets/images/movie_thumbnails/Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 2.jpeg" alt="movie link" width="100rem">
+                        <img src="/assets/images/movie_thumbnails/Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 2.jpeg" alt="movie link" class="rounded_img" width="100%">
                         <div>Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 2</div>
                     </a>
                 </li>
             
                 <li data-year="2002" data-movie-title="Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 1" data-movie-cast="Keeb Yaj, Ntxhoo Lauj, Khais Lauj, Kooj Hawj, Sua Lis, Tswb Yaj, Txais Hawj, Tswj Hwm Hawj, Daus Yaj">
                     <a href="/movie/Niam_Nkauj_Zuag_Paj_&_Txiv_Nraug_Ntsuag_Part_1">
-                        <img src="/assets/images/movie_thumbnails/Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 1.jpeg" alt="movie link" width="100rem">
+                        <img src="/assets/images/movie_thumbnails/Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 1.jpeg" alt="movie link" class="rounded_img" width="100%">
                         <div>Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 1</div>
                     </a>
                 </li>
             
                 <li data-year="2020" data-movie-title="Hlub Zaum Ob" data-movie-cast="Kwm Lis, Zuag 'Naiv' Vaaj, Tsheem Yaaj, Vam Lis Thoj, Neeb Hawj, Maiv Lis Yaj, Mais Xyooj, Xaiv Xaab Yaaj, Kaag 'Xaiv Xaab' Yaaj, Ntxhoo 'Nchaiv Yis' Lis">
                     <a href="/movie/Hlub-Zaum-Ob">
-                        <img src="/assets/images/movie_thumbnails/Hlub Zaum Ob.jpeg" alt="movie link" width="100rem">
+                        <img src="/assets/images/movie_thumbnails/Hlub Zaum Ob.jpeg" alt="movie link" class="rounded_img" width="100%">
                         <div>Hlub Zaum Ob</div>
                     </a>
                 </li>
             
                 <li data-year="" data-movie-title="ABC" data-movie-cast="">
                     <a href="/movie/ABC">
-                        <img src="/assets/images/movie_thumbnails/no_thumbnail.jpeg" alt="movie link" width="100rem">
+                        <img src="/assets/images/movie_thumbnails/no_thumbnail.jpeg" alt="movie link" class="rounded_img" width="100%">
                         <div>ABC</div>
                     </a>
                 </li>
             
                 <li data-year="" data-movie-title="1985" data-movie-cast="Ntxhoo Lauj, Keeb Yaj, Khais Lauj, Tswb Yaj, Ntxhi Vaj, Kooj Hawj, Sua Lis">
                     <a href="/movie/1985">
-                        <img src="/assets/images/movie_thumbnails/no_thumbnail.jpeg" alt="movie link" width="100rem">
+                        <img src="/assets/images/movie_thumbnails/no_thumbnail.jpeg" alt="movie link" class="rounded_img" width="100%">
                         <div>1985</div>
                     </a>
                 </li>
@@ -222,6 +157,7 @@ function getQueryVariable(variable) {
     }
 
     var query = decodeURIComponent((getQueryVariable("q") || "").replace(/\+/g, "%20"));
+    console.log(query);
     filterActors(query);
     filterMovies(query);
     

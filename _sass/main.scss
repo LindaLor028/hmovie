@@ -594,3 +594,33 @@ body {
     margin-top: 1rem;
     font-size: 1vw;
 }
+
+// search page
+
+#actors_list {
+    list-style-type: none;
+    display: grid;
+    background-color:rgba(31,44,68,255);
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 150px));
+    column-gap: 1rem;
+    row-gap: 1rem;
+    padding: 2%;
+    border-radius: 1rem;
+}
+  
+#actors_list li a{
+    margin-top: -1px; /* Prevent double borders */
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    display: block
+}
+  
+#actors_list li a:hover:not(.header) {
+    background-color: rgb(53, 63, 83);
+    border-radius: 1rem;
+}
+
+.circle_img {
+    border-radius: 5rem;
+}
