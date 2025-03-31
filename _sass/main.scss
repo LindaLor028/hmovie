@@ -216,6 +216,7 @@ button {
   
 #movies_list li a:hover:not(.header) {
     background-color: rgb(53, 63, 83);
+    border-radius: 1rem;
   }
   
 .filter_list {
@@ -546,7 +547,7 @@ body {
     display: block
 }
 
-.home_featured_movies img {
+.rounded_img {
     border-radius: 0.2rem;
 }
   
