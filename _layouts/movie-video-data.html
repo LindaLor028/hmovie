@@ -9,7 +9,7 @@
         <link href="//fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet" type="text/css">
     </head>
 
-    <body>
+    <body class="bg_blue">
     <!-- Site Header-->
     {% include site_header.html %}
 
@@ -20,27 +20,29 @@
     </div>
 
     <!-- PUT ALL PAGE CONTENT IN A DIV WITH MARGIN SO ALL THE CONTENT DOESN'T BLOW OUT-->
-    <div class="centercontent"> 
+    <div class="center_content"> 
 
         <!-- Put title and button beside one another-->
         <div class="movie_videoview_title">
             <h1 alt="Movie Title"> {{ %page.title% }} </h1>
             <!-- TODO: Only generate this button if the video variable is not null-->
-            <button type="button" class="video_button" onclick="triggerPopUp()"> Watch Movie </button>
+            <button type="button" class="clear_filters_button" onclick="triggerPopUp()"> Watch Movie </button>
         </div>
 
         <br>
         <!-- Under the title, create two columns -->
         <div class="movie_videoview">
             <!-- Column 1: Holds Movie Meta Data -->
-            <div class="movie_postercontainer">
+            <div>
                 <img src="{{page.thumbnail}}" alt="{{page.title}} Movie Poster" width="100%">
-                <p> Year of Production: {{%page.year%}}</p>
-                <p> Producer(s): {{%page.producer%}}</p>
-                <p> Writer(s):{{%page.writer%}} </p>
-                <p> Publishing Company: </p>
-                <p> Release Type: {{%page.release_type%}}</p>
-                <p> Storage Location: {{%page.storage%}}</p>
+                <div class="gray_box">
+                    <p> Year of Production: {{%page.year%}}</p>
+                    <p> Producer(s): {{%page.producer%}}</p>
+                    <p> Writer(s):{{%page.writer%}} </p>
+                    <p> Publishing Company: </p>
+                    <p> Release Type: {{%page.release_type%}}</p>
+                    <p> Storage Location: {{%page.storage%}}</p>
+                </div>
             </div>  
 
             <!-- Column 2: Holds Movie Details -->
@@ -55,14 +57,6 @@
 
             </div>
         </div>
-
-
-
-
-
-
-
-
 
 
 </div>
