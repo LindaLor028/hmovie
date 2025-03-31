@@ -1,9 +1,9 @@
 * {
   font-family: "Maven Pro";
+  color: white;
 }
 
 h1 {
-  color: green;
   font-style: bold;
 }
 
@@ -389,6 +389,8 @@ body {
   background-color: rgb(3, 28, 73);
   grid-template-columns: 1fr 2fr 0.75fr 0.75fr 0.75fr;
   box-shadow: none 20px 10px 5px rgb(0, 0, 0);
+  position: sticky;
+  top: 0;
 }
 
 .site_header * {
@@ -405,6 +407,9 @@ body {
   background-color: rgb(3, 28, 73);
   grid-template-columns: 3fr 0.75fr 0.75fr 0.75fr;
   box-shadow: none 20px 10px 5px rgb(0, 0, 0);
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 .nav_button {
@@ -491,6 +496,23 @@ body {
   background-size: 25px;
   border: 0;
   border-radius: 0.5rem;
+}
+
+.grid_text_img {
+  display: grid;
+  grid-template-columns: 4fr 2.5fr;
+}
+
+.about_profile {
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  column-gap: 1rem;
+  margin: 5rem;
+}
+
+.about_profile img {
+  width: 100%;
+  border-radius: 60rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
