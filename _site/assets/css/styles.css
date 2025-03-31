@@ -199,6 +199,17 @@ button {
 .filter_list {
   list-style-type: none;
   width: 100%;
+  text-indent: -10%;
+}
+
+.filter_list li input {
+  width: 25px;
+  height: 25px;
+}
+
+.filter_list li label {
+  font-size: larger;
+  vertical-align: 0.35rem;
 }
 
 .filter_div {
