@@ -206,25 +206,24 @@ button {
     margin: 0;
   }
   
-  #movies_list li {
+#movies_list li a{
     margin-top: -1px; /* Prevent double borders */
     padding: 12px;
     text-decoration: none;
     font-size: 18px;
-    color: black;
     display: block
   }
   
-  #movies_list li a:hover:not(.header) {
+#movies_list li a:hover:not(.header) {
     background-color: rgb(53, 63, 83);
   }
   
-  .filter_list {
+.filter_list {
     list-style-type: none;
     width: 100%;
   }
 
-  .filter_div{ 
+.filter_div{ 
     background-color: rgb(53, 63, 83);
     border-radius: 1rem;
     padding: 2rem;
@@ -546,7 +545,6 @@ body {
     font-size: 18px;
     display: block
 }
-
 
 .home_featured_movies img {
     border-radius: 0.2rem;

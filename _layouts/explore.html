@@ -1,14 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="/assets/css/styles.css" rel="stylesheet" type="text/css">
-<style>
-/* * {
-  box-sizing: border-box;
-} */
-
-</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css">
 </head>
 <body class="bg_blue">
     {% include site_header.html %}
@@ -21,8 +15,7 @@
                 <ul id="movies_list">
                     {% for movie in site.categories.movie %}
                         <li data-filter-data="{{%movie.year%}} {{%movie.release_type%}} {{movie.genre}}">
-                            <a href="{{movie.permalink}}">
-                                <a href="{{ movie.permalink }}" data-type="{% for person in movie.cast %}{{ person.name }}{% if forloop.last == false %}, {% endif %}{% endfor %}">
+                            <a href="{{ movie.permalink }}" data-type="{% for person in movie.cast %}{{ person.name }}{% if forloop.last == false %}, {% endif %}{% endfor %}">
                                 <img src="{{movie.thumbnail}}" alt="movie thumbnail" width="100%">
                                 <div>{{ %movie.title% }}</div>
                             </a>

@@ -34,7 +34,6 @@
                 {% for movie in site.categories.movie %}
                         <li data-filter-data="{{%movie.year%}} {{%movie.release-type%}} {{movie.genre}}">
                             <a href="{{movie.permalink}}">
-                                <a href="{{ movie.permalink }}">
                                 <img src="{{movie.thumbnail}}" alt="movie thumbnail" width="100%">
                                 <div>{{ %movie.title% }}</div>
                             </a>

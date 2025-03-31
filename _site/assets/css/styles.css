@@ -181,12 +181,11 @@ button {
   margin: 0;
 }
 
-#movies_list li {
+#movies_list li a {
   margin-top: -1px; /* Prevent double borders */
   padding: 12px;
   text-decoration: none;
   font-size: 18px;
-  color: black;
   display: block;
 }
 
