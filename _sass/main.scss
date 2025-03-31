@@ -136,11 +136,9 @@ button {
 
 .cast_movies {
     display: grid;
-    padding: 0.5rem;
-    column-gap: 0.5rem;
+    column-gap: 1rem;
     row-gap: 2rem;
-    background-color: rgb(225, 178, 219);
-    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 
 }
 

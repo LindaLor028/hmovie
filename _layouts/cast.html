@@ -13,13 +13,13 @@
             {% endif%}
     {% endfor%}
 
-    <body>
+    <body class="bg_blue">
         <!-- Site Header-->
         {% include site_header.html %}
     
-        <div class="centercontent">
+        <div class="center_content">
             <div class="movie_videoview">
-                <img src="{{actor.thumbnail}}" alt="{{actor.name}}" width="100%">
+                <img src="{{actor.thumbnail}}" alt="{{actor.name}}" class="rounded_img" width="100%">
 
                 <div>
                     <h1>{{actor.name}}</h1>
@@ -29,5 +29,6 @@
                 </div>
             </div>
         </div>
+        {% include site_footer.html %}
     </body>
 </html>
