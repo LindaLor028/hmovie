@@ -16,7 +16,7 @@
         <h1>Actors</h1>
         <ul id="actors_list">
             {% for actor in site.categories.actor %}
-                <li data-movie-title="{{actor.title}}">
+                <li data-movie-title="{{actor.title}}" class="inner_shadow">
                     <a href="{{actor.permalink}}">
                         <div class="side_by_side">
                             <img src="{{actor.thumbnail}}" class="circle_img" alt="actor link" height="80px">
@@ -28,7 +28,7 @@
         </ul>
 
         <h1>Movies</h1>
-        <ul id="movies_search_list">
+        <ul id="movies_search_list" class="inner_shadow">
             {% for movie in site.categories.movie %}
                 <li data-year="{{movie.year}}" data-movie-title="{{movie.title}}" data-movie-cast="{% for person in movie.cast %}{{ person.name }}{% if forloop.last == false %}, {% endif %}{% endfor %}">
                     <a href="{{movie.permalink}}">
