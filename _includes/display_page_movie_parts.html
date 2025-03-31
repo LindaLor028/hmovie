@@ -4,9 +4,9 @@
 
         <!-- If current movie is base movie, load all sequels -->
         {% if page.base_movie == page.title%}
-        <p> This is  the first movie</p>
+        <!-- <p> This is  the first movie</p> -->
             {% assign sequel = page.sequel%}
-            <div class="movie_parts_list">
+            <div class="movie_parts_list inner_shadow">
             {% for counter in (0..page.total_parts)%}
                 {% for movie in site.categories.movie %}
 
@@ -25,8 +25,8 @@
         <!-- If current movie is NOT base movie, load from base and skip current movie -->
 
         {% if page.base_movie != page.title%}
-            <p> This is not the first movie</p>
-            <div class="movie_parts_list">
+            <!-- <p> This is not the first movie</p> -->
+            <div class="movie_parts_list inner_shadow">
             {% for movie in site.posts %}
                 {% if movie.title == page.base_movie%}
                     <div class="movie_part_item">

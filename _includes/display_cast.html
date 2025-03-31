@@ -10,12 +10,13 @@
     {% for actor in film.cast%}
         {% for person in site.data.actors %}
             {% if actor.name == person.name%}
-                <a href="{{ person.link }}" >
                 <div class="actor_div">
-                    <img src="{{person.thumbnail}}" alt="Cast Thumbnail" width="80px">
-                    <br>
-                    <a href="{{ person.link }}">{{%actor.name %}} </a>
-                </div> </a>
+                    <a href="{{ person.link }}" >
+                        <img src="{{person.thumbnail}}" alt="Cast Thumbnail" width="80px">
+                        <br>
+                        <p>{{%actor.name %}}</p>
+                    </a>
+                </div> 
                 {% endif%}
     {% endfor %}
 {% endfor %}
