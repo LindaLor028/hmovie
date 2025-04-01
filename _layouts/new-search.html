@@ -13,7 +13,7 @@
     <div class="center_content">
         <p id="search"></p>
         <!-- <input type="text" id="myInput" onkeyup="newFilter()" placeholder="Search for names.." title="Type in a name"> -->
-        <h1>Actors</h1>
+        <h1 id="search_actor_header">Actors</h1>
         <ul id="actors_list">
             {% for actor in site.categories.actor %}
                 <li data-movie-title="{{actor.title}}" class="inner_shadow">
@@ -27,7 +27,7 @@
             {% endfor%}
         </ul>
 
-        <h1>Movies</h1>
+        <h1 id="search_movie_header">Movies</h1>
         <ul id="movies_search_list" class="inner_shadow">
             {% for movie in site.categories.movie %}
                 <li data-year="{{movie.year}}" data-movie-title="{{movie.title}}" data-movie-cast="{% for person in movie.cast %}{{ person.name }}{% if forloop.last == false %}, {% endif %}{% endfor %}">
@@ -44,6 +44,7 @@
 <script>
 
 function filterActors(query) {
+    var hasAtLeastOne = false;
     var input, filter, ul, li, a, i, txtValue;
     input = query;
     filter = query.toUpperCase();
@@ -54,13 +55,22 @@ function filterActors(query) {
         console.log("A is: " + a);
         if (a.toUpperCase().indexOf(filter) > -1) {
             li[i].style.display = "";
+            hasAtLeastOne = true;
         } else {
             li[i].style.display = "none";
         }
     }
+
+    if (hasAtLeastOne) {
+        document.getElementById("search_actor_header").style.display = "";
+    }
+    else {
+        document.getElementById("search_actor_header").style.display = "none";
+    }
 }
 
 function filterMovies(query) {
+    var hasAtLeastOne = false;
     var input, filter, ul, li, a, i, txtValue;
     input = query;
     filter = query.toUpperCase();
@@ -71,6 +81,7 @@ function filterMovies(query) {
         console.log("A is: " + a);
         if (a.toUpperCase().indexOf(filter) > -1) {
             li[i].style.display = "";
+            hasAtLeastOne = true;
         } else {
             li[i].style.display = "none";
         }
@@ -81,7 +92,17 @@ function filterMovies(query) {
         console.log("A is: " + a);
         if (a.toUpperCase().indexOf(filter) > -1) {
             li[i].style.display = "";
+            hasAtLeastOne = true;
         } 
+    }
+
+    if (hasAtLeastOne) {
+        document.getElementById("search_movie_header").style.display = "";
+        document.getElementById("movies_search_list").style.display = "";
+    }
+    else {
+        document.getElementById("search_movie_header").style.display = "none";
+        document.getElementById("movies_search_list").style.display = "none";
     }
 }
 
@@ -96,12 +117,12 @@ function getQueryVariable(variable) {
                 return decodeURIComponent(pair[1].replace(/\+/g, '%20')).trim();
             }
         }
-    }
+}
 
-    var query = decodeURIComponent((getQueryVariable("q") || "").replace(/\+/g, "%20"));
-    console.log(query);
-    filterActors(query);
-    filterMovies(query);
+var query = decodeURIComponent((getQueryVariable("q") || "").replace(/\+/g, "%20"));
+console.log(query);
+filterActors(query);
+filterMovies(query);
     
 </script>
 

@@ -129,6 +129,15 @@ button {
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+.cast_movies a {
+  padding: 1rem;
+}
+
+.cast_movies a:hover:not(.header) {
+  background-color: rgb(53, 63, 83);
+  border-radius: 1rem;
+}
+
 .movie_parts_list {
   display: grid;
   padding: 1rem;
