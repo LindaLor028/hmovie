@@ -16,7 +16,7 @@
     </form> -->
     <form action="/search/" id="header_searchbar" method="get" >
         <span class="search_icon"></span>
-        <input type="text" class="search_input" name="q" placeholder="search"/>
+        <input type="text" class="search_input" name="q" placeholder="search" required/>
     </form>
     <a href="/about/" class="nav_button">ABOUT</a>
     <a href="/explore/" class="nav_button">EXPLORE</a>
@@ -29,7 +29,7 @@
         
         <div class="side_by_side">
             <h1>Explore</h1>
-            <p>(400)</p>
+            <p id="total_displayed">(8)</p>
         </div>
 
         <div class="movie_mainview" >
@@ -54,6 +54,20 @@
                             <a href="/movie/Niam_Nkauj_Zuag_Paj_&_Txiv_Nraug_Ntsuag_Part_1" data-type="Keeb Yaj, Ntxhoo Lauj, Khais Lauj, Kooj Hawj, Sua Lis, Tswb Yaj, Txais Hawj, Tswj Hwm Hawj, Daus Yaj">
                                 <img src="/assets/images/movie_thumbnails/Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 1.jpeg" class="rounded_img" alt="movie thumbnail" width="100%">
                                 <div>Niam Nkauj Zuag Paj & Txiv Nraug Ntsuag Part 1</div>
+                            </a>
+                        </li>
+                    
+                        <li data-filter-data="2014 DVD Drama">
+                            <a href="/movie/Ntawv_Tsis_Tiam" data-type="Kos Lis, Nis Hawj, Coob Thoj, Npauj Vaj, Npis Yaj, Txawj Yaj">
+                                <img src="/assets/images/movie_thumbnails/Ntawv Tsis Tiam.jpeg" class="rounded_img" alt="movie thumbnail" width="100%">
+                                <div>Ntawv Tsis Tiam</div>
+                            </a>
+                        </li>
+                    
+                        <li data-filter-data="2004 VHS, DVD Romance ">
+                            <a href="/movie/Kuv_Leej_Niam_(Lost_Love)_Part_2" data-type="Maiv Neeb Thoj, Vam Yaj, Lis Vaj, Npis Thoj, Vam Lis Thoj, Cua Yaj, Paj Thoj, Paj Zaub Vwj, Ntxawm Vaj, Lwm Xyooj">
+                                <img src="/assets/images/movie_thumbnails/no_thumbnail.jpeg" class="rounded_img" alt="movie thumbnail" width="100%">
+                                <div>Kuv Leej Niam (Lost Love) Part 2</div>
                             </a>
                         </li>
                     
@@ -151,6 +165,7 @@ function resetListItemsVisibility(numOfFilters) {
     for (let movie_index = 0; movie_index < movie_items.length; movie_index++) {
         movie_items[movie_index].style.display = "block";
     }
+    document.getElementById("total_displayed").innerHTML = "(" + movie_items.length + ")";
 }
 
 /**
@@ -268,6 +283,7 @@ function clearFilters() {
  * This function sets the visibility of the movies on the Explore page based on if what fields are checked.
  * */
 function filterMultiple() {
+    var total_displayed = 0;
     var filter_input, current_movie;
     // Collect relevant movie items
     var movies = document.getElementById("movies_list");// This is the list that contains all the movies 
@@ -283,12 +299,15 @@ function filterMultiple() {
         txtValue = p;
         if ((checkYearRegex(txtValue, year_filters)) && (verifyCheck(txtValue, release_filters)) && (verifyCheck(txtValue, genre_filters))) {
             movie_blocks[movie_index].style.display = "";
+            total_displayed += 1;
         } 
         else {
             movie_blocks[movie_index].style.display = "none";
         }
-        }
     }
+
+    document.getElementById("total_displayed").innerHTML = "(" + total_displayed + ")";
+}
 
 </script>
 <footer class="site_footer">

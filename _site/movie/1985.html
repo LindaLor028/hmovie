@@ -20,7 +20,7 @@
     </form> -->
     <form action="/search/" id="header_searchbar" method="get" >
         <span class="search_icon"></span>
-        <input type="text" class="search_input" name="q" placeholder="search"/>
+        <input type="text" class="search_input" name="q" placeholder="search" required/>
     </form>
     <a href="/about/" class="nav_button">ABOUT</a>
     <a href="/explore/" class="nav_button">EXPLORE</a>
@@ -41,8 +41,10 @@
         <!-- Put title and button beside one another-->
         <div class="movie_videoview_title">
             <h1 alt="Movie Title"> 1985 </h1>
-            <!-- TODO: Only generate this button if the video variable is not null-->
-            <button type="button" class="clear_filters_button" onclick="triggerPopUp()"> Watch Movie </button>
+            
+    <button type="button" class="disabled_button"> NOT AVAILABLE ONLINE </button>
+    
+            <!-- <button type="button" class="clear_filters_button" onclick="triggerPopUp()"> Watch Movie </button> -->
         </div>
 
         <br>
@@ -51,13 +53,25 @@
             <!-- Column 1: Holds Movie Meta Data -->
             <div>
                 <img src="/assets/images/movie_thumbnails/no_thumbnail.jpeg" alt="1985 Movie Poster" width="100%" class="rounded_img">
-                <div class="gray_box inner_shadow">
-                    <p> Year of Production: </p>
+                <div class="movie_metadata inner_shadow margin_top">
+                    <!-- <p> Year of Production: </p>
                     <p> Producer(s): </p>
                     <p> Writer(s): </p>
                     <p> Publishing Company: </p>
                     <p> Release Type: </p>
-                    <p> Storage Location: </p>
+                    <p> Storage Location: </p> -->
+                    <p class="meta_data_type">Production Year:</p>
+                    <p></p>
+                    <p class="meta_data_type">Producer(s):</p>
+                    <p></p>
+                    <p class="meta_data_type">Writer(s):</p>
+                    <p></p>
+                    <p class="meta_data_type">Publisher:</p>
+                    <p></p>
+                    <p class="meta_data_type"> Release Type:</p>
+                    <p></p>
+                    <p class="meta_data_type"> Storage Location:</p>
+                    <p></p>
                 </div>
             </div>  
 
@@ -69,7 +83,7 @@
                 
 
 <!-- RETURN THE HTML GOOD STUFF TO DISPLAY THE CAST!-->
-<div class="scroll">
+<div>
     
         
             
@@ -79,12 +93,13 @@
             
     
             
-                <a href="/cast/Ntxhoo-Lauj" >
                 <div class="actor_div">
-                    <img src="/assets/images/cast_thumbnails/Ntxhoo Lauj.png" alt="Cast Thumbnail" width="80px">
-                    <br>
-                    <a href="/cast/Ntxhoo-Lauj">Ntxhoo Lauj </a>
-                </div> </a>
+                    <a href="/cast/Ntxhoo-Lauj" >
+                        <img src="/assets/images/cast_thumbnails/Ntxhoo Lauj.png" alt="Cast Thumbnail" width="80px" class="circle_img">
+                        <br>
+                        <a href="/cast/Ntxhoo-Lauj">Ntxhoo Lauj </a>
+                    </a>
+                </div>
                 
     
             
@@ -112,12 +127,13 @@
             
     
             
-                <a href="" >
                 <div class="actor_div">
-                    <img src="" alt="Cast Thumbnail" width="80px">
-                    <br>
-                    <a href="">Keeb Yaj </a>
-                </div> </a>
+                    <a href="" >
+                        <img src="" alt="Cast Thumbnail" width="80px" class="circle_img">
+                        <br>
+                        <a href="">Keeb Yaj </a>
+                    </a>
+                </div>
                 
     
             
@@ -145,12 +161,13 @@
             
     
             
-                <a href="" >
                 <div class="actor_div">
-                    <img src="" alt="Cast Thumbnail" width="80px">
-                    <br>
-                    <a href="">Khais Lauj </a>
-                </div> </a>
+                    <a href="" >
+                        <img src="" alt="Cast Thumbnail" width="80px" class="circle_img">
+                        <br>
+                        <a href="">Khais Lauj </a>
+                    </a>
+                </div>
                 
     
             
@@ -178,12 +195,13 @@
             
     
             
-                <a href="" >
                 <div class="actor_div">
-                    <img src="" alt="Cast Thumbnail" width="80px">
-                    <br>
-                    <a href="">Tswb Yaj </a>
-                </div> </a>
+                    <a href="" >
+                        <img src="" alt="Cast Thumbnail" width="80px" class="circle_img">
+                        <br>
+                        <a href="">Tswb Yaj </a>
+                    </a>
+                </div>
                 
     
             
@@ -211,12 +229,13 @@
             
     
             
-                <a href="" >
                 <div class="actor_div">
-                    <img src="" alt="Cast Thumbnail" width="80px">
-                    <br>
-                    <a href="">Ntxhi Vaj </a>
-                </div> </a>
+                    <a href="" >
+                        <img src="" alt="Cast Thumbnail" width="80px" class="circle_img">
+                        <br>
+                        <a href="">Ntxhi Vaj </a>
+                    </a>
+                </div>
                 
     
             
@@ -244,12 +263,13 @@
             
     
             
-                <a href="" >
                 <div class="actor_div">
-                    <img src="" alt="Cast Thumbnail" width="80px">
-                    <br>
-                    <a href="">Kooj Hawj </a>
-                </div> </a>
+                    <a href="" >
+                        <img src="" alt="Cast Thumbnail" width="80px" class="circle_img">
+                        <br>
+                        <a href="">Kooj Hawj </a>
+                    </a>
+                </div>
                 
     
             
@@ -277,12 +297,13 @@
             
     
             
-                <a href="" >
                 <div class="actor_div">
-                    <img src="" alt="Cast Thumbnail" width="80px">
-                    <br>
-                    <a href="">Sua Lis </a>
-                </div> </a>
+                    <a href="" >
+                        <img src="" alt="Cast Thumbnail" width="80px" class="circle_img">
+                        <br>
+                        <a href="">Sua Lis </a>
+                    </a>
+                </div>
                 
     
             

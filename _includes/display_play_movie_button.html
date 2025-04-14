@@ -1,0 +1,5 @@
+{% if page.video_link == null %}
+    <button type="button" class="disabled_button"> NOT AVAILABLE ONLINE </button>
+    {% else %}
+    <button type="button" class="clear_filters_button" onclick="triggerPopUp()"> WATCH MOVIE </button>
+{% endif%}

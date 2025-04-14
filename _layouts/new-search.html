@@ -12,6 +12,7 @@
 
     <div class="center_content">
         <p id="search"></p>
+        <h2 id="no_results">No Results</h2>
         <!-- <input type="text" id="myInput" onkeyup="newFilter()" placeholder="Search for names.." title="Type in a name"> -->
         <h1 id="search_actor_header">Actors</h1>
         <ul id="actors_list">
@@ -67,6 +68,7 @@ function filterActors(query) {
     else {
         document.getElementById("search_actor_header").style.display = "none";
     }
+    return hasAtLeastOne;
 }
 
 function filterMovies(query) {
@@ -104,6 +106,18 @@ function filterMovies(query) {
         document.getElementById("search_movie_header").style.display = "none";
         document.getElementById("movies_search_list").style.display = "none";
     }
+
+    return hasAtLeastOne;
+}
+
+function postIfNone(query, hasActor, hasMovie) {
+    if (hasActor || hasMovie) {
+        document.getElementById("no_results").style.display = "none";
+    }
+    else {
+        document.getElementById("no_results").style.display = "";
+    }
+
 }
 
 function getQueryVariable(variable) {
@@ -121,10 +135,13 @@ function getQueryVariable(variable) {
 
 var query = decodeURIComponent((getQueryVariable("q") || "").replace(/\+/g, "%20"));
 console.log(query);
-filterActors(query);
-filterMovies(query);
+var hasActor = filterActors(query);
+var hasMovie = filterMovies(query);
+postIfNone(query, hasActor, hasMovie);
+
     
 </script>
 
 </body>
+{% include site_footer.html %}
 </html>

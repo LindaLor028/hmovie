@@ -9,7 +9,7 @@
     {% for movie in site.categories.movie %}
         {% for cast in movie.cast %}
             {% if cast.name == actor.name %}
-                <a href="{{movie.link}}">
+                <a href="{{movie.permalink}}">
                     <div>
                         <img src="{{movie.thumbnail}}" alt="{{movie.name}} Movie Poster" class="rounded_img" width="100%">
                         <p> {{movie.title}} </p>

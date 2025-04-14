@@ -7,3 +7,4 @@ categories: actor
 permalink: "/cast/Ntxhoo-Lauj"
 thumbnail: "/assets/images/cast_thumbnails/Ntxhoo Lauj.png"
 ---
+An actress from Thailand.

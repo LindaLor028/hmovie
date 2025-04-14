@@ -1,0 +1,6 @@
+{% assign content = page.content | strip_newlines%}
+{% if content !=  "" %} 
+    <div class="gray_box inner_shadow margin_top">
+        <p>{{ page.content }}</p>
+    </div>
+{% endif %}

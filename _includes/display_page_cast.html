@@ -1,16 +1,17 @@
 
 
 <!-- RETURN THE HTML GOOD STUFF TO DISPLAY THE CAST!-->
-<div class="scroll">
+<div>
     {% for actor in page.cast%}
         {% for person in site.data.actors %}
             {% if actor.name == person.name%}
-                <a href="{{ person.link }}" >
                 <div class="actor_div">
-                    <img src="{{person.thumbnail}}" alt="Cast Thumbnail" width="80px">
-                    <br>
-                    <a href="{{ person.link }}">{{%actor.name %}} </a>
-                </div> </a>
+                    <a href="{{ person.link }}" >
+                        <img src="{{person.thumbnail}}" alt="Cast Thumbnail" width="80px" class="circle_img">
+                        <br>
+                        <a href="{{ person.link }}">{{%actor.name %}} </a>
+                    </a>
+                </div>
                 {% endif%}
     {% endfor %}
 {% endfor %}

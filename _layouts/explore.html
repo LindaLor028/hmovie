@@ -11,7 +11,7 @@
         
         <div class="side_by_side">
             <h1>Explore</h1>
-            <p>(400)</p>
+            <p id="total_displayed">({{ site.categories.movie | size }})</p>
         </div>
 
         <div class="movie_mainview" >
@@ -98,6 +98,7 @@ function resetListItemsVisibility(numOfFilters) {
     for (let movie_index = 0; movie_index < movie_items.length; movie_index++) {
         movie_items[movie_index].style.display = "block";
     }
+    document.getElementById("total_displayed").innerHTML = "(" + movie_items.length + ")";
 }
 
 /**
@@ -215,6 +216,7 @@ function clearFilters() {
  * This function sets the visibility of the movies on the Explore page based on if what fields are checked.
  * */
 function filterMultiple() {
+    var total_displayed = 0;
     var filter_input, current_movie;
     // Collect relevant movie items
     var movies = document.getElementById("movies_list");// This is the list that contains all the movies 
@@ -230,12 +232,15 @@ function filterMultiple() {
         txtValue = p;
         if ((checkYearRegex(txtValue, year_filters)) && (verifyCheck(txtValue, release_filters)) && (verifyCheck(txtValue, genre_filters))) {
             movie_blocks[movie_index].style.display = "";
+            total_displayed += 1;
         } 
         else {
             movie_blocks[movie_index].style.display = "none";
         }
-        }
     }
+
+    document.getElementById("total_displayed").innerHTML = "(" + total_displayed + ")";
+}
 
 </script>
 {% include site_footer.html %}

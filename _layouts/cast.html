@@ -18,8 +18,11 @@
         {% include site_header.html %}
     
         <div class="center_content">
-            <div class="movie_videoview">
-                <img src="{{actor.thumbnail}}" alt="{{actor.name}}" class="rounded_img" width="100%">
+            <div class="movie_videoview margin_top2">
+                <div>
+                    <img src="{{actor.thumbnail}}" alt="{{actor.name}}" class="rounded_img" width="100%">
+                    {% include display_cast_information.html %}
+                </div>
 
                 <div>
                     <h1>{{actor.name}}</h1>
