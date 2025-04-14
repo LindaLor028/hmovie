@@ -361,6 +361,7 @@ body {
   box-shadow: none 20px 10px 5px rgb(0, 0, 0);
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 
 .site_header * {
