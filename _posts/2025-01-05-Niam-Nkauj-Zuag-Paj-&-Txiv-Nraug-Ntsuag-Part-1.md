@@ -12,7 +12,7 @@ synopsis: "Niam Nkauj Zuag Paj thiab txiv nraug Ntsuag yog ib zaj dabneeg sib hl
 producer: "Ntxawg Vwj, Muas Lis"
 director: "Daus Yaj, Ntxawg Vwj"
 writer: ""
-video_link: "https://www.youtube.com/embed/vjwS-V62z04?si=QxZYp8W20Hy1zrJZ"
+video_link: "https://youtu.be/vjwS-V62z04?si=xVJ5V0ozvxv1OAN8"
 genre: "Folktale"
 year: "2002"
 release_type: "DVD VHS"
