@@ -519,7 +519,7 @@ body {
 }
 
 .about_profile img{
-    width: 100%;
+    width: 80%;
     border-radius: 60rem;
 }
 
@@ -730,4 +730,8 @@ body {
     font-size: 1vw;
     text-align: center;
     line-height: 2rem;
+}
+
+.about_name {
+    font-size: 1.5rem;
 }
