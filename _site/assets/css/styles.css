@@ -693,4 +693,8 @@ body {
   font-size: 1.5rem;
 }
 
+.bottom_fade {
+  mask-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgb(15, 20, 30) 20%);
+}
+
 /*# sourceMappingURL=styles.css.map */
