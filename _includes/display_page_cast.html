@@ -2,7 +2,10 @@
 
 <!-- RETURN THE HTML GOOD STUFF TO DISPLAY THE CAST!-->
 <div>
+    {% if page.cast.size > 0 %}
+    <h1> Cast </h1>
     {% for actor in page.cast%}
+        {% assign noPage = "false" %}
         {% for person in site.data.actors %}
             {% if actor.name == person.name%}
                 <div class="actor_div">
@@ -12,8 +15,20 @@
                         <a href="{{ person.link }}">{{%actor.name %}} </a>
                     </a>
                 </div>
+                {% assign noPage = "true" %}
             {% endif%}
+        {% endfor %}
+        {% if noPage == "false" %}
+            <div class="actor_div">
+                <div>
+                    <img src="/assets/images/cast_thumbnails/no_cast_image.jpeg" alt="Cast Thumbnail" width="80px" class="circle_img">
+                    <br>
+                    <p>{{%actor.name %}} </p>
+                </div>
+            </div>
+        {% endif %}
+
     {% endfor %}
-{% endfor %}
+    {% endif %}
 
 </div>

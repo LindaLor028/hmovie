@@ -1,5 +1,6 @@
 
     {% if page.total_parts > 1 %}
+        <h1> Parts </h1>
         {% assign sequel = null%}
 
         <!-- If current movie is base movie, load all sequels -->
@@ -54,4 +55,5 @@
         {% endif%}
         {% else %}
         <p> This movie does not have parts. </p>
+
     {% endif%}
