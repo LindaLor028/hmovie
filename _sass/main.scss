@@ -313,13 +313,18 @@ body {
     text-align: center;
 }
 
+.text_quote {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 .white_button {
     display: block;
     background-color: white;
     color: black;
     text-decoration: none;
     text-align: center;
-    font-weight: bold;
+    // font-weight:bld;
     padding: 1rem;
     width: 25%;
     margin: auto;
