@@ -8,6 +8,10 @@
   text-decoration: none;
 }
 
+p {
+  margin-left: 0rem;
+}
+
 h1 {
   font-style: bold;
 }
@@ -317,7 +321,7 @@ body {
   height: fit-content;
   background-color: rgb(3, 28, 73);
   grid-template-columns: 2fr 1fr 1fr 1fr;
-  column-gap: 1%;
+  column-gap: 3rem;
   box-shadow: none 20px 10px 5px rgb(0, 0, 0);
 }
 
@@ -327,17 +331,23 @@ body {
   column-gap: 1%;
 }
 
-.sponsor_logos img {
-  background-color: white;
+.sponsor_logos_big {
   border-radius: 0.2rem;
   height: 100%;
   width: 100%;
 }
 
+.sponsor_logos_small {
+  border-radius: 0.2rem;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .footer_sub_title {
   color: white;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: bold;
 }
 
 .site_footer * {
@@ -473,6 +483,8 @@ body {
   display: grid;
   grid-template-columns: 4fr 2.5fr;
   column-gap: 2rem;
+  margin: 0rem;
+  margin-bottom: 2rem;
 }
 
 .about_profile {
