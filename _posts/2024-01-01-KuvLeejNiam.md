@@ -17,7 +17,7 @@ genre: "Romance "
 year: "2004"
 release_type: "VHS, DVD"
 storage: "Private, SPPL"
-thumbnail: "/assets/images/movie_thumbnails/no_thumbnail.jpeg"
+thumbnail: "/assets/images/movie_thumbnails/no_thumbnail.png"
 publishing_company: "Golden Path Entertainment"
 
 # Sequels + Parts
