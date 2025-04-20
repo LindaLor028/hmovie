@@ -17,7 +17,7 @@ genre: "Historical Action"
 year: "2010"
 release_type: "DVD"
 storage: "Center for Hmong Studies"
-thumbnail: "/assets/images/movie_thumbnails/Cawm Seej Hmoob 1975 (The Legend of Chao Fa).jpeg"
+thumbnail: "/assets/images/movie_thumbnails/Cawm Seej Hmoob 1975.jpeg"
 publishing_company: "Modern Jungle Art Studio"
 
 # Sequels + Parts

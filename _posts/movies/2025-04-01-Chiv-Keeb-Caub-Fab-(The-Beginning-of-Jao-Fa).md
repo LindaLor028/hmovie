@@ -17,7 +17,7 @@ genre: "Action Historical"
 year: "2011"
 release_type: "DVD"
 storage: "Center for Hmong Studies"
-thumbnail: "/assets/images/movie_thumbnails/Chiv Keeb Caub Fab (The Beginning of Jao Fa).jpeg"
+thumbnail: "/assets/images/movie_thumbnails/Chiv Keeb Caub Fab.jpeg"
 publishing_company: "Nplaim Liab Film Production"
 
 # Sequels + Parts

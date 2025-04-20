@@ -17,7 +17,7 @@ genre: "Historical Action"
 year: "2009"
 release_type: "VHS DVD"
 storage: "Center for Hmong Studies"
-thumbnail: "/assets/images/movie_thumbnails/Caub Fa (Jao-Fa).jpeg"
+thumbnail: "/assets/images/movie_thumbnails/Caub Fa.jpeg"
 publishing_company: "Hmong Media Production"
 
 # Sequels + Parts
