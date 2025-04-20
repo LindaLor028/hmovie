@@ -1,29 +1,29 @@
 ---
 layout: movie-video-data
-date: 2025-03-01 21:25:08 -0653
+date: 2025-03-01 21:25:08 -0654
 categories: movie
 
 # Site Attributes
-title: "Ntsuag Noj Kaum Cej Kaum Xua Part 3"
-permalink: "/movie/Ntsuag_Noj_Kaum_Cej_Kaum_Xua_Part_3"
+title: "Ntsuag Noj Kuam Cej Kuam Xua Part 2"
+permalink: "/movie/Ntsuag_Noj_Kuam_Cej_Kuam_Xua_Part_2"
 
 # Movie Attributes
 synopsis: ""
 producer: "Muas Lis, Ntxawg Vwj"
 director: "Ntxawg Vwj, Daus Yaj"
 writer: "Daus Yaj"
-video_link: "https://youtu.be/xSVMzCQXa3k?si=YDiXFoFJN5WkXj1P"
+video_link: "https://youtu.be/pAMB94Vnizs?si=4aYOllK53oJpRy8g"
 genre: "Folklore Romance"
 year: "2003"
 release_type: "VHS"
 storage: "Private"
-thumbnail: "/assets/images/movie_thumbnails/Ntsuag Noj Kaum Cej Kaum Xua Part 3.jpeg"
+thumbnail: "/assets/images/movie_thumbnails/Ntsuag Noj Kuam Cej Kuam Xua Part 2.JPEG"
 publishing_company: "Asian Video Entertainment, Golden Path Entertainment"
 
 # Sequels + Parts
 base_movie: "Ntsuag Noj Kuam Cej Kuam Xua Part 1"
 total_parts: 4
-sequel: "Ntsuag Noj Kuam Cej Kuam Xua Part 4"
+sequel: "Ntsuag Noj Kuam Cej Kuam Xua Part 3"
 
 # Movie Cast
 cast:

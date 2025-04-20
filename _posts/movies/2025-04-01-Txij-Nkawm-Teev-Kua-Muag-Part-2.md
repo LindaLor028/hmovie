@@ -4,8 +4,8 @@ date: 2025-03-01 21:25:08 -0926
 categories: movie
 
 # Site Attributes
-title: "Txij Nkaum Teev Kua Muag Part 2"
-permalink: "/movie/Txij_Nkaum_Teev_Kua_Muag_Part_2"
+title: "Txij Nkawm Teev Kua Muag Part 2"
+permalink: "/movie/Txij_Nkawm_Teev_Kua_Muag_Part_2"
 
 # Movie Attributes
 synopsis: ""
@@ -17,13 +17,13 @@ genre: "Drama"
 year: "2006"
 release_type: "DVD"
 storage: "Center for Hmong Studies"
-thumbnail: "/assets/images/movie_thumbnails/Txij Nkaum Teev Kua Muag Part 2.jpeg"
+thumbnail: "/assets/images/movie_thumbnails/Txij Nkawm Teev Kua Muag Part 2.jpeg"
 publishing_company: "Asian Video Production"
 
 # Sequels + Parts
-base_movie: "Txij Nkaum Teev Kua Muag Part 1"
+base_movie: "Txij Nkawm Teev Kua Muag Part 1"
 total_parts: 4
-sequel: "Txij Nkaum Teev Kua Muag Part 3"
+sequel: "Txij Nkawm Teev Kua Muag Part 3"
 
 # Movie Cast
 cast:

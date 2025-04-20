@@ -1,11 +1,11 @@
 ---
 layout: movie-video-data
-date: 2025-03-01 21:25:08 -0817
+date: 2025-03-01 21:25:08 -0820
 categories: movie
 
 # Site Attributes
-title: "Nploog Siab Khaub Lig Cua (The Innocent Cyclone) Part 2"
-permalink: "/movie/Nploog_Siab_Khaub_Lig_Cua_(The_Innocent_Cyclone)_Part_2"
+title: "Nplooj Siab Khaub Lig Cua (The Innocent Cyclone) Part 5"
+permalink: "/movie/Nplooj_Siab_Khaub_Lig_Cua_(The_Innocent_Cyclone)_Part_5"
 
 # Movie Attributes
 synopsis: ""
@@ -17,13 +17,13 @@ genre: "Drama Romance"
 year: ""
 release_type: "DVD"
 storage: "Center for Hmong Studies"
-thumbnail: "/assets/images/movie_thumbnails/Nploog Siab Khaub Lig Cua (The Innocent Cyclone) Part 2.jpeg"
+thumbnail: "/assets/images/movie_thumbnails/Nplooj Siab Khaub Lig Cua (The Innocent Cyclone) Part 5.jpeg"
 publishing_company: "Modern Jungle Art Studio"
 
 # Sequels + Parts
-base_movie: ""
+base_movie: "Nplooj Siab Khaub Lig Cua (The Innocent Cyclone) Part 1"
 total_parts: 6
-sequel: "Nploog Siab Khaub Lig Cua (The Innocent Cyclone) Part 3"
+sequel: "Nplooj Siab Khaub Lig Cua (The Innocent Cyclone) Part 6"
 
 # Movie Cast
 cast:
