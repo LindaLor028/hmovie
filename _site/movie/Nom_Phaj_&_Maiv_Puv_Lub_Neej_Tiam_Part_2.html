@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Nom Phaj & Maiv Puv Lub Neej Tiam Part 2 </title>
+        <link href="/assets/css/styles.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body class="bg_blue">
+    <!-- Site Header-->
+    <head>
+    <!-- <link href="//fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet" type="text/css"> -->
+</head>
+<header class="site_header">
+    <a href="/home2" class="home_button">Hmovie</a>
+    <!-- <form action="/search/" method="get" id="header_searchbar">
+        <input type="text" name="q" />
+        <input type="submit" value="Search"/>
+    </form> -->
+    <form action="/search/" id="header_searchbar" method="get" >
+        <span class="search_icon"></span>
+        <input type="text" class="search_input" name="q" placeholder="search" required/>
+    </form>
+    <a href="/about/" class="nav_button">ABOUT</a>
+    <a href="/explore/" class="nav_button">EXPLORE</a>
+    <a href="/contribute/" class="nav_button">CONTRIBUTE</a>
+</header>
+
+
+
+    <!-- Movie Video PopUp -->
+    <div id="black_bg" onclick="closePopUp()">
+        <!-- <button id="close_popup_button">x</button> -->
+        <a href="" target="_blank"> Link </a>
+        <div id="movie_popup"></div>
+    </div>
+
+    <!-- PUT ALL PAGE CONTENT IN A DIV WITH MARGIN SO ALL THE CONTENT DOESN'T BLOW OUT-->
+    <div class="center_content"> 
+
+        <!-- Put title and button beside one another-->
+        <div class="movie_videoview_title">
+            <h1 alt="Movie Title"> Nom Phaj & Maiv Puv Lub Neej Tiam Part 2 </h1>
+            
+    <button type="button" class="disabled_button"> NOT AVAILABLE ONLINE </button>
+    
+            <!-- <button type="button" class="clear_filters_button" onclick="triggerPopUp()"> Watch Movie </button> -->
+        </div>
+
+        <br>
+        <!-- Under the title, create two columns -->
+        <div class="movie_videoview">
+            <!-- Column 1: Holds Movie Meta Data -->
+            <div>
+                <img src="/assets/images/movie_thumbnails/Nom Phaj & Maiv Puv Lub Neej Tiam Part 2.jpeg" alt="Nom Phaj & Maiv Puv Lub Neej Tiam Part 2 Movie Poster" width="100%" class="rounded_img">
+                <div class="movie_metadata inner_shadow margin_top">
+                    <!-- <p> Year of Production: 2007</p>
+                    <p> Producer(s): Asian Video Production</p>
+                    <p> Writer(s): </p>
+                    <p> Publishing Company: </p>
+                    <p> Release Type: DVD</p>
+                    <p> Storage Location: Center for Hmong Studies</p> -->
+                    <p class="meta_data_type">Production Year:</p>
+                    <p>2007</p>
+                    <p class="meta_data_type">Producer(s):</p>
+                    <p>Asian Video Production</p>
+                    <p class="meta_data_type">Writer(s):</p>
+                    <p></p>
+                    <p class="meta_data_type">Publisher:</p>
+                    <p>S.R.V. Video Thailand, Production Co. Asian Video</p>
+                    <p class="meta_data_type"> Release Type:</p>
+                    <p>DVD</p>
+                    <p class="meta_data_type"> Storage Location:</p>
+                    <p>Center for Hmong Studies</p>
+                </div>
+            </div>  
+
+            <!-- Column 2: Holds Movie Details -->
+            <div>
+                <p> Nom Phaj thiab Maiv Puv lub neej tiam 2 hais txog nom phaj txoj kev hlub poj niam nom phaj yuav hlub li cas thiab thaum kawg nom phaj lub neej yuav mus xaus li cas. Nom phaj thiab maiv puv lub neej tiam 2 yog ib zaj movie uas lom zem thiab tu siab heev zoo li peb hmoob lub neej tiag tiag thov nej sawv daws npaj siab saib tau nyob rau hauv nom phaj thiab maiv puv lub neej tiam 2 part 5 part 6 qhov xaus ntawm nom phaj txoj kev lim hiam tiam tag los maiv puv thiaj rov qab los tsim nom phaj rau tiam 2 txog hnub uas nom phaj them nuj them nqe tag rau maiv puv nom phaj thiab maiv puv thiaj nyias mus nyias nkawv lub neej thiaj los xaus li no xwb. ua tsaug.  </p>
+                
+                
+
+<!-- RETURN THE HTML GOOD STUFF TO DISPLAY THE CAST!-->
+<div>
+    
+
+</div>
+                
+                
+    
+        <p> This movie does not have parts. </p>
+
+    
+
+            </div>
+        </div>
+
+
+</div>
+<footer class="site_footer">
+    <div>
+        <h1>Hmovie</h1>
+        <p>Hmovie was officially launched in 2025 via the Hmong Studies Fellowship hosted by the Ramsey County Historical Society and Center for Hmong Studies. </p>
+        <p>This fellowship was made possible in part by the people of Minnesota through a grant funded by an appropriation to the Minnesota Historical Society from the Minnesota Arts and Cultural Heritage Fund.</p>
+        <div class="sponsor_logos" >
+            <img src="../assets/images/logos/legacy_logo-H.jpg" alt="Clean Water Land & Legacy Amendment Logo" class="sponsor_logos_big">
+            <img src="../assets/images/logos/RCHS Logo Red.jpg" alt="Ramsey County Historical Society Logo" class="sponsor_logos_big">
+            <img src="../assets/images/logos/Center for Hmong Studies.png" alt="Center for Hmong Studies Logo" class="sponsor_logos_big">
+        </div>
+    </div>
+    <div class="footer_stack_items">
+        <h1 class="footer_sub_title">About</h1>
+        <a href="/about">About Hmovie</a>
+        <a href="/contribute">Contribute</a>
+    </div>
+    <div>
+        <h1 class="footer_sub_title">Legal</h1>
+        <a href="/legal">Legal</a>
+    </div>
+    <div>
+        <h1 class="footer_sub_title">Contact</h1>
+        <a href="/about">email TODO</a>
+    </div>
+</footer>
+</body>
+
+
+</html>
+
+<script>
+    function triggerPopUp() {
+    //   document.getElementById("movie_popup").style.width = "80%";
+    //   document.getElementById("movie_popup").style.height = "80%";
+      document.getElementById("black_bg").style.display = "block";
+      document.getElementById("movie_popup").innerHTML = "<iframe src=" + "" + " title=" + "Movie ></iframe>";
+    //   <iframe id="movie_popup" src="https://www.youtube.com/embed/MzFABWO59UU" title="Lub zog ntawm txoj kev hlub" frameborder=
+     }
+
+    function closePopUp() {
+      document.getElementById("movie_popup").style.width = "80%";
+      document.getElementById("movie_popup").style.height = "80%";
+      document.getElementById("black_bg").style.display = "none";
+      document.getElementById("movie_popup").innerHTML = "";
+
+    }
+
+    </script>
