@@ -116,6 +116,7 @@ button {
 
 .movie_parts_list {
   display: grid;
+  list-style: none;
   padding: 1rem;
   column-gap: 1rem;
   row-gap: 2rem;
@@ -124,11 +125,22 @@ button {
   border-radius: 1rem;
 }
 
-.movie_part_item {
-  display: grid;
-  row-gap: 0rem;
-  grid-template-rows: 1fr 0.1fr;
-  padding: 0.5rem;
+.movie_parts_list li a {
+  padding: 6px;
+}
+
+.movie_parts_list li:hover:not(.header) {
+  background-color: rgb(53, 63, 83);
+  border-radius: 1rem;
+}
+
+.movie_parts_img {
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: black;
+  border-radius: 0.5rem;
 }
 
 .home_image {
@@ -529,15 +541,6 @@ body {
 }
 
 .explore_movie_li {
-  height: 250px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-color: black;
-  border-radius: 0.5rem;
-}
-
-.movie_part_li {
   height: 250px;
   background-position: center;
   background-repeat: no-repeat;
