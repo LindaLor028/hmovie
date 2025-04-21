@@ -26,7 +26,7 @@
 
                 <p class="center_text">EXPLORE THE CURRENT COLLECTION</p>
                 <ul class="home_featured_movies">
-                {% for movie in site.categories.movie %}
+                {% for movie in site.categories.front %}
                         <li data-filter-data="{{%movie.year%}} {{%movie.release-type%}} {{movie.genre}}">
                             <a href="{{movie.permalink}}">
                                 <!-- <img src="{{movie.thumbnail}}" class="rounded_img" alt="movie thumbnail" width="100%"> -->

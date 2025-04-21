@@ -6,10 +6,10 @@
     <h1> Cast </h1>
     {% for actor in page.cast%}
         {% assign noPage = "false" %}
-        {% for person in site.data.actors %}
-            {% if actor.name == person.name%}
+        {% for person in site.categories.actor %}
+            {% if actor.name == person.title%}
                 <div class="actor_div">
-                    <a href="{{ person.link }}" >
+                    <a href="{{ person.permalink }}" >
                         <img src="{{person.thumbnail}}" alt="Cast Thumbnail" width="80px" class="circle_img">
                         <br>
                         <a href="{{ person.link }}">{{%actor.name %}} </a>

@@ -1,14 +1,14 @@
 ---
 layout: movie-video-data
 date: 2025-03-01 21:25:08 -0764
-categories: movie
+categories: movie front
 
 # Site Attributes
 title: "Lam Hnub Txhob Txawj Poob Part 2"
 permalink: "/movie/Lam_Hnub_Txhob_Txawj_Poob_Part_2"
 
 # Movie Attributes
-synopsis: "Npis thiab Txhiaj nkawv yog kwv npawg. Nkawv tuaj nyob ua ntsuag ciaj vim teb chaws nchuav. Hli thiab hnub lawv txiv muaj 2-3 tus niam. Hli lawv niam tsis yog tus txiv hlub tiag. Teb-chaws nchuav, txiv tso lawv tseg mus nrog lwm tus niam uas txiv hlub tshaj nyob lawm. Hli, hnub, txhiaj thiab npis lawv txoj kev hlub muaj teeb-meem loj. niam tsis nyiam cov tub uas niam txiv tuaj tsis tau, niam ntsia mus rau cov tub nom, tub tswv thiab twb nplua nuj xwb. Npis thiab Txhiaj nkawv siv lo lus tias kev phem tsis yeej kev zoo los tsim nkawv txoj kev hlub. thaum kawg zoo li cas tsis muaj twg paub tau. yog koj xav paub no caum mus nrog.:
+synopsis: "Npis thiab Txhiaj nkawv yog kwv npawg. Nkawv tuaj nyob ua ntsuag ciaj vim teb chaws nchuav. Hli thiab hnub lawv txiv muaj 2-3 tus niam. Hli lawv niam tsis yog tus txiv hlub tiag. Teb-chaws nchuav, txiv tso lawv tseg mus nrog lwm tus niam uas txiv hlub tshaj nyob lawm. Hli, hnub, txhiaj thiab npis lawv txoj kev hlub muaj teeb-meem loj. niam tsis nyiam cov tub uas niam txiv tuaj tsis tau, niam ntsia mus rau cov tub nom, tub tswv thiab twb nplua nuj xwb. Npis thiab Txhiaj nkawv siv lo lus tias kev phem tsis yeej kev zoo los tsim nkawv txoj kev hlub. thaum kawg zoo li cas tsis muaj twg paub tau. yog koj xav paub no caum mus nrog."
 producer: "Hnub Qub Ntsa Video Productions Corp."
 director: ""
 writer: ""
