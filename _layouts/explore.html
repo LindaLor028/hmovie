@@ -19,7 +19,7 @@
                 <ul id="movies_list" class="inner_shadow">
                     {% assign sortedPosts = site.categories.movie | sort: 'title' %}
                     {% for movie in sortedPosts %}
-                        <li data-filter-data="{{%movie.year%}} {{%movie.release_type%}} {{movie.genre}}">
+                        <li data-filter-data="{{%movie.year%}} {{%movie.release_type%}} {{movie.genre}} {{movie.video_link}}">
                             <a href="{{ movie.permalink }}" data-type="{% for person in movie.cast %}{{ person.name }}{% if forloop.last == false %}, {% endif %}{% endfor %}">
                                 <div class="explore_movie_li" style="background-image: url('{{%movie.thumbnail%}}')"></div>
                                 <div>{{ %movie.title% }}</div>
@@ -35,6 +35,12 @@
                     <h2>FILTERS</h2>
                     <button onclick="clearFilters()" class="clear_filters_button"> Clear Filters</button>
                 </div>
+                <h2>Availability</h2>
+                    <ul id="availability_filters" class="filter_list">
+                        <li> <input type="checkbox" class="explore_checkbox" onclick="filterMultiple()"/> 
+                            <label>Online</label>
+                        </li>
+                    </ul>
                 <h2>Year of Release </h2>
                 <ul id="year_filters" class="filter_list">
                     <li> <input type="checkbox" class="explore_checkbox" onclick="filterMultiple()"/> 
@@ -182,6 +188,28 @@ function verifyCheck(input, list) {
 }
 
 /**
+ * verifyCheck(txtValue, list)
+ * This function is called in the filterMultiple() method.
+ * This function returns true/false if input matches one of the items in the list of checked filter items 
+ */
+ function verifyHasVideo(input, list) {
+    var hasAMatch = false;
+
+    if (list.length < 1) {
+        return true;
+    }
+    
+    for (let i = 0; i < list.length; i ++) {
+        hasAMatch = ((hasAMatch) || (input.toUpperCase().includes("HTTP")));
+        console.log("comparing if " + txtValue + " includes https" + " which is " + hasAMatch);
+        if (hasAMatch) {
+            break;
+        }
+    }
+    return hasAMatch;
+}
+
+/**
  * checkYearRegex(txtValue, regex_list)
  * This function is called in the filterMultiple() method. 
  * This function returns true/false if the input matches one of the regexs in the regex_list.
@@ -233,11 +261,12 @@ function filterMultiple() {
     var year_filters = returnCheckedYearFilters(); // returns an array of regex expressions based on what year-filters are checked (e.g. 1990s = 199\d)
     var release_filters = returnCheckedFilters("release_filters"); // returns an array of categories.toUpperCase() based on what release filters are checked
     var genre_filters = returnCheckedFilters("genre_filters"); // returns an array of categories.toUpperCase() based on what release filters are checked
+    var availability_filters = returnCheckedFilters("availability_filters");
 
     for (let movie_index = 0; movie_index < movie_blocks.length; movie_index++ ) {
         p = movie_blocks[movie_index].getAttribute("data-filter-data");
         txtValue = p;
-        if ((checkYearRegex(txtValue, year_filters)) && (verifyCheck(txtValue, release_filters)) && (verifyCheck(txtValue, genre_filters))) {
+        if ((checkYearRegex(txtValue, year_filters)) && (verifyCheck(txtValue, release_filters)) && (verifyCheck(txtValue, genre_filters)) && (verifyHasVideo(txtValue, availability_filters))) {
             movie_blocks[movie_index].style.display = "";
             total_displayed += 1;
         } 
