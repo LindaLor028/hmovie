@@ -205,6 +205,7 @@ button {
   background-color: rgb(53, 63, 83);
   border-radius: 1rem;
   padding: 2rem;
+  height: fit-content;
 }
 
 .bg_blue {
@@ -307,8 +308,12 @@ body {
   text-align: center;
   padding: 1rem;
   width: 25%;
-  margin: auto;
   border-radius: 0.5rem;
+}
+
+.center_button {
+  width: 25%;
+  margin: auto;
 }
 
 .site_footer {
