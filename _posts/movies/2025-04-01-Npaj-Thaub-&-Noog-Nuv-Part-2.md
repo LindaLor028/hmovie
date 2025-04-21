@@ -21,9 +21,9 @@ thumbnail: "/assets/images/movie_thumbnails/Npaj Thaub & Noog Nuv Part 2.jpeg"
 publishing_company: "Hmong Media"
 
 # Sequels + Parts
-base_movie: "Npaj Thaub & Noog Nuv Part 1"
+base_movie: "Npaj Thaub & Noog Nuv Part 2"
 total_parts: 2
-sequel: "Npaj Thaub & Noog Nuv Part 1"
+sequel: "Npaj Thaub & Noog Nuv Part 3"
 
 # Movie Cast
 cast:

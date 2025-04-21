@@ -23,7 +23,7 @@ publishing_company: "Ja Iab Production"
 # Sequels + Parts
 base_movie: "Kuv Nplooj Siab Ib Leej Niam Txawv Txiv"
 total_parts: 2
-sequel: "Kuv Nplooj Siab Ib Leej Niam Txawv Txiv Part 2"
+sequel:
 
 # Movie Cast
 cast:

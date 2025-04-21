@@ -17,7 +17,7 @@ genre: "Folklore Action"
 year: ""
 release_type: "DVD"
 storage: "Private"
-thumbnail: "/assets/images/movie_thumbnails/Peb Tug Ceg Kos Clean.jpeg"
+thumbnail: "/assets/images/movie_thumbnails/Peb Tug Ceg Kos.jpeg"
 publishing_company: "Zaj Dawb Production"
 
 # Sequels + Parts

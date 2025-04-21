@@ -17,12 +17,12 @@ genre: "Romance"
 year: "1995"
 release_type: "VHS"
 storage: "Private"
-thumbnail: "/assets/images/movie_thumbnails/Kev Hlub Txiav Tsis Tau.jpeg"
+thumbnail: "/assets/images/movie_thumbnails/Kev Hlub Txiav Tsis Tau.jpg"
 publishing_company: "S.T. Universal Video"
 
 # Sequels + Parts
-base_movie: "Khib Ciaj Khib Tuag Part 1"
-total_parts: 2
+base_movie: 
+total_parts:
 sequel: ""
 
 # Movie Cast

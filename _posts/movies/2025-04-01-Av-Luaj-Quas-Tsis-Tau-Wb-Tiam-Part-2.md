@@ -17,7 +17,7 @@ genre: "Romance"
 year: ""
 release_type: "DVD"
 storage: "Private"
-thumbnail: "/assets/images/movie_thumbnails/Av Luaj Quas Tsis Tau W6 Tiam Part 2.jpeg"
+thumbnail: "/assets/images/movie_thumbnails/Av Luaj Quas Tsis Tau Wb Tiam Part 2.jpeg"
 publishing_company: "Sky Production, Imagination Motion Picture"
 
 # Sequels + Parts

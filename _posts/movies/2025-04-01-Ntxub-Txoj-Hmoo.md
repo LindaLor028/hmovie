@@ -17,7 +17,7 @@ genre: "Drama Romance"
 year: "2005"
 release_type: "DVD"
 storage: "Private"
-thumbnail: "/assets/images/movie_thumbnails/no_thumbnail.png"
+thumbnail: "/assets/images/movie_thumbnails/Ntxub Txoj Hmoo.JPEG"
 publishing_company: "Link Pictures"
 
 # Sequels + Parts
