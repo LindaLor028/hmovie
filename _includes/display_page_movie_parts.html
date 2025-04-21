@@ -7,37 +7,33 @@
         {% if page.base_movie == page.title%}
         <!-- <p> This is  the first movie</p> -->
             {% assign sequel = page.sequel%}
-            <ul class="movie_parts_list inner_shadow">
+            <div class="movie_parts_list inner_shadow">
             {% for counter in (0..page.total_parts)%}
                 {% for movie in site.categories.movie %}
 
                     {% if movie.title == sequel%}
-                    <li>
-                        <a href="{{ movie.permalink }}">
-                            <div class="movie_parts_img" style="background-image: url('{{%movie.thumbnail%}}')"></div>
+                    <a href="{{ movie.permalink }}">
+                            <div class="explore_movie_li" style="background-image: url('{{%movie.thumbnail%}}')"></div>
                             <div>{{ %movie.title% }}</div>
-                        </a>
-                    </li>
+                    </a>
                     {% assign sequel = movie.sequel %}
                     {% endif %}
                 {% endfor%}
             {% endfor %}
-                </ul>
+            </div>
         {% endif%}
 
         <!-- If current movie is NOT base movie, load from base and skip current movie -->
 
         {% if page.base_movie != page.title%}
             <!-- <p> This is not the first movie</p> -->
-            <ul class="movie_parts_list inner_shadow">
+            <div class="movie_parts_list inner_shadow">
             {% for movie in site.posts %}
                 {% if movie.title == page.base_movie%}
-                    <li>
-                        <a href="{{ movie.permalink }}">
-                            <div class="movie_parts_img" style="background-image: url('{{%movie.thumbnail%}}')"></div>
+                    <a href="{{ movie.permalink }}">
+                            <div class="explore_movie_li" style="background-image: url('{{%movie.thumbnail%}}')"></div>
                             <div>{{ %movie.title% }}</div>
-                        </a>
-                    </li>
+                    </a>
                     {% assign sequel = movie.sequel %}
                 {% endif %}
             {% endfor%}
@@ -46,18 +42,16 @@
                 {% for movie in site.categories.movie %}
                     {% if movie.title == sequel%}
                     {% if movie.title != page.title%}
-                    <li>
-                        <a href="{{ movie.permalink }}">
-                            <div class="movie_parts_img" style="background-image: url('{{%movie.thumbnail%}}')"></div>
+                    <a href="{{ movie.permalink }}">
+                            <div class="explore_movie_li" style="background-image: url('{{%movie.thumbnail%}}')"></div>
                             <div>{{ %movie.title% }}</div>
-                        </a>
-                    </li>
+                    </a>
                     {% endif %}
                     {% assign sequel = movie.sequel %}
                     {% endif %}
                 {% endfor%}
             {% endfor %}
-            </ul>
+            </div>
         {% endif%}
         {% else %}
         <p> This movie does not have parts. </p>

@@ -125,11 +125,11 @@ button {
   border-radius: 1rem;
 }
 
-.movie_parts_list li a {
-  padding: 6px;
+.movie_parts_list a {
+  padding: 0.5rem;
 }
 
-.movie_parts_list li:hover:not(.header) {
+.movie_parts_list a:hover:not(.header) {
   background-color: rgb(53, 63, 83);
   border-radius: 1rem;
 }
