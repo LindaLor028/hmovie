@@ -23,10 +23,11 @@ publishing_company: "Asian Video Entertainment"
 # Sequels + Parts
 base_movie: "Nuj Nplhaib & Ntxawm Part 1"
 total_parts: 3
-sequel: ""
+sequel: "Nuj Nplhaib & Ntxawm Part 3"
 
 # Movie Cast
 cast:
 - name: "Kwm Lis"
 - name: "Ntxhoo Lauj"
 - name: "Kab Lauj"
+---

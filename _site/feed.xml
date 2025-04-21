@@ -1,71 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-04-21T21:41:45+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Nuj Nplhaib &amp;amp; Ntxawm Part 2</title><link href="http://localhost:4000/2025/04/01/Nuj-Nplhaib-&-Ntxawm-Part-2.html" rel="alternate" type="text/html" title="Nuj Nplhaib &amp;amp; Ntxawm Part 2" /><published>2025-04-01T00:00:00+00:00</published><updated>2025-04-01T00:00:00+00:00</updated><id>http://localhost:4000/2025/04/01/Nuj-Nplhaib-&amp;-Ntxawm-Part-2</id><content type="html" xml:base="http://localhost:4000/2025/04/01/Nuj-Nplhaib-&amp;-Ntxawm-Part-2.html"><![CDATA[<hr />
-<p>layout: movie-video-data
-date: 2025-03-01 21:25:08 -0657
-categories: movie</p>
-
-<h1 id="site-attributes">Site Attributes</h1>
-<p>title: “Nuj Nplhaib &amp; Ntxawm Part 2”
-permalink: “/movie/Nuj_Nplhaib_&amp;_Ntxawm_Part_2”</p>
-
-<h1 id="movie-attributes">Movie Attributes</h1>
-<p>synopsis: “‘Nujnplhaib thiab Ntxawm’ yog ib zaj dabneeg uas tej laus ib txhis hais los. Nkawv yog ib txwm nkauj nraug zoo zoo thiab sib sib hlub. Nujnplhaib yog ib tug tub txawj txawj qeeg hos Ntxawm yog ib leeg ntxhais zoo nkauj. Nkawv ua nkauj ua nraug zoo zoo thiab sib hlub kawg nkaus li Tiamsis, hmoov tsis muaj, Pojntxoog thiab Tsov los txeeb Ntxawm mus ua tsov pojniam lawm. Nujnplhaib chim siab heev, nws thiaj li ntaus ntaj raws tsov qab mus caum Ntxawm. Nujnplhaib raws tsov mus ti nkaus chaw puag qab tsuas daj, nws muab tsov tua tuag tas thiab coj tau Ntxawm rov los.”
-producer: “Ger Vue”
-director: “Ntxawg Vwj, Kwm Lis”
-writer: “Ntxawg Vwj, Kwm Lis, Tswj Hwm Vwj, Daus Yaj”
-video_link: “https://youtu.be/D_2ax4gYvAw?si=rXE6uoAb713JDV4u”
-genre: “Folklore Romance”
-year: “2001”
-release_type: “VHS”
-storage: “Private”
-thumbnail: “/assets/images/movie_thumbnails/Nuj Nplhaib &amp; Ntxawm Part 2.jpg”
-publishing_company: “Asian Video Entertainment”</p>
-
-<h1 id="sequels--parts">Sequels + Parts</h1>
-<p>base_movie: “Nuj Nplhaib &amp; Ntxawm Part 1”
-total_parts: 3
-sequel: “”</p>
-
-<h1 id="movie-cast">Movie Cast</h1>
-<p>cast:</p>
-<ul>
-  <li>name: “Kwm Lis”</li>
-  <li>name: “Ntxhoo Lauj”</li>
-  <li>name: “Kab Lauj”</li>
-</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[layout: movie-video-data date: 2025-03-01 21:25:08 -0657 categories: movie]]></summary></entry><entry><title type="html">Nkauj Hli Txoj Hmoo Part 2</title><link href="http://localhost:4000/2025/04/01/Nkauj-Hli-Txoj-Hmoo-Part-2.html" rel="alternate" type="text/html" title="Nkauj Hli Txoj Hmoo Part 2" /><published>2025-04-01T00:00:00+00:00</published><updated>2025-04-01T00:00:00+00:00</updated><id>http://localhost:4000/2025/04/01/Nkauj-Hli-Txoj-Hmoo-Part-2</id><content type="html" xml:base="http://localhost:4000/2025/04/01/Nkauj-Hli-Txoj-Hmoo-Part-2.html"><![CDATA[<hr />
-<p>layout: movie-video-data
-date: 2025-03-01 21:25:08 -0645
-categories: movie</p>
-
-<h1 id="site-attributes">Site Attributes</h1>
-<p>title: “Nkauj Hli Txoj Hmoo Part 2”
-permalink: “/movie/Nkauj_Hli_Txoj_Hmoo_Part_2”</p>
-
-<h1 id="movie-attributes">Movie Attributes</h1>
-<p>synopsis: “Moua Lee raises the bar for Hmong movies once again in this moving story about Nkauj Hli (Ntxheb Xyooj) who decides to take her own life because of the darkness she goes through. But an encounter with Nuj Toog (Coob Thoj) will give her a second chance to discover her destiny.”
-producer: “Moua Lee, Zoua Vang Lee”
-director: “Moua Lee”
-writer: “Moua Lee, Zoua Vang Lee”
-video_link: “”
-genre: “Drama Romance”
-year: “”
-release_type: “VHS”
-storage: “Private”
-thumbnail: “/assets/images/movie_thumbnails/Nkauj Hli Txoj Hmoo Part 2.jpeg”
-publishing_company: “Golden Path Entertainment”</p>
-
-<h1 id="sequels--parts">Sequels + Parts</h1>
-<p>base_movie: “Nkauj Hli Txoj Hmoo Part 1”
-total_parts: 2
-sequel: “”</p>
-
-<h1 id="movie-cast">Movie Cast</h1>
-<p>cast:</p>
-<ul>
-  <li>name: “Ntxheb Xyooj”</li>
-  <li>name: “Coob Thoj”</li>
-  <li>name: “Cai Yaj”</li>
-  <li>name: “Khu Lis”</li>
-</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[layout: movie-video-data date: 2025-03-01 21:25:08 -0645 categories: movie]]></summary></entry><entry><title type="html">Neeg Lub Neej Part Two</title><link href="http://localhost:4000/2025/04/01/Neeg-Lub-Neej-Part-Two.html" rel="alternate" type="text/html" title="Neeg Lub Neej Part Two" /><published>2025-04-01T00:00:00+00:00</published><updated>2025-04-01T00:00:00+00:00</updated><id>http://localhost:4000/2025/04/01/Neeg-Lub-Neej-Part-Two</id><content type="html" xml:base="http://localhost:4000/2025/04/01/Neeg-Lub-Neej-Part-Two.html"><![CDATA[<hr />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-04-21T21:45:24+00:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Neeg Lub Neej Part Two</title><link href="http://localhost:4000/2025/04/01/Neeg-Lub-Neej-Part-Two.html" rel="alternate" type="text/html" title="Neeg Lub Neej Part Two" /><published>2025-04-01T00:00:00+00:00</published><updated>2025-04-01T00:00:00+00:00</updated><id>http://localhost:4000/2025/04/01/Neeg-Lub-Neej-Part-Two</id><content type="html" xml:base="http://localhost:4000/2025/04/01/Neeg-Lub-Neej-Part-Two.html"><![CDATA[<hr />
 <p>layout: movie-video-data
 date: 2025-03-01 21:25:08 -0638
 categories: movie</p>
@@ -134,38 +67,38 @@ sequel: “”</p>
   <li>name: “Pov Muas Vaj”</li>
   <li>name: “Kub Yaj”</li>
   <li>name: “N. Txhiaj Mas Hawj”</li>
-</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[layout: movie-video-data date: 2025-03-01 21:25:08 -0782 categories: movie]]></summary></entry><entry><title type="html">Nuj Nplhaib &amp;amp; Ntxawm Part 3</title><link href="http://localhost:4000/2025/04/01/Nuj-Nplhaib-&-Ntxawm-Part-3.html" rel="alternate" type="text/html" title="Nuj Nplhaib &amp;amp; Ntxawm Part 3" /><published>2025-04-01T00:00:00+00:00</published><updated>2025-04-01T00:00:00+00:00</updated><id>http://localhost:4000/2025/04/01/Nuj-Nplhaib-&amp;-Ntxawm-Part-3</id><content type="html" xml:base="http://localhost:4000/2025/04/01/Nuj-Nplhaib-&amp;-Ntxawm-Part-3.html"><![CDATA[<hr />
+</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[layout: movie-video-data date: 2025-03-01 21:25:08 -0782 categories: movie]]></summary></entry><entry><title type="html">Nkauj Hli Txoj Hmoo Part 2</title><link href="http://localhost:4000/2025/04/01/Nkauj-Hli-Txoj-Hmoo-Part-2.html" rel="alternate" type="text/html" title="Nkauj Hli Txoj Hmoo Part 2" /><published>2025-04-01T00:00:00+00:00</published><updated>2025-04-01T00:00:00+00:00</updated><id>http://localhost:4000/2025/04/01/Nkauj-Hli-Txoj-Hmoo-Part-2</id><content type="html" xml:base="http://localhost:4000/2025/04/01/Nkauj-Hli-Txoj-Hmoo-Part-2.html"><![CDATA[<hr />
 <p>layout: movie-video-data
-date: 2025-03-01 21:25:08 -0658
+date: 2025-03-01 21:25:08 -0645
 categories: movie</p>
 
 <h1 id="site-attributes">Site Attributes</h1>
-<p>title: “Nuj Nplhaib &amp; Ntxawm Part 3”
-permalink: “/movie/Nuj_Nplhaib_&amp;_Ntxawm_Part_3”</p>
+<p>title: “Nkauj Hli Txoj Hmoo Part 2”
+permalink: “/movie/Nkauj_Hli_Txoj_Hmoo_Part_2”</p>
 
 <h1 id="movie-attributes">Movie Attributes</h1>
-<p>synopsis: “‘Nujnplhaib thiab Ntxawm’ yog ib zaj dabneeg uas tej laus ib txhis hais los. Nkawv yog ib txwm nkauj nraug zoo zoo thiab sib sib hlub. Nujnplhaib yog ib tug tub txawj txawj qeeg hos Ntxawm yog ib leeg ntxhais zoo nkauj. Nkawv ua nkauj ua nraug zoo zoo thiab sib hlub kawg nkaus li Tiamsis, hmoov tsis muaj, Pojntxoog thiab Tsov los txeeb Ntxawm mus ua tsov pojniam lawm. Nujnplhaib chim siab heev, nws thiaj li ntaus ntaj raws tsov qab mus caum Ntxawm. Nujnplhaib raws tsov mus ti nkaus chaw puag qab tsuas daj, nws muab tsov tua tuag tas thiab coj tau Ntxawm rov los.”
-producer: “Ger Vue”
-director: “Ntxawg Vwj, Kwm Lis”
-writer: “Ntxawg Vwj, Kwm Lis, Tswj Hwm Vwj, Daus Yaj”
-video_link: “https://youtu.be/kVwkMDSz-A0?si=kkmBfJux9olHEuX_”
-genre: “Folklore Romance”
-year: “2001”
+<p>synopsis: “Moua Lee raises the bar for Hmong movies once again in this moving story about Nkauj Hli (Ntxheb Xyooj) who decides to take her own life because of the darkness she goes through. But an encounter with Nuj Toog (Coob Thoj) will give her a second chance to discover her destiny.”
+producer: “Moua Lee, Zoua Vang Lee”
+director: “Moua Lee”
+writer: “Moua Lee, Zoua Vang Lee”
+video_link: “”
+genre: “Drama Romance”
+year: “”
 release_type: “VHS”
 storage: “Private”
-thumbnail: “/assets/images/movie_thumbnails/Nuj Nplhaib &amp; Ntxawm Part 3.jpg”
-publishing_company: “Asian Video Entertainment”</p>
+thumbnail: “/assets/images/movie_thumbnails/Nkauj Hli Txoj Hmoo Part 2.jpeg”
+publishing_company: “Golden Path Entertainment”</p>
 
 <h1 id="sequels--parts">Sequels + Parts</h1>
-<p>base_movie: “Nuj Nplhaib &amp; Ntxawm Part 1”
-total_parts: 3
+<p>base_movie: “Nkauj Hli Txoj Hmoo Part 1”
+total_parts: 2
 sequel: “”</p>
 
 <h1 id="movie-cast">Movie Cast</h1>
 <p>cast:</p>
 <ul>
-  <li>name: “Kwm Lis”</li>
-  <li>name: “Ntxhoo Lauj”</li>
-  <li>name: “Ntxawm Hawj”</li>
-  <li>name: “Khais Lauj”</li>
-</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[layout: movie-video-data date: 2025-03-01 21:25:08 -0658 categories: movie]]></summary></entry><entry><title type="html">Zoo Sib Xws Phem Sib Npaug</title><link href="http://localhost:4000/movie/Zoo_Sib_Xws_Phem_Sib_Npaug" rel="alternate" type="text/html" title="Zoo Sib Xws Phem Sib Npaug" /><published>2025-03-02T07:42:08+00:00</published><updated>2025-03-02T07:42:08+00:00</updated><id>http://localhost:4000/movie/Zoo-Sib-Xws-Phem-Sib-Npaug</id><content type="html" xml:base="http://localhost:4000/movie/Zoo_Sib_Xws_Phem_Sib_Npaug"><![CDATA[]]></content><author><name></name></author><category term="movie" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Zoo Li Cas Los Yog Tus Kuv Hlub Part 1,2</title><link href="http://localhost:4000/movie/Zoo_Li_Cas_Los_Yog_Tus_Kuv_Hlub_Part_1,2" rel="alternate" type="text/html" title="Zoo Li Cas Los Yog Tus Kuv Hlub Part 1,2" /><published>2025-03-02T07:41:08+00:00</published><updated>2025-03-02T07:41:08+00:00</updated><id>http://localhost:4000/movie/Zoo-Li-Cas-Los-Yog-Tus-Kuv-Hlub-Part-1,2</id><content type="html" xml:base="http://localhost:4000/movie/Zoo_Li_Cas_Los_Yog_Tus_Kuv_Hlub_Part_1,2"><![CDATA[]]></content><author><name></name></author><category term="movie" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Zog Xeeb</title><link href="http://localhost:4000/movie/Zog_Xeeb" rel="alternate" type="text/html" title="Zog Xeeb" /><published>2025-03-02T07:40:08+00:00</published><updated>2025-03-02T07:40:08+00:00</updated><id>http://localhost:4000/movie/Zog-Xeeb</id><content type="html" xml:base="http://localhost:4000/movie/Zog_Xeeb"><![CDATA[]]></content><author><name></name></author><category term="movie" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Yug Tau Hlub Tsis Tau Part 1,2</title><link href="http://localhost:4000/movie/Yug_Tau_Hlub_Tsis_Tau_Part_1,2" rel="alternate" type="text/html" title="Yug Tau Hlub Tsis Tau Part 1,2" /><published>2025-03-02T07:39:08+00:00</published><updated>2025-03-02T07:39:08+00:00</updated><id>http://localhost:4000/movie/Yug-Tau-Hlub-Tsis-Tau-Part-1,2</id><content type="html" xml:base="http://localhost:4000/movie/Yug_Tau_Hlub_Tsis_Tau_Part_1,2"><![CDATA[]]></content><author><name></name></author><category term="movie" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Yug Tau Hlub Tsis Tau (2010)</title><link href="http://localhost:4000/movie/Yug_Tau_Hlub_Tsis_Tau_(2010)" rel="alternate" type="text/html" title="Yug Tau Hlub Tsis Tau (2010)" /><published>2025-03-02T07:38:08+00:00</published><updated>2025-03-02T07:38:08+00:00</updated><id>http://localhost:4000/movie/Yug-Tau-Hlub-Tsis-Tau-(2010)</id><content type="html" xml:base="http://localhost:4000/movie/Yug_Tau_Hlub_Tsis_Tau_(2010)"><![CDATA[]]></content><author><name></name></author><category term="movie" /><summary type="html"><![CDATA[]]></summary></entry></feed>
+  <li>name: “Ntxheb Xyooj”</li>
+  <li>name: “Coob Thoj”</li>
+  <li>name: “Cai Yaj”</li>
+  <li>name: “Khu Lis”</li>
+</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[layout: movie-video-data date: 2025-03-01 21:25:08 -0645 categories: movie]]></summary></entry><entry><title type="html">Zoo Sib Xws Phem Sib Npaug</title><link href="http://localhost:4000/movie/Zoo_Sib_Xws_Phem_Sib_Npaug" rel="alternate" type="text/html" title="Zoo Sib Xws Phem Sib Npaug" /><published>2025-03-02T07:42:08+00:00</published><updated>2025-03-02T07:42:08+00:00</updated><id>http://localhost:4000/movie/Zoo-Sib-Xws-Phem-Sib-Npaug</id><content type="html" xml:base="http://localhost:4000/movie/Zoo_Sib_Xws_Phem_Sib_Npaug"><![CDATA[]]></content><author><name></name></author><category term="movie" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Zoo Li Cas Los Yog Tus Kuv Hlub Part 1,2</title><link href="http://localhost:4000/movie/Zoo_Li_Cas_Los_Yog_Tus_Kuv_Hlub_Part_1,2" rel="alternate" type="text/html" title="Zoo Li Cas Los Yog Tus Kuv Hlub Part 1,2" /><published>2025-03-02T07:41:08+00:00</published><updated>2025-03-02T07:41:08+00:00</updated><id>http://localhost:4000/movie/Zoo-Li-Cas-Los-Yog-Tus-Kuv-Hlub-Part-1,2</id><content type="html" xml:base="http://localhost:4000/movie/Zoo_Li_Cas_Los_Yog_Tus_Kuv_Hlub_Part_1,2"><![CDATA[]]></content><author><name></name></author><category term="movie" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Zog Xeeb</title><link href="http://localhost:4000/movie/Zog_Xeeb" rel="alternate" type="text/html" title="Zog Xeeb" /><published>2025-03-02T07:40:08+00:00</published><updated>2025-03-02T07:40:08+00:00</updated><id>http://localhost:4000/movie/Zog-Xeeb</id><content type="html" xml:base="http://localhost:4000/movie/Zog_Xeeb"><![CDATA[]]></content><author><name></name></author><category term="movie" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Yug Tau Hlub Tsis Tau Part 1,2</title><link href="http://localhost:4000/movie/Yug_Tau_Hlub_Tsis_Tau_Part_1,2" rel="alternate" type="text/html" title="Yug Tau Hlub Tsis Tau Part 1,2" /><published>2025-03-02T07:39:08+00:00</published><updated>2025-03-02T07:39:08+00:00</updated><id>http://localhost:4000/movie/Yug-Tau-Hlub-Tsis-Tau-Part-1,2</id><content type="html" xml:base="http://localhost:4000/movie/Yug_Tau_Hlub_Tsis_Tau_Part_1,2"><![CDATA[]]></content><author><name></name></author><category term="movie" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Yug Tau Hlub Tsis Tau (2010)</title><link href="http://localhost:4000/movie/Yug_Tau_Hlub_Tsis_Tau_(2010)" rel="alternate" type="text/html" title="Yug Tau Hlub Tsis Tau (2010)" /><published>2025-03-02T07:38:08+00:00</published><updated>2025-03-02T07:38:08+00:00</updated><id>http://localhost:4000/movie/Yug-Tau-Hlub-Tsis-Tau-(2010)</id><content type="html" xml:base="http://localhost:4000/movie/Yug_Tau_Hlub_Tsis_Tau_(2010)"><![CDATA[]]></content><author><name></name></author><category term="movie" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Yug Los Yuam Kev</title><link href="http://localhost:4000/movie/Yug_Los_Yuam_Kev" rel="alternate" type="text/html" title="Yug Los Yuam Kev" /><published>2025-03-02T07:37:08+00:00</published><updated>2025-03-02T07:37:08+00:00</updated><id>http://localhost:4000/movie/Yug-Los-Yuam-Kev</id><content type="html" xml:base="http://localhost:4000/movie/Yug_Los_Yuam_Kev"><![CDATA[]]></content><author><name></name></author><category term="movie" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Yug Los Xiam Tiam Part 1,2</title><link href="http://localhost:4000/movie/Yug_Los_Xiam_Tiam_Part_1,2" rel="alternate" type="text/html" title="Yug Los Xiam Tiam Part 1,2" /><published>2025-03-02T07:36:08+00:00</published><updated>2025-03-02T07:36:08+00:00</updated><id>http://localhost:4000/movie/Yug-Los-Xiam-Tiam-Part-1,2</id><content type="html" xml:base="http://localhost:4000/movie/Yug_Los_Xiam_Tiam_Part_1,2"><![CDATA[]]></content><author><name></name></author><category term="movie" /><summary type="html"><![CDATA[]]></summary></entry></feed>
