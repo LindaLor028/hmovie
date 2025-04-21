@@ -1,7 +1,7 @@
 ---
 layout: movie-video-data
 date: 2025-03-01 21:25:08 -0616
-categories: movie
+categories: movie front
 
 # Site Attributes
 title: "1 Tsug 13 Hnub (Inevitable Love)"

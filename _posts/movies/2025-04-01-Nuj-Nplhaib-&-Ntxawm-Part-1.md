@@ -1,7 +1,7 @@
 ---
 layout: movie-video-data
 date: 2025-03-01 21:25:08 -0656
-categories: movie
+categories: movie front
 
 # Site Attributes
 title: "Nuj Nplhaib & Ntxawm Part 1"

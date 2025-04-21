@@ -1,7 +1,7 @@
 ---
 layout: movie-video-data
 date: 2025-03-01 21:25:08 -0879
-categories: movie
+categories: movie front
 
 # Site Attributes
 title: "Tag Kis Tsis Zoo Li Qub Part 1"
