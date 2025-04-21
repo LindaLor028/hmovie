@@ -11,7 +11,8 @@
             {% if cast.name == actor.title %}
                 <a href="{{movie.permalink}}">
                     <div>
-                        <img src="{{movie.thumbnail}}" alt="{{movie.name}} Movie Poster" class="rounded_img" width="100%">
+                        <!-- <img src="{{movie.thumbnail}}" alt="{{movie.name}} Movie Poster" class="rounded_img" width="100%"> -->
+                        <div class="explore_movie_li" style="background-image: url('{{%movie.thumbnail%}}')"></div>
                         <p> {{movie.title}} </p>
                     </div>
                 </a>
