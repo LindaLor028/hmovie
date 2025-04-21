@@ -13,7 +13,8 @@
 
                     {% if movie.title == sequel%}
                     <div class="movie_part_item">
-                        <a href="{{movie.permalink}}"><img src="{{movie.thumbnail}}" alt="movie link" class="rounded_img" width="100%"></a>
+                        <!-- <a href="{{movie.permalink}}"><img src="{{movie.thumbnail}}" alt="movie link" class="rounded_img" width="100%"></a> -->
+                        <div class="movie_part_li" style="background-image: url('{{%movie.thumbnail%}}')"></div>
                         <a href="{{movie.permalink}}">{{movie.title}}</a>
                     </div>
                     {% assign sequel = movie.sequel %}
@@ -31,7 +32,8 @@
             {% for movie in site.posts %}
                 {% if movie.title == page.base_movie%}
                     <div class="movie_part_item">
-                        <a href="{{movie.permalink}}"><img src="{{movie.thumbnail}}" alt="movie link" class="rounded_img" width="100%"></a>
+                        <!-- <a href="{{movie.permalink}}"><img src="{{movie.thumbnail}}" alt="movie link" class="rounded_img" width="100%"></a> -->
+                        <div class="movie_part_li" style="background-image: url('{{%movie.thumbnail%}}')"></div>
                         <a href="{{movie.permalink}}">{{movie.title}}</a>
                     </div>
                     {% assign sequel = movie.sequel %}
@@ -43,7 +45,8 @@
                     {% if movie.title == sequel%}
                     {% if movie.title != page.title%}
                     <div class="movie_part_item">
-                        <a href="{{movie.permalink}}"><img src="{{movie.thumbnail}}" alt="movie link" class="rounded_img" width="100%"></a>
+                        <!-- <a href="{{movie.permalink}}"><img src="{{movie.thumbnail}}" alt="movie link" class="rounded_img" width="100%"></a> -->
+                        <div class="movie_part_li" style="background-image: url('{{%movie.thumbnail%}}')"></div>
                         <a href="{{movie.permalink}}">{{movie.title}}</a>
                     </div>
                     {% endif %}

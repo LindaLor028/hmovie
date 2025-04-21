@@ -17,7 +17,8 @@
                 {% for movie in site.data.movies %}
                     {% if movie.name == sequel%}
                     <div class="movie_part_item">
-                        <a href="{{movie.link}}"><img src="{{movie.thumbnail}}" alt="movie link" width="75px"></a>
+                        <!-- <a href="{{movie.link}}"><img src="{{movie.thumbnail}}" alt="movie link" width="75px"></a> -->
+                        <div class="explore_movie_li" style="background-image: url('{{%movie.thumbnail%}}')"></div>
                         <a href="{{movie.link}}">{{movie.name}}</a>
                     </div>
                     {% assign sequel = movie.sequel %}
@@ -35,7 +36,8 @@
             {% for movie in site.data.movies %}
                 {% if movie.name == film.basemovie%}
                     <div class="movie_part_item">
-                        <a href="{{movie.link}}"><img src="{{movie.thumbnail}}" alt="movie link" width="100%"></a>
+                        <!-- <a href="{{movie.link}}"><img src="{{movie.thumbnail}}" alt="movie link" width="100%"></a> -->
+                        <div class="explore_movie_li" style="background-image: url('{{%movie.thumbnail%}}')"></div>
                         <a href="{{movie.link}}">{{movie.name}}</a>
                     </div>
                     {% assign sequel = movie.sequel %}
@@ -47,7 +49,8 @@
                     {% if movie.name == sequel%}
                     {% if movie.name != film.name%}
                     <div class="movie_part_item">
-                        <a href="{{movie.link}}"><img src="{{movie.thumbnail}}" alt="movie link" width="100%"></a>
+                        <!-- <a href="{{movie.link}}"><img src="{{movie.thumbnail}}" alt="movie link" width="100%"></a> -->
+                        <div class="explore_movie_li" style="background-image: url('{{%movie.thumbnail%}}')"></div>
                         <a href="{{movie.link}}">{{movie.name}}</a>
                     </div>
                     {% endif %}

@@ -124,11 +124,6 @@ button {
   border-radius: 1rem;
 }
 
-.movie_parts_list div:hover:not(.header) {
-  background-color: rgb(53, 63, 83);
-  border-radius: 1rem;
-}
-
 .movie_part_item {
   display: grid;
   row-gap: 0rem;
@@ -534,6 +529,15 @@ body {
 }
 
 .explore_movie_li {
+  height: 250px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: black;
+  border-radius: 0.5rem;
+}
+
+.movie_part_li {
   height: 250px;
   background-position: center;
   background-repeat: no-repeat;
