@@ -21,12 +21,12 @@ thumbnail: "/assets/images/movie_thumbnails/Nkauj Nyab (The Awaiting Bride).jpeg
 publishing_company: "New Age Home Entertainment"
 
 # Sequels + Parts
-base_movie: "Nkauj Nyab (The Awaiting Bride)"
+base_movie: "Nkauj Nyab (The Awakening Bride)"
 total_parts: 2
 sequel: "Nkauj Nyab 2"
 
 # Movie Cast
 cast:
-- name: "Nou Lee"
+- name: "Hnub Lis"
 - name: "Chapoleon Vang"
 ---

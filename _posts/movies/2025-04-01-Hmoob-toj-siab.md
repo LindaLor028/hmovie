@@ -1,7 +1,7 @@
 ---
 layout: movie-video-data
 date: 2025-03-01 21:25:08 -0728
-categories: movie front
+categories: movie
 
 # Site Attributes
 title: "Hmoob toj siab"
@@ -29,7 +29,7 @@ sequel: ""
 cast:
 - name: "Paj Qabzib"
 - name: "Vaj Xob (Tub me)"
-- name: "Tsab Miv Lauj (Tsab Lauj)"
+- name: "Tsab Lauj"
 - name: "Maiv Vaj Yaj"
 - name: "Hawj Laj"
 - name: "Vaj Suav"

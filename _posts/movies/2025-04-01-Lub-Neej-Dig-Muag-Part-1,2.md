@@ -27,8 +27,8 @@ sequel: ""
 
 # Movie Cast
 cast:
-- name: "Tsavnpis Thoj"
-- name: "Tsabmiv Lauj"
+- name: "Tsab Npis Thoj"
+- name: "Tsab Lauj"
 - name: "Xaim Yaj"
 - name: "Ntxhi Xyooj"
 ---

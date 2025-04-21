@@ -31,7 +31,7 @@ cast:
 - name: "Mai Lee Thao"
 - name: "Cha Her"
 - name: "Van Cha"
-- name: "Pa 'Maiv Puv' Thao"
+- name: "Paj Thoj"
 - name: "Xab 'Av Liab' Lee"
 - name: "George Vue"
 ---

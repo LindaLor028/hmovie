@@ -29,6 +29,6 @@ sequel: ""
 cast:
 - name: "Thongneng Vang"
 - name: "Sheng Kue"
-- name: "Pha Vang"
+- name: "Phaj Vaj"
 - name: "Xai Hang"
 ---

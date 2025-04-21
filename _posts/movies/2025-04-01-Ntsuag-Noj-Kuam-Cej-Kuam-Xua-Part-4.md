@@ -29,7 +29,7 @@ sequel: ""
 cast:
 - name: "Ntxhoo Lauj"
 - name: "Ntsaim Pob Zeb Lis"
-- name: "Cua Yaj Vaj"
+- name: "Cua Yaj"
 - name: "Tswj Hwm Hawj"
 - name: "Daus Yaj"
 - name: "Naim Txais Hawj"

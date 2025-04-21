@@ -27,7 +27,7 @@ sequel: ""
 
 # Movie Cast
 cast:
-- name: "Koob Hawj"
+- name: "Kooj Hawj"
 - name: "Khais Vaj"
 - name: "Npis Lauj"
 - name: "Vaj Yaj"

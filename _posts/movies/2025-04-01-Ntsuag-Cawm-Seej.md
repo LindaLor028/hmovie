@@ -27,6 +27,10 @@ sequel: ""
 
 # Movie Cast
 cast:
+- name: "Chapoleon Vang"
+- name: "Ha Vang"
+- name: "Hnub Lis"
+- name: "Ma Yang"
 - name: "Choua Yang"
 - name: "Kouchi Yang"
 - name: "Wong Yang"

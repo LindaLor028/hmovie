@@ -29,7 +29,7 @@ sequel: ""
 cast:
 - name: "Tsawv Yeej Zoo Hawj"
 - name: "YeebSua Yaj"
-- name: "Tsawb Hawj"
+- name: "Txhaj Hawj"
 - name: "LubHli Vaj"
 - name: "FavMaiv Hawj"
 - name: "NiamYim Ham"

@@ -32,7 +32,7 @@ cast:
 - name: "Mab Sua Lis"
 - name: "Yi Xyooj"
 - name: "Ntxhee Lis"
-- name: "Dao Yang"
+- name: "Daus Yaj"
 - name: "Kiab Thoj"
 - name: "Phooj Yaj"
 - name: "Lwm Vaj"

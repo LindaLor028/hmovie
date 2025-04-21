@@ -31,7 +31,7 @@ cast:
 - name: "Dib Thoj"
 - name: "John Lis"
 - name: "Nom Phaj"
-- name: "Maiv Puv"
+- name: "Paj Thoj"
 - name: "Txawj Yang"
 - name: "Ntxawg Lauj"
 - name: "Ntxawm Lis"

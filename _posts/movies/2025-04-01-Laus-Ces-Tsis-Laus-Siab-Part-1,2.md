@@ -28,7 +28,7 @@ sequel: ""
 # Movie Cast
 cast:
 - name: "Kos Muas"
-- name: "Maiv Puv"
-- name: "Tsab Miv"
+- name: "Paj Thoj"
+- name: "Tsab Lauj"
 - name: "Paj Zaub Vwj"
 ---

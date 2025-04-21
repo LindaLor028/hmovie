@@ -23,7 +23,7 @@ publishing_company: "Suab Hmoob Production"
 # Sequels + Parts
 base_movie: "Ib Sim Niam Txiv Nkauj Nraug Part 1&2"
 total_parts: 2
-sequel: "Ib Sim Niam Txiv Nkauj Nraug Part 3&4"
+sequel: ""
 
 # Movie Cast
 cast:
@@ -31,7 +31,7 @@ cast:
 - name: "Mai Lee Thao"
 - name: "Cha Her"
 - name: "Van Cha"
-- name: "Pa 'Maiv Puv' Thao"
+- name: "Paj Thoj"
 - name: "Xab 'Av Liab' Lee"
 - name: "George Vue"
 ---

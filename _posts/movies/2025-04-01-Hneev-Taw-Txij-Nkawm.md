@@ -32,6 +32,6 @@ cast:
 - name: "Dalee Chang"
 - name: "Cher Yang"
 - name: "Chamee Yang"
-- name: "Paj Maiv Puv"
+- name: "Paj Thoj"
 - name: "Ntxhoo Lee"
 ---

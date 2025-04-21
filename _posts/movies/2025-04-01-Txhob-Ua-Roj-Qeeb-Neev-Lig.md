@@ -29,6 +29,6 @@ sequel: ""
 cast:
 - name: "Houa Xiong"
 - name: "Moua Lee"
-- name: "Nou Lee"
+- name: "Hnub Lis"
 - name: "Teng Vang"
 ---

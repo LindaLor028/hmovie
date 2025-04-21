@@ -28,7 +28,7 @@ sequel: ""
 # Movie Cast
 cast:
 - name: "Cha Mee Xiong"
-- name: "Pha Vang"
+- name: "Phaj Vaj"
 - name: "Neng Vang"
 - name: "Pheng Hang"
 - name: "Pao Vang"

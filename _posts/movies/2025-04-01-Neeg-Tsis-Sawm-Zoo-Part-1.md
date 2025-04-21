@@ -22,7 +22,7 @@ publishing_company: "Ntsa Iab Production"
 
 # Sequels + Parts
 base_movie: ""
-total_parts: 2
+total_parts: 
 sequel: ""
 
 # Movie Cast

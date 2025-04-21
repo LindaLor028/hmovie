@@ -27,7 +27,7 @@ sequel: ""
 
 # Movie Cast
 cast:
-- name: "Chia Yang"
+- name: "Txiab Yaj"
 - name: "Yang Thao"
 - name: "Mai Vue"
 ---

@@ -27,7 +27,7 @@ sequel: ""
 
 # Movie Cast
 cast:
-- name: "Pha Vang"
+- name: "Phaj Vaj"
 - name: "Bao Yang"
 - name: "Ma Vang"
 - name: "Mee Yang"

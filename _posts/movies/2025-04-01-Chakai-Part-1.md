@@ -27,7 +27,7 @@ sequel: ""
 
 # Movie Cast
 cast:
-- name: "Chong Thao"
+- name: "Coob Thoj"
 - name: "Aschakai Lee"
 - name: "Mashoua Lee"
 ---

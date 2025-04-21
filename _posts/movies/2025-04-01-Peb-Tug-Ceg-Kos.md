@@ -27,7 +27,7 @@ sequel: ""
 
 # Movie Cast
 cast:
-- name: "Cha Bee Thao"
+- name: "Tsab Npis Thoj"
 - name: "Viv Thoj"
 - name: "Paj Muas"
 - name: "Tsheej Xyooj"

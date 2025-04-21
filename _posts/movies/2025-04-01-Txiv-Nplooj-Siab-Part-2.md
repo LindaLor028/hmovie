@@ -28,7 +28,7 @@ sequel: ""
 # Movie Cast
 cast:
 - name: "Mim Vaj"
-- name: "Tsam Ham"
+- name: "Tsab Ham"
 - name: "Yi Xyooj"
 - name: "Meej Lauj"
 ---

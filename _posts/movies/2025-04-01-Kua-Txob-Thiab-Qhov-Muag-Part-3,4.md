@@ -21,7 +21,7 @@ thumbnail: "/assets/images/movie_thumbnails/Kua Txob Thiab Qhov Muag Part 3,4.jp
 publishing_company: "Nag Tshia Entertainment"
 
 # Sequels + Parts
-base_movie: ""
+base_movie: "Kua Txob Thiab Qhov Muag Part 1,2"
 total_parts: 2
 sequel: ""
 

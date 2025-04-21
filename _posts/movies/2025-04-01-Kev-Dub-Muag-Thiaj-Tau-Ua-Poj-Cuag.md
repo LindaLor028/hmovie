@@ -27,6 +27,6 @@ sequel: ""
 
 # Movie Cast
 cast:
-- name: "Maiv Puv"
+- name: "Paj Thoj"
 - name: "Cua Yaj"
 ---

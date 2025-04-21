@@ -27,5 +27,6 @@ sequel: ""
 
 # Movie Cast
 cast:
-#VALUE!
+- name: "Nom Phaj"
+- name: "Paj Thoj"
 ---

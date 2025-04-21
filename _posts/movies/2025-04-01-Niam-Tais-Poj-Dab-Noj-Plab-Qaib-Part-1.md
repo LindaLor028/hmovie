@@ -23,7 +23,7 @@ publishing_company: "Nuj Sisloob Entertainment, HmongThai Sound"
 # Sequels + Parts
 base_movie: "Niam Tais Poj Dab Noj Plab Qaib Part 1"
 total_parts: 2
-sequel: ""
+sequel: "Niam Tais Poj Dab Noj Plab Qaib Part 2"
 
 # Movie Cast
 cast:

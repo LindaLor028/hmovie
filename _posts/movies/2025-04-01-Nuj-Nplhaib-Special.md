@@ -27,7 +27,7 @@ sequel: ""
 
 # Movie Cast
 cast:
-- name: "Xaab Teem"
+- name: "Teem Xyooj"
 - name: "Ntaub Kaum"
 - name: "Txawj Bee"
 - name: "Yimleej"

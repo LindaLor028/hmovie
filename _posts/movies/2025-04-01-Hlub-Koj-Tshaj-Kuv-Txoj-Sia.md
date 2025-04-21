@@ -21,9 +21,9 @@ thumbnail: "/assets/images/movie_thumbnails/Hlub Koj Tshaj Kuv Txoj Sia.jpeg"
 publishing_company: "Twin Star Video Production"
 
 # Sequels + Parts
-base_movie: "Hlub Koj Tshaj Kuv Txoj Sia."
+base_movie: "Hlub Koj Tshaj Kuv Txoj Sia"
 total_parts: 2
-sequel: ""
+sequel: "Hlub Koj Tshaj Kuv Txoj Sia Part 2"
 
 # Movie Cast
 cast:

@@ -27,7 +27,7 @@ sequel: ""
 
 # Movie Cast
 cast:
-- name: "Tsiab Yaj"
+- name: "Txiab Yaj"
 - name: "Cuab Thoj"
 - name: "Chai Her"
 - name: "Choua Yang"

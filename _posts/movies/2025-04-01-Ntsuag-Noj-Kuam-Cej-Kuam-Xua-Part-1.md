@@ -29,7 +29,7 @@ sequel: "Ntsuag Noj Kuam Cej Kuam Xua Part 2"
 cast:
 - name: "Ntxhoo Lauj"
 - name: "Ntsaim Pob Zeb Lis"
-- name: "Cua Yaj Vaj"
+- name: "Cua Yaj"
 - name: "Tswj Hwm Hawj"
 - name: "Daus Yaj"
 - name: "Naim Txais Hawj"

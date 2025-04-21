@@ -27,7 +27,7 @@ sequel: ""
 
 # Movie Cast
 cast:
-- name: "Vong Yang"
+- name: "Voos Yaj"
 - name: "Bao Xiong"
 - name: "Pa Xiong"
 ---

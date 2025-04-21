@@ -21,7 +21,7 @@ thumbnail: "/assets/images/movie_thumbnails/Hlub Koj Tag Ib Txhis Part 2.jpeg"
 publishing_company: "Hmong United Video"
 
 # Sequels + Parts
-base_movie: ""
+base_movie: "Hlub Koj Tag Ib Txhis Part 1"
 total_parts: 2
 sequel: ""
 

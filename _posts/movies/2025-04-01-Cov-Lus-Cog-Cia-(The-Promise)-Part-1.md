@@ -29,10 +29,10 @@ sequel: ""
 cast:
 - name: "Kos Muas"
 - name: "Maiv Puv"
-- name: "Tsab Miv"
+- name: "Tsab Lauj"
 - name: "Paj Zaub Vwj"
 - name: "Meej Thoj"
 - name: "Eb Lauj"
-- name: "Maiv Puv"
+- name: "Paj Thoj"
 - name: "Tsa Fwm Hawj"
 ---

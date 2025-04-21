@@ -27,7 +27,7 @@ sequel: "Lam Ua Luag Kom Dhau Toj Ntxas Part 2"
 
 # Movie Cast
 cast:
-- name: "Lub Yaj"
+- name: "Luj Yaj"
 - name: "Iab Hawj"
 - name: "Nas Las Yaj"
 ---

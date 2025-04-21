@@ -29,21 +29,25 @@ button {
     width: auto;
 }
 
-.actor_div {
-    display: inline-block;
-    margin: 0.5rem;
-    padding: 0.5rem;
-    text-align: center;
 
-    width: 130px;
-    height: 130px;
+.actors_list {
+    list-style: none;
+    display: grid;
+    margin-left: -2.5rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr  1fr;
+    row-gap: 1rem;
+    column-gap: 1rem;
 }
 
-.actor_div:hover:not(.header) {
+.actors_list li {
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.actors_list li:hover:not(.header) {
     background-color: rgb(53, 63, 83);
     border-radius: 1rem;
 }
-
 // Testing for video
 .movie_videoview {
     display: grid;

@@ -27,7 +27,7 @@ sequel: ""
 
 # Movie Cast
 cast:
-- name: "Lub Yaj"
+- name: "Luj Yaj"
 - name: "Iab Hawj"
 - name: "Nas Las Yaj"
 ---

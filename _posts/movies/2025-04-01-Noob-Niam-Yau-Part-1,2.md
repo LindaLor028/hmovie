@@ -28,7 +28,7 @@ sequel: ""
 # Movie Cast
 cast:
 - name: "Teem Xyooj"
-- name: "Txiab Tsab"
+- name: "Txiab Yaj"
 - name: "Tswj Hwm"
 - name: "Paj Thoj"
 ---

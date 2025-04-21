@@ -27,11 +27,12 @@ sequel: "Niam Lub Kua Muag Part 2"
 
 # Movie Cast
 cast:
-- name: "Tsav Npis Thoj"
+- name: "Tsab Npis Thoj"
 - name: "Mos Vaj"
 - name: "Rwm Yaj"
 - name: "Pov Thoj"
 - name: "Maiv Yaj Muas"
 - name: "Niam Txhiaj"
 - name: "Mas Hawj"
+- name: "Tsab Ham"
 ---

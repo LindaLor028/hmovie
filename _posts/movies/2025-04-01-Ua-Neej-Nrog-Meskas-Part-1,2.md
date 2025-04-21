@@ -30,7 +30,7 @@ cast:
 - name: "Mr. Raier"
 - name: "Ntxawm Lauj"
 - name: "Paj Thoj"
-- name: "Tsabmiv Luaj"
+- name: "Tsab Lauj"
 - name: "Cua Yaj"
 - name: "Ntxhoo Lis"
 ---

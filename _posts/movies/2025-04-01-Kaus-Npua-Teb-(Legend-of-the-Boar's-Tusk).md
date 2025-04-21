@@ -28,7 +28,7 @@ sequel: ""
 # Movie Cast
 cast:
 - name: "Kwm Lis"
-- name: "Keem Lee"
+- name: "Keem Lis"
 - name: "Mea Hang"
 - name: "Pakou Her"
 - name: "Ger Yang"

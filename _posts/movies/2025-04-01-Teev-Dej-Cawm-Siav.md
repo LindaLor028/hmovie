@@ -27,7 +27,7 @@ sequel: ""
 
 # Movie Cast
 cast:
-- name: "Keem Lee"
+- name: "Keem Lis"
 - name: "Xab Thoj"
 - name: "Txiab Yaj"
 - name: "Npauj Vaj"

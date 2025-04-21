@@ -27,5 +27,8 @@ sequel: ""
 
 # Movie Cast
 cast:
-#VALUE!
+- name: "Hnub Lis"
+- name: "Txhaj Hawj"
+- name: "Tsab Lauj"
+- name: "Nom Phaj"
 ---

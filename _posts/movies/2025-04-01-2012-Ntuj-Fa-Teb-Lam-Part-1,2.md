@@ -27,5 +27,8 @@ sequel: ""
 
 # Movie Cast
 cast:
-#VALUE!
+- name: "Choo Thoj"
+- name: "Ntxhoo Lis"
+- name: "Cib Hawj"
+- name: "Ntxawg Yaj"
 ---

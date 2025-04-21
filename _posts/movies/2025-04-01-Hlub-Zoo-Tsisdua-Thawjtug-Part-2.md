@@ -23,7 +23,7 @@ publishing_company: "Dream Vision Entertainment"
 # Sequels + Parts
 base_movie: "Hlub Zoo Tsisdua Thawjtug Part 1"
 total_parts: 3
-sequel: ""
+sequel: "Hlub Zoo Tsisdua Thawjtug Part 3"
 
 # Movie Cast
 cast:

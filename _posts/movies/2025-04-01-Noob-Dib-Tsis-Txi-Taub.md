@@ -28,5 +28,5 @@ sequel: ""
 # Movie Cast
 cast:
 - name: "Lis Lauj"
-- name: "Tiaj Yaj"
+- name: "Txiab Yaj"
 ---

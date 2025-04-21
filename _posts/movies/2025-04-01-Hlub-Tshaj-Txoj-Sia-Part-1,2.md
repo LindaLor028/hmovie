@@ -27,7 +27,7 @@ sequel: "Hlub Tshaj Txoj Sia Part 3,4,5"
 
 # Movie Cast
 cast:
-- name: "Tou Yang"
+- name: "Tub Yaj"
 - name: "Cha Her"
 - name: "Chinda Moua"
 - name: "Naly Lee"

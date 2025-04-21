@@ -21,9 +21,9 @@ thumbnail: "/assets/images/movie_thumbnails/1975 Hmoob Poob Teb Chaws Part 1,2.j
 publishing_company: "Asian Video Production"
 
 # Sequels + Parts
-base_movie: ""
-total_parts: 
-sequel: ""
+base_movie: "1975 Hmoob Poob Teb Chaws Part 1,2"
+total_parts: 2
+sequel: "1975 Hmoob Poob Teb Chaws Part 3,4"
 
 # Movie Cast
 cast:

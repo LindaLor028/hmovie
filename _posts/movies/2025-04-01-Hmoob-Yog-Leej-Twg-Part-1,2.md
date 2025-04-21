@@ -27,7 +27,7 @@ sequel: ""
 
 # Movie Cast
 cast:
-- name: "Cong Thao"
+- name: "Coob Thoj"
 - name: "Yer Lor"
 - name: "Pa Thao"
 - name: "Nou Xiong"

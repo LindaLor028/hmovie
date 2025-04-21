@@ -23,7 +23,7 @@ publishing_company: "Link Pictures"
 # Sequels + Parts
 base_movie: "Khib Ciaj Khib Tuag Part 1"
 total_parts: 2
-sequel: ""
+sequel: "Khib Ciaj Khib Tuag Part 2"
 
 # Movie Cast
 cast:

@@ -34,7 +34,7 @@ cast:
 - name: "Ntxawm Vaj"
 - name: "NtxheeYess Lis"
 - name: "Fav Maiv Hawj"
-- name: "Tais Ntxawm Lauj"
+- name: "Ntxawm Lauj"
 - name: "Txoojhwm Faj"
 - name: "Vajneeb Vaj"
 - name: " Huas Hawj"
