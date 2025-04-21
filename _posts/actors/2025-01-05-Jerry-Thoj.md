@@ -8,5 +8,5 @@ title: "Jerry Thoj"
 permalink: "/cast/Jerry_Thoj"
 
 # Actor/Actress Attributes
-thumbnail: "/cast/Jerry Thoj.jpeg"
+thumbnail: "/assets/cast_thumbnails/Jerry Thoj.jpeg"
 ---

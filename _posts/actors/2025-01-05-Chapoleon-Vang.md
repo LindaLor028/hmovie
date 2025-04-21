@@ -8,5 +8,5 @@ title: "Chapoleon Vang"
 permalink: "/cast/Chapoleon_Vang"
 
 # Actor/Actress Attributes
-thumbnail: "/cast/Chapoleon Vang.jpeg"
+thumbnail: "/assets/cast_thumbnails/Chapoleon Vang.jpeg"
 ---

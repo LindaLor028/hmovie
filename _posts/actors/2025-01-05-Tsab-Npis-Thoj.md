@@ -8,5 +8,5 @@ title: "Tsab Npis Thoj"
 permalink: "/cast/Tsab_Npis_Thoj"
 
 # Actor/Actress Attributes
-thumbnail: "/cast/Tsab Npis Thoj.jpeg"
+thumbnail: "/assets/cast_thumbnails/Tsab Npis Thoj.jpeg"
 ---

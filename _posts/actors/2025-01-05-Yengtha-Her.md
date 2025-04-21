@@ -8,5 +8,5 @@ title: "Yengtha Her"
 permalink: "/cast/Yengtha_Her"
 
 # Actor/Actress Attributes
-thumbnail: "/cast/Yengtha Her.jpeg"
+thumbnail: "/assets/cast_thumbnails/Yengtha Her.jpeg"
 ---

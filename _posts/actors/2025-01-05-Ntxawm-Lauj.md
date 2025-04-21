@@ -8,5 +8,5 @@ title: "Ntxawm Lauj"
 permalink: "/cast/Ntxawm_Lauj"
 
 # Actor/Actress Attributes
-thumbnail: "/cast/Ntxawm Lauj.jpeg"
+thumbnail: "/assets/cast_thumbnails/Ntxawm Lauj.jpeg"
 ---
