@@ -8,5 +8,5 @@ title: "Ntxhoo Lauj"
 permalink: "/cast/Ntxhoo_Lauj"
 
 # Actor/Actress Attributes
-thumbnail: "/assets/cast_thumbnails/Ntxhoo Lauj.jpeg"
+thumbnail: "/assets/images/cast_thumbnails/Ntxhoo Lauj.jpeg"
 ---

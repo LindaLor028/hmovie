@@ -8,5 +8,5 @@ title: "Teem Xyooj"
 permalink: "/cast/Teem_Xyooj"
 
 # Actor/Actress Attributes
-thumbnail: "/assets/cast_thumbnails/Teem Xyooj.jpeg"
+thumbnail: "/assets/images/cast_thumbnails/Teem Xyooj.jpeg"
 ---

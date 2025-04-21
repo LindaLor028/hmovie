@@ -8,5 +8,5 @@ title: "Tshaj Hawj"
 permalink: "/cast/Tshaj_Hawj"
 
 # Actor/Actress Attributes
-thumbnail: "/assets/cast_thumbnails/Tshaj Hawj.jpeg"
+thumbnail: "/assets/images/cast_thumbnails/Tshaj Hawj.jpeg"
 ---

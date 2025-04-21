@@ -1,6 +1,6 @@
     <!-- GET THE ACTOR/ACTRESS AND STORE IT IN THE VARIABLE, film -->
-    {% for person in site.data.actors %}
-        {% if person.name contains page.title%}
+    {% for person in site.categories.actor %}
+        {% if person.title contains page.title%}
             {% assign actor = person%}
             {% endif%}
     {% endfor%}
@@ -8,7 +8,7 @@
 <div class="cast_movies">
     {% for movie in site.categories.movie %}
         {% for cast in movie.cast %}
-            {% if cast.name == actor.name %}
+            {% if cast.name == actor.title %}
                 <a href="{{movie.permalink}}">
                     <div>
                         <img src="{{movie.thumbnail}}" alt="{{movie.name}} Movie Poster" class="rounded_img" width="100%">

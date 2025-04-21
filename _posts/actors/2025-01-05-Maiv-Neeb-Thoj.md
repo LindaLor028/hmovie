@@ -8,5 +8,5 @@ title: "Maiv Neeb Thoj"
 permalink: "/cast/Maiv_Neeb_Thoj"
 
 # Actor/Actress Attributes
-thumbnail: "/assets/cast_thumbnails/Maiv Neeb Thoj.jpeg"
+thumbnail: "/assets/images/cast_thumbnails/Maiv Neeb Thoj.jpeg"
 ---

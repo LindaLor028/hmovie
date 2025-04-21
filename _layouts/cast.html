@@ -7,8 +7,8 @@
     </head>
 
     <!-- GET THE ACTOR/ACTRESS AND STORE IT IN THE VARIABLE, film -->
-    {% for person in site.data.actors %}
-        {% if person.name contains page.title%}
+    {% for person in site.categories.actor %}
+        {% if person.title contains page.title%}
             {% assign actor = person%}
             {% endif%}
     {% endfor%}
@@ -20,12 +20,12 @@
         <div class="center_content">
             <div class="movie_videoview margin_top2">
                 <div>
-                    <img src="{{actor.thumbnail}}" alt="{{actor.name}}" class="rounded_img" width="100%">
+                    <img src="{{actor.thumbnail}}" alt="{{actor.title}}" class="rounded_img" width="100%">
                     {% include display_cast_information.html %}
                 </div>
 
                 <div>
-                    <h1>{{actor.name}}</h1>
+                    <h1>{{actor.title}}</h1>
 
                     <h2> Featured Works</h2>
                     {% include display_cast_movies.html %}

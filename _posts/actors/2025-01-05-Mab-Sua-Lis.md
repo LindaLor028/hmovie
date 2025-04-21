@@ -8,5 +8,5 @@ title: "Mab Sua Lis"
 permalink: "/cast/Mab_Sua_Lis"
 
 # Actor/Actress Attributes
-thumbnail: "/assets/cast_thumbnails/Mab Sua Lis.jpeg"
+thumbnail: "/assets/images/cast_thumbnails/Mab Sua Lis.jpeg"
 ---
