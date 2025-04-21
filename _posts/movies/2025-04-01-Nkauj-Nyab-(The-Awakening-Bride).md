@@ -28,5 +28,5 @@ sequel: "Nkauj Nyab 2"
 # Movie Cast
 cast:
 - name: "Nou Lee"
-- name: "Chapolean Vang"
+- name: "Chapoleon Vang"
 ---

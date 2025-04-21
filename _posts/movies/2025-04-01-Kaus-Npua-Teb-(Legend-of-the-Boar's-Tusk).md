@@ -17,7 +17,7 @@ genre: "Historical Romance Action"
 year: "2012"
 release_type: "DVD"
 storage: "Private"
-thumbnail: "/assets/images/movie_thumbnails/Kaus Npua Teb (Legend of the Boar's Tusk).jpeg"
+thumbnail: "/assets/images/movie_thumbnails/Kaus Npua Teb.jpeg"
 publishing_company: "Keeb Kwm Production, XibXub Hmong Production"
 
 # Sequels + Parts
@@ -28,8 +28,9 @@ sequel: ""
 # Movie Cast
 cast:
 - name: "Kwm Lis"
-- name: "Keem Lis"
+- name: "Keem Lee"
 - name: "Mea Hang"
 - name: "Pakou Her"
 - name: "Ger Yang"
 - name: "Master Pao Yang"
+---

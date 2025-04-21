@@ -28,8 +28,8 @@ sequel: ""
 # Movie Cast
 cast:
 - name: "Yeejhuam Yaj"
-- name: " Xab Muas"
-- name: " Uab Lauj"
+- name: "Xab Muas"
+- name: "Uab Lauj"
 - name: "Kab Thoj"
 - name: "Tsua Muas"
 - name: "Ntshiab Vaj"

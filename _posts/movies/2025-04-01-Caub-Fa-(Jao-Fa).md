@@ -27,7 +27,7 @@ sequel: "Caub Fa 2 (Jao-Fa)"
 
 # Movie Cast
 cast:
-- name: "Tshaj Hawj"
+- name: "Txhaj Hawj"
 - name: "Ntxhais Tsab"
 - name: "PajThoj"
 - name: "Rianer"

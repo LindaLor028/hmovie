@@ -4,9 +4,9 @@ date: 2025-03-01 21:25:08 -0606
 categories: actor
 
 # Site Attributes
-title: "Tshaj Hawj"
-permalink: "/cast/Tshaj_Hawj"
+title: "Txhaj Hawj"
+permalink: "/cast/Txhaj_Hawj"
 
 # Actor/Actress Attributes
-thumbnail: "/assets/images/cast_thumbnails/Tshaj Hawj.jpeg"
+thumbnail: "/assets/images/cast_thumbnails/Txhaj Hawj.jpeg"
 ---

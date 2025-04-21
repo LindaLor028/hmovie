@@ -27,5 +27,6 @@ sequel: ""
 
 # Movie Cast
 cast:
-#VALUE!
+- name: "Hnub Lis"
+- name: "Txiab Yaj"
 ---

@@ -28,7 +28,7 @@ sequel: "Nplooj Siab Khaub Lig Cua (The Innocent Cyclone) Part 5"
 # Movie Cast
 cast:
 - name: "Leng Vang"
-- name: "Tou Yang"
+- name: "Tub Yaj"
 - name: "Bra Moua"
 - name: "Kao Nai Xiong"
 - name: "Kong Her"

@@ -31,7 +31,7 @@ cast:
 - name: "Pauv Yaj"
 - name: "Lis Fooj Hawj"
 - name: "Me Noog Yaj"
-- name: "Tsawb Hawj"
+- name: "Txhaj Hawj"
 - name: "Yeeb Sua Yaj"
 - name: "Vam Tseeb Lis"
 - name: "Nomphaj Hawj"

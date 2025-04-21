@@ -28,7 +28,7 @@ sequel: ""
 # Movie Cast
 cast:
 - name: "Leng Vang"
-- name: "Tou Yang"
+- name: "Tub Yaj"
 - name: "Bra Moua"
 - name: "Kao Nai Xiong"
 - name: "Kong Her"

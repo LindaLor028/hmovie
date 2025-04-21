@@ -27,7 +27,7 @@ sequel: ""
 
 # Movie Cast
 cast:
-- name: "Tshaj Hawj"
+- name: "Txhaj Hawj"
 - name: "Xaim Yaj"
 - name: "Kiab Toom Ham"
 - name: "Paj Huab Xyooj"

@@ -23,11 +23,11 @@ publishing_company: "Hmong Media Production"
 # Sequels + Parts
 base_movie: "Caub Fa (Jao-Fa)"
 total_parts: 2
-sequel: "Caub Fa 2 (Jao-Fa)"
+sequel:
 
 # Movie Cast
 cast:
-- name: "Tshaj Hawj"
+- name: "Txhaj Hawj"
 - name: "Mai Chao Thao"
 - name: "Pa Thao"
 - name: "Viv Thao"
