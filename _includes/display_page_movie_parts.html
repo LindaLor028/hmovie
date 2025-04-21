@@ -1,3 +1,4 @@
+{% assign sortedPosts = site.categories.movie | sort: 'title' %}
 
     {% if page.total_parts > 1 %}
         <h1> Parts </h1>
@@ -9,7 +10,7 @@
             {% assign sequel = page.sequel%}
             <div class="movie_parts_list inner_shadow">
             {% for counter in (0..page.total_parts)%}
-                {% for movie in site.categories.movie %}
+                {% for movie in sortedPosts %}
 
                     {% if movie.title == sequel%}
                     <a href="{{ movie.permalink }}">
@@ -28,7 +29,7 @@
         {% if page.base_movie != page.title%}
             <!-- <p> This is not the first movie</p> -->
             <div class="movie_parts_list inner_shadow">
-            {% for movie in site.posts %}
+            {% for movie in sortedPosts %}
                 {% if movie.title == page.base_movie%}
                     <a href="{{ movie.permalink }}">
                             <div class="explore_movie_li" style="background-image: url('{{%movie.thumbnail%}}')"></div>

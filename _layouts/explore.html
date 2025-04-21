@@ -17,7 +17,8 @@
         <div class="movie_mainview" >
             <div>
                 <ul id="movies_list" class="inner_shadow">
-                    {% for movie in site.categories.movie %}
+                    {% assign sortedPosts = site.categories.movie | sort: 'title' %}
+                    {% for movie in sortedPosts %}
                         <li data-filter-data="{{%movie.year%}} {{%movie.release_type%}} {{movie.genre}}">
                             <a href="{{ movie.permalink }}" data-type="{% for person in movie.cast %}{{ person.name }}{% if forloop.last == false %}, {% endif %}{% endfor %}">
                                 <div class="explore_movie_li" style="background-image: url('{{%movie.thumbnail%}}')"></div>

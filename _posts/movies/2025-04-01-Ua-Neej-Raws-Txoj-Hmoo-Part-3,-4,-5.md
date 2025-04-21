@@ -4,8 +4,8 @@ date: 2025-03-01 21:25:08 -0938
 categories: movie
 
 # Site Attributes
-title: "Ua Neej Raws Txoj Hmoo Part 3, 4, 5"
-permalink: "/movie/Ua_Neej_Raws_Txoj_Hmoo_Part_3,_4,_5"
+title: "Ua Neej Raws Txoj Hmoo Part 4, 5, 6"
+permalink: "/movie/Ua_Neej_Raws_Txoj_Hmoo_Part_4,_5,_6"
 
 # Movie Attributes
 synopsis: ""
@@ -17,7 +17,7 @@ genre: "Drama"
 year: "2008"
 release_type: "DVD"
 storage: "Center for Hmong Studies"
-thumbnail: "/assets/images/movie_thumbnails/Ua Neej Raws Txoj Hmoo Part 1, 2, 3.jpeg"
+thumbnail: "/assets/images/movie_thumbnails/Ua Neej Raws Txoj Hmoo Part 4, 5, 6.jpeg"
 publishing_company: "Asian Video Production"
 
 # Sequels + Parts
@@ -27,5 +27,5 @@ sequel: ""
 
 # Movie Cast
 cast:
-#VALUE!
+- name: "Tub Yaj"
 ---

@@ -5,8 +5,10 @@
             {% endif%}
     {% endfor%}
 
+    {% assign sortedPosts = site.categories.movie | sort: 'title' %}
+
 <div class="cast_movies">
-    {% for movie in site.categories.movie %}
+    {% for movie in sortedPosts %}
         {% for cast in movie.cast %}
             {% if cast.name == actor.title %}
                 <a href="{{movie.permalink}}">
