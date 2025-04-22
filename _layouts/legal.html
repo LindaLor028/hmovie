@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> {{%page.title%}} </title>
+        <link href="/assets/css/styles.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body class="bg_blue">
+        <!-- Site Header-->
+        {% include site_header.html %}
+        <div class="center_content">
+            <p>{{ page.content }}</p>
+        </div>
+    </body>
+    {% include site_footer.html %}
+</html>

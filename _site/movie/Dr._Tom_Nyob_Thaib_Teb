@@ -38,7 +38,6 @@
 
     <!-- PUT ALL PAGE CONTENT IN A DIV WITH MARGIN SO ALL THE CONTENT DOESN'T BLOW OUT-->
     <div class="center_content"> 
-
         <!-- Put title and button beside one another-->
         <div class="movie_videoview_title">
             <h1 alt="Movie Title"> Dr. Tom Nyob Thaib Teb </h1>
@@ -77,6 +76,7 @@
             </div>  
 
             <!-- Column 2: Holds Movie Details -->
+            
             <div>
                 <p> Ciaj Sia tau mus xyuas nws tus txiv ntawm vam phawv nyob thaibteb tiam sis ho mus poob zoo nyob rau Thaiteb. Ib lo lus thaib los tsis paub. Thawj lo lus uas nws paub ces yog 200 xwb. Sawv daws soj qab saib seb ciaj sia lub neej yuav xaus mus zoo li cas.  </p>
                 
@@ -413,11 +413,9 @@
                 
 
     
-        <p> This movie does not have parts. </p>
-
-    
 
             </div>
+            
         </div>
 
 
@@ -451,22 +449,3 @@
 
 
 </html>
-
-<script>
-    function triggerPopUp() {
-    //   document.getElementById("movie_popup").style.width = "80%";
-    //   document.getElementById("movie_popup").style.height = "80%";
-      document.getElementById("black_bg").style.display = "block";
-      document.getElementById("movie_popup").innerHTML = "<iframe src=" + "" + " title=" + "Movie ></iframe>";
-    //   <iframe id="movie_popup" src="https://www.youtube.com/embed/MzFABWO59UU" title="Lub zog ntawm txoj kev hlub" frameborder=
-     }
-
-    function closePopUp() {
-      document.getElementById("movie_popup").style.width = "80%";
-      document.getElementById("movie_popup").style.height = "80%";
-      document.getElementById("black_bg").style.display = "none";
-      document.getElementById("movie_popup").innerHTML = "";
-
-    }
-
-    </script>
