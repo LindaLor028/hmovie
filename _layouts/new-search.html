@@ -30,7 +30,8 @@
 
         <h1 id="search_movie_header">Movies</h1>
         <ul id="movies_search_list" class="inner_shadow">
-            {% for movie in site.categories.movie %}
+            {% assign sortedPosts = site.categories.movie | sort: 'title' %}
+            {% for movie in sortedPosts %}
                 <li data-year="{{movie.year}}" data-movie-title="{{movie.title}}" data-movie-cast="{% for person in movie.cast %}{{ person.name }}{% if forloop.last == false %}, {% endif %}{% endfor %}">
                     <a href="{{movie.permalink}}">
                         <!-- <img src="{{movie.thumbnail}}" alt="movie link" class="rounded_img" width="100%"> -->

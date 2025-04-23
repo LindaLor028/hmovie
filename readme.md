@@ -15,5 +15,10 @@ In addition to the site's user experience, the development experience for Hmovie
 # Attributions + Acknowledgements
 First and foremost, Hmovie would not be possible without without a grant funded by an appropriation to the Minnesota Historical Society from the Minnesota Arts and Cultural Heritage Fund. This grant funded the fellowship program, hosted by the Center for Hmong Studies and Ramsey County Historical Society, which brought this project to life. 
 
+Secondly, I would like to extend an additional thank you to the Ramsey County Historical Society and Center for Hmong Studies. The Ramsey County Historical Society provided rich mentorship and guidance to me while working on Hmovie which only enhanced my Hmovie’s quality. The Center for Hmong Studies provided over 300 Hmong movies to be cataloged in Hmovie and also provided deep cultural knowledge that can only be learned through hands-on experience. 
+
+Next, I would like to extend a thank you to NAME from LAWYER FIRM who provided guidance on developing a legal statement to ensure the site’s preservation of Hmong films whilst still maintaining the integrity of sharing films online. 
+
+Lastly, a huge thank you to all those who participated in user interviews and gave active feedback on the project. Dreaming big with me and realizing the importance of a Hmong movie database always motivated me to keep working on Hmovie when things were tough.
 
 

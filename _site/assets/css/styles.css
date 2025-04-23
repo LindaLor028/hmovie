@@ -346,6 +346,8 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 1%;
+  place-items: center;
+  margin-top: 2rem;
 }
 
 .sponsor_logos_big {
@@ -357,6 +359,7 @@ body {
 .sponsor_logos_small {
   border-radius: 0.2rem;
   height: 100px;
+  width: auto;
   margin-left: auto;
   margin-right: auto;
 }
