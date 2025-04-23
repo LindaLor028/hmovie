@@ -27,6 +27,6 @@ sequel: ""
 
 # Movie Cast
 cast:
-- name: "Vws Yaj"
+- name: "Voos Yaj"
 - name: "Ntxhi Xyooj"
 ---

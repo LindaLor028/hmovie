@@ -34,12 +34,6 @@
             <div>
                 <img src="{{page.thumbnail}}" alt="{{page.title}} Movie Poster" width="100%" class="rounded_img">
                 <div class="movie_metadata inner_shadow margin_top">
-                    <!-- <p> Year of Production: {{%page.year%}}</p>
-                    <p> Producer(s): {{%page.producer%}}</p>
-                    <p> Writer(s):{{%page.writer%}} </p>
-                    <p> Publishing Company: </p>
-                    <p> Release Type: {{%page.release_type%}}</p>
-                    <p> Storage Location: {{%page.storage%}}</p> -->
                     <p class="meta_data_type">Production Year:</p>
                     <p>{{%page.year%}}</p>
                     <p class="meta_data_type">Producer(s):</p>
@@ -56,7 +50,7 @@
             </div>  
 
             <!-- Column 2: Holds Movie Details -->
-            {% if page.synopsis == "" && page.cast.size > 0 && page.total_parts == null%}
+            {% if page.synopsis == "" and page.cast.size > 0 and page.total_parts == null%}
             <div class="gray_box inner_shadow">
                 <p>Additional Information for this movie is not available at this time.</p>
             </div>
