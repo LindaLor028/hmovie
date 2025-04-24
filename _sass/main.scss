@@ -379,6 +379,15 @@ body {
     border-radius: 0.2rem;
     height: 100%;
     width: 100%;
+    filter: brightness(80%);
+}
+
+.sponsor_logos_big:hover {
+    filter: brightness(100%);
+}
+
+.sponsor_logos_small:hover {
+    filter: brightness(100%);
 }
 
 .sponsor_logos_small {
@@ -387,6 +396,7 @@ body {
     width: auto;
     margin-left: auto;
     margin-right: auto;
+    filter: brightness(80%);
 }
 
 .footer_sub_title {
@@ -443,9 +453,16 @@ body {
 }
 
 .nav_button {
+    display: block;
+    color:rgb(204, 208, 214);
     text-decoration: none;
-    margin-top: 15px;
+    padding-top: 15px;
     text-align: center;
+}
+
+.nav_button:hover {
+    color: white;
+
 }
 
 .home_button {
