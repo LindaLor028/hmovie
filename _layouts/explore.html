@@ -20,7 +20,7 @@
                     {% assign sortedPosts = site.categories.movie | sort: 'title' %}
                     {% for movie in sortedPosts %}
                         <li data-filter-data="{{%movie.year%}} {{%movie.release_type%}} {{movie.genre}} {{movie.video_link}}">
-                            <a href="{{ movie.permalink }}" data-type="{% for person in movie.cast %}{{ person.name }}{% if forloop.last == false %}, {% endif %}{% endfor %}">
+                            <a href="{{ movie.permalink | relative_url }}" data-type="{% for person in movie.cast %}{{ person.name }}{% if forloop.last == false %}, {% endif %}{% endfor %}">
                                 <div class="explore_movie_li" style="background-image: url('{{ movie.thumbnail | relative_url }}')"></div>
                                 <div>{{ %movie.title% }}</div>
                             </a>
