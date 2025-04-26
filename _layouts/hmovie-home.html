@@ -31,7 +31,7 @@
                         <li data-filter-data="{{%movie.year%}} {{%movie.release-type%}} {{movie.genre}}">
                             <a href="{{movie.permalink}}">
                                 <!-- <img src="{{movie.thumbnail}}" class="rounded_img" alt="movie thumbnail" width="100%"> -->
-                                 <div class="home_movie_li" style="background-image: url('{{movie.thumbnail}}')"></div>
+                                 <div class="home_movie_li" style="background-image: url('{{ movie.thumbnail | relative_url }}')"></div>
                                 <div>{{ %movie.title% }}</div>
                             </a>
                         </li>
