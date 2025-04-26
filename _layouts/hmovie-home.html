@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title> {{%page.title%}} </title>
+        <title> {{page.title}} </title>
         <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     </head>
 
@@ -32,14 +32,14 @@
                         <li data-filter-data="{{%movie.year%}} {{%movie.release-type%}} {{movie.genre}}">
                             <a href="{{movie.permalink}}">
                                 <!-- <img src="{{movie.thumbnail}}" class="rounded_img" alt="movie thumbnail" width="100%"> -->
-                                 <div class="home_movie_li" style="background-image: url('{{%movie.thumbnail%}}')"></div>
+                                 <div class="home_movie_li" style="background-image: url('{{movie.thumbnail}}')"></div>
                                 <div>{{ %movie.title% }}</div>
                             </a>
                         </li>
-                {% endfor%}
+                {% endfor %}
             </ul>
 
-            <a href="/explore" class="white_button center_button">SEE MORE MOVIES</a>
+            <a href="{{ '/explore' | relative_url }}" class="white_button center_button">SEE MORE MOVIES</a>
         </div>
     </body>
     {% include site_footer.html %}
