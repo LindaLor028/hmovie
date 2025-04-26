@@ -22,7 +22,7 @@ publishing_company: "Koomsiab Entertainment"
 
 # Sequels + Parts
 base_movie: "Hlub Koj Tag Ib Txhis Part 1"
-total_parts: 
+total_parts: 0
 sequel: ""
 
 # Movie Cast

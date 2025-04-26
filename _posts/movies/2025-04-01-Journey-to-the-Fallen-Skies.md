@@ -22,7 +22,7 @@ publishing_company: "Birds-Eye Vue Films, Hmong Bros. Pictures"
 
 # Sequels + Parts
 base_movie: ""
-total_parts: 
+total_parts: 0
 sequel: ""
 
 # Movie Cast

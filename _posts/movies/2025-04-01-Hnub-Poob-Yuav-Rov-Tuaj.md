@@ -22,7 +22,7 @@ publishing_company: "Herr's Video Production"
 
 # Sequels + Parts
 base_movie: ""
-total_parts: 
+total_parts: 0
 sequel: ""
 
 # Movie Cast

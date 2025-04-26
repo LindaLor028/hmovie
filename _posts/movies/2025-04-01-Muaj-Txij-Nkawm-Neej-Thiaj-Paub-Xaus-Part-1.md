@@ -22,7 +22,7 @@ publishing_company: "Moonlight Productions"
 
 # Sequels + Parts
 base_movie: "Muaj Txij Nkawm Neej Thiaj Paub Xaus Part 1"
-total_parts: 
+total_parts: 0
 sequel: "Muaj Txij Nkawm Neej Thiaj Paub Xaus Part 2"
 
 # Movie Cast

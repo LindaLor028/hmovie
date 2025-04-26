@@ -21,8 +21,8 @@ thumbnail: "/assets/images/movie_thumbnails/Kev Hlub Txiav Tsis Tau.jpg"
 publishing_company: "S.T. Universal Video"
 
 # Sequels + Parts
-base_movie: 
-total_parts:
+base_movie: "Kev Hlub Txiav Tsis Tau"
+total_parts: 0
 sequel: ""
 
 # Movie Cast

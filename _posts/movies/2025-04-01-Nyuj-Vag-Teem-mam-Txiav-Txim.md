@@ -22,7 +22,7 @@ publishing_company: "Hli Nrag Production"
 
 # Sequels + Parts
 base_movie: ""
-total_parts: 
+total_parts: 0
 sequel: ""
 
 # Movie Cast

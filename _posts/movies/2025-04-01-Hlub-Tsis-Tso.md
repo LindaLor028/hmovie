@@ -22,7 +22,7 @@ publishing_company: "M.T. Video Productions"
 
 # Sequels + Parts
 base_movie: ""
-total_parts: 
+total_parts: 0
 sequel: ""
 
 # Movie Cast

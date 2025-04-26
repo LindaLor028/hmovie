@@ -22,10 +22,10 @@ publishing_company: "Pao Yang"
 
 # Sequels + Parts
 base_movie: ""
-total_parts: 
+total_parts: 0
 sequel: ""
 
 # Movie Cast
 cast:
 #VALUE!
---
+---

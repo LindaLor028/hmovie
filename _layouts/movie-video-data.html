@@ -50,7 +50,7 @@
             </div>  
 
             <!-- Column 2: Holds Movie Details -->
-            {% if page.synopsis == "" and page.cast.size > 0 and page.total_parts == null%}
+            {% if page.synopsis == "" and page.cast == null and page.total_parts == 0%}
             <div class="gray_box inner_shadow">
                 <p>Additional Information for this movie is not available at this time.</p>
             </div>

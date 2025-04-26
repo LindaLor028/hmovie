@@ -22,7 +22,7 @@ publishing_company: "Hmong's Righteous Right, Hmong Modern Stars"
 
 # Sequels + Parts
 base_movie: ""
-total_parts: 
+total_parts: 0
 sequel: ""
 
 # Movie Cast
