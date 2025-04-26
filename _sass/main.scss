@@ -487,7 +487,8 @@ body {
     color: black;
     width: 100%;
     height: 40px;
-    background-image: url(/assets/images/search.jpeg);
+    // background-image: url(/assets/images/search.jpeg);
+    background-image: url("{{ 'assets/images/search.jpeg' | relative_url }}");
     background-position: 10px center;
     background-repeat: no-repeat;
     background-size: 30px;
