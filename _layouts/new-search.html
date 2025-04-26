@@ -20,7 +20,7 @@
                 <li data-movie-title="{{actor.title}}" class="inner_shadow">
                     <a href="{{actor.permalink | relative_url}}">
                         <div class="side_by_side">
-                            <img src="{{actor.thumbnail}}" class="circle_img" alt="actor link" height="80px">
+                            <img src="{{actor.thumbnail | relative_url}}" class="circle_img" alt="actor link" height="80px">
                             <p>{{ %actor.title% }}</p>
                         </div>
                     </a>
