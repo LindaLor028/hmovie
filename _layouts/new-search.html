@@ -35,7 +35,7 @@
                 <li data-year="{{movie.year}}" data-movie-title="{{movie.title}}" data-movie-cast="{% for person in movie.cast %}{{ person.name }}{% if forloop.last == false %}, {% endif %}{% endfor %}">
                     <a href="{{movie.permalink}}">
                         <!-- <img src="{{movie.thumbnail}}" alt="movie link" class="rounded_img" width="100%"> -->
-                        <div class="explore_movie_li" style="background-image: url('{{%movie.thumbnail%}}')"></div>
+                        <div class="explore_movie_li" style="background-image: url('{{ movie.thumbnail | relative_url }}')"></div>
                         <div>{{ %movie.title% }}</div>
                     </a>
                 </li>
