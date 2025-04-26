@@ -769,4 +769,8 @@ body {
   mask-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgb(15, 20, 30) 20%);
 }
 
+p a {
+  text-decoration: underline;
+}
+
 /*# sourceMappingURL=styles.css.map */
