@@ -17,7 +17,7 @@
                     <p class="sub_title black_shadow">The Largest Digital Hmong Movie Database</p>
                     <p class="black_shadow">SEARCH FOR A MOVIE</p> 
                     <form action="{{site.baseurl}}/search/" id="home_searchbar" class="black_div_shadow" method="get" >
-                        <span class="search_home_icon" style="background-image: url('{{ /assets/images/search.jpeg | relative_url }}')"></span>
+                        <span class="search_home_icon" style='background-image: url("{{ "/assets/images/search.jpeg" | relative_url }}")'></span>
                         <input type="text" class="search_home_input" name="q" placeholder="search" required/>
                     </form>
 
