@@ -8,7 +8,7 @@
         <input type="submit" value="Search"/>
     </form> -->
     <form action="{{site.baseurl}}/search/" id="header_searchbar" method="get" >
-        <span class="search_icon"></span>
+        <span class="search_icon" style="background-image: url('{{ "/assets/images/search.jpeg" | relative_url }}')"></span>
         <input type="text" class="search_input" name="q" placeholder="search" required/>
     </form>
     <a href="{{ '/about' | relative_url }}" class="nav_button">ABOUT</a>
