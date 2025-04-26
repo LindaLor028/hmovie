@@ -17,7 +17,8 @@ genre: "Historical Romance"
 year: "2013"
 release_type: "DVD"
 storage: "Private"
-thumbnail: "/assets/images/movie_thumbnails/1 Tsug 13 Hnub (Inevitable Love).jpeg"
+thumbnail: "{{ '/assets/images/movie_thumbnails/1 Tsug 13 Hnub (Inevitable Love).jpeg' | relative_url }}"
+# thumbnail: "/assets/images/movie_thumbnails/1 Tsug 13 Hnub (Inevitable Love).jpeg"
 publishing_company: "NplaimLiab Film Production"
 
 # Sequels + Parts
