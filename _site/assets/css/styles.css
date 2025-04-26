@@ -746,6 +746,25 @@ body {
   font-size: 1.5rem;
 }
 
+.error_img {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5rem;
+}
+
+.error_text {
+  text-align: center;
+  font-style: bold;
+  font-size: 1.5em;
+  margin-bottom: 3rem;
+}
+
+.four-oh-four {
+  text-align: center;
+  font-size: 8em;
+}
+
 .bottom_fade {
   mask-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgb(15, 20, 30) 20%);
 }
