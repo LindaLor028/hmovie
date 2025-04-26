@@ -28,7 +28,7 @@
                 <ul class="home_featured_movies">
                 {% for movie in site.categories.front %}
                         <li data-filter-data="{{%movie.year%}} {{%movie.release-type%}} {{movie.genre}}">
-                            <a href="{{movie.permalink}}">
+                            <a href="{{ movie.permalink | relative_url }}">
                                  <div class="home_movie_li" style="background-image: url('{{ movie.thumbnail | relative_url }}')"></div>
                                 <div>{{ %movie.title% }}</div>
                             </a>
