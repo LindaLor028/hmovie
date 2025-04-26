@@ -1,7 +1,8 @@
 @font-face {
 	font-family: "Maven Pro";
-    src: url("{{ 'assets/fonrts/MavenPro-VariableFont_wght.tff' | relative_url }}");
+    src: url("{{ 'assets/fonts/MavenPro-VariableFont_wght.tff' | relative_url }}");
 }
+
 * {
     font-family: 'Maven Pro';
     color: white;
