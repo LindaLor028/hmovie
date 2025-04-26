@@ -10,8 +10,8 @@
         {% for person in site.categories.actor %}
             {% if actor.name == person.title%}
                 <li>
-                    <a href="{{ person.permalink }}" class="clickable_link_block">
-                        <img src="{{person.thumbnail}}" alt="Cast Thumbnail" width="80px" height= "80px" class="circle_img">
+                    <a href="{{ person.permalink | relative_url}}" class="clickable_link_block">
+                        <img src="{{ site.url }}{{ site.baseurl }}{{person.thumbnail}}" alt="Cast Thumbnail" width="80px" height= "80px" class="circle_img">
                         <br>
                         <p>{{%actor.name %}}</p>
                     </a>
