@@ -13,8 +13,8 @@
                 {% for movie in sortedPosts %}
 
                     {% if movie.title == sequel%}
-                    <a href="{{ movie.permalink }}">
-                            <div class="explore_movie_li" style="background-image: url('{{%movie.thumbnail%}}')"></div>
+                    <a href="{{ movie.permalink | relative_url}}">
+                            <div class="explore_movie_li" style="background-image: url('{{ movie.thumbnail | relative_url }}')"></div>
                             <div>{{ %movie.title% }}</div>
                     </a>
                     {% assign sequel = movie.sequel %}
@@ -31,8 +31,8 @@
             <div class="movie_parts_list inner_shadow">
             {% for movie in sortedPosts %}
                 {% if movie.title == page.base_movie%}
-                    <a href="{{ movie.permalink }}">
-                            <div class="explore_movie_li" style="background-image: url('{{%movie.thumbnail%}}')"></div>
+                    <a href="{{ movie.permalink | relative_url}}">
+                            <div class="explore_movie_li" style="background-image: url('{{ movie.thumbnail | relative_url }}')"></div>
                             <div>{{ %movie.title% }}</div>
                     </a>
                     {% assign sequel = movie.sequel %}
@@ -43,8 +43,8 @@
                 {% for movie in site.categories.movie %}
                     {% if movie.title == sequel%}
                     {% if movie.title != page.title%}
-                    <a href="{{ movie.permalink }}">
-                            <div class="explore_movie_li" style="background-image: url('{{%movie.thumbnail%}}')"></div>
+                    <a href="{{ movie.permalink | relative_url}}">
+                            <div class="explore_movie_li" style="background-image: url('{{ movie.thumbnail | relative_url }}')"></div>
                             <div>{{ %movie.title% }}</div>
                     </a>
                     {% endif %}
