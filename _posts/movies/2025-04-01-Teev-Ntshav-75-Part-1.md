@@ -17,7 +17,7 @@ genre: "Action Historical"
 year: "2002"
 release_type: "VHS"
 storage: "Center for Hmong Studies"
-thumbnail: "/assets/images/movie_thumbnails/Teev Ntshav 75 Part 1.JPEG"
+thumbnail: "/assets/images/movie_thumbnails/Teev Ntshav 75 Part 1.jpeg"
 publishing_company: "Ntsa Iab Production"
 
 # Sequels + Parts
