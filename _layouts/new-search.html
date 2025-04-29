@@ -53,7 +53,7 @@ function filterActors(query) {
     li = ul.getElementsByTagName("li");
     for (i = 0; i < li.length; i++) {
         a = li[i].getAttribute("data-movie-title");
-        console.log("A is: " + a);
+        // console.log("A is: " + a);
         if (a.toUpperCase().indexOf(filter) > -1) {
             li[i].style.display = "";
             hasAtLeastOne = true;
@@ -80,7 +80,7 @@ function filterMovies(query) {
     li = ul.getElementsByTagName("li");
     for (i = 0; i < li.length; i++) {
         a = li[i].getAttribute("data-movie-title");
-        console.log("A is: " + a);
+        // console.log("A is: " + a);
         if (a.toUpperCase().indexOf(filter) > -1) {
             li[i].style.display = "";
             hasAtLeastOne = true;
@@ -91,7 +91,7 @@ function filterMovies(query) {
 
     for (i = 0; i < li.length; i++) {
         a = li[i].getAttribute("data-movie-cast");
-        console.log("A is: " + a);
+        // console.log("A is: " + a);
         if (a.toUpperCase().indexOf(filter) > -1) {
             li[i].style.display = "";
             hasAtLeastOne = true;
@@ -134,7 +134,7 @@ function getQueryVariable(variable) {
 }
 
 var query = decodeURIComponent((getQueryVariable("q") || "").replace(/\+/g, "%20"));
-console.log(query);
+// console.log(query);
 var hasActor = filterActors(query);
 var hasMovie = filterMovies(query);
 postIfNone(query, hasActor, hasMovie);

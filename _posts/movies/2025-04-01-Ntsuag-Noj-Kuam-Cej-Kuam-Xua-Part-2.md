@@ -17,7 +17,7 @@ genre: "Folklore Romance"
 year: "2003"
 release_type: "VHS"
 storage: "Private"
-thumbnail: "/assets/images/movie_thumbnails/Ntsuag Noj Kuam Cej Kuam Xua Part 2.JPEG"
+thumbnail: "/assets/images/movie_thumbnails/Ntsuag Noj Kuam Cej Kuam Xua Part 2.jpeg"
 publishing_company: "Asian Video Entertainment, Golden Path Entertainment"
 
 # Sequels + Parts

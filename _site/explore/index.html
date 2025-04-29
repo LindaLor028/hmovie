@@ -2684,7 +2684,7 @@ function returnCheckedYearFilters() {
         if (filters[i].getElementsByTagName("input")[0].checked == true) {
             // console.log("at least one checkbox is checked!")
             checked_regex[array_index] =  decade_regex[i];
-            console.log("ADDING " + decade_regex[i] + " TO CHECKED_REGEX");
+            // console.log("ADDING " + decade_regex[i] + " TO CHECKED_REGEX");
             array_index++;
         }
     }
@@ -2751,7 +2751,7 @@ function verifyCheck(input, list) {
     
     for (let i = 0; i < list.length; i ++) {
         hasAMatch = ((hasAMatch) || (input.toUpperCase().includes("HTTP")));
-        console.log("comparing if " + txtValue + " includes https" + " which is " + hasAMatch);
+        // console.log("comparing if " + txtValue + " includes https" + " which is " + hasAMatch);
         if (hasAMatch) {
             break;
         }

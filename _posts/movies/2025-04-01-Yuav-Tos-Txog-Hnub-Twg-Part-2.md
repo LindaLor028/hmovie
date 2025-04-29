@@ -17,7 +17,7 @@ genre: "Romance"
 year: ""
 release_type: "VHS"
 storage: "Center for Hmong Studies"
-thumbnail: "/assets/images/movie_thumbnails/Yuav Tos Txog Hnuv Twg Part 2.JPEG"
+thumbnail: "/assets/images/movie_thumbnails/Yuav Tos Txog Hnuv Twg Part 2.jpeg"
 publishing_company: "Ntsa Iab Production"
 
 # Sequels + Parts
