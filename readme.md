@@ -24,9 +24,9 @@ Lastly, a huge thank you to all those who participated in user interviews and ga
 # Attributions
 Additionally, the following icons were provided by the following contributors: 
 
-- [Edit Icon](https://www.flaticon.com/free-icons/edit-text)[ by Arkinasi](https://www.flaticon.com/authors/arkinasi)
-- [Code Icon](https://www.flaticon.com/free-icons/code)[ by Royyan Wijaya](https://www.flaticon.com/authors/royyan-wijaya)
-- [User Icon](https://www.flaticon.com/free-icons/user)[ by Freepik](https://www.flaticon.com/authors/freepik)
-- [Add User Icon](https://www.flaticon.com/free-icons/add-user)[ by uicon](https://www.flaticon.com/authors/uicon)
-- [Movie Icon](https://www.flaticon.com/free-icons/film)[ by IconKanan](https://www.flaticon.com/authors/iconkanan)
-- [Magnifying Glass Icon](https://www.flaticon.com/free-icons/search)[ by Chanut](https://www.flaticon.com/authors/chanut)
+- [Edit Icon](https://www.flaticon.com/free-icons/edit-text) by [ Arkinasi](https://www.flaticon.com/authors/arkinasi)
+- [Code Icon](https://www.flaticon.com/free-icons/code) by [ Royyan Wijaya](https://www.flaticon.com/authors/royyan-wijaya)
+- [User Icon](https://www.flaticon.com/free-icons/user) by [ Freepik](https://www.flaticon.com/authors/freepik)
+- [Add User Icon](https://www.flaticon.com/free-icons/add-user) by [ uicon](https://www.flaticon.com/authors/uicon)
+- [Movie Icon](https://www.flaticon.com/free-icons/film) by [ IconKanan](https://www.flaticon.com/authors/iconkanan)
+- [Magnifying Glass Icon](https://www.flaticon.com/free-icons/search) by [ Chanut](https://www.flaticon.com/authors/chanut)
