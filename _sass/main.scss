@@ -198,6 +198,7 @@ button {
     margin: 0;
     padding: 2%;
     border-radius: 1rem;
+    justify-content: center;
 }
   
 #movies_list li a{
@@ -583,6 +584,7 @@ body {
     margin-top: 2rem;
     row-gap: 1rem;
     padding: 0;
+    justify-content: center;
   }
   
 .home_featured_movies li {
