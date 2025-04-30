@@ -1,3 +1,4 @@
+![Header](https://github.com/LindaLor028/hmovie/blob/main/assets/images/extras/GitHub_Header.png)
 # Welcome to the dev-side of Hmovie!
 
 Hmovie is a digital catalog of over 300 Hmong movies- aiming to preserve the history of Hmong movies, film-making, and storytelling. Hmovie was officially launched in 2025 via the Hmong Studies Fellowship hosted by the Ramsey County Historical Society and Center for Hmong Studies and is currently maintained by the Hmovie Team- which consists of: 
