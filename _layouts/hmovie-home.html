@@ -12,23 +12,23 @@
         {% include header_nosearch.html %}
         <div class="center_content">
                 <!-- Overlay -->
-                <div class="landing_div" style="background-image: url('{{ "/assets/images/home_image.jpeg" | relative_url }}')"></div>
-                <div class="text_over_image">
+                <div class="landing_div" style="background-image: url('{{ "/assets/images/home_image.jpeg" | relative_url }}')" aria-label="Background image of a Hmong boy and Girl for the landing page"></div>
+                <div class="text_over_image" >
                     <h1 class="hmovie_title black_shadow">Hmovie</h1>
                     <p class="sub_title black_shadow">The Largest Digital Hmong Movie Database</p>
                     <p class="black_shadow">SEARCH FOR A MOVIE</p> 
-                    <form action="{{site.baseurl}}/search/" id="home_searchbar" class="black_div_shadow" method="get" >
-                        <span class="search_home_icon" style="background-image: url('{{ "/assets/images/search.jpeg" | relative_url }}')"></span>
-                        <input type="text" class="search_home_input" name="q" placeholder="search" required/>
+                    <form action="{{site.baseurl}}/search/" id="home_searchbar" class="black_div_shadow" method="get" aria-label="Search Bar">
+                        <span class="search_home_icon" style="background-image: url('{{ "/assets/images/search.jpeg" | relative_url }}')" aria-label="Search Icon"></span>
+                        <input type="text" class="search_home_input" name="q" aria-label="Search bar field" placeholder="search" required/>
                     </form>
 
                 </div>
     
 
                 <p class="center_text">EXPLORE THE CURRENT COLLECTION</p>
-                <ul class="home_featured_movies">
+                <ul class="home_featured_movies" aria-label="List of Featured movies on homepage">
                 {% for movie in site.categories.front %}
-                        <li data-filter-data="{{%movie.year%}} {{%movie.release-type%}} {{movie.genre}}">
+                        <li data-filter-data="{{%movie.year%}} {{%movie.release-type%}} {{movie.genre}}" aria-label="{{movie.title}}">
                             <a href="{{ movie.permalink | relative_url }}">
                                  <div class="home_movie_li" style="background-image: url('{{ movie.thumbnail | relative_url }}')"></div>
                                 <div>{{ %movie.title% }}</div>

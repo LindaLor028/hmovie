@@ -14,18 +14,18 @@
     <!-- <link href="//fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet" type="text/css"> -->
 </head>
 <header class="site_header">
-    <a href="/hmovie" class="home_button">Hmovie</a>
+    <a href="/hmovie" class="home_button"  aria-label="Link to home page">Hmovie</a>
     <!-- <form action="/hmovie/search/" method="get" id="header_searchbar">
         <input type="text" name="q" />
         <input type="submit" value="Search"/>
     </form> -->
-    <form action="/hmovie/search/" id="header_searchbar" method="get" >
-        <span class="search_icon" style="background-image: url('/hmovie/assets/images/search.jpeg')"></span>
-        <input type="text" class="search_input" name="q" placeholder="search" required/>
+    <form action="/hmovie/search/" id="header_searchbar" method="get" aria-label="Search bar field"  >
+        <span class="search_icon" style="background-image: url('/hmovie/assets/images/search.jpeg')" aria-label="Search icon" ></span>
+        <input type="text" class="search_input" name="q" aria-label="Search bar field" placeholder="search" required/>
     </form>
-    <a href="/hmovie/about" class="nav_button">ABOUT</a>
-    <a href="/hmovie/explore" class="nav_button">EXPLORE</a>
-    <a href="/hmovie/contribute" class="nav_button">CONTRIBUTE</a>
+    <a href="/hmovie/about" class="nav_button" aria-label="Link to About page">ABOUT</a>
+    <a href="/hmovie/explore" class="nav_button" aria-label="Link to Explore page">EXPLORE</a>
+    <a href="/hmovie/contribute" class="nav_button" aria-label="Link to Contribute page">CONTRIBUTE</a>
 </header>
 
 
@@ -33,7 +33,7 @@
     <!-- Movie Video PopUp -->
     <div id="black_bg" onclick="closePopUp()">
         <!-- <button id="close_popup_button">x</button> -->
-        <a href="https://youtu.be/HkUh9NS7oLI?si=3QOdUqlAm8ztL4Tn" target="_blank"> Link </a>
+        <a href="https://youtu.be/HkUh9NS7oLI?si=3QOdUqlAm8ztL4Tn" target="_blank" aria-label="Link to view Movie on external site"> Link </a>
         <div id="movie_popup"></div>
     </div>
 
@@ -43,7 +43,7 @@
         <div class="movie_videoview_title">
             <h1 alt="Movie Title"> Caub Fa 2 (Jao-Fa) </h1>
             
-    <a href="https://youtu.be/HkUh9NS7oLI?si=3QOdUqlAm8ztL4Tn" target="_blank" class="watch_movie_button_a"> WATCH MOVIE </a>
+    <a href="https://youtu.be/HkUh9NS7oLI?si=3QOdUqlAm8ztL4Tn" target="_blank" class="watch_movie_button_a" aria-label="Play movie button"> WATCH MOVIE </a>
 
             <!-- <button type="button" class="clear_filters_button" onclick="triggerPopUp()"> Watch Movie </button> -->
         </div>
@@ -139,8 +139,8 @@
         
             
                 <li>
-                    <a href="/hmovie/cast/Txhaj_Hawj" class="clickable_link_block">
-                        <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/Txhaj Hawj.jpeg" alt="Cast Thumbnail" width="80px" height= "80px" class="circle_img">
+                    <a href="/hmovie/cast/Txhaj_Hawj" class="clickable_link_block" aria-label="Link to Txhaj Hawj page">
+                        <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/Txhaj Hawj.jpeg" alt="Txhaj Hawj Thumbnail" width="80px" height= "80px" class="circle_img">
                         <br>
                         <p>Txhaj Hawj</p>
                     </a>
@@ -237,8 +237,8 @@
         
         
             <li>
-                <div>
-                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Cast Thumbnail" width="80px" height= "80px" class="circle_img">
+                <div aria-label="Mai Chao Thao section but has no link">
+                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Mai Chao Thao Thumbnail" width="80px" height= "80px" class="circle_img">
                     <br>
                     <p>Mai Chao Thao</p>
                 </div>
@@ -318,8 +318,8 @@
         
         
             <li>
-                <div>
-                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Cast Thumbnail" width="80px" height= "80px" class="circle_img">
+                <div aria-label="Pa Thao section but has no link">
+                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Pa Thao Thumbnail" width="80px" height= "80px" class="circle_img">
                     <br>
                     <p>Pa Thao</p>
                 </div>
@@ -399,8 +399,8 @@
         
         
             <li>
-                <div>
-                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Cast Thumbnail" width="80px" height= "80px" class="circle_img">
+                <div aria-label="Viv Thao section but has no link">
+                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Viv Thao Thumbnail" width="80px" height= "80px" class="circle_img">
                     <br>
                     <p>Viv Thao</p>
                 </div>
@@ -480,8 +480,8 @@
         
         
             <li>
-                <div>
-                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Cast Thumbnail" width="80px" height= "80px" class="circle_img">
+                <div aria-label="Cee Xiong section but has no link">
+                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Cee Xiong Thumbnail" width="80px" height= "80px" class="circle_img">
                     <br>
                     <p>Cee Xiong</p>
                 </div>
@@ -561,8 +561,8 @@
         
         
             <li>
-                <div>
-                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Cast Thumbnail" width="80px" height= "80px" class="circle_img">
+                <div aria-label="Hue Thao section but has no link">
+                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Hue Thao Thumbnail" width="80px" height= "80px" class="circle_img">
                     <br>
                     <p>Hue Thao</p>
                 </div>
@@ -642,8 +642,8 @@
         
         
             <li>
-                <div>
-                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Cast Thumbnail" width="80px" height= "80px" class="circle_img">
+                <div aria-label=" Ker Thao section but has no link">
+                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt=" Ker Thao Thumbnail" width="80px" height= "80px" class="circle_img">
                     <br>
                     <p> Ker Thao</p>
                 </div>
@@ -723,8 +723,8 @@
         
         
             <li>
-                <div>
-                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Cast Thumbnail" width="80px" height= "80px" class="circle_img">
+                <div aria-label="Tote Lee section but has no link">
+                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Tote Lee Thumbnail" width="80px" height= "80px" class="circle_img">
                     <br>
                     <p>Tote Lee</p>
                 </div>
@@ -804,8 +804,8 @@
         
         
             <li>
-                <div>
-                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Cast Thumbnail" width="80px" height= "80px" class="circle_img">
+                <div aria-label="Bee Xiong section but has no link">
+                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Bee Xiong Thumbnail" width="80px" height= "80px" class="circle_img">
                     <br>
                     <p>Bee Xiong</p>
                 </div>
@@ -885,8 +885,8 @@
         
         
             <li>
-                <div>
-                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Cast Thumbnail" width="80px" height= "80px" class="circle_img">
+                <div aria-label="Keng Khang section but has no link">
+                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Keng Khang Thumbnail" width="80px" height= "80px" class="circle_img">
                     <br>
                     <p>Keng Khang</p>
                 </div>
@@ -966,8 +966,8 @@
         
         
             <li>
-                <div>
-                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Cast Thumbnail" width="80px" height= "80px" class="circle_img">
+                <div aria-label="Cheng Xiong section but has no link">
+                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Cheng Xiong Thumbnail" width="80px" height= "80px" class="circle_img">
                     <br>
                     <p>Cheng Xiong</p>
                 </div>
@@ -1047,8 +1047,8 @@
         
         
             <li>
-                <div>
-                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Cast Thumbnail" width="80px" height= "80px" class="circle_img">
+                <div aria-label="Rong Lor section but has no link">
+                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Rong Lor Thumbnail" width="80px" height= "80px" class="circle_img">
                     <br>
                     <p>Rong Lor</p>
                 </div>
@@ -1128,8 +1128,8 @@
         
         
             <li>
-                <div>
-                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Cast Thumbnail" width="80px" height= "80px" class="circle_img">
+                <div aria-label="Bee Yang section but has no link">
+                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Bee Yang Thumbnail" width="80px" height= "80px" class="circle_img">
                     <br>
                     <p>Bee Yang</p>
                 </div>
@@ -1209,8 +1209,8 @@
         
         
             <li>
-                <div>
-                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Cast Thumbnail" width="80px" height= "80px" class="circle_img">
+                <div aria-label="Wathao Xiong section but has no link">
+                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Wathao Xiong Thumbnail" width="80px" height= "80px" class="circle_img">
                     <br>
                     <p>Wathao Xiong</p>
                 </div>
@@ -1290,8 +1290,8 @@
         
         
             <li>
-                <div>
-                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Cast Thumbnail" width="80px" height= "80px" class="circle_img">
+                <div aria-label="Soua Lee section but has no link">
+                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Soua Lee Thumbnail" width="80px" height= "80px" class="circle_img">
                     <br>
                     <p>Soua Lee</p>
                 </div>
@@ -1371,8 +1371,8 @@
         
         
             <li>
-                <div>
-                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Cast Thumbnail" width="80px" height= "80px" class="circle_img">
+                <div aria-label="Kao Lee Thao section but has no link">
+                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Kao Lee Thao Thumbnail" width="80px" height= "80px" class="circle_img">
                     <br>
                     <p>Kao Lee Thao</p>
                 </div>
@@ -1452,8 +1452,8 @@
         
         
             <li>
-                <div>
-                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Cast Thumbnail" width="80px" height= "80px" class="circle_img">
+                <div aria-label=" Pao Parapat section but has no link">
+                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt=" Pao Parapat Thumbnail" width="80px" height= "80px" class="circle_img">
                     <br>
                     <p> Pao Parapat</p>
                 </div>
@@ -1533,8 +1533,8 @@
         
         
             <li>
-                <div>
-                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Cast Thumbnail" width="80px" height= "80px" class="circle_img">
+                <div aria-label="Cunia Thapaya section but has no link">
+                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Cunia Thapaya Thumbnail" width="80px" height= "80px" class="circle_img">
                     <br>
                     <p>Cunia Thapaya</p>
                 </div>
@@ -1614,8 +1614,8 @@
         
         
             <li>
-                <div>
-                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Cast Thumbnail" width="80px" height= "80px" class="circle_img">
+                <div aria-label="Cing Neverdie section but has no link">
+                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Cing Neverdie Thumbnail" width="80px" height= "80px" class="circle_img">
                     <br>
                     <p>Cing Neverdie</p>
                 </div>
@@ -1695,8 +1695,8 @@
         
         
             <li>
-                <div>
-                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Cast Thumbnail" width="80px" height= "80px" class="circle_img">
+                <div aria-label=" E Neverdie section but has no link">
+                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt=" E Neverdie Thumbnail" width="80px" height= "80px" class="circle_img">
                     <br>
                     <p> E Neverdie</p>
                 </div>
@@ -1761,8 +1761,8 @@
                 
             
                 
-                    <a href="/hmovie/movie/Caub_Fa_(Jao-Fa)">
-                            <div class="explore_movie_li" style="background-image: url('/hmovie/assets/images/movie_thumbnails/Caub%20Fa.jpeg')"></div>
+                    <a href="/hmovie/movie/Caub_Fa_(Jao-Fa)" aria-label="Link to Caub Fa (Jao-Fa) page">
+                            <div class="explore_movie_li" style="background-image: url('/hmovie/assets/images/movie_thumbnails/Caub%20Fa.jpeg')" aria-label="Caub Fa (Jao-Fa) thumbnail"></div>
                             <div>Caub Fa (Jao-Fa)</div>
                     </a>
                     
@@ -4661,29 +4661,29 @@
         <p>Hmovie was officially launched in 2025 via the Hmong Studies Fellowship hosted by the Ramsey County Historical Society and Center for Hmong Studies. </p>
         <p>This fellowship was made possible in part by the people of Minnesota through a grant funded by an appropriation to the Minnesota Historical Society from the Minnesota Arts and Cultural Heritage Fund.</p>
         <div class="sponsor_logos" >
-            <a href="https://www.legacy.mn.gov/" target="_blank" >
+            <a href="https://www.legacy.mn.gov/" target="_blank" aria-label="Clean Water Fund Website Link">
                 <img src="https://lindalor028.github.io/hmovie/assets/images/logos/MSAB.png" alt="Clean Water Land & Legacy Amendment Logo" class="sponsor_logos_small">
             </a>    
-            <a href="https://rchs.com/" target="_blank">
+            <a href="https://rchs.com/" target="_blank" aria-label="Ramsey County Historical Society Website Link">
             <img src="https://lindalor028.github.io/hmovie/assets/images/logos/RCHS-removebg-preview.png" alt="Ramsey County Historical Society Logo" class="sponsor_logos_small">
             </a>
-            <a href="https://www.csp.edu/center-for-hmong-studies/" target="_blank">
+            <a href="https://www.csp.edu/center-for-hmong-studies/" target="_blank" aria-label="Center for Hmong Studies Website Link">
             <img src="https://lindalor028.github.io/hmovie/assets/images/logos/CFHS.png" alt="Center for Hmong Studies Logo" class="sponsor_logos_small">
             </a>
         </div>
     </div>
     <div class="footer_stack_items">
         <h1 class="footer_sub_title">About</h1>
-        <a href="/hmovie/about">About Hmovie</a>
-        <a href="/hmovie/contribute">Contribute</a>
+        <a href="/hmovie/about" aria-label="Link to About Page">About Hmovie</a>
+        <a href="/hmovie/contribute" aria-label="Link to Contribute Page">Contribute</a>
     </div>
     <div>
         <h1 class="footer_sub_title">Legal</h1>
-        <a href="/hmovie/terms_of_use">Terms of Use</a>
+        <a href="/hmovie/terms_of_use" aria-label="Link to Terms of Use Page">Terms of Use</a>
     </div>
     <div>
         <h1 class="footer_sub_title">Contact</h1>
-        <a href="https://forms.gle/wXPr6YyNa5qmJC9u7" target="_blank">Contact Form</a>
+        <a href="https://forms.gle/wXPr6YyNa5qmJC9u7" target="_blank" aria-label="Link to Contact Form">Contact Form</a>
     </div>
 </footer>
 </body>

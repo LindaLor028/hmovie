@@ -11,10 +11,10 @@
     {% for movie in sortedPosts %}
         {% for cast in movie.cast %}
             {% if cast.name == actor.title %}
-                <a href="{{movie.permalink | relative_url}}">
+                <a href="{{movie.permalink | relative_url}}" aria-label="Link to {{movie.title}} page">
                     <div>
                         <!-- <img src="{{movie.thumbnail}}" alt="{{movie.name}} Movie Poster" class="rounded_img" width="100%"> -->
-                        <div class="explore_movie_li" style="background-image: url('{{ movie.thumbnail | relative_url }}')"></div>
+                        <div class="explore_movie_li" style="background-image: url('{{ movie.thumbnail | relative_url }}')" aria-label="{{movie.title}} thumbnail"></div>
                         <p> {{movie.title}} </p>
                     </div>
                 </a>

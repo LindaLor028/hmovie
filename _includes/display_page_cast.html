@@ -10,8 +10,8 @@
         {% for person in site.categories.actor %}
             {% if actor.name == person.title%}
                 <li>
-                    <a href="{{ person.permalink | relative_url}}" class="clickable_link_block">
-                        <img src="{{ site.url }}{{ site.baseurl }}{{person.thumbnail}}" alt="Cast Thumbnail" width="80px" height= "80px" class="circle_img">
+                    <a href="{{ person.permalink | relative_url}}" class="clickable_link_block" aria-label="Link to {{actor.name}} page">
+                        <img src="{{ site.url }}{{ site.baseurl }}{{person.thumbnail}}" alt="{{actor.name}} Thumbnail" width="80px" height= "80px" class="circle_img">
                         <br>
                         <p>{{%actor.name %}}</p>
                     </a>
@@ -21,8 +21,8 @@
         {% endfor %}
         {% if noPage == "false" %}
             <li>
-                <div>
-                    <img src="{{ site.url }}{{ site.baseurl }}/assets/images/cast_thumbnails/no_cast_image.png" alt="Cast Thumbnail" width="80px" height= "80px" class="circle_img">
+                <div aria-label="{{actor.name}} section but has no link">
+                    <img src="{{ site.url }}{{ site.baseurl }}/assets/images/cast_thumbnails/no_cast_image.png" alt="{{actor.name}} Thumbnail" width="80px" height= "80px" class="circle_img">
                     <br>
                     <p>{{%actor.name %}}</p>
                 </div>

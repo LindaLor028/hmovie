@@ -1,5 +1,5 @@
 {% if page.video_link == "" %}
-    <button type="button" class="disabled_button"> NOT AVAILABLE ONLINE </button>
+    <button type="button" class="disabled_button" aria-label="Disabled Button"> NOT AVAILABLE ONLINE </button>
     {% else %}
-    <a href="{{%page.video_link%}}" target="_blank" class="watch_movie_button_a"> WATCH MOVIE </a>
+    <a href="{{%page.video_link%}}" target="_blank" class="watch_movie_button_a" aria-label="Play movie button"> WATCH MOVIE </a>
 {% endif%}

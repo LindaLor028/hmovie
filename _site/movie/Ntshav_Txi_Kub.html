@@ -14,18 +14,18 @@
     <!-- <link href="//fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet" type="text/css"> -->
 </head>
 <header class="site_header">
-    <a href="/hmovie" class="home_button">Hmovie</a>
+    <a href="/hmovie" class="home_button"  aria-label="Link to home page">Hmovie</a>
     <!-- <form action="/hmovie/search/" method="get" id="header_searchbar">
         <input type="text" name="q" />
         <input type="submit" value="Search"/>
     </form> -->
-    <form action="/hmovie/search/" id="header_searchbar" method="get" >
-        <span class="search_icon" style="background-image: url('/hmovie/assets/images/search.jpeg')"></span>
-        <input type="text" class="search_input" name="q" placeholder="search" required/>
+    <form action="/hmovie/search/" id="header_searchbar" method="get" aria-label="Search bar field"  >
+        <span class="search_icon" style="background-image: url('/hmovie/assets/images/search.jpeg')" aria-label="Search icon" ></span>
+        <input type="text" class="search_input" name="q" aria-label="Search bar field" placeholder="search" required/>
     </form>
-    <a href="/hmovie/about" class="nav_button">ABOUT</a>
-    <a href="/hmovie/explore" class="nav_button">EXPLORE</a>
-    <a href="/hmovie/contribute" class="nav_button">CONTRIBUTE</a>
+    <a href="/hmovie/about" class="nav_button" aria-label="Link to About page">ABOUT</a>
+    <a href="/hmovie/explore" class="nav_button" aria-label="Link to Explore page">EXPLORE</a>
+    <a href="/hmovie/contribute" class="nav_button" aria-label="Link to Contribute page">CONTRIBUTE</a>
 </header>
 
 
@@ -33,7 +33,7 @@
     <!-- Movie Video PopUp -->
     <div id="black_bg" onclick="closePopUp()">
         <!-- <button id="close_popup_button">x</button> -->
-        <a href="https://youtu.be/HSRBD4Qndwk?si=BkNp4e38HgLvio72" target="_blank"> Link </a>
+        <a href="https://youtu.be/HSRBD4Qndwk?si=BkNp4e38HgLvio72" target="_blank" aria-label="Link to view Movie on external site"> Link </a>
         <div id="movie_popup"></div>
     </div>
 
@@ -43,7 +43,7 @@
         <div class="movie_videoview_title">
             <h1 alt="Movie Title"> Ntshav Txi Kub </h1>
             
-    <a href="https://youtu.be/HSRBD4Qndwk?si=BkNp4e38HgLvio72" target="_blank" class="watch_movie_button_a"> WATCH MOVIE </a>
+    <a href="https://youtu.be/HSRBD4Qndwk?si=BkNp4e38HgLvio72" target="_blank" class="watch_movie_button_a" aria-label="Play movie button"> WATCH MOVIE </a>
 
             <!-- <button type="button" class="clear_filters_button" onclick="triggerPopUp()"> Watch Movie </button> -->
         </div>
@@ -137,8 +137,8 @@
         
             
                 <li>
-                    <a href="/hmovie/cast/Kwm_Lis" class="clickable_link_block">
-                        <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/Kwm Lis.jpeg" alt="Cast Thumbnail" width="80px" height= "80px" class="circle_img">
+                    <a href="/hmovie/cast/Kwm_Lis" class="clickable_link_block" aria-label="Link to Kwm Lis page">
+                        <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/Kwm Lis.jpeg" alt="Kwm Lis Thumbnail" width="80px" height= "80px" class="circle_img">
                         <br>
                         <p>Kwm Lis</p>
                     </a>
@@ -237,8 +237,8 @@
         
         
             <li>
-                <div>
-                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Cast Thumbnail" width="80px" height= "80px" class="circle_img">
+                <div aria-label="Nee Her section but has no link">
+                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Nee Her Thumbnail" width="80px" height= "80px" class="circle_img">
                     <br>
                     <p>Nee Her</p>
                 </div>
@@ -318,8 +318,8 @@
         
         
             <li>
-                <div>
-                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Cast Thumbnail" width="80px" height= "80px" class="circle_img">
+                <div aria-label="Bee Yang section but has no link">
+                    <img src="https://lindalor028.github.io/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Bee Yang Thumbnail" width="80px" height= "80px" class="circle_img">
                     <br>
                     <p>Bee Yang</p>
                 </div>
@@ -348,29 +348,29 @@
         <p>Hmovie was officially launched in 2025 via the Hmong Studies Fellowship hosted by the Ramsey County Historical Society and Center for Hmong Studies. </p>
         <p>This fellowship was made possible in part by the people of Minnesota through a grant funded by an appropriation to the Minnesota Historical Society from the Minnesota Arts and Cultural Heritage Fund.</p>
         <div class="sponsor_logos" >
-            <a href="https://www.legacy.mn.gov/" target="_blank" >
+            <a href="https://www.legacy.mn.gov/" target="_blank" aria-label="Clean Water Fund Website Link">
                 <img src="https://lindalor028.github.io/hmovie/assets/images/logos/MSAB.png" alt="Clean Water Land & Legacy Amendment Logo" class="sponsor_logos_small">
             </a>    
-            <a href="https://rchs.com/" target="_blank">
+            <a href="https://rchs.com/" target="_blank" aria-label="Ramsey County Historical Society Website Link">
             <img src="https://lindalor028.github.io/hmovie/assets/images/logos/RCHS-removebg-preview.png" alt="Ramsey County Historical Society Logo" class="sponsor_logos_small">
             </a>
-            <a href="https://www.csp.edu/center-for-hmong-studies/" target="_blank">
+            <a href="https://www.csp.edu/center-for-hmong-studies/" target="_blank" aria-label="Center for Hmong Studies Website Link">
             <img src="https://lindalor028.github.io/hmovie/assets/images/logos/CFHS.png" alt="Center for Hmong Studies Logo" class="sponsor_logos_small">
             </a>
         </div>
     </div>
     <div class="footer_stack_items">
         <h1 class="footer_sub_title">About</h1>
-        <a href="/hmovie/about">About Hmovie</a>
-        <a href="/hmovie/contribute">Contribute</a>
+        <a href="/hmovie/about" aria-label="Link to About Page">About Hmovie</a>
+        <a href="/hmovie/contribute" aria-label="Link to Contribute Page">Contribute</a>
     </div>
     <div>
         <h1 class="footer_sub_title">Legal</h1>
-        <a href="/hmovie/terms_of_use">Terms of Use</a>
+        <a href="/hmovie/terms_of_use" aria-label="Link to Terms of Use Page">Terms of Use</a>
     </div>
     <div>
         <h1 class="footer_sub_title">Contact</h1>
-        <a href="https://forms.gle/wXPr6YyNa5qmJC9u7" target="_blank">Contact Form</a>
+        <a href="https://forms.gle/wXPr6YyNa5qmJC9u7" target="_blank" aria-label="Link to Contact Form">Contact Form</a>
     </div>
 </footer>
 </body>

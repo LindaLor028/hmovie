@@ -12,17 +12,17 @@
         
         <div class="side_by_side">
             <h1>Explore</h1>
-            <p id="total_displayed">({{ site.categories.movie | size }})</p>
+            <p id="total_displayed" aria-label="Total Number of Movies Displayed on Screen">({{ site.categories.movie | size }})</p>
         </div>
 
         <div class="movie_mainview" >
             <div>
-                <ul id="movies_list" class="inner_shadow">
+                <ul id="movies_list" class="inner_shadow" aria-label="List of movies">
                     {% assign sortedPosts = site.categories.movie | sort: 'title' %}
                     {% for movie in sortedPosts %}
-                        <li data-filter-data="{{%movie.year%}} {{%movie.release_type%}} {{movie.genre}} {{movie.video_link}}">
-                            <a href="{{ movie.permalink | relative_url }}" data-type="{% for person in movie.cast %}{{ person.name }}{% if forloop.last == false %}, {% endif %}{% endfor %}">
-                                <div class="explore_movie_li" style="background-image: url('{{ movie.thumbnail | relative_url }}')"></div>
+                        <li data-filter-data="{{%movie.year%}} {{%movie.release_type%}} {{movie.genre}} {{movie.video_link}}" aria-label="{{movie.title}}">
+                            <a href="{{ movie.permalink | relative_url }}" aria-label="Link to {{movie.title}}" data-type="{% for person in movie.cast %}{{ person.name }}{% if forloop.last == false %}, {% endif %}{% endfor %}">
+                                <div class="explore_movie_li" style="background-image: url('{{ movie.thumbnail | relative_url }}')" aria-label="Movie Thumbnail"></div>
                                 <div>{{ %movie.title% }}</div>
                             </a>
                         </li>
@@ -34,16 +34,16 @@
             <div class="gray_box inner_shadow">
                 <div class="filter_title">
                     <h2>FILTERS</h2>
-                    <button onclick="clearFilters()" class="clear_filters_button"> Clear Filters</button>
+                    <button onclick="clearFilters()" class="clear_filters_button" aria-label="Button to clear enabled filters">Clear Filters</button>
                 </div>
                 <h2>Availability</h2>
-                    <ul id="availability_filters" class="filter_list">
+                    <ul id="availability_filters" class="filter_list" aria-label="Filters of type: availability">
                         <li> <input type="checkbox" class="explore_checkbox" onclick="filterMultiple()"/> 
                             <label>Online</label>
                         </li>
                     </ul>
                 <h2>Year of Release </h2>
-                <ul id="year_filters" class="filter_list">
+                <ul id="year_filters" class="filter_list" aria-label="Filters of type: Year of Release">
                     <li> <input type="checkbox" class="explore_checkbox" onclick="filterMultiple()"/> 
                         <label>1990s</label>
                    </li>
@@ -56,7 +56,7 @@
                     </li>
                 </ul>
                 <h2>Release Type</h2>
-                <ul id="release_filters" class="filter_list">
+                <ul id="release_filters" class="filter_list" aria-label="Filters of type: Release Type">
                     <li> <input type="checkbox" class="explore_checkbox" onclick="filterMultiple()"/>
                          <label>VHS</label>
                     </li>
@@ -66,7 +66,7 @@
                 </ul>
 
                 <h2>Genre</h2>
-                <ul id="genre_filters" class="filter_list">
+                <ul id="genre_filters" class="filter_list" aria-label="Filters of type: Genre">
                     <li> <input type="checkbox" class="explore_checkbox" onclick="filterMultiple()"/>
                          <label>Folklore</label>
                     </li>
