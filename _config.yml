@@ -3,7 +3,7 @@ email: linda.lor.904@gmail.com
 description: >-
   The largest digital Hmong movie database.
 
-baseurl: "/hmovie.github.io"
+baseurl: "/hmovie"
 production_url : https://lindalor028.github.io.com/hmovie.github.io
 url: "https://lindalor028.github.io"
 
