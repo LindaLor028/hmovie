@@ -24,7 +24,7 @@ button {
   display: grid;
   column-gap: 0.5rem;
   grid-template-columns: 2fr 1fr;
-  width: auto;
+  width: 80vw;
 }
 
 .actors_list {
@@ -493,7 +493,7 @@ body {
   font-size: 20px;
   user-select: none;
   height: 75%;
-  margin-top: 0.2rem;
+  margin-top: 0.05vh;
   border-bottom-right-radius: 5rem;
   border-top-right-radius: 5rem;
 }
