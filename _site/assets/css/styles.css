@@ -32,9 +32,6 @@ button {
   .movie_mainview {
     grid-template-columns: 1fr; /* stack them vertically */
   }
-  .header_searchbar {
-    width: 40%;
-  }
 }
 .actors_list {
   list-style: none;
