@@ -363,7 +363,7 @@ body {
 
 .sponsor_logos_big {
   border-radius: 0.2rem;
-  height: 100px;
+  height: 8vw;
   width: auto;
   margin-left: auto;
   margin-right: auto;
@@ -492,7 +492,7 @@ body {
   color: black;
   font-size: 20px;
   user-select: none;
-  height: 75%;
+  height: 4vh;
   margin-top: 1%;
   border-bottom-right-radius: 5rem;
   border-top-right-radius: 5rem;
