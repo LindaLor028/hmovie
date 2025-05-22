@@ -24,7 +24,7 @@ button {
   display: grid;
   column-gap: 0.5rem;
   grid-template-columns: 2fr 1fr;
-  width: 80vw;
+  width: auto;
 }
 
 /* Make it responsive on small screens */
@@ -499,7 +499,7 @@ body {
   font-size: 20px;
   user-select: none;
   height: 75%;
-  margin-top: 0.05vh;
+  margin-top: 0.01vh;
   border-bottom-right-radius: 5rem;
   border-top-right-radius: 5rem;
 }
