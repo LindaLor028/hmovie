@@ -181,7 +181,7 @@ button {
   list-style-type: none;
   display: grid;
   background-color: rgb(31, 44, 68);
-  grid-template-columns: repeat(auto-fit, minmax(min-content, 175px));
+  grid-template-columns: repeat(auto-fit, minmax(min-content, 11vw));
   column-gap: 1rem;
   row-gap: 1rem;
   padding: 0;
