@@ -499,7 +499,7 @@ body {
   font-size: 20px;
   user-select: none;
   height: 60%;
-  margin-top: 0.05vh;
+  margin-top: 1vh;
   border-bottom-right-radius: 5rem;
   border-top-right-radius: 5rem;
 }
