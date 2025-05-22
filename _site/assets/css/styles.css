@@ -32,6 +32,12 @@ button {
   .movie_mainview {
     grid-template-columns: 1fr; /* stack them vertically */
   }
+  .about_nav {
+    display: none;
+  }
+  .contribute_nav {
+    display: none;
+  }
 }
 .actors_list {
   list-style: none;
