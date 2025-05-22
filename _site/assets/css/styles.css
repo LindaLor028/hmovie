@@ -27,6 +27,12 @@ button {
   width: 80vw;
 }
 
+/* Make it responsive on small screens */
+@media (max-width: 768px) {
+  .movie_mainview {
+    grid-template-columns: 1fr; /* stack them vertically */
+  }
+}
 .actors_list {
   list-style: none;
   display: grid;
