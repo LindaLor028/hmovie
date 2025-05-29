@@ -12,7 +12,7 @@ synopsis: "Npis thiab Txhiaj nkawv yog kwv npawg. Nkawv tuaj nyob ua ntsuag ciaj
 producer: "Hnub Qub Ntsa Video Productions Corp."
 director: ""
 writer: ""
-video_link: "https://youtu.be/lw1g5TV-gEY?si=DlQcIr8QXRkkJS80"
+video_link: ""
 genre: "Drama Action"
 year: "1992"
 release_type: "VHS"
