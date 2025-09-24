@@ -12,6 +12,9 @@ theme: minima
 plugins:
   - jekyll-feed
 
+# Google Analytics 
+google_analytics: G-XCK7DWWLFC
+
 exclude:
   - .sass-cache/
   - .jekyll-cache/

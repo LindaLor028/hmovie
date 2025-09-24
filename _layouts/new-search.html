@@ -5,6 +5,9 @@
     <title> {{%page.title%}} </title>
     <link rel="stylesheet" href="{{ 'assets/css/styles.css' | relative_url }}">
     <link rel="icon" type="image/x-icon" href="{{ site.url }}{{ site.baseurl }}/assets/images/fav-icon.png">
+    {% if site.google_analytics and jekyll.environment == 'production' %}
+            {% include analytics.html %}
+    {% endif %}
 </head>
 <body class="bg_blue">
     {% include site_header.html %}
