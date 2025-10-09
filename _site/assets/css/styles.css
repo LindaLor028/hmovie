@@ -417,6 +417,7 @@ body {
 
 .site_header_nosearch {
   display: grid;
+  align-items: center;
   padding-left: 10%;
   padding-right: 10%;
   padding-top: 0.5rem;
@@ -445,6 +446,7 @@ body {
   text-decoration: none;
   display: flex;
   align-items: center;
+  width: fit-content;
 }
 
 .logo_img {
