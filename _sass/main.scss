@@ -476,7 +476,14 @@ body {
 
 .home_button {
     text-decoration: none;
-    font-size: 250%;
+    display: flex;
+    align-items: center;
+}
+
+.logo_img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
 }
 
 // SEARCH BARS

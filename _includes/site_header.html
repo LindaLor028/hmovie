@@ -2,17 +2,20 @@
     <!-- <link href="//fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet" type="text/css"> -->
 </head>
 <header class="site_header">
-    <a href="{{site.baseurl}}" class="home_button"  aria-label="Link to home page">Hmovie</a>
+    <!-- <a href="{{site.baseurl}}" class="home_button"  aria-label="Link to home page">Hmovie</a> -->
+    <a href="{{site.baseurl}}" class="home_button" aria-label="Link to home page">
+        <img src="{{ '/assets/images/logos/Hmovie Logo Circle.png' | relative_url }}" alt="Hmovie" class="logo_img">
+    </a>
     <!-- <form action="{{site.baseurl}}/search/" method="get" id="header_searchbar">
         <input type="text" name="q" />
         <input type="submit" value="Search"/>
     </form> -->
-    <form action="{{site.baseurl}}/search/" id="header_searchbar" method="get" aria-label="Search bar field"  >
-        <span class="search_icon" style="background-image: url('{{ "/assets/images/search.jpeg" | relative_url }}')" aria-label="Search icon" ></span>
-        <input type="text" class="search_input" name="q" aria-label="Search bar field" placeholder="search" required/>
+    <form action="{{site.baseurl}}/search/" id="header_searchbar" method="get" aria-label="Search bar field">
+        <span class="search_icon" style="background-image: url('{{ " /assets/images/search.jpeg" | relative_url }}')"
+            aria-label="Search icon"></span>
+        <input type="text" class="search_input" name="q" aria-label="Search bar field" placeholder="search" required />
     </form>
     <a href="{{ '/about' | relative_url }}" class="nav_button" aria-label="Link to About page">ABOUT</a>
     <a href="{{ '/explore' | relative_url }}" class="nav_button" aria-label="Link to Explore page">EXPLORE</a>
     <a href="{{ '/contribute' | relative_url }}" class="nav_button" aria-label="Link to Contribute page">CONTRIBUTE</a>
 </header>
-

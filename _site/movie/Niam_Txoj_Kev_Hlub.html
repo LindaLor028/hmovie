@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <title> Niam Txoj Kev Hlub </title>
         <link rel="stylesheet" href="/hmovie/assets/css/styles.css">
-        <link rel="icon" type="image/x-icon" href="http://localhost:4002/hmovie/assets/images/fav-icon.png">
+        <link rel="icon" type="image/x-icon" href="http://localhost:4001/hmovie/assets/images/fav-icon.png">
         
     </head>
 
@@ -15,21 +15,23 @@
     <!-- <link href="//fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet" type="text/css"> -->
 </head>
 <header class="site_header">
-    <a href="/hmovie" class="home_button"  aria-label="Link to home page">Hmovie</a>
+    <!-- <a href="/hmovie" class="home_button"  aria-label="Link to home page">Hmovie</a> -->
+    <a href="/hmovie" class="home_button" aria-label="Link to home page">
+        <img src="/hmovie/assets/images/logos/Hmovie%20Logo%20Circle.png" alt="Hmovie" class="logo_img">
+    </a>
     <!-- <form action="/hmovie/search/" method="get" id="header_searchbar">
         <input type="text" name="q" />
         <input type="submit" value="Search"/>
     </form> -->
-    <form action="/hmovie/search/" id="header_searchbar" method="get" aria-label="Search bar field"  >
-        <span class="search_icon" style="background-image: url('/hmovie/assets/images/search.jpeg')" aria-label="Search icon" ></span>
-        <input type="text" class="search_input" name="q" aria-label="Search bar field" placeholder="search" required/>
+    <form action="/hmovie/search/" id="header_searchbar" method="get" aria-label="Search bar field">
+        <span class="search_icon" style="background-image: url('/hmovie/%20/assets/images/search.jpeg')"
+            aria-label="Search icon"></span>
+        <input type="text" class="search_input" name="q" aria-label="Search bar field" placeholder="search" required />
     </form>
     <a href="/hmovie/about" class="nav_button" aria-label="Link to About page">ABOUT</a>
     <a href="/hmovie/explore" class="nav_button" aria-label="Link to Explore page">EXPLORE</a>
     <a href="/hmovie/contribute" class="nav_button" aria-label="Link to Contribute page">CONTRIBUTE</a>
 </header>
-
-
 
     <!-- Movie Video PopUp -->
     <div id="black_bg" onclick="closePopUp()">
@@ -54,7 +56,7 @@
         <div class="movie_videoview">
             <!-- Column 1: Holds Movie Meta Data -->
             <div>
-                <img src="http://localhost:4002/hmovie/assets/images/movie_thumbnails/Niam Txoj Kev Hlub.jpeg" alt="Niam Txoj Kev Hlub Movie Poster" width="100%" class="rounded_img">
+                <img src="http://localhost:4001/hmovie/assets/images/movie_thumbnails/Niam Txoj Kev Hlub.jpeg" alt="Niam Txoj Kev Hlub Movie Poster" width="100%" class="rounded_img">
                 <div class="movie_metadata inner_shadow margin_top">
                     <p class="meta_data_type">Production Year:</p>
                     <p>2016</p>
@@ -109,7 +111,7 @@
             
                 <li>
                     <a href="/hmovie/cast/Teem_Xyooj" class="clickable_link_block" aria-label="Link to Teem Xyooj page">
-                        <img src="http://localhost:4002/hmovie/assets/images/cast_thumbnails/Teem Xyooj.jpeg" alt="Teem Xyooj Thumbnail" width="80px" height= "80px" class="circle_img">
+                        <img src="http://localhost:4001/hmovie/assets/images/cast_thumbnails/Teem Xyooj.jpeg" alt="Teem Xyooj Thumbnail" width="80px" height= "80px" class="circle_img">
                         <br>
                         <p>Teem Xyooj</p>
                     </a>
@@ -239,7 +241,7 @@
         
             <li>
                 <div aria-label="Hli Vang section but has no link">
-                    <img src="http://localhost:4002/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Hli Vang Thumbnail" width="80px" height= "80px" class="circle_img">
+                    <img src="http://localhost:4001/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Hli Vang Thumbnail" width="80px" height= "80px" class="circle_img">
                     <br>
                     <p>Hli Vang</p>
                 </div>
@@ -320,7 +322,7 @@
         
             <li>
                 <div aria-label="Me Yaj section but has no link">
-                    <img src="http://localhost:4002/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Me Yaj Thumbnail" width="80px" height= "80px" class="circle_img">
+                    <img src="http://localhost:4001/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Me Yaj Thumbnail" width="80px" height= "80px" class="circle_img">
                     <br>
                     <p>Me Yaj</p>
                 </div>
@@ -343,7 +345,7 @@
             
                 <li>
                     <a href="/hmovie/cast/Ntxawm_Lauj" class="clickable_link_block" aria-label="Link to Ntxawm Lauj page">
-                        <img src="http://localhost:4002/hmovie/assets/images/cast_thumbnails/Ntxawm Lauj.jpeg" alt="Ntxawm Lauj Thumbnail" width="80px" height= "80px" class="circle_img">
+                        <img src="http://localhost:4001/hmovie/assets/images/cast_thumbnails/Ntxawm Lauj.jpeg" alt="Ntxawm Lauj Thumbnail" width="80px" height= "80px" class="circle_img">
                         <br>
                         <p>Ntxawm Lauj</p>
                     </a>
@@ -483,7 +485,7 @@
         
             <li>
                 <div aria-label="Fav Maiv Hawj section but has no link">
-                    <img src="http://localhost:4002/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Fav Maiv Hawj Thumbnail" width="80px" height= "80px" class="circle_img">
+                    <img src="http://localhost:4001/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Fav Maiv Hawj Thumbnail" width="80px" height= "80px" class="circle_img">
                     <br>
                     <p>Fav Maiv Hawj</p>
                 </div>
@@ -564,7 +566,7 @@
         
             <li>
                 <div aria-label="Ntxhi Lauj section but has no link">
-                    <img src="http://localhost:4002/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Ntxhi Lauj Thumbnail" width="80px" height= "80px" class="circle_img">
+                    <img src="http://localhost:4001/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Ntxhi Lauj Thumbnail" width="80px" height= "80px" class="circle_img">
                     <br>
                     <p>Ntxhi Lauj</p>
                 </div>
@@ -645,7 +647,7 @@
         
             <li>
                 <div aria-label="Kab Ntsais Tsab section but has no link">
-                    <img src="http://localhost:4002/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Kab Ntsais Tsab Thumbnail" width="80px" height= "80px" class="circle_img">
+                    <img src="http://localhost:4001/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Kab Ntsais Tsab Thumbnail" width="80px" height= "80px" class="circle_img">
                     <br>
                     <p>Kab Ntsais Tsab</p>
                 </div>
@@ -726,7 +728,7 @@
         
             <li>
                 <div aria-label="Yis Vwj section but has no link">
-                    <img src="http://localhost:4002/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Yis Vwj Thumbnail" width="80px" height= "80px" class="circle_img">
+                    <img src="http://localhost:4001/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Yis Vwj Thumbnail" width="80px" height= "80px" class="circle_img">
                     <br>
                     <p>Yis Vwj</p>
                 </div>
@@ -807,7 +809,7 @@
         
             <li>
                 <div aria-label="Meej Yaj section but has no link">
-                    <img src="http://localhost:4002/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Meej Yaj Thumbnail" width="80px" height= "80px" class="circle_img">
+                    <img src="http://localhost:4001/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Meej Yaj Thumbnail" width="80px" height= "80px" class="circle_img">
                     <br>
                     <p>Meej Yaj</p>
                 </div>
@@ -888,7 +890,7 @@
         
             <li>
                 <div aria-label="Paj Nyiag Ham section but has no link">
-                    <img src="http://localhost:4002/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Paj Nyiag Ham Thumbnail" width="80px" height= "80px" class="circle_img">
+                    <img src="http://localhost:4001/hmovie/assets/images/cast_thumbnails/no_cast_image.png" alt="Paj Nyiag Ham Thumbnail" width="80px" height= "80px" class="circle_img">
                     <br>
                     <p>Paj Nyiag Ham</p>
                 </div>
@@ -920,16 +922,16 @@
             appropriation to the Minnesota Historical Society from the Minnesota Arts and Cultural Heritage Fund.</p>
         <div class="sponsor_logos">
             <a href="https://www.legacy.mn.gov/" target="_blank" aria-label="Clean Water Fund Website Link">
-                <img src="http://localhost:4002/hmovie/assets/images/logos/MSAB.png"
+                <img src="http://localhost:4001/hmovie/assets/images/logos/MSAB.png"
                     alt="Clean Water Land & Legacy Amendment Logo" class="sponsor_logos_small">
             </a>
             <a href="https://rchs.com/" target="_blank" aria-label="Ramsey County Historical Society Website Link">
-                <img src="http://localhost:4002/hmovie/assets/images/logos/RCHS-removebg-preview.png"
+                <img src="http://localhost:4001/hmovie/assets/images/logos/RCHS-removebg-preview.png"
                     alt="Ramsey County Historical Society Logo" class="sponsor_logos_small">
             </a>
             <a href="https://www.csp.edu/center-for-hmong-studies/" target="_blank"
                 aria-label="Center for Hmong Studies Website Link">
-                <img src="http://localhost:4002/hmovie/assets/images/logos/CFHS.png"
+                <img src="http://localhost:4001/hmovie/assets/images/logos/CFHS.png"
                     alt="Center for Hmong Studies Logo" class="sponsor_logos_small">
             </a>
         </div>
