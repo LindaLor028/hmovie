@@ -9,7 +9,7 @@ permalink: "/privacy_policy"
 
 # Privacy Policy
 
-**Last updated: October 2, 2025**
+Last updated: October 2, 2025
 
 ## The data we collect
 
