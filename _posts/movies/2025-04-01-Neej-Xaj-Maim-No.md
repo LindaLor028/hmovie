@@ -31,7 +31,7 @@ cast:
 - name: "Teem Xyooj"
 - name: "Hawm Thoj"
 - name: "Maiv Yaj"
-- name: "Cua Yaj"
+- name: "Cua Yaj (Pog Nplaum)"
 - name: "Blaim Yaj"
 - name: "Maiv Muas"
 ---

@@ -33,5 +33,5 @@ cast:
 - name: "Daus Yaj"
 - name: "Dib Lauj"
 - name: "Kuam Lis"
-- name: "Cua Yaj"
+- name: "Cua Yaj (Pog Nplaum)"
 ---

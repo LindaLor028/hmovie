@@ -29,7 +29,7 @@ sequel: ""
 cast:
 - name: "Caluenee Thoj"
 - name: "Ntxawg Lauj"
-- name: "Cua Yaj"
+- name: "Cua Yaj (Pog Nplaum)"
 - name: "Pheej Thoj"
 - name: "Kuam Lis"
 ---

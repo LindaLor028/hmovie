@@ -28,5 +28,5 @@ sequel: ""
 # Movie Cast
 cast:
 - name: "Paj Thoj"
-- name: "Cua Yaj"
+- name: "Cua Yaj (Pog Nplaum)"
 ---

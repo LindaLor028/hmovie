@@ -28,7 +28,7 @@ sequel: ""
 # Movie Cast
 cast:
 - name: "Txooj Hwm"
-- name: "Cua Yaj"
+- name: "Cua Yaj (Pog Nplaum)"
 - name: "Tsabmiv"
 - name: "PajHuab Favmaiv"
 - name: "Ntxhi"

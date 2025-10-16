@@ -34,7 +34,7 @@ cast:
 - name: "Maiv Lauj"
 - name: "Eb Lauj"
 - name: "Pheej Xyooj"
-- name: "Cua Yaj"
+- name: "Cua Yaj (Pog Nplaum)"
 - name: "Teem Xyooj"
 - name: "Tsaab Haam"
 - name: " Yimleej Lis"

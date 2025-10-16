@@ -31,5 +31,5 @@ cast:
 - name: "Chapoleon Vang"
 - name: "Paj Thoj"
 - name: "Kwm Lis"
-- name: "Cua Yaj"
+- name: "Cua Yaj (Pog Nplaum)"
 ---

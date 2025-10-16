@@ -33,6 +33,6 @@ cast:
 - name: "Eb Lauj"
 - name: "Meej Thoj"
 - name: "Mos Vaj"
-- name: "Cua Yaj"
+- name: "Cua Yaj (Pog Nplaum)"
 - name: "Npis Yaj"
 ---
