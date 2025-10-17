@@ -28,7 +28,7 @@ sequel: ""
 # Movie Cast
 cast:
 - name: "Fwm Hawj"
-- name: "Cua Yaj"
+- name: "Cua Yaj (Pog Nplaum)"
 - name: "Ntshiab Hawj"
 - name: "Thaiv Yaj"
 ---

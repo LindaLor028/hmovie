@@ -28,5 +28,5 @@ sequel: ""
 # Movie Cast
 cast:
 - name: "Nus Xyooj"
-- name: "Cua Yaj"
+- name: "Cua Yaj (Pog Nplaum)"
 ---

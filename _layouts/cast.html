@@ -12,7 +12,7 @@
 
     <!-- GET THE ACTOR/ACTRESS AND STORE IT IN THE VARIABLE, film -->
     {% for person in site.categories.actor %}
-        {% if person.title contains page.title%}
+        {% if person.title == page.title%}
             {% assign actor = person%}
             {% endif%}
     {% endfor%}
