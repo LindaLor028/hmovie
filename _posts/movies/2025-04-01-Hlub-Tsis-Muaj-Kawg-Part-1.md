@@ -4,8 +4,8 @@ date: 2025-03-01 21:25:08 -0719
 categories: movie
 
 # Site Attributes
-title: "Hlub Tsis Mauj Kawg Part 1"
-permalink: "/movie/Hlub_Tsis_Mauj_Kawg_Part_1"
+title: "Hlub Tsis Muaj Kawg Part 1"
+permalink: "/movie/Hlub_Tsis_Muaj_Kawg_Part_1"
 
 # Movie Attributes
 synopsis: ""
@@ -17,13 +17,13 @@ genre: "Drama Romance"
 year: ""
 release_type: "VHS"
 storage: "Center for Hmong Studies"
-thumbnail: "/assets/images/movie_thumbnails/Hlub Tsis Mauj Kawg Part 1.jpeg"
+thumbnail: "/assets/images/movie_thumbnails/Hlub Tsis Muaj Kawg Part 1.jpeg"
 publishing_company: ""
 
 # Sequels + Parts
-base_movie: "Hlub Tsis Mauj Kawg Part 1"
+base_movie: "Hlub Tsis Muaj Kawg Part 1"
 total_parts: 2
-sequel: "Hlub Tsis Mauj Kawg Part 2"
+sequel: "Hlub Tsis Muaj Kawg Part 2"
 
 # Movie Cast
 cast:
