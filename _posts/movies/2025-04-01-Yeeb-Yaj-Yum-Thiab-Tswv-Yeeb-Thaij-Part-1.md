@@ -12,7 +12,7 @@ synopsis: "Thousands of years ago, the folk tale of Yeeb Yaj Yum & Tswv Yeeb Tha
 producer: "Hmong Toj Siab Productions"
 director: ""
 writer: ""
-video_link: "https://youtu.be/9t4CCsJTSyE?si=x6c3Ui2JAubhRqjq"
+video_link: "https://youtu.be/6abVcuWcVn0?si=WN6HS6XK7_L1cDYk"
 genre: "Folklore"
 year: "2006"
 release_type: "DVD"
