@@ -17,7 +17,7 @@
         
         <div class="side_by_side">
             <h1>Explore</h1>
-            <p id="total_displayed" aria-label="Total Number of Movies Displayed on Screen">({{ site.categories.movie | size }})</p>
+            <p id="total_displayed" aria-label="Total Number of Movies Displayed on Screen">({{ site.categories.movie | size }} Movies)</p>
         </div>
 
         <div class="movie_mainview" >
@@ -114,7 +114,7 @@
         for (let movie_index = 0; movie_index < movie_items.length; movie_index++) {
             movie_items[movie_index].style.display = "block";
         }
-        document.getElementById("total_displayed").innerHTML = "(" + movie_items.length + ")";
+        document.getElementById("total_displayed").innerHTML = "(" + movie_items.length + " Movies)";
     }
     
     /**
@@ -278,7 +278,7 @@
             }
         }
     
-        document.getElementById("total_displayed").innerHTML = "(" + total_displayed + ")";
+        document.getElementById("total_displayed").innerHTML = "(" + total_displayed + " Movies)";
     }
     
     </script>
