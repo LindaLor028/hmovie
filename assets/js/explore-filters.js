@@ -4,8 +4,8 @@
  * This function sets the visibility of all movies on the explore page to visible.
  */
 function resetListItemsVisibility(numOfFilters) {
-    var movie_list = document.getElementById("movies_list");
-    var movie_items = movie_list.getElementsByTagName("li");
+    const movie_list = document.getElementById("movies_list");
+    const movie_items = movie_list.getElementsByTagName("li");
 
     for (let movie_index = 0; movie_index < movie_items.length; movie_index++) {
         movie_items[movie_index].style.display = "block";
@@ -19,25 +19,21 @@ function resetListItemsVisibility(numOfFilters) {
  * This function returns an array of regex expressions based on what filter years are checked.
  */
 function returnCheckedYearFilters() {
-    var filters = document.getElementById("year_filters").getElementsByTagName("li");
-    var decade_1990s = new RegExp("199[0-9]");
-    var decade_2000s = new RegExp("200[0-9]");
-    var decade_2010s = new RegExp("201[0-9]");
-    var decade_2020s = new RegExp("202[0-9]");
-    var decade_regex = [decade_1990s, decade_2000s, decade_2010s, decade_2020s];
+    const filters = document.getElementById("year_filters").getElementsByTagName("li");
+    const decades = [
+        { regex: /199[0-9]/, label: "1990s" },
+        { regex: /200[0-9]/, label: "2000s" },
+        { regex: /201[0-9]/, label: "2010s" },
+        { regex: /202[0-9]/, label: "2020s" }
+    ];
 
-    const checked_regex = [];
-    var array_index = 0;
-
-    for (let i = 0; i < filters.length; i++ ) {
-        if (filters[i].getElementsByTagName("input")[0].checked == true) {
-            // console.log("at least one checkbox is checked!")
-            checked_regex[array_index] =  decade_regex[i];
-            // console.log("ADDING " + decade_regex[i] + " TO CHECKED_REGEX");
-            array_index++;
+    const checked = [];
+    for (let i = 0; i < filters.length; i++) {
+        if (filters[i].getElementsByTagName("input")[0].checked) {
+            checked.push(decades[i]);
         }
     }
-    return checked_regex;
+    return checked;
 }
 
 /**
@@ -46,19 +42,11 @@ function returnCheckedYearFilters() {
  * This function returns an array of checked filters of type id.
 */
 function returnCheckedFilters(id) {
-    var filters = document.getElementById(id).getElementsByTagName("li");
-
-    var hasChecked = false;
+    const filters = document.getElementById(id).getElementsByTagName("li");
     const checked_filters = [];
-    const all_filters = [];
-    var array_index = 0;
     for (let i = 0; i < filters.length; i++ ) {
-        all_filters[i] = filters[i].innerText.toUpperCase();
-        if (filters[i].getElementsByTagName("input")[0].checked == true) {
-            // console.log("at least one checkbox is checked!")
-            checked_filters[array_index] =  filters[i].innerText.toUpperCase();
-            array_index++;
-            hasChecked = true;
+        if (filters[i].getElementsByTagName("input")[0].checked) {
+            checked_filters.push(filters[i].innerText.toUpperCase());
         }
     }
     return checked_filters;
@@ -70,7 +58,7 @@ function returnCheckedFilters(id) {
  * This function returns true/false if input matches one of the items in the list of checked filter items
  */
 function verifyCheck(input, list) {
-    var hasAMatch = false;
+    let hasAMatch = false;
 
     if (list.length < 1) {
         return true;
@@ -92,7 +80,7 @@ function verifyCheck(input, list) {
  * This function returns true/false if input matches one of the items in the list of checked filter items
  */
 function verifyHasVideo(input, list) {
-    var hasAMatch = false;
+    let hasAMatch = false;
 
     if (list.length < 1) {
         return true;
@@ -114,14 +102,14 @@ function verifyHasVideo(input, list) {
  * This function returns true/false if the input matches one of the regexes in the regex_list.
  */
 function checkYearRegex(input, regex_list) {
-    var hasAMatch = false;
+    let hasAMatch = false;
 
     if (regex_list.length < 1) {
         return true;
     }
 
     for (let i = 0; i < regex_list.length; i ++) {
-        hasAMatch = ((hasAMatch) || (regex_list[i].test(input)));
+        hasAMatch = ((hasAMatch) || (regex_list[i].regex.test(input)));
         // console.log("comparing if " + txtValue + " includes " + list[i] + " which is " + hasAMatch);
         if (hasAMatch) {
             break;
@@ -138,9 +126,12 @@ function checkYearRegex(input, regex_list) {
 function clearFilters() {
     resetListItemsVisibility();
     // document.getElementById("#2005-label").removeAttr('checked');
-    var filters = document.getElementsByClassName("explore_checkbox");
+    const filters = document.getElementsByClassName("explore_checkbox");
     for (let i = 0; i < filters.length; i++ ) {
         filters[i].checked = false;
+    }
+    if (typeof gtag !== "undefined") {
+        gtag("event", "explore_filter_clear");
     }
 }
 
@@ -150,21 +141,17 @@ function clearFilters() {
  * This function sets the visibility of the movies on the Explore page based on if what fields are checked.
  * */
 function filterMultiple() {
-    var total_displayed = 0;
-    var filter_input, current_movie;
-    // Collect relevant movie items
-    var movies = document.getElementById("movies_list");// This is the list that contains all the movies
-    var movie_blocks = movies.getElementsByTagName("li"); // We then store the movies in an array
+    let total_displayed = 0;
+    const movies = document.getElementById("movies_list");
+    const movie_blocks = movies.getElementsByTagName("li");
 
-
-    var year_filters = returnCheckedYearFilters(); // returns an array of regex expressions based on what year-filters are checked (e.g. 1990s = 199\d)
-    var release_filters = returnCheckedFilters("release_filters"); // returns an array of categories.toUpperCase() based on what release filters are checked
-    var genre_filters = returnCheckedFilters("genre_filters"); // returns an array of categories.toUpperCase() based on what release filters are checked
-    var availability_filters = returnCheckedFilters("availability_filters");
+    const year_filters = returnCheckedYearFilters();
+    const release_filters = returnCheckedFilters("release_filters");
+    const genre_filters = returnCheckedFilters("genre_filters");
+    const availability_filters = returnCheckedFilters("availability_filters");
 
     for (let movie_index = 0; movie_index < movie_blocks.length; movie_index++ ) {
-        p = movie_blocks[movie_index].getAttribute("data-filter-data");
-        txtValue = p;
+        const txtValue = movie_blocks[movie_index].getAttribute("data-filter-data");
         if ((checkYearRegex(txtValue, year_filters)) && (verifyCheck(txtValue, release_filters)) && (verifyCheck(txtValue, genre_filters)) && (verifyHasVideo(txtValue, availability_filters))) {
             movie_blocks[movie_index].style.display = "";
             total_displayed += 1;
@@ -175,4 +162,13 @@ function filterMultiple() {
     }
 
     document.getElementById("total_displayed").innerHTML = "(" + total_displayed + " Movies)";
+
+    if (typeof gtag !== "undefined") {
+        gtag("event", "explore_filter_apply", {
+            filter_year: year_filters.length > 0 ? year_filters.map(function (decades) { return decades.label; }).join(", ") : "(none)",
+            filter_release: release_filters.length > 0 ? release_filters.join(", ") : "(none)",
+            filter_genre: genre_filters.length > 0 ? genre_filters.join(", ") : "(none)",
+            results_count: total_displayed
+        });
+    }
 }
