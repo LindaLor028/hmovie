@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // --- Search Form Tracking ---
   var headerSearch = document.getElementById("header_searchbar");
   var homeSearch = document.getElementById("home_searchbar");
 
@@ -22,4 +21,13 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
+
+  document.querySelectorAll("[data-contribute]").forEach(function (link) {
+    link.addEventListener("click", function () {
+      gtag("event", "contribute_form_click", {
+        form_type: this.dataset.contribute,
+        link_url: this.href,
+      });
+    });
+  });
 });
