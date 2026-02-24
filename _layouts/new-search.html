@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title> {{%page.title%}} </title>
+    <title> {{ page.title }} </title>
     <link rel="stylesheet" href="{{ 'assets/css/styles.css' | relative_url }}">
     <link rel="icon" type="image/x-icon" href="{{ site.url }}{{ site.baseurl }}/assets/images/fav-icon.png">
     {% if site.google_analytics and jekyll.environment == 'production' %}
@@ -23,7 +23,7 @@
                     <a href="{{actor.permalink | relative_url}}" aria-label="Link to {{actor.title}} page">
                         <div class="side_by_side">
                             <img src="{{actor.thumbnail | relative_url}}" class="circle_img" alt="{{actor.title}} Thumbnail" height="80px">
-                            <p>{{ %actor.title% }}</p>
+                            <p>{{ actor.title }}</p>
                         </div>
                     </a>
                 </li>
@@ -38,7 +38,7 @@
                     <a href="{{ movie.permalink | relative_url }}">
                         <!-- <img src="{{movie.thumbnail}}" alt="movie link" class="rounded_img" width="100%"> -->
                         <div class="explore_movie_li" style="background-image: url('{{ movie.thumbnail | relative_url }}')" aria-label="{{movie.title}} Thumbnail"></div>
-                        <div>{{ %movie.title% }}</div>
+                        <div>{{ movie.title }}</div>
                     </a>
                 </li>
             {% endfor%}
