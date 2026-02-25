@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title> {{%page.title%}} </title>
+    <title> {{ page.title }} </title>
     <link rel="stylesheet" href="{{ 'assets/css/styles.css' | relative_url }}">
     <link rel="icon" type="image/x-icon" href="{{ site.url }}{{ site.baseurl }}/assets/images/fav-icon.png">
     {% if site.google_analytics and jekyll.environment == 'production' %}
@@ -25,10 +25,10 @@
                 <ul id="movies_list" class="inner_shadow" aria-label="List of movies">
                     {% assign sortedPosts = site.categories.movie | sort: 'title' %}
                     {% for movie in sortedPosts %}
-                        <li data-filter-data="{{%movie.year%}} {{%movie.release_type%}} {{movie.genre}} {{movie.video_link}}" aria-label="{{movie.title}}">
+                        <li data-filter-data="{{ movie.year }} {{ movie.release_type }} {{movie.genre}} {{movie.video_link}}" aria-label="{{movie.title}}">
                             <a href="{{ movie.permalink | relative_url }}" aria-label="Link to {{movie.title}}" data-type="{% for person in movie.cast %}{{ person.name }}{% if forloop.last == false %}, {% endif %}{% endfor %}">
                                 <div class="explore_movie_li" style="background-image: url('{{ movie.thumbnail | relative_url }}')" aria-label="Movie Thumbnail"></div>
-                                <div>{{ %movie.title% }}</div>
+                                <div>{{ movie.title }}</div>
                             </a>
                         </li>
                     {% endfor%}
