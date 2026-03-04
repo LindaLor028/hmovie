@@ -253,9 +253,13 @@ button {
 
 body {
     margin: 0px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .center_content {
+    flex: 1;
     margin-left: 10%;
     margin-right: 10%;
     margin-bottom: 5%;
