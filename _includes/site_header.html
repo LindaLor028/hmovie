@@ -1,9 +1,5 @@
 <header class="site_header">
     <a href="{{ '/' | relative_url }}" class="home_button"  aria-label="Link to home page">Hmovie</a>
-    <!-- <form action="{{site.baseurl}}/search/" method="get" id="header_searchbar">
-        <input type="text" name="q" />
-        <input type="submit" value="Search"/>
-    </form> -->
     <form action="{{site.baseurl}}/search/" id="header_searchbar" method="get" aria-label="Search bar field"  >
         <span class="search_icon" style="background-image: url('{{ "/assets/images/search.jpeg" | relative_url }}')" aria-label="Search icon" ></span>
         <input type="text" class="search_input" name="q" aria-label="Search bar field" placeholder="search" required/>
