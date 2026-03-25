@@ -23,7 +23,7 @@ publishing_company: "Twin Star Video Production"
 # Sequels + Parts
 base_movie: "Hlub Ti Ntuj Ntxub Ti Txha Part 1"
 total_parts: 2
-sequel: "Hlub Ti Ntuj Ntxub Ti Txha Part 2"
+sequel: 
 
 # Movie Cast
 cast:

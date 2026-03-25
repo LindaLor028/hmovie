@@ -22,7 +22,7 @@ publishing_company: ""
 
 # Sequels + Parts
 base_movie: "Nkauj Mim & NujTee Part 1"
-total_parts: 1
+total_parts: 2
 sequel: ""
 
 # Movie Cast
