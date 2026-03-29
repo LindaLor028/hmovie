@@ -6,4 +6,22 @@
     {% if site.google_analytics and jekyll.environment == 'production' %}
         {% include analytics.html %}
     {% endif %}
+    <script>
+        function removeTrackingParams() {
+            const TRACKING_PARAMS = ['fbclid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+            const params = new URLSearchParams(window.location.search);
+            const hasTracking = TRACKING_PARAMS.some(p => params.has(p));
+
+            if (!hasTracking) return;
+
+            TRACKING_PARAMS.forEach(param => params.delete(param));
+
+            const query = params.toString() ? '?' + params.toString() : '';
+            const cleanUrl = window.location.pathname + query + window.location.hash;
+            
+            history.replaceState(null, '', cleanUrl);
+        }
+
+        removeTrackingParams();
+    </script>
 </head>
