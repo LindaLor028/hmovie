@@ -559,14 +559,17 @@ body {
 
 .about_profile {
     display: grid;
-    grid-template-columns: 2fr 4fr;
+    grid-template-columns: 1.5fr 4fr;
     column-gap: 1rem;
     margin: 5rem;
 }
 
 .about_profile img {
-    width: 80%;
-    border-radius: 60rem;
+         width: 250px;
+         height: 250px;
+         border-radius: 60rem;
+         object-fit: cover;
+         object-position: center bottom;
 }
 
 // FEATURED MOVIES LIST
