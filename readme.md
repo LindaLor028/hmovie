@@ -6,6 +6,7 @@ Hmovie is a digital catalog of over 300 Hmong movies- aiming to preserve the his
 
 - [Linda Lor](https://github.com/LindaLor028)
 - [Danny Yang](https://github.com/dannyyaaj)
+- Rachel Vang
 
 Hmovie is a community-managed site that relies on the expertise and contributions of individuals. For that reason, Hmovie is always looking for contributors to ensure the site’s accuracy in information and experience in implementation. If you're interested in contributing, [join here](https://docs.google.com/forms/d/e/1FAIpQLScNHbhgT9XjnfDxzHmVGZO4mkPn5SHC3-aTS0kcSaTOyuS-Fg/viewform)!
 
