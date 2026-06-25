@@ -29,6 +29,6 @@ sequel: ""
 cast:
 - name: "Teem Xyooj"
 - name: "Blaim Yaj"
-- name: "Cua Yaj (Pog Nplaum)"
+- name: "Cua Yaj"
 - name: "Hli Vaj"
 ---

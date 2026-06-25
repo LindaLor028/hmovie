@@ -32,7 +32,7 @@ cast:
 - name: "Lis Vaj"
 - name: "Npis Thoj"
 - name: "Vam Lis Thoj"
-- name: "Cua Yaj (Pog Nplaum)"
+- name: "Cua Yaj"
 - name: "Paj Thoj"
 - name: "Paj Zaub Vwj"
 - name: "Ntxawm Vaj"

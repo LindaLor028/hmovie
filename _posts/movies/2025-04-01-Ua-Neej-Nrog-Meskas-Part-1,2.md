@@ -31,6 +31,6 @@ cast:
 - name: "Ntxawm Lauj"
 - name: "Paj Thoj"
 - name: "Tsab Lauj"
-- name: "Cua Yaj (Pog Nplaum)"
+- name: "Cua Yaj"
 - name: "Ntxhoo Lis"
 ---

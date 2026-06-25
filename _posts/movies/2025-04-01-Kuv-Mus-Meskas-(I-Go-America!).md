@@ -31,5 +31,5 @@ cast:
 - name: "Paj Thoj"
 - name: "Eb Lauj"
 - name: "Ntxhi Xyooj"
-- name: "Cua Yaj (Pog Nplaum)"
+- name: "Cua Yaj"
 ---
