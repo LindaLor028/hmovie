@@ -13,7 +13,7 @@
                     <a href="{{ person.permalink | relative_url}}" class="clickable_link_block" aria-label="Link to {{actor.name}} page">
                         <img src="{{person.thumbnail | relative_url }}" alt="{{actor.name}} Thumbnail" width="80px" height= "80px" class="circle_img">
                         <br>
-                        <p>{{%actor.name %}}</p>
+                        <p>{{ person.display_name | default: actor.name }}</p>
                     </a>
                 </li>
                 {% assign noPage = "true" %}

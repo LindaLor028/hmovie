@@ -21,7 +21,7 @@
                 </div>
 
                 <div>
-                    <h1>{{actor.title}}</h1>
+                    <h1>{{ actor.display_name | default: actor.title }}</h1>
 
                     <h2> Featured Works</h2>
                     {% include display_cast_movies.html %}
