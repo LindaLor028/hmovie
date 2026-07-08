@@ -29,7 +29,7 @@ sequel: "Kua Txob Thiab Qhov Muag Part 3,4"
 cast:
 - name: "Vam Khwb"
 - name: "Tswj Hwm Hawj"
-- name: "Cua Yaj (Pog Nplaum)"
+- name: "Cua Yaj"
 - name: "Ntaub Hawj"
 - name: "Paj Thoj"
 ---

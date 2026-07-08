@@ -29,7 +29,7 @@ sequel: ""
 cast:
   - name: "Luj Yaj"
   - name: "Dawb Thoj"
-  - name: "Cua Yaj"
+  - name: "Cua Yaj 2"
   - name: "Manivan"
   - name: "Xob Xyooj"
   - name: "Huab Yaj"

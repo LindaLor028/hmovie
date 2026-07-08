@@ -33,6 +33,6 @@ cast:
 - name: "Paj Thoj"
 - name: "Viv Thoj"
 - name: "Yi Xyooj"
-- name: "Cua Yaj (Pog Nplaum)"
+- name: "Cua Yaj"
 - name: "Khais Vaj"
 ---
