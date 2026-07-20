@@ -1,0 +1,19 @@
+// Base: fonts, resets, global utilities
+@use 'base';
+
+// Layout components
+@use 'header';
+@use 'footer';
+
+// Shared UI
+@use 'buttons';
+
+// Page-specific styles
+@use 'home';
+@use 'movie';
+@use 'cast';
+@use 'explore';
+@use 'search';
+@use 'about';
+@use 'contribute';
+@use 'errors';

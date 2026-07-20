@@ -1,0 +1,33 @@
+---
+
+# Site Attributes
+title: "Sib Tog"
+permalink: "/movie/Sib_Tog"
+
+# Movie Attributes
+synopsis: ""
+producer: "Leng Yang"
+director: "Leng Yang"
+writer: "Leng Yang, Chee Yang"
+video_link: "https://youtu.be/9qb37d_4lus?si=sCT2_I8PveQcLeBv"
+genre: "Comedy"
+year: "2011"
+release_type: "DVD"
+storage: "Center for Hmong Studies"
+thumbnail: "/assets/images/movie_thumbnails/Sib Tog.jpeg"
+publishing_company: "Link Pictures"
+
+# Sequels + Parts
+base_movie: ""
+total_parts: 0
+sequel: ""
+
+# Movie Cast
+cast:
+- name: "Tsab Lauj"
+- name: "Blaim Yaj"
+- name: "Blas Muas"
+- name: "Teem Xyooj"
+- name: "Cua Yaj"
+featured: false
+---

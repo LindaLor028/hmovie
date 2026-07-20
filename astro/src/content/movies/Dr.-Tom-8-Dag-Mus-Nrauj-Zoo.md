@@ -1,0 +1,28 @@
+---
+
+# Site Attributes
+title: "Dr. Tom 8 Dag Mus Nrauj Zoo"
+permalink: "/movie/Dr._Tom_8_Dag_Mus_Nrauj_Zoo"
+
+# Movie Attributes
+synopsis: "Thaum lub caij Daus sawv kev rov qab los Amesliskas teb, Daus raug ib pab laib coj mus tua. Paj Dawb uas yog Daus tus hluas nkauj thaib uas Daus tau cog lus tias Daus yuav rov qab mus yuav tuaj ua poj niam tus phooj ywg thiaj los pab tau Daus thiab coj Daus mus kho. Thaum no ob tug phooj ywg tau los hlub nrog ib tug hluas nraug lawm, soj qab saib seb lawv lub neej yuav xaus mus li cas. "
+producer: "Ntsa Iab Production"
+director: ""
+writer: ""
+video_link: "https://youtu.be/1F9IVYmb9Hw?si=zqfHGajZ8eDYCfao"
+genre: "Action Romance"
+year: "2007"
+release_type: "DVD"
+storage: "Center for Hmong Studies"
+thumbnail: "/assets/images/movie_thumbnails/Dr. Tom 8 Dag Mus Nrauj Zoo.jpeg"
+publishing_company: "Ntsa Iab Production"
+
+# Sequels + Parts
+base_movie: ""
+total_parts: 0
+sequel: ""
+
+# Movie Cast
+cast: []
+featured: false
+---

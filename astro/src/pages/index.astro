@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { getCollection } from 'astro:content';
+
+const featuredMovies = await getCollection('movies', ({ data }) => data.featured);
+---
+
+<BaseLayout title="Hmovie" bodyClass="bg_blue">
+  <Header showSearch={false} />
+  <div class="center_content">
+    <!-- Hero -->
+    <div class="landing_div" style="background-image: url('/assets/images/home_image.jpeg')" aria-label="Background image of a Hmong boy and Girl for the landing page"></div>
+    <div class="text_over_image">
+      <h1 class="hmovie_title black_shadow">Hmovie</h1>
+      <p class="sub_title black_shadow">The Largest Digital Hmong Movie Database</p>
+      <form action="/search/" id="home_searchbar" class="black_div_shadow" method="get" aria-label="Search Bar">
+        <span class="search_home_icon" style="background-image: url('/assets/images/search.jpeg')" aria-label="Search Icon"></span>
+        <input type="text" class="search_home_input" name="q" aria-label="Search bar field" placeholder="Search for a movie or actor..." required />
+      </form>
+    </div>
+
+    <p class="center_text">EXPLORE THE CURRENT COLLECTION</p>
+    <ul class="home_featured_movies" aria-label="List of Featured movies on homepage">
+      {featuredMovies.map((movie) => (
+        <li data-filter-data={`${movie.data.year} ${movie.data.release_type} ${movie.data.genre}`} aria-label={movie.data.title}>
+          <a href={movie.data.permalink}>
+            <div class="home_movie_li" style={`background-image: url('${movie.data.thumbnail}')`}></div>
+            <div>{movie.data.title}</div>
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <a href="/explore" class="white_button center_button">SEE MORE MOVIES</a>
+  </div>
+  <Footer />
+</BaseLayout>

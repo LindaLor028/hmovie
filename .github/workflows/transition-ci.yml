@@ -1,0 +1,100 @@
+# Dual-build CI for the Jekyll → Astro transition period.
+# Runs the appropriate build check based on which files a PR touches.
+# Once the cutover PR merges, replace this with the permanent Astro CI.
+
+name: Transition CI
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  # ── Jekyll build (changes outside astro/) ──────────────────────────
+  jekyll:
+    name: Build Jekyll site
+    runs-on: ubuntu-latest
+    # Skip if the PR ONLY touches files inside astro/
+    if: |
+      github.event_name == 'pull_request'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check for non-Astro changes
+        id: filter
+        run: |
+          # List files changed in this PR that are NOT inside astro/
+          NON_ASTRO=$(gh pr diff ${{ github.event.pull_request.number }} --name-only \
+            | grep -v '^astro/' || true)
+          if [ -z "$NON_ASTRO" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Set up Ruby
+        if: steps.filter.outputs.skip != 'true'
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+          bundler-cache: false
+
+      - name: Install dependencies
+        if: steps.filter.outputs.skip != 'true'
+        run: bundle update sass-embedded && bundle install
+
+      - name: Build site
+        if: steps.filter.outputs.skip != 'true'
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+
+  # ── Astro build (changes inside astro/) ────────────────────────────
+  astro:
+    name: Build & check Astro site
+    runs-on: ubuntu-latest
+    # Skip if the PR doesn't touch anything inside astro/
+    if: |
+      github.event_name == 'pull_request'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check for Astro changes
+        id: filter
+        run: |
+          ASTRO=$(gh pr diff ${{ github.event.pull_request.number }} --name-only \
+            | grep '^astro/' || true)
+          if [ -z "$ASTRO" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Set up Node
+        if: steps.filter.outputs.skip != 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install dependencies
+        if: steps.filter.outputs.skip != 'true'
+        working-directory: astro
+        run: npm ci
+
+      - name: Run astro check
+        if: steps.filter.outputs.skip != 'true'
+        working-directory: astro
+        run: npx astro check
+
+      - name: Build site
+        if: steps.filter.outputs.skip != 'true'
+        working-directory: astro
+        run: npm run build

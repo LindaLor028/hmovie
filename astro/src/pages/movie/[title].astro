@@ -1,0 +1,172 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const movies = await getCollection('movies');
+  return movies.map((movie) => ({
+    params: { title: movie.data.permalink.replace('/movie/', '') },
+    props: { movie },
+  }));
+}
+
+const { movie } = Astro.props;
+const {
+  title,
+  thumbnail,
+  year,
+  producer,
+  writer,
+  publishing_company,
+  release_type,
+  synopsis,
+  video_link,
+  cast,
+  total_parts,
+  base_movie,
+  sequel,
+} = movie.data;
+
+// Load all movies for parts navigation
+const allMovies = (await getCollection('movies')).sort((a, b) =>
+  a.data.title.localeCompare(b.data.title)
+);
+
+// Load actors collection (may be empty)
+let actors: Awaited<ReturnType<typeof getCollection<'actors'>>> = [];
+try {
+  const result = await getCollection('actors');
+  if (result) actors = result;
+} catch {
+  // No actor content files yet
+}
+
+// Build parts chain if this movie has multiple parts
+let parts: typeof allMovies = [];
+if (total_parts != null && total_parts > 1) {
+  const isBase = base_movie === title;
+
+  if (isBase) {
+    // Current movie is the base — follow sequel chain
+    let nextTitle = sequel;
+    for (let i = 0; i < total_parts && nextTitle; i++) {
+      const found = allMovies.find((m) => m.data.title === nextTitle);
+      if (!found) break;
+      parts.push(found);
+      nextTitle = found.data.sequel;
+    }
+  } else {
+    // Current movie is not the base — start from base movie
+    const baseEntry = allMovies.find((m) => m.data.title === base_movie);
+    if (baseEntry) {
+      parts.push(baseEntry);
+      let nextTitle = baseEntry.data.sequel;
+      for (let i = 0; i < total_parts && nextTitle; i++) {
+        const found = allMovies.find((m) => m.data.title === nextTitle);
+        if (!found) break;
+        if (found.data.title !== title) {
+          parts.push(found);
+        }
+        nextTitle = found.data.sequel;
+      }
+    }
+  }
+}
+
+const hasParts = total_parts != null && total_parts > 1 && parts.length > 0;
+const hasCast = cast.length > 0;
+const hasDetails = synopsis || hasCast || hasParts;
+---
+
+<BaseLayout title={title} bodyClass="bg_blue">
+  <Header />
+
+  <div class="center_content">
+    <div class="movie_videoview_title">
+      <h1>{title}</h1>
+      {video_link ? (
+        <a href={video_link} target="_blank" class="watch_movie_button_a" aria-label="Play movie button">WATCH MOVIE</a>
+      ) : (
+        <button type="button" class="disabled_button" aria-label="Disabled Button">NOT AVAILABLE ONLINE</button>
+      )}
+    </div>
+
+    <br />
+
+    <div class="movie_videoview">
+      <!-- Column 1: Movie poster and metadata -->
+      <div>
+        <img src={thumbnail} alt={`${title} Movie Poster`} width="100%" class="rounded_img" />
+        <div class="movie_metadata inner_shadow margin_top">
+          <p class="meta_data_type">Production Year:</p>
+          <p>{year}</p>
+          <p class="meta_data_type">Producer(s):</p>
+          <p>{producer}</p>
+          <p class="meta_data_type">Writer(s):</p>
+          <p>{writer}</p>
+          <p class="meta_data_type">Publisher:</p>
+          <p>{publishing_company}</p>
+          <p class="meta_data_type">Release Type:</p>
+          <p>{release_type}</p>
+        </div>
+      </div>
+
+      <!-- Column 2: Synopsis, cast, and parts -->
+      {!hasDetails ? (
+        <div class="gray_box inner_shadow">
+          <p>Additional Information for this movie is not available at this time.</p>
+        </div>
+      ) : (
+        <div>
+          {synopsis && <p>{synopsis}</p>}
+
+          {hasCast && (
+            <div>
+              <h1>Cast</h1>
+              <ul class="actors_list">
+                {cast.map((member) => {
+                  const actorEntry = actors.find((a) => a.data.title === member.name);
+                  return actorEntry ? (
+                    <li>
+                      <a href={actorEntry.data.permalink} class="clickable_link_block" aria-label={`Link to ${member.name} page`}>
+                        <img src={actorEntry.data.thumbnail} alt={`${member.name} Thumbnail`} width="80px" height="80px" class="circle_img" />
+                        <br />
+                        <p>{actorEntry.data.display_name ?? member.name}</p>
+                      </a>
+                    </li>
+                  ) : (
+                    <li>
+                      <div aria-label={`${member.name} section but has no link`}>
+                        <img src="/assets/images/cast_thumbnails/no_cast_image.png" alt={`${member.name} Thumbnail`} width="80px" height="80px" class="circle_img" />
+                        <br />
+                        <p>{member.name}</p>
+                      </div>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          )}
+
+          {hasParts && (
+            <div>
+              <h1>Parts</h1>
+              <div class="movie_parts_list inner_shadow">
+                {parts.map((part) => (
+                  <a href={part.data.permalink} aria-label={`Link to ${part.data.title} page`}>
+                    <div class="explore_movie_li" style={`background-image: url('${part.data.thumbnail}')`} aria-label={`${part.data.title} thumbnail`}></div>
+                    <div>{part.data.title}</div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  </div>
+
+  <Footer />
+</BaseLayout>

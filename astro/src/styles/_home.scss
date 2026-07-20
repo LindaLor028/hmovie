@@ -1,0 +1,154 @@
+@use 'variables' as *;
+
+// HOME PAGE
+
+.home_image {
+    border-radius: 1rem;
+    vertical-align: top;
+    width: 100%;
+    filter: brightness(50%);
+    mask-image: linear-gradient(black, transparent 50%);
+}
+
+.landing_items {
+    position: relative;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+}
+
+.text_over_image {
+    color: white;
+    position: absolute;
+    top: 15rem;
+    width: 79%;
+    text-align: center;
+}
+
+.hmovie_title {
+    font-size: 5rem;
+    color: white;
+    margin: 0%;
+}
+
+.sub_title {
+    font-size: 3vw;
+    margin: 0%;
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: 2rem;
+}
+
+.landing_div {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 36rem;
+    margin-top: 3%;
+
+    text-align: center;
+    border-radius: 1rem;
+    vertical-align: top;
+    width: 100%;
+    filter: brightness(70%);
+    mask-image: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(15, 20, 30, 1) 20%);
+}
+
+#home_search {
+    width: 60%;
+    left: 40%;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: (translate(-50%, -50%));
+    text-align: center;
+}
+
+#home_search input {
+    color: black;
+    width: 100%;
+    height: 40px;
+    background-image: url(/assets/images/search.jpeg);
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    border: 0;
+    border-radius: 0.5rem;
+}
+
+#home_search input:active {
+    color: black;
+    width: 100%;
+    height: 40px;
+    border: 0;
+    border-radius: 0.5rem;
+}
+
+#home_searchbar {
+    display: grid;
+    margin-left: 20%;
+    column-gap: 0rem;
+    grid-template-columns: 45px 6fr;
+    background-color: white;
+    border-radius: 5rem;
+    width: 60%;
+}
+
+.search_home_input {
+    border-color: white;
+    border-width: 0px;
+    color: black;
+    font-size: 20px;
+    user-select: none;
+    border-bottom-right-radius: 5rem;
+    border-top-right-radius: 5rem;
+}
+
+.search_home_input:focus {
+    outline: none;
+}
+
+// FEATURED MOVIES LIST
+
+.home_featured_movies {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 230px));
+    column-gap: 3rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 2rem;
+    row-gap: 1rem;
+    padding: 0;
+    justify-content: center;
+}
+
+.home_featured_movies li {
+    margin-top: -1px;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+}
+
+.home_movie_li {
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: black;
+    border-radius: 1rem;
+}
+
+.home_featured_movies li a {
+    margin-top: -1px;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+}
+
+.home_featured_movies li:hover:not(.header) {
+    background-color: $color-bg-hover;
+    border-radius: 1rem;
+}

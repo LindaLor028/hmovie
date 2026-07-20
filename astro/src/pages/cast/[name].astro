@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const actors = await getCollection('actors');
+  return actors.map((actor) => ({
+    params: { name: actor.data.permalink.replace('/cast/', '') },
+    props: { actor },
+  }));
+}
+
+const { actor } = Astro.props;
+const { title, display_name, thumbnail } = actor.data;
+const displayName = display_name ?? title;
+
+// Find all movies this actor appears in
+const allMovies = (await getCollection('movies')).sort((a, b) =>
+  a.data.title.localeCompare(b.data.title)
+);
+const featuredMovies = allMovies.filter((movie) =>
+  movie.data.cast.some((member) => member.name === title)
+);
+---
+
+<BaseLayout title={displayName} bodyClass="bg_blue">
+  <Header />
+
+  <div class="center_content">
+    <div class="movie_videoview margin_top2">
+      <div>
+        <img src={thumbnail} alt={`Thumbnail photo of ${displayName}`} class="rounded_img" width="100%" />
+      </div>
+
+      <div>
+        <h1>{displayName}</h1>
+
+        <h2>Featured Works</h2>
+        <div class="cast_movies">
+          {featuredMovies.map((movie) => (
+            <a href={movie.data.permalink} aria-label={`Link to ${movie.data.title} page`}>
+              <div>
+                <div class="explore_movie_li" style={`background-image: url('${movie.data.thumbnail}')`} aria-label={`${movie.data.title} thumbnail`}></div>
+                <p>{movie.data.title}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <Footer />
+</BaseLayout>

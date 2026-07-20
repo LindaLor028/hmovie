@@ -1,0 +1,23 @@
+@use 'variables' as *;
+
+// Contribute page
+.three_columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 3rem;
+}
+
+.contribute_button {
+    margin-left: 10%;
+    width: 80%;
+    margin-top: 10%;
+}
+
+.three_columns p {
+    text-align: center;
+}
+
+.three_columns div:hover:not(.header) {
+    background-color: $color-bg-hover;
+    border-radius: 1rem;
+}

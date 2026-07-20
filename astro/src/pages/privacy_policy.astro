@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Privacy Policy" bodyClass="bg_blue">
+  <Header />
+
+  <div class="center_content">
+    <h1>Privacy Policy</h1>
+    <p><strong>Last updated: October 2, 2025</strong></p>
+
+    <h2>The data we collect</h2>
+    <p>We use Google Analytics to understand how visitors use our site. This includes basic information like which pages you visit, how long you stay, and what device/browser you're using. We do not collect personal information like names or email addresses.</p>
+
+    <h2>Third-parties</h2>
+    <p><strong>Google Analytics</strong> is the only third-party service we use. Google collects anonymous usage data to help us improve the site. You can opt out of Google Analytics by installing their <a href="https://tools.google.com/dlpage/gaoptout">browser add-on</a>.</p>
+    <p>We do not sell or share your data with anyone. We do not use advertising or tracking for marketing purposes.</p>
+
+    <h2>Security</h2>
+    <p>Your data is handled securely. Although we cannot guarantee that data transiting through the internet is 100% secure, Google Analytics follows industry-standard security practices.</p>
+
+    <h2>Your choices</h2>
+    <p>You can block cookies and analytics tracking through your browser settings at any time. This will not affect your ability to browse our site.</p>
+    <p>We reserve the right to modify this Privacy Policy at any time by posting an updated version on this page. Your continued use of this site indicates your acceptance of any changes.</p>
+  </div>
+
+  <Footer />
+</BaseLayout>

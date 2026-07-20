@@ -1,0 +1,55 @@
+---
+import Analytics from '../components/Analytics.astro';
+import '../styles/main.scss';
+
+interface Props {
+  title: string;
+  bodyClass?: string;
+}
+
+const { title, bodyClass = '' } = Astro.props;
+const siteUrl = 'https://www.hmovie.org';
+const description = 'The largest digital Hmong movie database.';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content={title || 'Hmovie'}>
+    <meta property="og:description" content={description}>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content={Astro.url.href}>
+    <meta property="og:image" content={`${siteUrl}/assets/images/og-preview.png`}>
+    <meta property="og:site_name" content="Hmovie">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content={title || 'Hmovie'}>
+    <meta name="twitter:description" content={description}>
+    <meta name="twitter:image" content={`${siteUrl}/assets/images/og-preview.png`}>
+    <title>{title}</title>
+    <link rel="icon" type="image/x-icon" href="/assets/images/fav-icon.png">
+    <Analytics />
+    <script is:inline>
+      function removeTrackingParams() {
+        const TRACKING_PARAMS = ['fbclid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+        const params = new URLSearchParams(window.location.search);
+        const hasTracking = TRACKING_PARAMS.some(p => params.has(p));
+
+        if (!hasTracking) return;
+
+        TRACKING_PARAMS.forEach(param => params.delete(param));
+
+        const query = params.toString() ? '?' + params.toString() : '';
+        const cleanUrl = window.location.pathname + query + window.location.hash;
+
+        history.replaceState(null, '', cleanUrl);
+      }
+
+      removeTrackingParams();
+    </script>
+  </head>
+  <body class={bodyClass}>
+    <slot />
+  </body>
+</html>

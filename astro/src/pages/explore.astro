@@ -1,0 +1,229 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { getCollection } from 'astro:content';
+
+const movies = (await getCollection('movies')).sort((a, b) =>
+  a.data.title.localeCompare(b.data.title)
+);
+---
+
+<BaseLayout title="Explore" bodyClass="bg_blue">
+  <Header />
+
+  <div class="center_content">
+    <div class="side_by_side">
+      <h1>Explore</h1>
+      <p id="total_displayed" aria-label="Total Number of Movies Displayed on Screen">({movies.length} Movies)</p>
+    </div>
+
+    <div class="movie_mainview">
+      <!-- Movie grid -->
+      <div>
+        <ul id="movies_list" class="inner_shadow" aria-label="List of movies">
+          {movies.map((movie) => (
+            <li
+              data-filter-data={`${movie.data.year} ${movie.data.release_type} ${movie.data.genre} ${movie.data.video_link}`}
+              aria-label={movie.data.title}
+            >
+              <a
+                href={movie.data.permalink}
+                aria-label={`Link to ${movie.data.title}`}
+                data-type={movie.data.cast.map((p) => p.name).join(', ')}
+              >
+                <div class="explore_movie_li" style={`background-image: url('${movie.data.thumbnail}')`} aria-label="Movie Thumbnail"></div>
+                <div>{movie.data.title}</div>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Sidebar filters -->
+      <div class="gray_box inner_shadow">
+        <div class="filter_title">
+          <h2>FILTERS</h2>
+          <button onclick="clearFilters()" class="clear_filters_button" aria-label="Button to clear enabled filters">Clear Filters</button>
+        </div>
+
+        <h2>Availability</h2>
+        <ul id="availability_filters" class="filter_list" aria-label="Filters of type: availability">
+          <li>
+            <input type="checkbox" id="filter-online" class="explore_checkbox" onclick="filterMultiple()" />
+            <label for="filter-online">Online</label>
+          </li>
+        </ul>
+
+        <h2>Year of Release</h2>
+        <ul id="year_filters" class="filter_list" aria-label="Filters of type: Year of Release">
+          <li>
+            <input type="checkbox" id="filter-1990s" class="explore_checkbox" onclick="filterMultiple()" />
+            <label for="filter-1990s">1990s</label>
+          </li>
+          <li>
+            <input type="checkbox" id="filter-2000s" class="explore_checkbox" onclick="filterMultiple()" />
+            <label for="filter-2000s">2000s</label>
+          </li>
+          <li>
+            <input type="checkbox" id="filter-2010s" class="explore_checkbox" onclick="filterMultiple()" />
+            <label for="filter-2010s">2010s</label>
+          </li>
+        </ul>
+
+        <h2>Release Type</h2>
+        <ul id="release_filters" class="filter_list" aria-label="Filters of type: Release Type">
+          <li>
+            <input type="checkbox" id="filter-vhs" class="explore_checkbox" onclick="filterMultiple()" />
+            <label for="filter-vhs">VHS</label>
+          </li>
+          <li>
+            <input type="checkbox" id="filter-dvd" class="explore_checkbox" onclick="filterMultiple()" />
+            <label for="filter-dvd">DVD</label>
+          </li>
+        </ul>
+
+        <h2>Genre</h2>
+        <ul id="genre_filters" class="filter_list" aria-label="Filters of type: Genre">
+          <li>
+            <input type="checkbox" id="filter-folklore" class="explore_checkbox" onclick="filterMultiple()" />
+            <label for="filter-folklore">Folklore</label>
+          </li>
+          <li>
+            <input type="checkbox" id="filter-comedy" class="explore_checkbox" onclick="filterMultiple()" />
+            <label for="filter-comedy">Comedy</label>
+          </li>
+          <li>
+            <input type="checkbox" id="filter-horror" class="explore_checkbox" onclick="filterMultiple()" />
+            <label for="filter-horror">Horror</label>
+          </li>
+          <li>
+            <input type="checkbox" id="filter-romance" class="explore_checkbox" onclick="filterMultiple()" />
+            <label for="filter-romance">Romance</label>
+          </li>
+          <li>
+            <input type="checkbox" id="filter-action" class="explore_checkbox" onclick="filterMultiple()" />
+            <label for="filter-action">Action</label>
+          </li>
+          <li>
+            <input type="checkbox" id="filter-historical" class="explore_checkbox" onclick="filterMultiple()" />
+            <label for="filter-historical">Historical</label>
+          </li>
+          <li>
+            <input type="checkbox" id="filter-drama" class="explore_checkbox" onclick="filterMultiple()" />
+            <label for="filter-drama">Drama</label>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <Footer />
+
+  <script is:inline>
+    function resetListItemsVisibility() {
+      var movieList = document.getElementById("movies_list");
+      var movieItems = movieList.getElementsByTagName("li");
+      for (var i = 0; i < movieItems.length; i++) {
+        movieItems[i].style.display = "block";
+      }
+      document.getElementById("total_displayed").innerHTML = "(" + movieItems.length + " Movies)";
+    }
+
+    function returnCheckedYearFilters() {
+      var filters = document.getElementById("year_filters").getElementsByTagName("li");
+      var decades = [
+        { regex: /199[0-9]/, label: "1990s" },
+        { regex: /200[0-9]/, label: "2000s" },
+        { regex: /201[0-9]/, label: "2010s" },
+        { regex: /202[0-9]/, label: "2020s" }
+      ];
+      var checked = [];
+      for (var i = 0; i < filters.length; i++) {
+        if (filters[i].getElementsByTagName("input")[0].checked) {
+          checked.push(decades[i]);
+        }
+      }
+      return checked;
+    }
+
+    function returnCheckedFilters(id) {
+      var filters = document.getElementById(id).getElementsByTagName("li");
+      var checkedFilters = [];
+      for (var i = 0; i < filters.length; i++) {
+        if (filters[i].getElementsByTagName("input")[0].checked) {
+          checkedFilters.push(filters[i].innerText.toUpperCase());
+        }
+      }
+      return checkedFilters;
+    }
+
+    function verifyCheck(input, list) {
+      if (list.length < 1) return true;
+      for (var i = 0; i < list.length; i++) {
+        if (input.toUpperCase().includes(list[i].replaceAll(" ", ""))) return true;
+      }
+      return false;
+    }
+
+    function verifyHasVideo(input, list) {
+      if (list.length < 1) return true;
+      return input.toUpperCase().includes("HTTP");
+    }
+
+    function checkYearRegex(input, regexList) {
+      if (regexList.length < 1) return true;
+      for (var i = 0; i < regexList.length; i++) {
+        if (regexList[i].regex.test(input)) return true;
+      }
+      return false;
+    }
+
+    function clearFilters() {
+      resetListItemsVisibility();
+      var filters = document.getElementsByClassName("explore_checkbox");
+      for (var i = 0; i < filters.length; i++) {
+        filters[i].checked = false;
+      }
+      if (typeof gtag !== "undefined") {
+        gtag("event", "explore_filter_clear");
+      }
+    }
+
+    function filterMultiple() {
+      var totalDisplayed = 0;
+      var moviesList = document.getElementById("movies_list");
+      var movieBlocks = moviesList.getElementsByTagName("li");
+      var yearFilters = returnCheckedYearFilters();
+      var releaseFilters = returnCheckedFilters("release_filters");
+      var genreFilters = returnCheckedFilters("genre_filters");
+      var availabilityFilters = returnCheckedFilters("availability_filters");
+
+      for (var i = 0; i < movieBlocks.length; i++) {
+        var filterData = movieBlocks[i].getAttribute("data-filter-data");
+        if (
+          checkYearRegex(filterData, yearFilters) &&
+          verifyCheck(filterData, releaseFilters) &&
+          verifyCheck(filterData, genreFilters) &&
+          verifyHasVideo(filterData, availabilityFilters)
+        ) {
+          movieBlocks[i].style.display = "";
+          totalDisplayed += 1;
+        } else {
+          movieBlocks[i].style.display = "none";
+        }
+      }
+
+      document.getElementById("total_displayed").innerHTML = "(" + totalDisplayed + " Movies)";
+
+      if (typeof gtag !== "undefined") {
+        gtag("event", "explore_filter_apply", {
+          filter_year: yearFilters.length > 0 ? yearFilters.map(function(d) { return d.label; }).join(", ") : "(none)",
+          filter_release: releaseFilters.length > 0 ? releaseFilters.join(", ") : "(none)",
+          filter_genre: genreFilters.length > 0 ? genreFilters.join(", ") : "(none)",
+          results_count: totalDisplayed
+        });
+      }
+    }
+  </script>
+</BaseLayout>
