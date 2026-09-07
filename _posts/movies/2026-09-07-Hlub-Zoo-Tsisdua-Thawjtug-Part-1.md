@@ -1,0 +1,30 @@
+---
+layout: movie-video-data
+date: Mon Sep 07 2026 00:00:00 GMT-0700 (Pacific Daylight Time)
+categories: movie
+
+# Site Attributes
+title: "Hlub Zoo Tsisdua Thawjtug Part 1"
+permalink: "/movie/Hlub_Zoo_Tsisdua_Thawjtug_Part_1"
+
+# Movie Attributes
+synopsis: "A film based on a true love Hmong motion pictures.\nIt's the most romantic and sad story. Because the conflicts between the teens and the old Hmong generations, the culture can not play its role within a Hmong family, which has caused both generations to become further apart. Sometimes there is an answer to a few questions; somehow there is a way to find out the destination of a question leading to an answer"
+producer: "Dream Vision Entertainment"
+director: ""
+writer: ""
+video_link: ""
+genre: "Drama, Romance"
+year: "2003"
+release_type: "VHS"
+storage: "Private"
+thumbnail: "/assets/images/movie_thumbnails/Hlub Zoo Tsisdua Thawjtug Part 1.jpeg"
+publishing_company: "Dream Vision Entertainment"
+
+# Sequels + Parts
+base_movie: "Hlub Zoo Tsisdua Thawjtug Part 1"
+total_parts: 3
+sequel: ""
+
+# Movie Cast
+cast:
+---
