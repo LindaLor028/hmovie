@@ -1,7 +1,7 @@
 ---
 layout: movie-video-data
 date: Mon Sep 07 2026 00:00:00 GMT-0700 (Pacific Daylight Time)
-categories: movie
+categories: movie front
 
 # Site Attributes
 title: "Mam Hlub Lwm Tiam Part 2"
