@@ -1,0 +1,31 @@
+---
+layout: movie-video-data
+date: Mon Sep 07 2026 00:00:00 GMT-0700 (Pacific Daylight Time)
+categories: movie
+
+# Site Attributes
+title: "Npaj Thaub & Noog Nuv Part 2"
+permalink: "/movie/Npaj_Thaub_&_Noog_Nuv_Part_2"
+
+# Movie Attributes
+synopsis: ""
+producer: "Kou Thao"
+director: "Kou Thao"
+writer: ""
+video_link: "https://youtu.be/-f7hY1gX1zM?si=RH4vehkWjXP8LvUv"
+genre: "Action"
+year: ""
+release_type: "VHS"
+storage: ""
+thumbnail: "/assets/images/movie_thumbnails/Npaj Thaub & Noog Nuv Part 2.jpeg"
+publishing_company: "Hmong Media Production"
+
+# Sequels + Parts
+base_movie: "Npaj Thaub & Noog Nuv Part 2"
+total_parts: 2
+sequel: "Npaj Thaub & Noog Nuv Part 3"
+
+# Movie Cast
+cast:
+  - name: "Jerry Thoj"
+---
