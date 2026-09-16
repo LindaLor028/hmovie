@@ -149,14 +149,6 @@ button {
     border-radius: 1rem;
 }
 
-.movie_parts_img {
-    height: 200px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-color: black;
-    border-radius: 0.5rem;
-}
 
 // HOME PAGE
 
@@ -597,18 +589,20 @@ body {
 
 .home_movie_li {
     height: 300px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
     background-color: black;
     border-radius: 1rem;
 }
 
 .explore_movie_li {
     height: 250px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
     background-color: black;
     border-radius: 0.5rem;
 }
